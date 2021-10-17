@@ -19,7 +19,13 @@ namespace QLLuongSanPham
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult msg = MessageBox.Show("Thoát khỏi chương trình.", "Thông báo", MessageBoxButtons.YesNo);
+
+            if (msg == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Yes;
+                this.Close();
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
