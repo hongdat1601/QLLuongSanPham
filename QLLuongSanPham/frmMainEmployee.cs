@@ -22,7 +22,7 @@ namespace QLLuongSanPham
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
         }
-        
+
         //Structs
         private struct RGBColor
         {
@@ -74,6 +74,10 @@ namespace QLLuongSanPham
         private void btnInfor_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColor.color2);
+            frmEmployeeAdministrative frm = new frmEmployeeAdministrative();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
 
         private void btnSalary_Click(object sender, EventArgs e)

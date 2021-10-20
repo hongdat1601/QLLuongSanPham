@@ -43,17 +43,10 @@ namespace QLLuongSanPham
             this.btnHide = new FontAwesome.Sharp.IconButton();
             this.btnShow = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.btnInforDesktop = new FontAwesome.Sharp.IconButton();
-            this.lblNameDesktop = new System.Windows.Forms.Label();
-            this.pcbLogoDesktop = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panelTab.SuspendLayout();
-            this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoDesktop)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -67,7 +60,7 @@ namespace QLLuongSanPham
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 706);
+            this.panelMenu.Size = new System.Drawing.Size(250, 846);
             this.panelMenu.TabIndex = 0;
             // 
             // btnExit
@@ -82,7 +75,7 @@ namespace QLLuongSanPham
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 32;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 645);
+            this.btnExit.Location = new System.Drawing.Point(0, 785);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnExit.Size = new System.Drawing.Size(250, 61);
@@ -224,7 +217,7 @@ namespace QLLuongSanPham
             this.panelTab.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTab.Location = new System.Drawing.Point(250, 0);
             this.panelTab.Name = "panelTab";
-            this.panelTab.Size = new System.Drawing.Size(802, 37);
+            this.panelTab.Size = new System.Drawing.Size(974, 37);
             this.panelTab.TabIndex = 1;
             this.panelTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTab_MouseDown);
             // 
@@ -237,7 +230,7 @@ namespace QLLuongSanPham
             this.btnHide.IconColor = System.Drawing.Color.Black;
             this.btnHide.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHide.IconSize = 20;
-            this.btnHide.Location = new System.Drawing.Point(678, 0);
+            this.btnHide.Location = new System.Drawing.Point(850, 0);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(41, 37);
             this.btnHide.TabIndex = 2;
@@ -252,7 +245,7 @@ namespace QLLuongSanPham
             this.btnShow.IconColor = System.Drawing.Color.Black;
             this.btnShow.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnShow.IconSize = 20;
-            this.btnShow.Location = new System.Drawing.Point(719, 0);
+            this.btnShow.Location = new System.Drawing.Point(891, 0);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(42, 37);
             this.btnShow.TabIndex = 1;
@@ -270,7 +263,7 @@ namespace QLLuongSanPham
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 60;
-            this.btnClose.Location = new System.Drawing.Point(761, 0);
+            this.btnClose.Location = new System.Drawing.Point(933, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(41, 37);
             this.btnClose.TabIndex = 0;
@@ -278,102 +271,17 @@ namespace QLLuongSanPham
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // panelDesktop
-            // 
-            this.panelDesktop.Controls.Add(this.iconButton2);
-            this.panelDesktop.Controls.Add(this.btnInforDesktop);
-            this.panelDesktop.Controls.Add(this.lblNameDesktop);
-            this.panelDesktop.Controls.Add(this.pcbLogoDesktop);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(250, 37);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(802, 669);
-            this.panelDesktop.TabIndex = 2;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.iconButton2.FlatAppearance.BorderSize = 2;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(437, 358);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(80, 0, 20, 0);
-            this.iconButton2.Size = new System.Drawing.Size(281, 158);
-            this.iconButton2.TabIndex = 4;
-            this.iconButton2.Text = "Lương";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // btnInforDesktop
-            // 
-            this.btnInforDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnInforDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnInforDesktop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInforDesktop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnInforDesktop.FlatAppearance.BorderSize = 2;
-            this.btnInforDesktop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInforDesktop.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.btnInforDesktop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnInforDesktop.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.btnInforDesktop.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnInforDesktop.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInforDesktop.IconSize = 32;
-            this.btnInforDesktop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInforDesktop.Location = new System.Drawing.Point(54, 358);
-            this.btnInforDesktop.Name = "btnInforDesktop";
-            this.btnInforDesktop.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnInforDesktop.Size = new System.Drawing.Size(257, 158);
-            this.btnInforDesktop.TabIndex = 3;
-            this.btnInforDesktop.Text = "Thông tin cá nhân";
-            this.btnInforDesktop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInforDesktop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInforDesktop.UseVisualStyleBackColor = true;
-            // 
-            // lblNameDesktop
-            // 
-            this.lblNameDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNameDesktop.AutoSize = true;
-            this.lblNameDesktop.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameDesktop.ForeColor = System.Drawing.Color.Black;
-            this.lblNameDesktop.Location = new System.Drawing.Point(173, 185);
-            this.lblNameDesktop.Name = "lblNameDesktop";
-            this.lblNameDesktop.Size = new System.Drawing.Size(431, 23);
-            this.lblNameDesktop.TabIndex = 2;
-            this.lblNameDesktop.Text = "Chào mừng nhân viên Võ Minh Phương";
-            // 
-            // pcbLogoDesktop
-            // 
-            this.pcbLogoDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pcbLogoDesktop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pcbLogoDesktop.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogoDesktop.Image")));
-            this.pcbLogoDesktop.Location = new System.Drawing.Point(235, 15);
-            this.pcbLogoDesktop.Name = "pcbLogoDesktop";
-            this.pcbLogoDesktop.Size = new System.Drawing.Size(314, 142);
-            this.pcbLogoDesktop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbLogoDesktop.TabIndex = 1;
-            this.pcbLogoDesktop.TabStop = false;
-            // 
-            // frmEmployee
+            // frmMainEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1052, 706);
-            this.Controls.Add(this.panelDesktop);
+            this.ClientSize = new System.Drawing.Size(1224, 846);
             this.Controls.Add(this.panelTab);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmEmployee";
+            this.IsMdiContainer = true;
+            this.Name = "frmMainEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
@@ -381,9 +289,6 @@ namespace QLLuongSanPham
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.panelTab.ResumeLayout(false);
-            this.panelDesktop.ResumeLayout(false);
-            this.panelDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoDesktop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,16 +300,11 @@ namespace QLLuongSanPham
         private System.Windows.Forms.Panel panelTab;
         private System.Windows.Forms.PictureBox pcbLogo;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnSalary;
         private FontAwesome.Sharp.IconButton btnInfor;
-        private System.Windows.Forms.Label lblNameDesktop;
-        private System.Windows.Forms.PictureBox pcbLogoDesktop;
         private FontAwesome.Sharp.IconButton btnBars;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton btnInforDesktop;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnShow;
         private FontAwesome.Sharp.IconButton btnHide;
