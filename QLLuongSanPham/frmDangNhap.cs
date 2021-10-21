@@ -10,23 +10,29 @@ using System.Windows.Forms;
 
 namespace QLLuongSanPham
 {
-    public partial class frmLogin : Form
+    public partial class frmDangNhap : Form
     {
-        public frmLogin()
+        public frmDangNhap()
         {
             InitializeComponent();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult msg = MessageBox.Show("Thoát khỏi chương trình.", "Thông báo", MessageBoxButtons.YesNo);
+
+            if (msg == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Yes;
+                this.Close();
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "demo" && txtPassword.Text == "123")
             {
-                frmManagement frm = new frmManagement();
+                frmQuanLy frm = new frmQuanLy();
                 this.Hide();
 
                 if (frm.ShowDialog() == DialogResult.Yes)
