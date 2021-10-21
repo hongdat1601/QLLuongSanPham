@@ -10,6 +10,12 @@ namespace QLLuongSanPham
 {
     static class Constant
     {
+        /// <summary>
+        /// - primary   <br></br>
+        /// - btnSub    <br></br>
+        /// - btnFocus  <br></br>
+        /// - btnSubFocus
+        /// </summary>
         public static Hashtable Colors = new Hashtable
         {
             { "primary", Color.RoyalBlue },
