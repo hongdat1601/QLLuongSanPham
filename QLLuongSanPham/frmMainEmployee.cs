@@ -23,6 +23,10 @@ namespace QLLuongSanPham
             panelMenu.Controls.Add(leftBorderBtn);
         }
 
+        private void frmMainEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
         //Structs
         private struct RGBColor
         {

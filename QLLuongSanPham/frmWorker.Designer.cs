@@ -1,7 +1,7 @@
 ﻿
 namespace QLLuongSanPham
 {
-    partial class frmEmployeeAdministrative
+    partial class frmWorker
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,6 @@ namespace QLLuongSanPham
         {
             this.btnFixPassWord = new FontAwesome.Sharp.IconButton();
             this.btnFixInfo = new FontAwesome.Sharp.IconButton();
-            this.gbxInfoSlary = new System.Windows.Forms.GroupBox();
-            this.txtIndexSalary = new System.Windows.Forms.TextBox();
-            this.txtBasicSalary = new System.Windows.Forms.TextBox();
-            this.lblIndexSalary = new System.Windows.Forms.Label();
-            this.lblSalaryBasic = new System.Windows.Forms.Label();
             this.gbxInfoWork = new System.Windows.Forms.GroupBox();
             this.txtSeniority = new System.Windows.Forms.TextBox();
             this.lblDateStart = new System.Windows.Forms.Label();
@@ -62,7 +57,6 @@ namespace QLLuongSanPham
             this.lblName = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.picImage = new System.Windows.Forms.PictureBox();
-            this.gbxInfoSlary.SuspendLayout();
             this.gbxInfoWork.SuspendLayout();
             this.gbxInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
@@ -75,10 +69,10 @@ namespace QLLuongSanPham
             this.btnFixPassWord.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnFixPassWord.IconColor = System.Drawing.Color.Black;
             this.btnFixPassWord.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFixPassWord.Location = new System.Drawing.Point(825, 234);
+            this.btnFixPassWord.Location = new System.Drawing.Point(827, 245);
             this.btnFixPassWord.Name = "btnFixPassWord";
             this.btnFixPassWord.Size = new System.Drawing.Size(161, 38);
-            this.btnFixPassWord.TabIndex = 11;
+            this.btnFixPassWord.TabIndex = 18;
             this.btnFixPassWord.Text = "Đổi mật khẩu";
             this.btnFixPassWord.UseVisualStyleBackColor = true;
             // 
@@ -89,71 +83,12 @@ namespace QLLuongSanPham
             this.btnFixInfo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnFixInfo.IconColor = System.Drawing.Color.Black;
             this.btnFixInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFixInfo.Location = new System.Drawing.Point(1007, 234);
+            this.btnFixInfo.Location = new System.Drawing.Point(1009, 245);
             this.btnFixInfo.Name = "btnFixInfo";
             this.btnFixInfo.Size = new System.Drawing.Size(165, 38);
-            this.btnFixInfo.TabIndex = 12;
+            this.btnFixInfo.TabIndex = 19;
             this.btnFixInfo.Text = "Sữa thông tin";
             this.btnFixInfo.UseVisualStyleBackColor = true;
-            // 
-            // gbxInfoSlary
-            // 
-            this.gbxInfoSlary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbxInfoSlary.Controls.Add(this.txtIndexSalary);
-            this.gbxInfoSlary.Controls.Add(this.txtBasicSalary);
-            this.gbxInfoSlary.Controls.Add(this.lblIndexSalary);
-            this.gbxInfoSlary.Controls.Add(this.lblSalaryBasic);
-            this.gbxInfoSlary.Font = new System.Drawing.Font("Verdana", 8F);
-            this.gbxInfoSlary.Location = new System.Drawing.Point(35, 632);
-            this.gbxInfoSlary.Name = "gbxInfoSlary";
-            this.gbxInfoSlary.Size = new System.Drawing.Size(818, 163);
-            this.gbxInfoSlary.TabIndex = 10;
-            this.gbxInfoSlary.TabStop = false;
-            this.gbxInfoSlary.Text = "Thông tin lương";
-            // 
-            // txtIndexSalary
-            // 
-            this.txtIndexSalary.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtIndexSalary.Enabled = false;
-            this.txtIndexSalary.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtIndexSalary.Location = new System.Drawing.Point(339, 100);
-            this.txtIndexSalary.Name = "txtIndexSalary";
-            this.txtIndexSalary.Size = new System.Drawing.Size(410, 29);
-            this.txtIndexSalary.TabIndex = 2;
-            this.txtIndexSalary.Text = "4.2";
-            // 
-            // txtBasicSalary
-            // 
-            this.txtBasicSalary.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtBasicSalary.Enabled = false;
-            this.txtBasicSalary.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtBasicSalary.Location = new System.Drawing.Point(339, 34);
-            this.txtBasicSalary.Name = "txtBasicSalary";
-            this.txtBasicSalary.Size = new System.Drawing.Size(410, 29);
-            this.txtBasicSalary.TabIndex = 2;
-            this.txtBasicSalary.Text = "15.000.000 VNĐ";
-            // 
-            // lblIndexSalary
-            // 
-            this.lblIndexSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblIndexSalary.AutoSize = true;
-            this.lblIndexSalary.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblIndexSalary.Location = new System.Drawing.Point(22, 106);
-            this.lblIndexSalary.Name = "lblIndexSalary";
-            this.lblIndexSalary.Size = new System.Drawing.Size(131, 23);
-            this.lblIndexSalary.TabIndex = 1;
-            this.lblIndexSalary.Text = "Chỉ số lương";
-            // 
-            // lblSalaryBasic
-            // 
-            this.lblSalaryBasic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSalaryBasic.AutoSize = true;
-            this.lblSalaryBasic.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblSalaryBasic.Location = new System.Drawing.Point(22, 40);
-            this.lblSalaryBasic.Name = "lblSalaryBasic";
-            this.lblSalaryBasic.Size = new System.Drawing.Size(151, 23);
-            this.lblSalaryBasic.TabIndex = 1;
-            this.lblSalaryBasic.Text = "Lương căn bản";
             // 
             // gbxInfoWork
             // 
@@ -172,10 +107,10 @@ namespace QLLuongSanPham
             this.gbxInfoWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxInfoWork.Font = new System.Drawing.Font("Verdana", 8F);
             this.gbxInfoWork.ForeColor = System.Drawing.Color.Black;
-            this.gbxInfoWork.Location = new System.Drawing.Point(35, 287);
+            this.gbxInfoWork.Location = new System.Drawing.Point(37, 311);
             this.gbxInfoWork.Name = "gbxInfoWork";
             this.gbxInfoWork.Size = new System.Drawing.Size(818, 300);
-            this.gbxInfoWork.TabIndex = 9;
+            this.gbxInfoWork.TabIndex = 16;
             this.gbxInfoWork.TabStop = false;
             this.gbxInfoWork.Text = "Thông tin công việc";
             // 
@@ -305,10 +240,10 @@ namespace QLLuongSanPham
             this.gbxInfor.Controls.Add(this.lblSex);
             this.gbxInfor.Controls.Add(this.lblName);
             this.gbxInfor.Font = new System.Drawing.Font("Verdana", 8F);
-            this.gbxInfor.Location = new System.Drawing.Point(283, 13);
+            this.gbxInfor.Location = new System.Drawing.Point(285, 24);
             this.gbxInfor.Name = "gbxInfor";
             this.gbxInfor.Size = new System.Drawing.Size(889, 205);
-            this.gbxInfor.TabIndex = 8;
+            this.gbxInfor.TabIndex = 15;
             this.gbxInfor.TabStop = false;
             this.gbxInfor.Text = "Thông tin cá nhân";
             // 
@@ -446,41 +381,37 @@ namespace QLLuongSanPham
             this.lblRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.lblRole.Location = new System.Drawing.Point(32, 234);
+            this.lblRole.Location = new System.Drawing.Point(34, 245);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(181, 18);
-            this.lblRole.TabIndex = 7;
-            this.lblRole.Text = "Nhân viên hành chính";
+            this.lblRole.Size = new System.Drawing.Size(94, 18);
+            this.lblRole.TabIndex = 14;
+            this.lblRole.Text = "Công nhân";
             // 
             // picImage
             // 
             this.picImage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picImage.Location = new System.Drawing.Point(35, 26);
+            this.picImage.Location = new System.Drawing.Point(37, 37);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(221, 192);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImage.TabIndex = 6;
+            this.picImage.TabIndex = 13;
             this.picImage.TabStop = false;
             // 
-            // frmEmployeeAdministrative
+            // frmWorker
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1205, 809);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1208, 830);
             this.Controls.Add(this.btnFixPassWord);
             this.Controls.Add(this.btnFixInfo);
-            this.Controls.Add(this.gbxInfoSlary);
             this.Controls.Add(this.gbxInfoWork);
             this.Controls.Add(this.gbxInfor);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.picImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmEmployeeAdministrative";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
-            this.gbxInfoSlary.ResumeLayout(false);
-            this.gbxInfoSlary.PerformLayout();
+            this.Name = "frmWorker";
+            this.Text = "frmWorker";
             this.gbxInfoWork.ResumeLayout(false);
             this.gbxInfoWork.PerformLayout();
             this.gbxInfor.ResumeLayout(false);
@@ -495,11 +426,6 @@ namespace QLLuongSanPham
 
         private FontAwesome.Sharp.IconButton btnFixPassWord;
         private FontAwesome.Sharp.IconButton btnFixInfo;
-        private System.Windows.Forms.GroupBox gbxInfoSlary;
-        private System.Windows.Forms.TextBox txtIndexSalary;
-        private System.Windows.Forms.TextBox txtBasicSalary;
-        private System.Windows.Forms.Label lblIndexSalary;
-        private System.Windows.Forms.Label lblSalaryBasic;
         private System.Windows.Forms.GroupBox gbxInfoWork;
         private System.Windows.Forms.TextBox txtSeniority;
         private System.Windows.Forms.Label lblDateStart;

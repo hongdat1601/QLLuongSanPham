@@ -60,7 +60,7 @@ namespace QLLuongSanPham
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 846);
+            this.panelMenu.Size = new System.Drawing.Size(250, 811);
             this.panelMenu.TabIndex = 0;
             // 
             // btnExit
@@ -75,7 +75,7 @@ namespace QLLuongSanPham
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 32;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 785);
+            this.btnExit.Location = new System.Drawing.Point(0, 750);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnExit.Size = new System.Drawing.Size(250, 61);
@@ -217,7 +217,7 @@ namespace QLLuongSanPham
             this.panelTab.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTab.Location = new System.Drawing.Point(250, 0);
             this.panelTab.Name = "panelTab";
-            this.panelTab.Size = new System.Drawing.Size(974, 37);
+            this.panelTab.Size = new System.Drawing.Size(976, 37);
             this.panelTab.TabIndex = 1;
             this.panelTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTab_MouseDown);
             // 
@@ -230,7 +230,7 @@ namespace QLLuongSanPham
             this.btnHide.IconColor = System.Drawing.Color.Black;
             this.btnHide.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHide.IconSize = 20;
-            this.btnHide.Location = new System.Drawing.Point(850, 0);
+            this.btnHide.Location = new System.Drawing.Point(852, 0);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(41, 37);
             this.btnHide.TabIndex = 2;
@@ -245,7 +245,7 @@ namespace QLLuongSanPham
             this.btnShow.IconColor = System.Drawing.Color.Black;
             this.btnShow.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnShow.IconSize = 20;
-            this.btnShow.Location = new System.Drawing.Point(891, 0);
+            this.btnShow.Location = new System.Drawing.Point(893, 0);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(42, 37);
             this.btnShow.TabIndex = 1;
@@ -263,7 +263,7 @@ namespace QLLuongSanPham
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 60;
-            this.btnClose.Location = new System.Drawing.Point(933, 0);
+            this.btnClose.Location = new System.Drawing.Point(935, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(41, 37);
             this.btnClose.TabIndex = 0;
@@ -276,7 +276,7 @@ namespace QLLuongSanPham
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1224, 846);
+            this.ClientSize = new System.Drawing.Size(1226, 811);
             this.Controls.Add(this.panelTab);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -284,6 +284,7 @@ namespace QLLuongSanPham
             this.Name = "frmMainEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMainEmployee_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();

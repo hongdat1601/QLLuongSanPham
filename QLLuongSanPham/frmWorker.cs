@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLLuongSanPham
 {
-    public partial class frmEmployeeAdministrative : Form
+    public partial class frmWorker : Form
     {
-        public frmEmployeeAdministrative()
+        public frmWorker()
         {
             InitializeComponent();
         }
