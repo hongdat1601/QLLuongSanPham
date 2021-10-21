@@ -1,4 +1,4 @@
 # QLLuongSanPham
 
 ## REQUIREMENT
-- FontAweSome.Sharp (5.15.3)
+- FontAweSome.Sharp (ver 5.15.3)
