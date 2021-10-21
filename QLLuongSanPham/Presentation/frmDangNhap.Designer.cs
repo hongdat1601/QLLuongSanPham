@@ -91,6 +91,7 @@ namespace QLLuongSanPham.Presentation
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(323, 43);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.WordWrap = false;
             // 
             // label1
             // 
@@ -115,6 +116,7 @@ namespace QLLuongSanPham.Presentation
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(323, 43);
             this.txtPassword.TabIndex = 10;
+            this.txtPassword.WordWrap = false;
             // 
             // panel2
             // 
@@ -170,7 +172,7 @@ namespace QLLuongSanPham.Presentation
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // frmLogin
+            // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,7 +189,7 @@ namespace QLLuongSanPham.Presentation
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmLogin";
+            this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
