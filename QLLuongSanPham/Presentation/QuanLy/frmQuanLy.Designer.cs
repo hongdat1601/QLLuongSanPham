@@ -239,6 +239,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // pnlTinhLuong
             // 
@@ -318,6 +319,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTinhLuong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTinhLuong.UseVisualStyleBackColor = false;
+            this.btnTinhLuong.Click += new System.EventHandler(this.btnTinhLuong_Click);
             // 
             // pnlChamCong
             // 
@@ -397,6 +399,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnChamCong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChamCong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChamCong.UseVisualStyleBackColor = false;
+            this.btnChamCong.Click += new System.EventHandler(this.btnChamCong_Click);
             // 
             // pnlQLNhanSu
             // 
@@ -499,6 +502,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnQLNhanSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLNhanSu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLNhanSu.UseVisualStyleBackColor = false;
+            this.btnQLNhanSu.Click += new System.EventHandler(this.btnQLNhanSu_Click);
             // 
             // pnlQLSanPham
             // 
@@ -578,6 +582,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnQLSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLSanPham.UseVisualStyleBackColor = false;
+            this.btnQLSanPham.Click += new System.EventHandler(this.btnQLSanPham_Click);
             // 
             // btnLapHopDong
             // 
@@ -601,6 +606,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnLapHopDong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLapHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLapHopDong.UseVisualStyleBackColor = false;
+            this.btnLapHopDong.Click += new System.EventHandler(this.btnLapHopDong_Click);
             // 
             // btnQLPhongBan
             // 
@@ -624,6 +630,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnQLPhongBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLPhongBan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLPhongBan.UseVisualStyleBackColor = false;
+            this.btnQLPhongBan.Click += new System.EventHandler(this.btnQLPhongBan_Click);
             // 
             // btnTongQuan
             // 
@@ -647,6 +654,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnTongQuan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTongQuan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTongQuan.UseVisualStyleBackColor = false;
+            this.btnTongQuan.Click += new System.EventHandler(this.btnTongQuan_Click);
             // 
             // pnlInfo
             // 
