@@ -124,7 +124,11 @@ namespace QLLuongSanPham.Presentation.QuanLy
 
         private void btnQLPhongBan_Click(object sender, EventArgs e)
         {
-            FocusBtn((Button)sender);
+            if(!activeBtn.Equals(btnQLPhongBan))
+            {
+                FocusBtn((Button)sender);
+                OpenFormChild(new frmQLPhongBan());
+            }
         }
 
         private void btnLapHopDong_Click(object sender, EventArgs e)
