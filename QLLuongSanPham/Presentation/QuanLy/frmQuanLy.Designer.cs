@@ -32,26 +32,33 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.pnLeft = new System.Windows.Forms.Panel();
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pnlQLSanPham = new System.Windows.Forms.Panel();
-            this.btnCongDoan = new FontAwesome.Sharp.IconButton();
-            this.btnDSSanPham = new FontAwesome.Sharp.IconButton();
-            this.btnSanPham = new FontAwesome.Sharp.IconButton();
+            this.pnlThongKe = new System.Windows.Forms.Panel();
+            this.btnThongKeCT = new FontAwesome.Sharp.IconButton();
+            this.btnThongKeHC = new FontAwesome.Sharp.IconButton();
+            this.btnThongKeCN = new FontAwesome.Sharp.IconButton();
+            this.btnThongKe = new FontAwesome.Sharp.IconButton();
             this.pnlTinhLuong = new System.Windows.Forms.Panel();
-            this.btnTInhLuongHC = new FontAwesome.Sharp.IconButton();
+            this.btnTinhLuongHC = new FontAwesome.Sharp.IconButton();
             this.btnTinhLuongCN = new FontAwesome.Sharp.IconButton();
             this.btnTinhLuong = new FontAwesome.Sharp.IconButton();
             this.pnlChamCong = new System.Windows.Forms.Panel();
             this.btnChamCongHC = new FontAwesome.Sharp.IconButton();
             this.btnChamCongCN = new FontAwesome.Sharp.IconButton();
             this.btnChamCong = new FontAwesome.Sharp.IconButton();
-            this.btnQLPhongBan = new FontAwesome.Sharp.IconButton();
             this.pnlQLNhanSu = new System.Windows.Forms.Panel();
-            this.btnQLTrinhDoHV = new FontAwesome.Sharp.IconButton();
-            this.btnQLChucVu = new FontAwesome.Sharp.IconButton();
-            this.btnQLNhanVien = new FontAwesome.Sharp.IconButton();
+            this.btnQLNhanSuTD = new FontAwesome.Sharp.IconButton();
+            this.btnQLNhanSuCV = new FontAwesome.Sharp.IconButton();
+            this.btnQLNhanSuNV = new FontAwesome.Sharp.IconButton();
             this.btnQLNhanSu = new FontAwesome.Sharp.IconButton();
+            this.pnlQLSanPham = new System.Windows.Forms.Panel();
+            this.btnQLSanPhamCD = new FontAwesome.Sharp.IconButton();
+            this.btnQLSanPhamDS = new FontAwesome.Sharp.IconButton();
+            this.btnQLSanPham = new FontAwesome.Sharp.IconButton();
+            this.btnLapHopDong = new FontAwesome.Sharp.IconButton();
+            this.btnQLPhongBan = new FontAwesome.Sharp.IconButton();
             this.btnTongQuan = new FontAwesome.Sharp.IconButton();
             this.pnlInfo = new System.Windows.Forms.Panel();
+            this.btnChinhSuaTT = new System.Windows.Forms.Button();
             this.txtChucVu = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.pnlSeperate = new System.Windows.Forms.Panel();
@@ -60,23 +67,16 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.pnlControl = new System.Windows.Forms.Panel();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.btnLapHopDong = new FontAwesome.Sharp.IconButton();
-            this.btnThongKe = new FontAwesome.Sharp.IconButton();
-            this.pnlThongKe = new System.Windows.Forms.Panel();
-            this.btnThongKeCT = new FontAwesome.Sharp.IconButton();
-            this.btnThongKeHC = new FontAwesome.Sharp.IconButton();
-            this.btnThongKeCN = new FontAwesome.Sharp.IconButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnLeft.SuspendLayout();
             this.pnlMenu.SuspendLayout();
-            this.pnlQLSanPham.SuspendLayout();
+            this.pnlThongKe.SuspendLayout();
             this.pnlTinhLuong.SuspendLayout();
             this.pnlChamCong.SuspendLayout();
             this.pnlQLNhanSu.SuspendLayout();
+            this.pnlQLSanPham.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.pnlControl.SuspendLayout();
-            this.pnlThongKe.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnLeft
@@ -122,134 +122,160 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.pnlMenu.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlMenu.Controls.Add(this.pnlThongKe);
             this.pnlMenu.Controls.Add(this.btnThongKe);
-            this.pnlMenu.Controls.Add(this.btnLapHopDong);
-            this.pnlMenu.Controls.Add(this.pnlQLSanPham);
-            this.pnlMenu.Controls.Add(this.btnSanPham);
             this.pnlMenu.Controls.Add(this.pnlTinhLuong);
             this.pnlMenu.Controls.Add(this.btnTinhLuong);
             this.pnlMenu.Controls.Add(this.pnlChamCong);
             this.pnlMenu.Controls.Add(this.btnChamCong);
-            this.pnlMenu.Controls.Add(this.btnQLPhongBan);
             this.pnlMenu.Controls.Add(this.pnlQLNhanSu);
             this.pnlMenu.Controls.Add(this.btnQLNhanSu);
+            this.pnlMenu.Controls.Add(this.pnlQLSanPham);
+            this.pnlMenu.Controls.Add(this.btnQLSanPham);
+            this.pnlMenu.Controls.Add(this.btnLapHopDong);
+            this.pnlMenu.Controls.Add(this.btnQLPhongBan);
             this.pnlMenu.Controls.Add(this.btnTongQuan);
             this.pnlMenu.Location = new System.Drawing.Point(0, 354);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(317, 524);
+            this.pnlMenu.Size = new System.Drawing.Size(317, 562);
             this.pnlMenu.TabIndex = 2;
             // 
-            // pnlQLSanPham
+            // pnlThongKe
             // 
-            this.pnlQLSanPham.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlQLSanPham.Controls.Add(this.btnCongDoan);
-            this.pnlQLSanPham.Controls.Add(this.btnDSSanPham);
-            this.pnlQLSanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlQLSanPham.Location = new System.Drawing.Point(0, 839);
-            this.pnlQLSanPham.Name = "pnlQLSanPham";
-            this.pnlQLSanPham.Size = new System.Drawing.Size(296, 131);
-            this.pnlQLSanPham.TabIndex = 22;
+            this.pnlThongKe.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlThongKe.Controls.Add(this.btnThongKeCT);
+            this.pnlThongKe.Controls.Add(this.btnThongKeHC);
+            this.pnlThongKe.Controls.Add(this.btnThongKeCN);
+            this.pnlThongKe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlThongKe.Location = new System.Drawing.Point(0, 1093);
+            this.pnlThongKe.Name = "pnlThongKe";
+            this.pnlThongKe.Size = new System.Drawing.Size(296, 198);
+            this.pnlThongKe.TabIndex = 19;
             // 
-            // btnCongDoan
+            // btnThongKeCT
             // 
-            this.btnCongDoan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCongDoan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCongDoan.FlatAppearance.BorderSize = 0;
-            this.btnCongDoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCongDoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCongDoan.ForeColor = System.Drawing.Color.White;
-            this.btnCongDoan.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCongDoan.IconColor = System.Drawing.Color.White;
-            this.btnCongDoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCongDoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCongDoan.Location = new System.Drawing.Point(0, 63);
-            this.btnCongDoan.Name = "btnCongDoan";
-            this.btnCongDoan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCongDoan.Size = new System.Drawing.Size(296, 63);
-            this.btnCongDoan.TabIndex = 9;
-            this.btnCongDoan.Text = "Công Đoạn";
-            this.btnCongDoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCongDoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCongDoan.UseVisualStyleBackColor = true;
+            this.btnThongKeCT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKeCT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKeCT.FlatAppearance.BorderSize = 0;
+            this.btnThongKeCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKeCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeCT.ForeColor = System.Drawing.Color.White;
+            this.btnThongKeCT.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnThongKeCT.IconColor = System.Drawing.Color.White;
+            this.btnThongKeCT.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThongKeCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeCT.Location = new System.Drawing.Point(0, 126);
+            this.btnThongKeCT.Name = "btnThongKeCT";
+            this.btnThongKeCT.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnThongKeCT.Size = new System.Drawing.Size(296, 63);
+            this.btnThongKeCT.TabIndex = 10;
+            this.btnThongKeCT.Text = "Toàn Công Ty";
+            this.btnThongKeCT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeCT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThongKeCT.UseVisualStyleBackColor = true;
             // 
-            // btnDSSanPham
+            // btnThongKeHC
             // 
-            this.btnDSSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDSSanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDSSanPham.FlatAppearance.BorderSize = 0;
-            this.btnDSSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDSSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnDSSanPham.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnDSSanPham.IconColor = System.Drawing.Color.White;
-            this.btnDSSanPham.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDSSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSSanPham.Location = new System.Drawing.Point(0, 0);
-            this.btnDSSanPham.Name = "btnDSSanPham";
-            this.btnDSSanPham.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDSSanPham.Size = new System.Drawing.Size(296, 63);
-            this.btnDSSanPham.TabIndex = 8;
-            this.btnDSSanPham.Text = "Danh Sách Sản Phẩm";
-            this.btnDSSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDSSanPham.UseVisualStyleBackColor = true;
+            this.btnThongKeHC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKeHC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKeHC.FlatAppearance.BorderSize = 0;
+            this.btnThongKeHC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKeHC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeHC.ForeColor = System.Drawing.Color.White;
+            this.btnThongKeHC.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnThongKeHC.IconColor = System.Drawing.Color.White;
+            this.btnThongKeHC.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThongKeHC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeHC.Location = new System.Drawing.Point(0, 63);
+            this.btnThongKeHC.Name = "btnThongKeHC";
+            this.btnThongKeHC.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnThongKeHC.Size = new System.Drawing.Size(296, 63);
+            this.btnThongKeHC.TabIndex = 9;
+            this.btnThongKeHC.Text = "Hành Chánh";
+            this.btnThongKeHC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeHC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThongKeHC.UseVisualStyleBackColor = true;
             // 
-            // btnSanPham
+            // btnThongKeCN
             // 
-            this.btnSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSanPham.FlatAppearance.BorderSize = 0;
-            this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnSanPham.IconChar = FontAwesome.Sharp.IconChar.BoxOpen;
-            this.btnSanPham.IconColor = System.Drawing.Color.White;
-            this.btnSanPham.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.Location = new System.Drawing.Point(0, 776);
-            this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSanPham.Size = new System.Drawing.Size(296, 63);
-            this.btnSanPham.TabIndex = 21;
-            this.btnSanPham.Text = "Quản Lý Sản Phẩm";
-            this.btnSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSanPham.UseVisualStyleBackColor = true;
+            this.btnThongKeCN.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnThongKeCN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKeCN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKeCN.FlatAppearance.BorderSize = 0;
+            this.btnThongKeCN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKeCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeCN.ForeColor = System.Drawing.Color.White;
+            this.btnThongKeCN.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnThongKeCN.IconColor = System.Drawing.Color.White;
+            this.btnThongKeCN.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThongKeCN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeCN.Location = new System.Drawing.Point(0, 0);
+            this.btnThongKeCN.Name = "btnThongKeCN";
+            this.btnThongKeCN.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnThongKeCN.Size = new System.Drawing.Size(296, 63);
+            this.btnThongKeCN.TabIndex = 8;
+            this.btnThongKeCN.Text = "Công Nhân";
+            this.btnThongKeCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeCN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThongKeCN.UseVisualStyleBackColor = false;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKe.FlatAppearance.BorderSize = 0;
+            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
+            this.btnThongKe.IconColor = System.Drawing.Color.White;
+            this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(0, 1030);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnThongKe.Size = new System.Drawing.Size(296, 63);
+            this.btnThongKe.TabIndex = 18;
+            this.btnThongKe.Text = "Thống Kê Lương";
+            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThongKe.UseVisualStyleBackColor = false;
             // 
             // pnlTinhLuong
             // 
             this.pnlTinhLuong.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlTinhLuong.Controls.Add(this.btnTInhLuongHC);
+            this.pnlTinhLuong.Controls.Add(this.btnTinhLuongHC);
             this.pnlTinhLuong.Controls.Add(this.btnTinhLuongCN);
             this.pnlTinhLuong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTinhLuong.Location = new System.Drawing.Point(0, 642);
+            this.pnlTinhLuong.Location = new System.Drawing.Point(0, 898);
             this.pnlTinhLuong.Name = "pnlTinhLuong";
-            this.pnlTinhLuong.Size = new System.Drawing.Size(296, 134);
-            this.pnlTinhLuong.TabIndex = 20;
+            this.pnlTinhLuong.Size = new System.Drawing.Size(296, 132);
+            this.pnlTinhLuong.TabIndex = 17;
             // 
-            // btnTInhLuongHC
+            // btnTinhLuongHC
             // 
-            this.btnTInhLuongHC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTInhLuongHC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTInhLuongHC.FlatAppearance.BorderSize = 0;
-            this.btnTInhLuongHC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTInhLuongHC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTInhLuongHC.ForeColor = System.Drawing.Color.White;
-            this.btnTInhLuongHC.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTInhLuongHC.IconColor = System.Drawing.Color.White;
-            this.btnTInhLuongHC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTInhLuongHC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTInhLuongHC.Location = new System.Drawing.Point(0, 63);
-            this.btnTInhLuongHC.Name = "btnTInhLuongHC";
-            this.btnTInhLuongHC.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTInhLuongHC.Size = new System.Drawing.Size(296, 63);
-            this.btnTInhLuongHC.TabIndex = 9;
-            this.btnTInhLuongHC.Text = "Hành Chánh";
-            this.btnTInhLuongHC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTInhLuongHC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTInhLuongHC.UseVisualStyleBackColor = true;
+            this.btnTinhLuongHC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTinhLuongHC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTinhLuongHC.FlatAppearance.BorderSize = 0;
+            this.btnTinhLuongHC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTinhLuongHC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTinhLuongHC.ForeColor = System.Drawing.Color.White;
+            this.btnTinhLuongHC.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnTinhLuongHC.IconColor = System.Drawing.Color.White;
+            this.btnTinhLuongHC.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTinhLuongHC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTinhLuongHC.Location = new System.Drawing.Point(0, 63);
+            this.btnTinhLuongHC.Name = "btnTinhLuongHC";
+            this.btnTinhLuongHC.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTinhLuongHC.Size = new System.Drawing.Size(296, 63);
+            this.btnTinhLuongHC.TabIndex = 9;
+            this.btnTinhLuongHC.Text = "Hành Chánh";
+            this.btnTinhLuongHC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTinhLuongHC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTinhLuongHC.UseVisualStyleBackColor = true;
             // 
             // btnTinhLuongCN
             // 
+            this.btnTinhLuongCN.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTinhLuongCN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTinhLuongCN.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTinhLuongCN.FlatAppearance.BorderSize = 0;
@@ -265,13 +291,14 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnTinhLuongCN.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnTinhLuongCN.Size = new System.Drawing.Size(296, 63);
             this.btnTinhLuongCN.TabIndex = 8;
-            this.btnTinhLuongCN.Text = "Công nhân";
+            this.btnTinhLuongCN.Text = "Công Nhân";
             this.btnTinhLuongCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTinhLuongCN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTinhLuongCN.UseVisualStyleBackColor = true;
+            this.btnTinhLuongCN.UseVisualStyleBackColor = false;
             // 
             // btnTinhLuong
             // 
+            this.btnTinhLuong.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnTinhLuong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTinhLuong.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTinhLuong.FlatAppearance.BorderSize = 0;
@@ -282,15 +309,15 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnTinhLuong.IconColor = System.Drawing.Color.White;
             this.btnTinhLuong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTinhLuong.Location = new System.Drawing.Point(0, 579);
+            this.btnTinhLuong.Location = new System.Drawing.Point(0, 835);
             this.btnTinhLuong.Name = "btnTinhLuong";
             this.btnTinhLuong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnTinhLuong.Size = new System.Drawing.Size(296, 63);
-            this.btnTinhLuong.TabIndex = 19;
+            this.btnTinhLuong.TabIndex = 16;
             this.btnTinhLuong.Text = "Tính Lương";
             this.btnTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTinhLuong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTinhLuong.UseVisualStyleBackColor = true;
+            this.btnTinhLuong.UseVisualStyleBackColor = false;
             // 
             // pnlChamCong
             // 
@@ -298,10 +325,10 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.pnlChamCong.Controls.Add(this.btnChamCongHC);
             this.pnlChamCong.Controls.Add(this.btnChamCongCN);
             this.pnlChamCong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlChamCong.Location = new System.Drawing.Point(0, 445);
+            this.pnlChamCong.Location = new System.Drawing.Point(0, 703);
             this.pnlChamCong.Name = "pnlChamCong";
-            this.pnlChamCong.Size = new System.Drawing.Size(296, 134);
-            this.pnlChamCong.TabIndex = 14;
+            this.pnlChamCong.Size = new System.Drawing.Size(296, 132);
+            this.pnlChamCong.TabIndex = 15;
             // 
             // btnChamCongHC
             // 
@@ -327,6 +354,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // btnChamCongCN
             // 
+            this.btnChamCongCN.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnChamCongCN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChamCongCN.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChamCongCN.FlatAppearance.BorderSize = 0;
@@ -342,13 +370,14 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnChamCongCN.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnChamCongCN.Size = new System.Drawing.Size(296, 63);
             this.btnChamCongCN.TabIndex = 8;
-            this.btnChamCongCN.Text = "Công nhân";
+            this.btnChamCongCN.Text = "Công Nhân";
             this.btnChamCongCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChamCongCN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChamCongCN.UseVisualStyleBackColor = true;
+            this.btnChamCongCN.UseVisualStyleBackColor = false;
             // 
             // btnChamCong
             // 
+            this.btnChamCong.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnChamCong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChamCong.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChamCong.FlatAppearance.BorderSize = 0;
@@ -359,119 +388,98 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnChamCong.IconColor = System.Drawing.Color.White;
             this.btnChamCong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnChamCong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChamCong.Location = new System.Drawing.Point(0, 382);
+            this.btnChamCong.Location = new System.Drawing.Point(0, 640);
             this.btnChamCong.Name = "btnChamCong";
             this.btnChamCong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnChamCong.Size = new System.Drawing.Size(296, 63);
-            this.btnChamCong.TabIndex = 9;
+            this.btnChamCong.TabIndex = 14;
             this.btnChamCong.Text = "Chấm Công";
             this.btnChamCong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChamCong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChamCong.UseVisualStyleBackColor = true;
-            // 
-            // btnQLPhongBan
-            // 
-            this.btnQLPhongBan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLPhongBan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLPhongBan.FlatAppearance.BorderSize = 0;
-            this.btnQLPhongBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLPhongBan.ForeColor = System.Drawing.Color.White;
-            this.btnQLPhongBan.IconChar = FontAwesome.Sharp.IconChar.Building;
-            this.btnQLPhongBan.IconColor = System.Drawing.Color.White;
-            this.btnQLPhongBan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnQLPhongBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLPhongBan.Location = new System.Drawing.Point(0, 319);
-            this.btnQLPhongBan.Name = "btnQLPhongBan";
-            this.btnQLPhongBan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnQLPhongBan.Size = new System.Drawing.Size(296, 63);
-            this.btnQLPhongBan.TabIndex = 8;
-            this.btnQLPhongBan.Text = "Quản Lý Phòng Ban";
-            this.btnQLPhongBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLPhongBan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLPhongBan.UseVisualStyleBackColor = true;
+            this.btnChamCong.UseVisualStyleBackColor = false;
             // 
             // pnlQLNhanSu
             // 
             this.pnlQLNhanSu.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlQLNhanSu.Controls.Add(this.btnQLTrinhDoHV);
-            this.pnlQLNhanSu.Controls.Add(this.btnQLChucVu);
-            this.pnlQLNhanSu.Controls.Add(this.btnQLNhanVien);
+            this.pnlQLNhanSu.Controls.Add(this.btnQLNhanSuTD);
+            this.pnlQLNhanSu.Controls.Add(this.btnQLNhanSuCV);
+            this.pnlQLNhanSu.Controls.Add(this.btnQLNhanSuNV);
             this.pnlQLNhanSu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlQLNhanSu.Location = new System.Drawing.Point(0, 126);
+            this.pnlQLNhanSu.Location = new System.Drawing.Point(0, 447);
             this.pnlQLNhanSu.Name = "pnlQLNhanSu";
             this.pnlQLNhanSu.Size = new System.Drawing.Size(296, 193);
-            this.pnlQLNhanSu.TabIndex = 7;
+            this.pnlQLNhanSu.TabIndex = 13;
             // 
-            // btnQLTrinhDoHV
+            // btnQLNhanSuTD
             // 
-            this.btnQLTrinhDoHV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLTrinhDoHV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLTrinhDoHV.FlatAppearance.BorderSize = 0;
-            this.btnQLTrinhDoHV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLTrinhDoHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTrinhDoHV.ForeColor = System.Drawing.Color.White;
-            this.btnQLTrinhDoHV.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnQLTrinhDoHV.IconColor = System.Drawing.Color.White;
-            this.btnQLTrinhDoHV.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnQLTrinhDoHV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTrinhDoHV.Location = new System.Drawing.Point(0, 126);
-            this.btnQLTrinhDoHV.Name = "btnQLTrinhDoHV";
-            this.btnQLTrinhDoHV.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnQLTrinhDoHV.Size = new System.Drawing.Size(296, 63);
-            this.btnQLTrinhDoHV.TabIndex = 10;
-            this.btnQLTrinhDoHV.Text = "Trình Độ Học Vấn";
-            this.btnQLTrinhDoHV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTrinhDoHV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLTrinhDoHV.UseVisualStyleBackColor = true;
+            this.btnQLNhanSuTD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLNhanSuTD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLNhanSuTD.FlatAppearance.BorderSize = 0;
+            this.btnQLNhanSuTD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLNhanSuTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNhanSuTD.ForeColor = System.Drawing.Color.White;
+            this.btnQLNhanSuTD.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnQLNhanSuTD.IconColor = System.Drawing.Color.White;
+            this.btnQLNhanSuTD.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLNhanSuTD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLNhanSuTD.Location = new System.Drawing.Point(0, 126);
+            this.btnQLNhanSuTD.Name = "btnQLNhanSuTD";
+            this.btnQLNhanSuTD.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnQLNhanSuTD.Size = new System.Drawing.Size(296, 63);
+            this.btnQLNhanSuTD.TabIndex = 10;
+            this.btnQLNhanSuTD.Text = "Trình Độ Học Vấn";
+            this.btnQLNhanSuTD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLNhanSuTD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLNhanSuTD.UseVisualStyleBackColor = true;
             // 
-            // btnQLChucVu
+            // btnQLNhanSuCV
             // 
-            this.btnQLChucVu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLChucVu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLChucVu.FlatAppearance.BorderSize = 0;
-            this.btnQLChucVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLChucVu.ForeColor = System.Drawing.Color.White;
-            this.btnQLChucVu.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnQLChucVu.IconColor = System.Drawing.Color.White;
-            this.btnQLChucVu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnQLChucVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLChucVu.Location = new System.Drawing.Point(0, 63);
-            this.btnQLChucVu.Name = "btnQLChucVu";
-            this.btnQLChucVu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnQLChucVu.Size = new System.Drawing.Size(296, 63);
-            this.btnQLChucVu.TabIndex = 9;
-            this.btnQLChucVu.Text = "Chức vụ";
-            this.btnQLChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLChucVu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLChucVu.UseVisualStyleBackColor = true;
+            this.btnQLNhanSuCV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLNhanSuCV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLNhanSuCV.FlatAppearance.BorderSize = 0;
+            this.btnQLNhanSuCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLNhanSuCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNhanSuCV.ForeColor = System.Drawing.Color.White;
+            this.btnQLNhanSuCV.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnQLNhanSuCV.IconColor = System.Drawing.Color.White;
+            this.btnQLNhanSuCV.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLNhanSuCV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLNhanSuCV.Location = new System.Drawing.Point(0, 63);
+            this.btnQLNhanSuCV.Name = "btnQLNhanSuCV";
+            this.btnQLNhanSuCV.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnQLNhanSuCV.Size = new System.Drawing.Size(296, 63);
+            this.btnQLNhanSuCV.TabIndex = 9;
+            this.btnQLNhanSuCV.Text = "Chức vụ";
+            this.btnQLNhanSuCV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLNhanSuCV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLNhanSuCV.UseVisualStyleBackColor = true;
             // 
-            // btnQLNhanVien
+            // btnQLNhanSuNV
             // 
-            this.btnQLNhanVien.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnQLNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnQLNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnQLNhanVien.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnQLNhanVien.IconColor = System.Drawing.Color.White;
-            this.btnQLNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnQLNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLNhanVien.Location = new System.Drawing.Point(0, 0);
-            this.btnQLNhanVien.Name = "btnQLNhanVien";
-            this.btnQLNhanVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnQLNhanVien.Size = new System.Drawing.Size(296, 63);
-            this.btnQLNhanVien.TabIndex = 8;
-            this.btnQLNhanVien.Text = "Nhân viên";
-            this.btnQLNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLNhanVien.UseVisualStyleBackColor = false;
+            this.btnQLNhanSuNV.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnQLNhanSuNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLNhanSuNV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLNhanSuNV.FlatAppearance.BorderSize = 0;
+            this.btnQLNhanSuNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLNhanSuNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNhanSuNV.ForeColor = System.Drawing.Color.White;
+            this.btnQLNhanSuNV.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnQLNhanSuNV.IconColor = System.Drawing.Color.White;
+            this.btnQLNhanSuNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLNhanSuNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLNhanSuNV.Location = new System.Drawing.Point(0, 0);
+            this.btnQLNhanSuNV.Name = "btnQLNhanSuNV";
+            this.btnQLNhanSuNV.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnQLNhanSuNV.Size = new System.Drawing.Size(296, 63);
+            this.btnQLNhanSuNV.TabIndex = 8;
+            this.btnQLNhanSuNV.Text = "Nhân viên";
+            this.btnQLNhanSuNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLNhanSuNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLNhanSuNV.UseVisualStyleBackColor = false;
             // 
             // btnQLNhanSu
             // 
+            this.btnQLNhanSu.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnQLNhanSu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLNhanSu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLNhanSu.FlatAppearance.BorderSize = 0;
@@ -482,15 +490,140 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnQLNhanSu.IconColor = System.Drawing.Color.White;
             this.btnQLNhanSu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQLNhanSu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLNhanSu.Location = new System.Drawing.Point(0, 63);
+            this.btnQLNhanSu.Location = new System.Drawing.Point(0, 384);
             this.btnQLNhanSu.Name = "btnQLNhanSu";
             this.btnQLNhanSu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnQLNhanSu.Size = new System.Drawing.Size(296, 63);
-            this.btnQLNhanSu.TabIndex = 1;
+            this.btnQLNhanSu.TabIndex = 12;
             this.btnQLNhanSu.Text = "Quản Lý Nhân Sự";
             this.btnQLNhanSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLNhanSu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLNhanSu.UseVisualStyleBackColor = true;
+            this.btnQLNhanSu.UseVisualStyleBackColor = false;
+            // 
+            // pnlQLSanPham
+            // 
+            this.pnlQLSanPham.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlQLSanPham.Controls.Add(this.btnQLSanPhamCD);
+            this.pnlQLSanPham.Controls.Add(this.btnQLSanPhamDS);
+            this.pnlQLSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlQLSanPham.Location = new System.Drawing.Point(0, 252);
+            this.pnlQLSanPham.Name = "pnlQLSanPham";
+            this.pnlQLSanPham.Size = new System.Drawing.Size(296, 132);
+            this.pnlQLSanPham.TabIndex = 11;
+            // 
+            // btnQLSanPhamCD
+            // 
+            this.btnQLSanPhamCD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLSanPhamCD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLSanPhamCD.FlatAppearance.BorderSize = 0;
+            this.btnQLSanPhamCD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLSanPhamCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLSanPhamCD.ForeColor = System.Drawing.Color.White;
+            this.btnQLSanPhamCD.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnQLSanPhamCD.IconColor = System.Drawing.Color.White;
+            this.btnQLSanPhamCD.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLSanPhamCD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSanPhamCD.Location = new System.Drawing.Point(0, 63);
+            this.btnQLSanPhamCD.Name = "btnQLSanPhamCD";
+            this.btnQLSanPhamCD.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnQLSanPhamCD.Size = new System.Drawing.Size(296, 63);
+            this.btnQLSanPhamCD.TabIndex = 9;
+            this.btnQLSanPhamCD.Text = "Công Đoạn";
+            this.btnQLSanPhamCD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSanPhamCD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLSanPhamCD.UseVisualStyleBackColor = true;
+            // 
+            // btnQLSanPhamDS
+            // 
+            this.btnQLSanPhamDS.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnQLSanPhamDS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLSanPhamDS.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLSanPhamDS.FlatAppearance.BorderSize = 0;
+            this.btnQLSanPhamDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLSanPhamDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLSanPhamDS.ForeColor = System.Drawing.Color.White;
+            this.btnQLSanPhamDS.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnQLSanPhamDS.IconColor = System.Drawing.Color.White;
+            this.btnQLSanPhamDS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLSanPhamDS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSanPhamDS.Location = new System.Drawing.Point(0, 0);
+            this.btnQLSanPhamDS.Name = "btnQLSanPhamDS";
+            this.btnQLSanPhamDS.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnQLSanPhamDS.Size = new System.Drawing.Size(296, 63);
+            this.btnQLSanPhamDS.TabIndex = 8;
+            this.btnQLSanPhamDS.Text = "Danh Sách Sản Phẩm";
+            this.btnQLSanPhamDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSanPhamDS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLSanPhamDS.UseVisualStyleBackColor = false;
+            // 
+            // btnQLSanPham
+            // 
+            this.btnQLSanPham.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnQLSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLSanPham.FlatAppearance.BorderSize = 0;
+            this.btnQLSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnQLSanPham.IconChar = FontAwesome.Sharp.IconChar.BoxOpen;
+            this.btnQLSanPham.IconColor = System.Drawing.Color.White;
+            this.btnQLSanPham.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSanPham.Location = new System.Drawing.Point(0, 189);
+            this.btnQLSanPham.Name = "btnQLSanPham";
+            this.btnQLSanPham.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnQLSanPham.Size = new System.Drawing.Size(296, 63);
+            this.btnQLSanPham.TabIndex = 10;
+            this.btnQLSanPham.Text = "Quản Lý Sản Phẩm";
+            this.btnQLSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLSanPham.UseVisualStyleBackColor = false;
+            // 
+            // btnLapHopDong
+            // 
+            this.btnLapHopDong.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLapHopDong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLapHopDong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLapHopDong.FlatAppearance.BorderSize = 0;
+            this.btnLapHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLapHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLapHopDong.ForeColor = System.Drawing.Color.White;
+            this.btnLapHopDong.IconChar = FontAwesome.Sharp.IconChar.Handshake;
+            this.btnLapHopDong.IconColor = System.Drawing.Color.White;
+            this.btnLapHopDong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLapHopDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLapHopDong.Location = new System.Drawing.Point(0, 126);
+            this.btnLapHopDong.Name = "btnLapHopDong";
+            this.btnLapHopDong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLapHopDong.Size = new System.Drawing.Size(296, 63);
+            this.btnLapHopDong.TabIndex = 9;
+            this.btnLapHopDong.Text = "Lập Hợp Đồng";
+            this.btnLapHopDong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLapHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLapHopDong.UseVisualStyleBackColor = false;
+            // 
+            // btnQLPhongBan
+            // 
+            this.btnQLPhongBan.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnQLPhongBan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLPhongBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLPhongBan.FlatAppearance.BorderSize = 0;
+            this.btnQLPhongBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLPhongBan.ForeColor = System.Drawing.Color.White;
+            this.btnQLPhongBan.IconChar = FontAwesome.Sharp.IconChar.Building;
+            this.btnQLPhongBan.IconColor = System.Drawing.Color.White;
+            this.btnQLPhongBan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLPhongBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLPhongBan.Location = new System.Drawing.Point(0, 63);
+            this.btnQLPhongBan.Name = "btnQLPhongBan";
+            this.btnQLPhongBan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnQLPhongBan.Size = new System.Drawing.Size(296, 63);
+            this.btnQLPhongBan.TabIndex = 8;
+            this.btnQLPhongBan.Text = "Quản Lý Phòng Ban";
+            this.btnQLPhongBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLPhongBan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLPhongBan.UseVisualStyleBackColor = false;
             // 
             // btnTongQuan
             // 
@@ -518,7 +651,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // pnlInfo
             // 
             this.pnlInfo.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pnlInfo.Controls.Add(this.button1);
+            this.pnlInfo.Controls.Add(this.btnChinhSuaTT);
             this.pnlInfo.Controls.Add(this.txtChucVu);
             this.pnlInfo.Controls.Add(this.txtTen);
             this.pnlInfo.Controls.Add(this.pnlSeperate);
@@ -528,6 +661,19 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.pnlInfo.Name = "pnlInfo";
             this.pnlInfo.Size = new System.Drawing.Size(320, 348);
             this.pnlInfo.TabIndex = 1;
+            // 
+            // btnChinhSuaTT
+            // 
+            this.btnChinhSuaTT.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnChinhSuaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhSuaTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSuaTT.ForeColor = System.Drawing.Color.White;
+            this.btnChinhSuaTT.Location = new System.Drawing.Point(12, 274);
+            this.btnChinhSuaTT.Name = "btnChinhSuaTT";
+            this.btnChinhSuaTT.Size = new System.Drawing.Size(296, 48);
+            this.btnChinhSuaTT.TabIndex = 0;
+            this.btnChinhSuaTT.Text = "Chỉnh Sửa Thông Tin";
+            this.btnChinhSuaTT.UseVisualStyleBackColor = true;
             // 
             // txtChucVu
             // 
@@ -632,142 +778,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.pnlBody.Size = new System.Drawing.Size(1062, 1052);
             this.pnlBody.TabIndex = 4;
             // 
-            // btnLapHopDong
-            // 
-            this.btnLapHopDong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLapHopDong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLapHopDong.FlatAppearance.BorderSize = 0;
-            this.btnLapHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLapHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLapHopDong.ForeColor = System.Drawing.Color.White;
-            this.btnLapHopDong.IconChar = FontAwesome.Sharp.IconChar.Handshake;
-            this.btnLapHopDong.IconColor = System.Drawing.Color.White;
-            this.btnLapHopDong.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLapHopDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLapHopDong.Location = new System.Drawing.Point(0, 970);
-            this.btnLapHopDong.Name = "btnLapHopDong";
-            this.btnLapHopDong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLapHopDong.Size = new System.Drawing.Size(296, 63);
-            this.btnLapHopDong.TabIndex = 23;
-            this.btnLapHopDong.Text = "Lập Hợp Đồng";
-            this.btnLapHopDong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLapHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLapHopDong.UseVisualStyleBackColor = true;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKe.FlatAppearance.BorderSize = 0;
-            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
-            this.btnThongKe.IconColor = System.Drawing.Color.White;
-            this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 1033);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnThongKe.Size = new System.Drawing.Size(296, 63);
-            this.btnThongKe.TabIndex = 25;
-            this.btnThongKe.Text = "Thống Kê Lương";
-            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKe.UseVisualStyleBackColor = true;
-            // 
-            // pnlThongKe
-            // 
-            this.pnlThongKe.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlThongKe.Controls.Add(this.btnThongKeCT);
-            this.pnlThongKe.Controls.Add(this.btnThongKeHC);
-            this.pnlThongKe.Controls.Add(this.btnThongKeCN);
-            this.pnlThongKe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlThongKe.Location = new System.Drawing.Point(0, 1096);
-            this.pnlThongKe.Name = "pnlThongKe";
-            this.pnlThongKe.Size = new System.Drawing.Size(296, 196);
-            this.pnlThongKe.TabIndex = 26;
-            // 
-            // btnThongKeCT
-            // 
-            this.btnThongKeCT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKeCT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKeCT.FlatAppearance.BorderSize = 0;
-            this.btnThongKeCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeCT.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeCT.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnThongKeCT.IconColor = System.Drawing.Color.White;
-            this.btnThongKeCT.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongKeCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeCT.Location = new System.Drawing.Point(0, 126);
-            this.btnThongKeCT.Name = "btnThongKeCT";
-            this.btnThongKeCT.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnThongKeCT.Size = new System.Drawing.Size(296, 63);
-            this.btnThongKeCT.TabIndex = 10;
-            this.btnThongKeCT.Text = "Toàn Công Ty";
-            this.btnThongKeCT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeCT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKeCT.UseVisualStyleBackColor = true;
-            // 
-            // btnThongKeHC
-            // 
-            this.btnThongKeHC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKeHC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKeHC.FlatAppearance.BorderSize = 0;
-            this.btnThongKeHC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeHC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeHC.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeHC.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnThongKeHC.IconColor = System.Drawing.Color.White;
-            this.btnThongKeHC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongKeHC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeHC.Location = new System.Drawing.Point(0, 63);
-            this.btnThongKeHC.Name = "btnThongKeHC";
-            this.btnThongKeHC.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnThongKeHC.Size = new System.Drawing.Size(296, 63);
-            this.btnThongKeHC.TabIndex = 9;
-            this.btnThongKeHC.Text = "Hành Chánh";
-            this.btnThongKeHC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeHC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKeHC.UseVisualStyleBackColor = true;
-            // 
-            // btnThongKeCN
-            // 
-            this.btnThongKeCN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKeCN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKeCN.FlatAppearance.BorderSize = 0;
-            this.btnThongKeCN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeCN.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeCN.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnThongKeCN.IconColor = System.Drawing.Color.White;
-            this.btnThongKeCN.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongKeCN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeCN.Location = new System.Drawing.Point(0, 0);
-            this.btnThongKeCN.Name = "btnThongKeCN";
-            this.btnThongKeCN.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnThongKeCN.Size = new System.Drawing.Size(296, 63);
-            this.btnThongKeCN.TabIndex = 8;
-            this.btnThongKeCN.Text = "Công nhân";
-            this.btnThongKeCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeCN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKeCN.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(12, 274);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(296, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Chỉnh Sửa Thông Tin";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // frmManagement
+            // frmQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -777,20 +788,20 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.pnLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmManagement";
+            this.Name = "frmQuanLy";
             this.Text = "frmManagement";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnLeft.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
-            this.pnlQLSanPham.ResumeLayout(false);
+            this.pnlThongKe.ResumeLayout(false);
             this.pnlTinhLuong.ResumeLayout(false);
             this.pnlChamCong.ResumeLayout(false);
             this.pnlQLNhanSu.ResumeLayout(false);
+            this.pnlQLSanPham.ResumeLayout(false);
             this.pnlInfo.ResumeLayout(false);
             this.pnlInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.pnlControl.ResumeLayout(false);
-            this.pnlThongKe.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -801,7 +812,6 @@ namespace QLLuongSanPham.Presentation.QuanLy
         private System.Windows.Forms.Panel pnlInfo;
         private FontAwesome.Sharp.IconPictureBox picAvatar;
         private System.Windows.Forms.Panel pnlMenu;
-        private FontAwesome.Sharp.IconButton btnQLNhanSu;
         private FontAwesome.Sharp.IconButton btnTongQuan;
         private System.Windows.Forms.Panel pnlSeperate;
         private System.Windows.Forms.TextBox txtChucVu;
@@ -809,31 +819,32 @@ namespace QLLuongSanPham.Presentation.QuanLy
         private FontAwesome.Sharp.IconButton btnThoat;
         private System.Windows.Forms.Panel pnlControl;
         private System.Windows.Forms.Panel pnlBody;
-        private System.Windows.Forms.Panel pnlQLNhanSu;
-        private FontAwesome.Sharp.IconButton btnQLNhanVien;
-        private FontAwesome.Sharp.IconButton btnQLPhongBan;
-        private FontAwesome.Sharp.IconButton btnQLChucVu;
-        private FontAwesome.Sharp.IconButton btnChamCong;
-        private FontAwesome.Sharp.IconButton btnQLTrinhDoHV;
         private FontAwesome.Sharp.IconButton btnDangXuat;
+        private FontAwesome.Sharp.IconButton btnHelp;
+        private System.Windows.Forms.Button btnChinhSuaTT;
+        private FontAwesome.Sharp.IconButton btnQLPhongBan;
+        private FontAwesome.Sharp.IconButton btnLapHopDong;
+        private FontAwesome.Sharp.IconButton btnQLSanPham;
         private System.Windows.Forms.Panel pnlQLSanPham;
-        private FontAwesome.Sharp.IconButton btnCongDoan;
-        private FontAwesome.Sharp.IconButton btnDSSanPham;
-        private FontAwesome.Sharp.IconButton btnSanPham;
-        private System.Windows.Forms.Panel pnlTinhLuong;
-        private FontAwesome.Sharp.IconButton btnTInhLuongHC;
-        private FontAwesome.Sharp.IconButton btnTinhLuongCN;
+        private FontAwesome.Sharp.IconButton btnQLSanPhamCD;
+        private FontAwesome.Sharp.IconButton btnQLSanPhamDS;
+        private FontAwesome.Sharp.IconButton btnQLNhanSu;
+        private System.Windows.Forms.Panel pnlQLNhanSu;
+        private FontAwesome.Sharp.IconButton btnQLNhanSuTD;
+        private FontAwesome.Sharp.IconButton btnQLNhanSuCV;
+        private FontAwesome.Sharp.IconButton btnQLNhanSuNV;
+        private FontAwesome.Sharp.IconButton btnChamCong;
         private FontAwesome.Sharp.IconButton btnTinhLuong;
         private System.Windows.Forms.Panel pnlChamCong;
         private FontAwesome.Sharp.IconButton btnChamCongHC;
         private FontAwesome.Sharp.IconButton btnChamCongCN;
-        private FontAwesome.Sharp.IconButton btnHelp;
-        private FontAwesome.Sharp.IconButton btnLapHopDong;
+        private System.Windows.Forms.Panel pnlTinhLuong;
+        private FontAwesome.Sharp.IconButton btnTinhLuongHC;
+        private FontAwesome.Sharp.IconButton btnTinhLuongCN;
         private System.Windows.Forms.Panel pnlThongKe;
         private FontAwesome.Sharp.IconButton btnThongKeCT;
         private FontAwesome.Sharp.IconButton btnThongKeHC;
         private FontAwesome.Sharp.IconButton btnThongKeCN;
         private FontAwesome.Sharp.IconButton btnThongKe;
-        private System.Windows.Forms.Button button1;
     }
 }
