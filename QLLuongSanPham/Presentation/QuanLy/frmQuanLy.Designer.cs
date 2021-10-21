@@ -791,6 +791,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.Name = "frmQuanLy";
             this.Text = "frmManagement";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmQuanLy_Load);
             this.pnLeft.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             this.pnlThongKe.ResumeLayout(false);

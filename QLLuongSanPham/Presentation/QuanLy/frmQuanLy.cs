@@ -12,9 +12,29 @@ namespace QLLuongSanPham.Presentation.QuanLy
 {
     public partial class frmQuanLy : Form
     {
+        private Form activeForm = null;
+
         public frmQuanLy()
         {
             InitializeComponent();
+        }
+
+
+        private void OpenFormChild(Form formChild)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = formChild;
+            formChild.TopLevel = false;
+            formChild.Dock = DockStyle.Fill;
+
+            pnlBody.Controls.Add(activeForm);
+            activeForm.BringToFront();
+            activeForm.Show();
+
         }
 
         #region Event
@@ -42,5 +62,10 @@ namespace QLLuongSanPham.Presentation.QuanLy
         }
 
         #endregion
+
+        private void frmQuanLy_Load(object sender, EventArgs e)
+        {
+            OpenFormChild(new frmTongQuan());
+        }
     }
 }
