@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLuongSanPham
+namespace QLLuongSanPham.Presentation
 {
     public partial class frmDangNhap : Form
     {
