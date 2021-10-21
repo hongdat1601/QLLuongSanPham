@@ -1,5 +1,5 @@
 ﻿
-namespace QLLuongSanPham
+namespace QLLuongSanPham.Presentation
 {
     partial class frmDangNhap
     {
