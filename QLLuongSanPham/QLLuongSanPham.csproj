@@ -49,6 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEmployeeAdministrative .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeAdministrative .Designer.cs">
+      <DependentUpon>frmEmployeeAdministrative .cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainEmployee.Designer.cs">
+      <DependentUpon>frmMainEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
     <Compile Include="Constant.cs" />
     <Compile Include="Presentation\frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -74,8 +87,22 @@
     <Compile Include="Presentation\QuanLy\frmTongQuan.Designer.cs">
       <DependentUpon>frmTongQuan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorker.Designer.cs">
+      <DependentUpon>frmWorker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmEmployeeAdministrative .resx">
+      <DependentUpon>frmEmployeeAdministrative .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainEmployee.resx">
+      <DependentUpon>frmMainEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     <EmbeddedResource Include="Presentation\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\QuanLy\frmTongQuan.resx">
       <DependentUpon>frmTongQuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorker.resx">
+      <DependentUpon>frmWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
