@@ -1,5 +1,5 @@
 ﻿
-namespace QLLuongSanPham
+namespace QLLuongSanPham.Presentation.NhanVien
 {
     partial class frmMainEmployee
     {

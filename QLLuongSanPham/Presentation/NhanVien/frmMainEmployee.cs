@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace QLLuongSanPham
+namespace QLLuongSanPham.Presentation.NhanVien
 {
     public partial class frmMainEmployee : Form
     {
