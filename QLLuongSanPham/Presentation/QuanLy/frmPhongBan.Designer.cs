@@ -166,9 +166,9 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lvwPhongBan.HideSelection = false;
-            this.lvwPhongBan.Location = new System.Drawing.Point(7, 46);
+            this.lvwPhongBan.Location = new System.Drawing.Point(7, 29);
             this.lvwPhongBan.Name = "lvwPhongBan";
-            this.lvwPhongBan.Size = new System.Drawing.Size(689, 269);
+            this.lvwPhongBan.Size = new System.Drawing.Size(689, 286);
             this.lvwPhongBan.TabIndex = 0;
             this.lvwPhongBan.UseCompatibleStateImageBehavior = false;
             // 
@@ -316,7 +316,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
             // 
-            // frmQLPhongBan
+            // frmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -330,7 +330,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmQLPhongBan";
+            this.Name = "frmPhongBan";
             this.Text = "frmQLPhongBan";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -108,36 +108,134 @@ namespace QLLuongSanPham.Presentation.QuanLy
                 this.Close();
             }
         }
+
+        private void btnClick(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            if (btn.Equals(btnThongKe))
+            {
+                FocusBtn(btnThongKe);
+                ToggleMenu(pnlThongKe);
+            }
+            else if (btn.Equals(btnCapNhat))
+            {
+                FocusBtn(btnCapNhat);
+                ToggleMenu(pnlCapNhat);
+            }
+            else if (btn.Equals(btnXuLy))
+            {
+                FocusBtn(btnXuLy);
+                ToggleMenu(pnlXuLy);
+            }
+            else if (btn.Equals(btnTimKiem))
+            {
+                FocusBtn(btnTimKiem);
+                ToggleMenu(pnlTimKiem);
+            }
+            else
+            {
+                FocusBtn(btnDanhMuc);
+                ToggleMenu(pnlDanhMuc);
+            }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnXuLyTinhLuong_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXuLyChamCong_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXuLyPhanCa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThongKeHC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHopDong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPhongBan_Click(object sender, EventArgs e)
+        {
+            OpenFormChild(new frmPhongBan());
+        }
+
+        private void btnCaLam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCongDoan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXuLyChamCong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXuLyTinhLuong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiemNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiemSP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiemPB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiemHD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThongKeSP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThongKeCT_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            FocusBtn(btnThongKe);
-            ToggleMenu(pnlThongKe);
-        }
-
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-            FocusBtn(btnCapNhat);
-            ToggleMenu(pnlCapNhat);
-        }
-
-        private void btnXuLy_Click(object sender, EventArgs e)
-        {
-            FocusBtn(btnXuLy);
-            ToggleMenu(pnlXuLy);
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            FocusBtn(btnTimKiem);
-            ToggleMenu(pnlTimKiem);
-        }
-
-        private void btnDanhMuc_Click(object sender, EventArgs e)
-        {
-            FocusBtn(btnDanhMuc);
-            ToggleMenu(pnlDanhMuc);
-        }
     }
 }
