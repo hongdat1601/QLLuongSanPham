@@ -1,7 +1,7 @@
 ﻿
 namespace QLLuongSanPham.Presentation.QuanLy
 {
-    partial class frmQLPhongBan
+    partial class frmPhongBan
     {
         /// <summary>
         /// Required designer variable.
@@ -32,25 +32,25 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPos = new System.Windows.Forms.TextBox();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrev = new System.Windows.Forms.Button();
+            this.btnFirst = new System.Windows.Forms.Button();
+            this.btnLast = new System.Windows.Forms.Button();
+            this.lvwPhongBan = new System.Windows.Forms.ListView();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtTenPhongBan = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtQuanLy = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtNgayTL = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtQuanLy = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTenPhongBan = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.lvwPhongBan = new System.Windows.Forms.ListView();
-            this.btnLast = new System.Windows.Forms.Button();
-            this.btnFirst = new System.Windows.Forms.Button();
-            this.btnPrev = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.txtPos = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1513, 110);
             this.label1.TabIndex = 0;
-            this.label1.Text = "QUẢN LÝ PHÒNG BAN";
+            this.label1.Text = "PHÒNG BAN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTimKiem
@@ -96,6 +96,81 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phòng ban";
+            // 
+            // txtPos
+            // 
+            this.txtPos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPos.Location = new System.Drawing.Point(277, 325);
+            this.txtPos.Multiline = true;
+            this.txtPos.Name = "txtPos";
+            this.txtPos.Size = new System.Drawing.Size(149, 45);
+            this.txtPos.TabIndex = 8;
+            this.txtPos.Text = "0";
+            this.txtPos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNext.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(432, 325);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(129, 45);
+            this.btnNext.TabIndex = 11;
+            this.btnNext.Text = ">";
+            this.btnNext.UseVisualStyleBackColor = false;
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrev.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrev.ForeColor = System.Drawing.Color.White;
+            this.btnPrev.Location = new System.Drawing.Point(142, 325);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(129, 45);
+            this.btnPrev.TabIndex = 10;
+            this.btnPrev.Text = "<";
+            this.btnPrev.UseVisualStyleBackColor = false;
+            // 
+            // btnFirst
+            // 
+            this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFirst.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFirst.ForeColor = System.Drawing.Color.White;
+            this.btnFirst.Location = new System.Drawing.Point(7, 325);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(129, 45);
+            this.btnFirst.TabIndex = 9;
+            this.btnFirst.Text = "<<";
+            this.btnFirst.UseVisualStyleBackColor = false;
+            // 
+            // btnLast
+            // 
+            this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLast.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLast.ForeColor = System.Drawing.Color.White;
+            this.btnLast.Location = new System.Drawing.Point(567, 325);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(129, 45);
+            this.btnLast.TabIndex = 8;
+            this.btnLast.Text = ">>";
+            this.btnLast.UseVisualStyleBackColor = false;
+            // 
+            // lvwPhongBan
+            // 
+            this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lvwPhongBan.HideSelection = false;
+            this.lvwPhongBan.Location = new System.Drawing.Point(7, 46);
+            this.lvwPhongBan.Name = "lvwPhongBan";
+            this.lvwPhongBan.Size = new System.Drawing.Size(689, 269);
+            this.lvwPhongBan.TabIndex = 0;
+            this.lvwPhongBan.UseCompatibleStateImageBehavior = false;
             // 
             // btnTimKiem
             // 
@@ -129,43 +204,24 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin phòng ban";
             // 
-            // label2
+            // txtNgayTL
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ID: ";
+            this.txtNgayTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayTL.Location = new System.Drawing.Point(235, 268);
+            this.txtNgayTL.Multiline = true;
+            this.txtNgayTL.Name = "txtNgayTL";
+            this.txtNgayTL.Size = new System.Drawing.Size(466, 47);
+            this.txtNgayTL.TabIndex = 7;
+            this.txtNgayTL.WordWrap = false;
             // 
-            // txtID
+            // label5
             // 
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(235, 58);
-            this.txtID.Multiline = true;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(466, 47);
-            this.txtID.TabIndex = 1;
-            this.txtID.WordWrap = false;
-            // 
-            // txtTenPhongBan
-            // 
-            this.txtTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenPhongBan.Location = new System.Drawing.Point(235, 128);
-            this.txtTenPhongBan.Multiline = true;
-            this.txtTenPhongBan.Name = "txtTenPhongBan";
-            this.txtTenPhongBan.Size = new System.Drawing.Size(466, 47);
-            this.txtTenPhongBan.TabIndex = 3;
-            this.txtTenPhongBan.WordWrap = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 139);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tên Phòng Ban:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 279);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 25);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Ngày Thành Lập:";
             // 
             // txtQuanLy
             // 
@@ -186,24 +242,43 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.label4.TabIndex = 4;
             this.label4.Text = "Người Quản Lý:";
             // 
-            // txtNgayTL
+            // txtTenPhongBan
             // 
-            this.txtNgayTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayTL.Location = new System.Drawing.Point(235, 268);
-            this.txtNgayTL.Multiline = true;
-            this.txtNgayTL.Name = "txtNgayTL";
-            this.txtNgayTL.Size = new System.Drawing.Size(466, 47);
-            this.txtNgayTL.TabIndex = 7;
-            this.txtNgayTL.WordWrap = false;
+            this.txtTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenPhongBan.Location = new System.Drawing.Point(235, 128);
+            this.txtTenPhongBan.Multiline = true;
+            this.txtTenPhongBan.Name = "txtTenPhongBan";
+            this.txtTenPhongBan.Size = new System.Drawing.Size(466, 47);
+            this.txtTenPhongBan.TabIndex = 3;
+            this.txtTenPhongBan.WordWrap = false;
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 279);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 25);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Ngày Thành Lập:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(45, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(169, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tên Phòng Ban:";
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(235, 58);
+            this.txtID.Multiline = true;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(466, 47);
+            this.txtID.TabIndex = 1;
+            this.txtID.WordWrap = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(168, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ID: ";
             // 
             // btnSua
             // 
@@ -240,81 +315,6 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // lvwPhongBan
-            // 
-            this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lvwPhongBan.HideSelection = false;
-            this.lvwPhongBan.Location = new System.Drawing.Point(7, 46);
-            this.lvwPhongBan.Name = "lvwPhongBan";
-            this.lvwPhongBan.Size = new System.Drawing.Size(689, 269);
-            this.lvwPhongBan.TabIndex = 0;
-            this.lvwPhongBan.UseCompatibleStateImageBehavior = false;
-            // 
-            // btnLast
-            // 
-            this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLast.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLast.ForeColor = System.Drawing.Color.White;
-            this.btnLast.Location = new System.Drawing.Point(567, 325);
-            this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(129, 45);
-            this.btnLast.TabIndex = 8;
-            this.btnLast.Text = ">>";
-            this.btnLast.UseVisualStyleBackColor = false;
-            // 
-            // btnFirst
-            // 
-            this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnFirst.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFirst.ForeColor = System.Drawing.Color.White;
-            this.btnFirst.Location = new System.Drawing.Point(7, 325);
-            this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(129, 45);
-            this.btnFirst.TabIndex = 9;
-            this.btnFirst.Text = "<<";
-            this.btnFirst.UseVisualStyleBackColor = false;
-            // 
-            // btnPrev
-            // 
-            this.btnPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPrev.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrev.ForeColor = System.Drawing.Color.White;
-            this.btnPrev.Location = new System.Drawing.Point(142, 325);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(129, 45);
-            this.btnPrev.TabIndex = 10;
-            this.btnPrev.Text = "<";
-            this.btnPrev.UseVisualStyleBackColor = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNext.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(432, 325);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(129, 45);
-            this.btnNext.TabIndex = 11;
-            this.btnNext.Text = ">";
-            this.btnNext.UseVisualStyleBackColor = false;
-            // 
-            // txtPos
-            // 
-            this.txtPos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPos.Location = new System.Drawing.Point(277, 325);
-            this.txtPos.Multiline = true;
-            this.txtPos.Name = "txtPos";
-            this.txtPos.Size = new System.Drawing.Size(149, 45);
-            this.txtPos.TabIndex = 8;
-            this.txtPos.Text = "0";
-            this.txtPos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmQLPhongBan
             // 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLLuongSanPham.Presentation.QuanLy
 {
-    public partial class frmQLPhongBan : Form
+    public partial class frmPhongBan : Form
     {
-        public frmQLPhongBan()
+        public frmPhongBan()
         {
             InitializeComponent();
         }

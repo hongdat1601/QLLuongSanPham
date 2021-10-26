@@ -31,10 +31,10 @@ namespace QLLuongSanPham.Presentation.QuanLy
         {
             this.lblNgay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblSLHopDong = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblSLHopDong = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblSLSanPham = new System.Windows.Forms.Label();
@@ -97,6 +97,35 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.panel1.Size = new System.Drawing.Size(331, 136);
             this.panel1.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gold;
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(13, 129);
+            this.panel2.TabIndex = 3;
+            // 
+            // lblSLHopDong
+            // 
+            this.lblSLHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSLHopDong.Location = new System.Drawing.Point(23, 54);
+            this.lblSLHopDong.Name = "lblSLHopDong";
+            this.lblSLHopDong.Size = new System.Drawing.Size(227, 37);
+            this.lblSLHopDong.TabIndex = 2;
+            this.lblSLHopDong.Text = "7";
+            this.lblSLHopDong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(23, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(227, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Số Lượng Hợp Đồng";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -111,35 +140,6 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(23, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Số Lượng Hợp Đồng";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblSLHopDong
-            // 
-            this.lblSLHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSLHopDong.Location = new System.Drawing.Point(23, 54);
-            this.lblSLHopDong.Name = "lblSLHopDong";
-            this.lblSLHopDong.Size = new System.Drawing.Size(227, 37);
-            this.lblSLHopDong.TabIndex = 2;
-            this.lblSLHopDong.Text = "7";
-            this.lblSLHopDong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gold;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(13, 129);
-            this.panel2.TabIndex = 3;
             // 
             // panel3
             // 
@@ -329,9 +329,9 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 54);
+            this.listView1.Location = new System.Drawing.Point(7, 29);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(709, 372);
+            this.listView1.Size = new System.Drawing.Size(709, 397);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -353,9 +353,9 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(7, 54);
+            this.listView2.Location = new System.Drawing.Point(7, 29);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(709, 181);
+            this.listView2.Size = new System.Drawing.Size(709, 206);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -379,9 +379,9 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.listView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(7, 54);
+            this.listView3.Location = new System.Drawing.Point(7, 29);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(317, 106);
+            this.listView3.Size = new System.Drawing.Size(317, 131);
             this.listView3.TabIndex = 0;
             this.listView3.UseCompatibleStateImageBehavior = false;
             // 
@@ -405,9 +405,9 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.listView4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(7, 54);
+            this.listView4.Location = new System.Drawing.Point(7, 29);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(317, 106);
+            this.listView4.Size = new System.Drawing.Size(317, 131);
             this.listView4.TabIndex = 0;
             this.listView4.UseCompatibleStateImageBehavior = false;
             // 

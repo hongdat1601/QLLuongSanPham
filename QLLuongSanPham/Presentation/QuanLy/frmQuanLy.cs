@@ -41,15 +41,11 @@ namespace QLLuongSanPham.Presentation.QuanLy
 
         private void SettingDefault()
         {
-            pnlChamCong.Visible = false;
-            pnlQLNhanSu.Visible = false;
-            pnlQLSanPham.Visible = false;
+            pnlDanhMuc.Visible = false;
+            pnlCapNhat.Visible = false;
+            pnlXuLy.Visible = false;
+            pnlTimKiem.Visible = false;
             pnlThongKe.Visible = false;
-            pnlTinhLuong.Visible = false;
-
-            btnTongQuan.Focus();
-            FocusBtn(btnTongQuan);
-            activeBtn = btnTongQuan;
             OpenFormChild(new frmTongQuan());
         }
 
@@ -63,7 +59,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             activeBtn.BackColor = (Color)Constant.Colors["btnFocus"];
         }
 
-        private void ToggleSubMenu(Panel pnl)
+        private void ToggleMenu(Panel pnl)
         {
             if(activePnl == null)
             {
@@ -112,60 +108,36 @@ namespace QLLuongSanPham.Presentation.QuanLy
                 this.Close();
             }
         }
-
-        private void btnTongQuan_Click(object sender, EventArgs e)
-        {
-            if (!activeBtn.Equals(btnTongQuan))
-            {
-                FocusBtn((Button)sender);
-                OpenFormChild(new frmTongQuan());
-            }
-        }
-
-        private void btnQLPhongBan_Click(object sender, EventArgs e)
-        {
-            if(!activeBtn.Equals(btnQLPhongBan))
-            {
-                FocusBtn((Button)sender);
-                OpenFormChild(new frmQLPhongBan());
-            }
-        }
-
-        private void btnLapHopDong_Click(object sender, EventArgs e)
-        {
-            FocusBtn((Button)sender);
-        }
-
-        private void btnQLSanPham_Click(object sender, EventArgs e)
-        {
-            FocusBtn((Button)sender);
-            ToggleSubMenu(pnlQLSanPham);
-        }
-
-        private void btnQLNhanSu_Click(object sender, EventArgs e)
-        {
-            FocusBtn((Button)sender);
-            ToggleSubMenu(pnlQLNhanSu);
-        }
-
-        private void btnChamCong_Click(object sender, EventArgs e)
-        {
-            FocusBtn((Button)sender);
-            ToggleSubMenu(pnlChamCong);
-        }
-
-        private void btnTinhLuong_Click(object sender, EventArgs e)
-        {
-            FocusBtn((Button)sender);
-            ToggleSubMenu(pnlTinhLuong);
-        }
+        #endregion
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            FocusBtn((Button)sender);
-            ToggleSubMenu(pnlThongKe);
+            FocusBtn(btnThongKe);
+            ToggleMenu(pnlThongKe);
         }
-        #endregion
 
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            FocusBtn(btnCapNhat);
+            ToggleMenu(pnlCapNhat);
+        }
+
+        private void btnXuLy_Click(object sender, EventArgs e)
+        {
+            FocusBtn(btnXuLy);
+            ToggleMenu(pnlXuLy);
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            FocusBtn(btnTimKiem);
+            ToggleMenu(pnlTimKiem);
+        }
+
+        private void btnDanhMuc_Click(object sender, EventArgs e)
+        {
+            FocusBtn(btnDanhMuc);
+            ToggleMenu(pnlDanhMuc);
+        }
     }
 }
