@@ -51,13 +51,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label8 = new System.Windows.Forms.Label();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvwNhanVien = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.lvwPhongBan = new System.Windows.Forms.ListView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.lvwSanPham = new System.Windows.Forms.ListView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.lvwHopDong = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -311,10 +311,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.lvwNhanVien);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 299);
@@ -324,21 +324,21 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Nhân Viên";
             // 
-            // listView1
+            // lvwNhanVien
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lvwNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 29);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(709, 397);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvwNhanVien.HideSelection = false;
+            this.lvwNhanVien.Location = new System.Drawing.Point(7, 29);
+            this.lvwNhanVien.Name = "lvwNhanVien";
+            this.lvwNhanVien.Size = new System.Drawing.Size(709, 397);
+            this.lvwNhanVien.TabIndex = 0;
+            this.lvwNhanVien.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.LimeGreen;
-            this.groupBox2.Controls.Add(this.listView2);
+            this.groupBox2.Controls.Add(this.lvwPhongBan);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(796, 299);
@@ -348,23 +348,23 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Phòng Ban";
             // 
-            // listView2
+            // lvwPhongBan
             // 
-            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(7, 29);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(709, 206);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.lvwPhongBan.HideSelection = false;
+            this.lvwPhongBan.Location = new System.Drawing.Point(7, 29);
+            this.lvwPhongBan.Name = "lvwPhongBan";
+            this.lvwPhongBan.Size = new System.Drawing.Size(709, 206);
+            this.lvwPhongBan.TabIndex = 0;
+            this.lvwPhongBan.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.groupBox3.Controls.Add(this.listView3);
+            this.groupBox3.Controls.Add(this.lvwSanPham);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(794, 559);
@@ -374,23 +374,23 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Sách Sản Phẩm";
             // 
-            // listView3
+            // lvwSanPham
             // 
-            this.listView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lvwSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(7, 29);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(317, 131);
-            this.listView3.TabIndex = 0;
-            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.lvwSanPham.HideSelection = false;
+            this.lvwSanPham.Location = new System.Drawing.Point(7, 29);
+            this.lvwSanPham.Name = "lvwSanPham";
+            this.lvwSanPham.Size = new System.Drawing.Size(317, 131);
+            this.lvwSanPham.TabIndex = 0;
+            this.lvwSanPham.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox4.BackColor = System.Drawing.Color.Gold;
-            this.groupBox4.Controls.Add(this.listView4);
+            this.groupBox4.Controls.Add(this.lvwHopDong);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(1188, 559);
@@ -400,16 +400,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh Sách Hợp Đồng";
             // 
-            // listView4
+            // lvwHopDong
             // 
-            this.listView4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lvwHopDong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(7, 29);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(317, 131);
-            this.listView4.TabIndex = 0;
-            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.lvwHopDong.HideSelection = false;
+            this.lvwHopDong.Location = new System.Drawing.Point(7, 29);
+            this.lvwHopDong.Name = "lvwHopDong";
+            this.lvwHopDong.Size = new System.Drawing.Size(317, 131);
+            this.lvwHopDong.TabIndex = 0;
+            this.lvwHopDong.UseCompatibleStateImageBehavior = false;
             // 
             // frmTongQuan
             // 
@@ -428,6 +428,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTongQuan";
             this.Text = "frmTongQuan";
+            this.Load += new System.EventHandler(this.frmTongQuan_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -468,12 +469,12 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvwNhanVien;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lvwPhongBan;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView lvwSanPham;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView lvwHopDong;
     }
 }
