@@ -1,5 +1,5 @@
 ﻿
-namespace QLLuongSanPham.Presentation.QuanLy
+namespace QLLuongSanPham.GUI.QuanLy
 {
     partial class frmPhongBan
     {
@@ -59,13 +59,13 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             this.label1.BackColor = System.Drawing.Color.LimeGreen;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1513, 110);
             this.label1.TabIndex = 0;
-            this.label1.Text = "PHÒNG BAN";
+            this.label1.Text = "Phòng Ban";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTimKiem
@@ -74,14 +74,14 @@ namespace QLLuongSanPham.Presentation.QuanLy
             this.txtTimKiem.Location = new System.Drawing.Point(799, 161);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(594, 40);
+            this.txtTimKiem.Size = new System.Drawing.Size(622, 40);
             this.txtTimKiem.TabIndex = 1;
             this.txtTimKiem.Text = "Nhap tim kiem";
             this.txtTimKiem.WordWrap = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.txtPos);
             this.groupBox1.Controls.Add(this.btnNext);
@@ -163,7 +163,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // lvwPhongBan
             // 
-            this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lvwPhongBan.HideSelection = false;
             this.lvwPhongBan.Location = new System.Drawing.Point(7, 29);

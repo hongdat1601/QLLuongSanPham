@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,61 +50,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presentation\NhanVien\frmEmployeeAdministrative .cs">
+    <Compile Include="DAL\QLLuongSP.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLLuongSP.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhanVien\frmEmployeeAdministrative .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\NhanVien\frmEmployeeAdministrative .Designer.cs">
+    <Compile Include="GUI\NhanVien\frmEmployeeAdministrative .Designer.cs">
       <DependentUpon>frmEmployeeAdministrative .cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\NhanVien\frmMainEmployee.cs">
+    <Compile Include="GUI\NhanVien\frmMainEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\NhanVien\frmMainEmployee.Designer.cs">
+    <Compile Include="GUI\NhanVien\frmMainEmployee.Designer.cs">
       <DependentUpon>frmMainEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Constant.cs" />
-    <Compile Include="Presentation\frmDangNhap.cs">
+    <Compile Include="GUI\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\frmDangNhap.Designer.cs">
+    <Compile Include="GUI\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\QuanLy\frmPhongBan.cs">
+    <Compile Include="GUI\QuanLy\frmPhongBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\QuanLy\frmPhongBan.Designer.cs">
+    <Compile Include="GUI\QuanLy\frmPhongBan.Designer.cs">
       <DependentUpon>frmPhongBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\QuanLy\frmQuanLy.cs">
+    <Compile Include="GUI\QuanLy\frmQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\QuanLy\frmQuanLy.Designer.cs">
+    <Compile Include="GUI\QuanLy\frmQuanLy.Designer.cs">
       <DependentUpon>frmQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\QuanLy\frmTongQuan.cs">
+    <Compile Include="GUI\QuanLy\frmTongQuan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\QuanLy\frmTongQuan.Designer.cs">
+    <Compile Include="GUI\QuanLy\frmTongQuan.Designer.cs">
       <DependentUpon>frmTongQuan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentation\NhanVien\frmEmployeeAdministrative .resx">
+    <EmbeddedResource Include="GUI\NhanVien\frmEmployeeAdministrative .resx">
       <DependentUpon>frmEmployeeAdministrative .cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\NhanVien\frmMainEmployee.resx">
+    <EmbeddedResource Include="GUI\NhanVien\frmMainEmployee.resx">
       <DependentUpon>frmMainEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmDangNhap.resx">
+    <EmbeddedResource Include="GUI\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\QuanLy\frmPhongBan.resx">
+    <EmbeddedResource Include="GUI\QuanLy\frmPhongBan.resx">
       <DependentUpon>frmPhongBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\QuanLy\frmQuanLy.resx">
+    <EmbeddedResource Include="GUI\QuanLy\frmQuanLy.resx">
       <DependentUpon>frmQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\QuanLy\frmTongQuan.resx">
+    <EmbeddedResource Include="GUI\QuanLy\frmTongQuan.resx">
       <DependentUpon>frmTongQuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,6 +121,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DAL\QLLuongSP.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLLuongSP.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\QLLuongSP.dbml.layout">
+      <DependentUpon>QLLuongSP.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -130,8 +144,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Business\" />
-    <Folder Include="Data\" />
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

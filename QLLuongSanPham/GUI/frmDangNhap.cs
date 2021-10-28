@@ -1,4 +1,4 @@
-﻿using QLLuongSanPham.Presentation.QuanLy;
+﻿using QLLuongSanPham.GUI.QuanLy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLuongSanPham.Presentation
+namespace QLLuongSanPham.GUI
 {
     public partial class frmDangNhap : Form
     {

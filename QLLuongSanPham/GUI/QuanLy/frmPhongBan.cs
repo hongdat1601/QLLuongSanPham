@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLuongSanPham.Presentation.QuanLy
+namespace QLLuongSanPham.GUI.QuanLy
 {
-    public partial class frmTongQuan : Form
+    public partial class frmPhongBan : Form
     {
-        public frmTongQuan()
+        public frmPhongBan()
         {
             InitializeComponent();
         }

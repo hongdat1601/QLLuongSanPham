@@ -1,5 +1,5 @@
 ﻿
-namespace QLLuongSanPham.Presentation.QuanLy
+namespace QLLuongSanPham.GUI.QuanLy
 {
     partial class frmTongQuan
     {
@@ -311,7 +311,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
             this.groupBox1.Controls.Add(this.listView1);
@@ -326,7 +326,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(7, 29);
@@ -350,7 +350,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // listView2
             // 
-            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(7, 29);
@@ -361,7 +361,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.BackColor = System.Drawing.Color.MediumTurquoise;
             this.groupBox3.Controls.Add(this.listView3);
@@ -376,7 +376,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // listView3
             // 
-            this.listView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(7, 29);
@@ -387,7 +387,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox4.BackColor = System.Drawing.Color.Gold;
             this.groupBox4.Controls.Add(this.listView4);
@@ -402,7 +402,7 @@ namespace QLLuongSanPham.Presentation.QuanLy
             // 
             // listView4
             // 
-            this.listView4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listView4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView4.HideSelection = false;
             this.listView4.Location = new System.Drawing.Point(7, 29);

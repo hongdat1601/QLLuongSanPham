@@ -1,4 +1,4 @@
-﻿using QLLuongSanPham.Presentation.QuanLy;
+﻿using QLLuongSanPham.GUI.QuanLy;
 using System;
 using System.Collections.Generic;
 using System.Linq;

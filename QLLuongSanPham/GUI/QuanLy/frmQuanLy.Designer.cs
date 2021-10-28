@@ -1,5 +1,5 @@
 ﻿
-namespace QLLuongSanPham.Presentation.QuanLy
+namespace QLLuongSanPham.GUI.QuanLy
 {
     partial class frmQuanLy
     {
