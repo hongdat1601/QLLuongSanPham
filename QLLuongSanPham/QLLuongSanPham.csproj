@@ -61,18 +61,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLLuongSP.dbml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\NhanVienGUI\frmEmployeeAdministrative .cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\NhanVienGUI\frmEmployeeAdministrative .Designer.cs">
-      <DependentUpon>frmEmployeeAdministrative .cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\NhanVienGUI\frmMainEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\NhanVienGUI\frmMainEmployee.Designer.cs">
-      <DependentUpon>frmMainEmployee.cs</DependentUpon>
-    </Compile>
     <Compile Include="Constant.cs" />
     <Compile Include="GUI\frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -100,12 +88,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\NhanVienGUI\frmEmployeeAdministrative .resx">
-      <DependentUpon>frmEmployeeAdministrative .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NhanVienGUI\frmMainEmployee.resx">
-      <DependentUpon>frmMainEmployee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +134,8 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="GUI\NhanVienGUI\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
