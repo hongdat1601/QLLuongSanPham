@@ -16,5 +16,12 @@ namespace QLLuongSanPham.BLL
         }
 
         public IEnumerable<NhanVien> GetNhanViens() => context.NhanViens;
+
+        public NhanVien GetById(int id)
+        {
+            return context.NhanViens
+                .Where(x => x.ID == id)
+                .FirstOrDefault();
+        }
     }
 }

@@ -31,6 +31,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPos = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnFirst = new System.Windows.Forms.Button();
@@ -38,6 +39,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lvwPhongBan = new System.Windows.Forms.ListView();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTenQL = new System.Windows.Forms.TextBox();
+            this.txtSLNV = new System.Windows.Forms.TextBox();
+            this.txtNgayThanhLap = new System.Windows.Forms.TextBox();
+            this.txtTenPhongBan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,11 +50,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.txtTenPhongBan = new System.Windows.Forms.TextBox();
-            this.txtNgayThanhLap = new System.Windows.Forms.TextBox();
-            this.txtSLNV = new System.Windows.Forms.TextBox();
-            this.txtTenQL = new System.Windows.Forms.TextBox();
-            this.txtPos = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,6 +86,17 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phòng ban";
             // 
+            // txtPos
+            // 
+            this.txtPos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPos.Location = new System.Drawing.Point(277, 328);
+            this.txtPos.Name = "txtPos";
+            this.txtPos.Size = new System.Drawing.Size(149, 38);
+            this.txtPos.TabIndex = 14;
+            this.txtPos.Text = "0";
+            this.txtPos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // btnNext
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -98,6 +109,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnNext.TabIndex = 11;
             this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrev
             // 
@@ -111,6 +123,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnPrev.TabIndex = 10;
             this.btnPrev.Text = "<";
             this.btnPrev.UseVisualStyleBackColor = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // btnFirst
             // 
@@ -124,6 +137,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnFirst.TabIndex = 9;
             this.btnFirst.Text = "<<";
             this.btnFirst.UseVisualStyleBackColor = false;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // btnLast
             // 
@@ -137,6 +151,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnLast.TabIndex = 8;
             this.btnLast.Text = ">>";
             this.btnLast.UseVisualStyleBackColor = false;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // lvwPhongBan
             // 
@@ -182,6 +197,41 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin phòng ban";
+            // 
+            // txtTenQL
+            // 
+            this.txtTenQL.Enabled = false;
+            this.txtTenQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenQL.Location = new System.Drawing.Point(247, 270);
+            this.txtTenQL.Name = "txtTenQL";
+            this.txtTenQL.Size = new System.Drawing.Size(448, 38);
+            this.txtTenQL.TabIndex = 13;
+            // 
+            // txtSLNV
+            // 
+            this.txtSLNV.Enabled = false;
+            this.txtSLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSLNV.Location = new System.Drawing.Point(247, 202);
+            this.txtSLNV.Name = "txtSLNV";
+            this.txtSLNV.Size = new System.Drawing.Size(448, 38);
+            this.txtSLNV.TabIndex = 12;
+            // 
+            // txtNgayThanhLap
+            // 
+            this.txtNgayThanhLap.Enabled = false;
+            this.txtNgayThanhLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayThanhLap.Location = new System.Drawing.Point(247, 134);
+            this.txtNgayThanhLap.Name = "txtNgayThanhLap";
+            this.txtNgayThanhLap.Size = new System.Drawing.Size(448, 38);
+            this.txtNgayThanhLap.TabIndex = 11;
+            // 
+            // txtTenPhongBan
+            // 
+            this.txtTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenPhongBan.Location = new System.Drawing.Point(247, 62);
+            this.txtTenPhongBan.Name = "txtTenPhongBan";
+            this.txtTenPhongBan.Size = new System.Drawing.Size(448, 38);
+            this.txtTenPhongBan.TabIndex = 10;
             // 
             // label2
             // 
@@ -230,6 +280,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -242,6 +293,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -254,53 +306,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // txtTenPhongBan
-            // 
-            this.txtTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenPhongBan.Location = new System.Drawing.Point(247, 62);
-            this.txtTenPhongBan.Name = "txtTenPhongBan";
-            this.txtTenPhongBan.Size = new System.Drawing.Size(448, 38);
-            this.txtTenPhongBan.TabIndex = 10;
-            this.txtTenPhongBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
-            // 
-            // txtNgayThanhLap
-            // 
-            this.txtNgayThanhLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayThanhLap.Location = new System.Drawing.Point(247, 134);
-            this.txtNgayThanhLap.Name = "txtNgayThanhLap";
-            this.txtNgayThanhLap.Size = new System.Drawing.Size(448, 38);
-            this.txtNgayThanhLap.TabIndex = 11;
-            this.txtNgayThanhLap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
-            // 
-            // txtSLNV
-            // 
-            this.txtSLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLNV.Location = new System.Drawing.Point(247, 202);
-            this.txtSLNV.Name = "txtSLNV";
-            this.txtSLNV.Size = new System.Drawing.Size(448, 38);
-            this.txtSLNV.TabIndex = 12;
-            this.txtSLNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
-            // 
-            // txtTenQL
-            // 
-            this.txtTenQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenQL.Location = new System.Drawing.Point(247, 270);
-            this.txtTenQL.Name = "txtTenQL";
-            this.txtTenQL.Size = new System.Drawing.Size(448, 38);
-            this.txtTenQL.TabIndex = 13;
-            this.txtTenQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
-            // 
-            // txtPos
-            // 
-            this.txtPos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPos.Location = new System.Drawing.Point(277, 328);
-            this.txtPos.Name = "txtPos";
-            this.txtPos.Size = new System.Drawing.Size(149, 38);
-            this.txtPos.TabIndex = 14;
-            this.txtPos.Text = "0";
-            this.txtPos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // textBox1
             // 

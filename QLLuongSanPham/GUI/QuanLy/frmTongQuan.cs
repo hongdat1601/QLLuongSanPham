@@ -91,7 +91,11 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(pb.TenPhongBan);
                 item.SubItems.Add(pb.NgayThanhLap.Value.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(pb.SoLuongNhanVien.ToString());
-                item.SubItems.Add(pb.TenQuanLy);
+
+                if (pb.IDQuanLy != null)
+                    item.SubItems.Add(_nhanVien.GetById(pb.IDQuanLy.Value).HoTen);
+                else
+                    item.SubItems.Add("");
 
                 lvwPhongBan.Items.Add(item);
                 i++;

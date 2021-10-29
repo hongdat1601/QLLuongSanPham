@@ -69,12 +69,12 @@ namespace QLLuongSanPham.DAL
     partial void InsertNhanVien(NhanVien instance);
     partial void UpdateNhanVien(NhanVien instance);
     partial void DeleteNhanVien(NhanVien instance);
-    partial void InsertPhongBan(PhongBan instance);
-    partial void UpdatePhongBan(PhongBan instance);
-    partial void DeletePhongBan(PhongBan instance);
     partial void InsertHopDong(HopDong instance);
     partial void UpdateHopDong(HopDong instance);
     partial void DeleteHopDong(HopDong instance);
+    partial void InsertPhongBan(PhongBan instance);
+    partial void UpdatePhongBan(PhongBan instance);
+    partial void DeletePhongBan(PhongBan instance);
     #endregion
 		
 		public QLLuongSPDataContext() : 
@@ -211,19 +211,19 @@ namespace QLLuongSanPham.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<PhongBan> PhongBans
-		{
-			get
-			{
-				return this.GetTable<PhongBan>();
-			}
-		}
-		
 		public System.Data.Linq.Table<HopDong> HopDongs
 		{
 			get
 			{
 				return this.GetTable<HopDong>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PhongBan> PhongBans
+		{
+			get
+			{
+				return this.GetTable<PhongBan>();
 			}
 		}
 	}
@@ -3048,192 +3048,6 @@ namespace QLLuongSanPham.DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PhongBan")]
-	public partial class PhongBan : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID;
-		
-		private string _TenPhongBan;
-		
-		private System.Nullable<System.DateTime> _NgayThanhLap;
-		
-		private string _TenQuanLy;
-		
-		private System.Nullable<int> _SoLuongNhanVien;
-		
-		private EntitySet<NhanVien> _NhanViens;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnTenPhongBanChanging(string value);
-    partial void OnTenPhongBanChanged();
-    partial void OnNgayThanhLapChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgayThanhLapChanged();
-    partial void OnTenQuanLyChanging(string value);
-    partial void OnTenQuanLyChanged();
-    partial void OnSoLuongNhanVienChanging(System.Nullable<int> value);
-    partial void OnSoLuongNhanVienChanged();
-    #endregion
-		
-		public PhongBan()
-		{
-			this._NhanViens = new EntitySet<NhanVien>(new Action<NhanVien>(this.attach_NhanViens), new Action<NhanVien>(this.detach_NhanViens));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenPhongBan", DbType="NVarChar(120)")]
-		public string TenPhongBan
-		{
-			get
-			{
-				return this._TenPhongBan;
-			}
-			set
-			{
-				if ((this._TenPhongBan != value))
-				{
-					this.OnTenPhongBanChanging(value);
-					this.SendPropertyChanging();
-					this._TenPhongBan = value;
-					this.SendPropertyChanged("TenPhongBan");
-					this.OnTenPhongBanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayThanhLap", DbType="Date")]
-		public System.Nullable<System.DateTime> NgayThanhLap
-		{
-			get
-			{
-				return this._NgayThanhLap;
-			}
-			set
-			{
-				if ((this._NgayThanhLap != value))
-				{
-					this.OnNgayThanhLapChanging(value);
-					this.SendPropertyChanging();
-					this._NgayThanhLap = value;
-					this.SendPropertyChanged("NgayThanhLap");
-					this.OnNgayThanhLapChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenQuanLy", DbType="NVarChar(120)")]
-		public string TenQuanLy
-		{
-			get
-			{
-				return this._TenQuanLy;
-			}
-			set
-			{
-				if ((this._TenQuanLy != value))
-				{
-					this.OnTenQuanLyChanging(value);
-					this.SendPropertyChanging();
-					this._TenQuanLy = value;
-					this.SendPropertyChanged("TenQuanLy");
-					this.OnTenQuanLyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuongNhanVien", DbType="Int")]
-		public System.Nullable<int> SoLuongNhanVien
-		{
-			get
-			{
-				return this._SoLuongNhanVien;
-			}
-			set
-			{
-				if ((this._SoLuongNhanVien != value))
-				{
-					this.OnSoLuongNhanVienChanging(value);
-					this.SendPropertyChanging();
-					this._SoLuongNhanVien = value;
-					this.SendPropertyChanged("SoLuongNhanVien");
-					this.OnSoLuongNhanVienChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhongBan_NhanVien", Storage="_NhanViens", ThisKey="ID", OtherKey="IDPhongBan")]
-		public EntitySet<NhanVien> NhanViens
-		{
-			get
-			{
-				return this._NhanViens;
-			}
-			set
-			{
-				this._NhanViens.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_NhanViens(NhanVien entity)
-		{
-			this.SendPropertyChanging();
-			entity.PhongBan = this;
-		}
-		
-		private void detach_NhanViens(NhanVien entity)
-		{
-			this.SendPropertyChanging();
-			entity.PhongBan = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.HopDong")]
 	public partial class HopDong : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3465,6 +3279,192 @@ namespace QLLuongSanPham.DAL
 		{
 			this.SendPropertyChanging();
 			entity.HopDong = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PhongBan")]
+	public partial class PhongBan : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _TenPhongBan;
+		
+		private System.Nullable<System.DateTime> _NgayThanhLap;
+		
+		private System.Nullable<int> _IDQuanLy;
+		
+		private System.Nullable<int> _SoLuongNhanVien;
+		
+		private EntitySet<NhanVien> _NhanViens;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnTenPhongBanChanging(string value);
+    partial void OnTenPhongBanChanged();
+    partial void OnNgayThanhLapChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayThanhLapChanged();
+    partial void OnIDQuanLyChanging(System.Nullable<int> value);
+    partial void OnIDQuanLyChanged();
+    partial void OnSoLuongNhanVienChanging(System.Nullable<int> value);
+    partial void OnSoLuongNhanVienChanged();
+    #endregion
+		
+		public PhongBan()
+		{
+			this._NhanViens = new EntitySet<NhanVien>(new Action<NhanVien>(this.attach_NhanViens), new Action<NhanVien>(this.detach_NhanViens));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenPhongBan", DbType="NVarChar(120)")]
+		public string TenPhongBan
+		{
+			get
+			{
+				return this._TenPhongBan;
+			}
+			set
+			{
+				if ((this._TenPhongBan != value))
+				{
+					this.OnTenPhongBanChanging(value);
+					this.SendPropertyChanging();
+					this._TenPhongBan = value;
+					this.SendPropertyChanged("TenPhongBan");
+					this.OnTenPhongBanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayThanhLap", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayThanhLap
+		{
+			get
+			{
+				return this._NgayThanhLap;
+			}
+			set
+			{
+				if ((this._NgayThanhLap != value))
+				{
+					this.OnNgayThanhLapChanging(value);
+					this.SendPropertyChanging();
+					this._NgayThanhLap = value;
+					this.SendPropertyChanged("NgayThanhLap");
+					this.OnNgayThanhLapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDQuanLy", DbType="Int")]
+		public System.Nullable<int> IDQuanLy
+		{
+			get
+			{
+				return this._IDQuanLy;
+			}
+			set
+			{
+				if ((this._IDQuanLy != value))
+				{
+					this.OnIDQuanLyChanging(value);
+					this.SendPropertyChanging();
+					this._IDQuanLy = value;
+					this.SendPropertyChanged("IDQuanLy");
+					this.OnIDQuanLyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuongNhanVien", DbType="Int")]
+		public System.Nullable<int> SoLuongNhanVien
+		{
+			get
+			{
+				return this._SoLuongNhanVien;
+			}
+			set
+			{
+				if ((this._SoLuongNhanVien != value))
+				{
+					this.OnSoLuongNhanVienChanging(value);
+					this.SendPropertyChanging();
+					this._SoLuongNhanVien = value;
+					this.SendPropertyChanged("SoLuongNhanVien");
+					this.OnSoLuongNhanVienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhongBan_NhanVien", Storage="_NhanViens", ThisKey="ID", OtherKey="IDPhongBan")]
+		public EntitySet<NhanVien> NhanViens
+		{
+			get
+			{
+				return this._NhanViens;
+			}
+			set
+			{
+				this._NhanViens.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_NhanViens(NhanVien entity)
+		{
+			this.SendPropertyChanging();
+			entity.PhongBan = this;
+		}
+		
+		private void detach_NhanViens(NhanVien entity)
+		{
+			this.SendPropertyChanging();
+			entity.PhongBan = null;
 		}
 	}
 }

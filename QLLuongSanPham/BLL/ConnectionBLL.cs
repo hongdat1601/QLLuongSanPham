@@ -15,6 +15,7 @@ namespace QLLuongSanPham.BLL
         public ConnectionBLL()
         {
             context = new QLLuongSPDataContext(connection);
+            context.Connection.Open();
         }
     }
 }
