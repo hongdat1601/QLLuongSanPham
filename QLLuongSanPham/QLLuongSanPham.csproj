@@ -49,17 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presentation\NhanVien\frmEmployeeAdministrative .cs">
+    <Compile Include="Presentation\NhanVien\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\NhanVien\frmEmployeeAdministrative .Designer.cs">
-      <DependentUpon>frmEmployeeAdministrative .cs</DependentUpon>
+    <Compile Include="Presentation\NhanVien\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\NhanVien\frmMainEmployee.cs">
+    <Compile Include="Presentation\NhanVien\frmLuongNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\NhanVien\frmMainEmployee.Designer.cs">
-      <DependentUpon>frmMainEmployee.cs</DependentUpon>
+    <Compile Include="Presentation\NhanVien\frmLuongNhanVien.Designer.cs">
+      <DependentUpon>frmLuongNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\NhanVien\frmThongTinNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\NhanVien\frmThongTinNV.Designer.cs">
+      <DependentUpon>frmThongTinNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\NhanVien\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\NhanVien\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Constant.cs" />
     <Compile Include="Presentation\frmDangNhap.cs">
@@ -67,6 +79,12 @@
     </Compile>
     <Compile Include="Presentation\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\NhanVien\frmTongQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\NhanVien\frmTongQuan.Designer.cs">
+      <DependentUpon>frmTongQuan.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\QuanLy\frmPhongBan.cs">
       <SubType>Form</SubType>
@@ -88,14 +106,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentation\NhanVien\frmEmployeeAdministrative .resx">
-      <DependentUpon>frmEmployeeAdministrative .cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\NhanVien\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\NhanVien\frmMainEmployee.resx">
-      <DependentUpon>frmMainEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\NhanVien\frmLuongNhanVien.resx">
+      <DependentUpon>frmLuongNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\NhanVien\frmThongTinNV.resx">
+      <DependentUpon>frmThongTinNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\NhanVien\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\NhanVien\frmTongQuan.resx">
+      <DependentUpon>frmTongQuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\QuanLy\frmPhongBan.resx">
       <DependentUpon>frmPhongBan.cs</DependentUpon>
@@ -114,6 +141,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -132,6 +160,7 @@
   <ItemGroup>
     <Folder Include="Business\" />
     <Folder Include="Data\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
