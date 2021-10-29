@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLLuongSanPham.Presentation.NhanVien;
+using QLLuongSanPham.GUI.QuanLy;
 namespace QLLuongSanPham
 {
     static class Program
@@ -17,7 +17,7 @@ namespace QLLuongSanPham
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNhanVien());
+            Application.Run(new frmQuanLy());
         }
     }
 }
