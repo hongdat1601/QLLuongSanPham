@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLuongSanPham.Presentation.NhanVien
+namespace QLLuongSanPham.GUI.NhanVienGUI
 {
     public partial class frmLuongNhanVien : Form
     {

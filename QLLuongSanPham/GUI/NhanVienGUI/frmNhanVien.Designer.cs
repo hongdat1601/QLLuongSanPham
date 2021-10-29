@@ -1,5 +1,5 @@
 ﻿
-namespace QLLuongSanPham.Presentation.NhanVien
+namespace QLLuongSanPham.GUI.NhanVienGUI
 {
     partial class frmNhanVien
     {
