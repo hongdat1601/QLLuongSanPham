@@ -74,7 +74,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlNgayLam.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlNgayLam.Controls.Add(this.tblThu);
             this.pnlNgayLam.Controls.Add(this.lblDate);
-            this.pnlNgayLam.Location = new System.Drawing.Point(437, 63);
+            this.pnlNgayLam.Location = new System.Drawing.Point(439, 61);
             this.pnlNgayLam.Name = "pnlNgayLam";
             this.pnlNgayLam.Size = new System.Drawing.Size(755, 262);
             this.pnlNgayLam.TabIndex = 5;
@@ -264,7 +264,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDate.Size = new System.Drawing.Size(751, 42);
             this.lblDate.TabIndex = 0;
             this.lblDate.Text = "Ngày đi làm trong tuần";
-            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlDSSP
             // 

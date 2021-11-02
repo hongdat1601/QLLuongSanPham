@@ -49,7 +49,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDSNV = new System.Windows.Forms.Panel();
             this.lvwDSNV = new System.Windows.Forms.ListView();
             this.lsbDSNV = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlDSCV = new System.Windows.Forms.Panel();
             this.lvwDSLich = new System.Windows.Forms.ListView();
             this.lblDSLich = new System.Windows.Forms.Label();
             this.txtNgaySearch = new System.Windows.Forms.TextBox();
@@ -65,11 +65,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnLeft = new FontAwesome.Sharp.IconButton();
             this.btnRight = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboCaSearch = new System.Windows.Forms.ComboBox();
             this.pnlDSSP.SuspendLayout();
             this.pnlDSPC.SuspendLayout();
             this.pnlDSNV.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlDSCV.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDSSP
@@ -284,16 +284,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lsbDSNV.Text = "Danh sách công nhân";
             this.lsbDSNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
+            // pnlDSCV
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.lvwDSLich);
-            this.panel3.Controls.Add(this.lblDSLich);
-            this.panel3.Location = new System.Drawing.Point(25, 651);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1578, 303);
-            this.panel3.TabIndex = 10;
+            this.pnlDSCV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlDSCV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlDSCV.Controls.Add(this.lvwDSLich);
+            this.pnlDSCV.Controls.Add(this.lblDSLich);
+            this.pnlDSCV.Location = new System.Drawing.Point(25, 651);
+            this.pnlDSCV.Name = "pnlDSCV";
+            this.pnlDSCV.Size = new System.Drawing.Size(1578, 303);
+            this.pnlDSCV.TabIndex = 10;
             // 
             // lvwDSLich
             // 
@@ -479,29 +479,29 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnRight.TabIndex = 21;
             this.btnRight.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cboCaSearch
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1244, 613);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 28);
-            this.comboBox1.TabIndex = 22;
+            this.cboCaSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboCaSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCaSearch.FormattingEnabled = true;
+            this.cboCaSearch.Location = new System.Drawing.Point(1244, 613);
+            this.cboCaSearch.Name = "cboCaSearch";
+            this.cboCaSearch.Size = new System.Drawing.Size(177, 28);
+            this.cboCaSearch.TabIndex = 22;
             // 
             // frmPhanLichCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1615, 966);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboCaSearch);
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnLeft);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimDSSCa);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlDSCV);
             this.Controls.Add(this.pnlDSNV);
             this.Controls.Add(this.pnlDSPC);
             this.Controls.Add(this.dtmNgay);
@@ -530,7 +530,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDSSP.ResumeLayout(false);
             this.pnlDSPC.ResumeLayout(false);
             this.pnlDSNV.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.pnlDSCV.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -558,7 +558,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Panel pnlDSNV;
         private System.Windows.Forms.ListView lvwDSNV;
         private System.Windows.Forms.Label lsbDSNV;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlDSCV;
         private System.Windows.Forms.ListView lvwDSLich;
         private System.Windows.Forms.Label lblDSLich;
         private System.Windows.Forms.TextBox txtNgaySearch;
@@ -574,6 +574,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnThem;
         private FontAwesome.Sharp.IconButton btnLeft;
         private FontAwesome.Sharp.IconButton btnRight;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboCaSearch;
     }
 }
