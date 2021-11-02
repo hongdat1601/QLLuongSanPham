@@ -53,7 +53,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             // lvwSalary
             // 
             this.lvwSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lvwSalary.Font = new System.Drawing.Font("Verdana", 8F);
+            this.lvwSalary.Font = new System.Drawing.Font("Verdana", 12F);
             this.lvwSalary.HideSelection = false;
             this.lvwSalary.Location = new System.Drawing.Point(14, 54);
             this.lvwSalary.Name = "lvwSalary";

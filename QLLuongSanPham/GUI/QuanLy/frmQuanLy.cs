@@ -22,7 +22,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         }
 
         #region Methods
-        private void OpenFormChild(Form formChild)
+        public void OpenFormChild(Form formChild)
         {
             if (activeForm != null)
             {
@@ -147,7 +147,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnXuLyTinhLuong_Click_1(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmTinhLuong());
         }
 
         private void btnXuLyChamCong_Click_1(object sender, EventArgs e)
@@ -157,12 +157,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnXuLyPhanCa_Click(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmPhanLich());
         }
 
         private void btnThongKeHC_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
@@ -182,12 +182,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnCaLam_Click(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmCaLamViec());
         }
 
         private void btnCongDoan_Click(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmCongDoan());
         }
 
         private void btnXuLyChamCong_Click(object sender, EventArgs e)
@@ -202,7 +202,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnTimKiemNV_Click(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmTimKiemNV());
         }
 
         private void btnTimKiemSP_Click(object sender, EventArgs e)

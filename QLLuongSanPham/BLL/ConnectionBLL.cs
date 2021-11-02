@@ -10,7 +10,7 @@ namespace QLLuongSanPham.BLL
     class ConnectionBLL
     {
         protected QLLuongSPDataContext context;
-        private string connection = @"Data Source=.;Initial Catalog=QLLuongSP;Integrated Security=True";
+        private string connection = @"Data Source=VOMINHPHUONG;Initial Catalog=QLLuongSP;Integrated Security=True";
 
         public ConnectionBLL()
         {
