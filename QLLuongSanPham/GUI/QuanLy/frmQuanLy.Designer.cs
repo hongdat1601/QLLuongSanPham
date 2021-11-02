@@ -44,6 +44,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiemNV = new FontAwesome.Sharp.IconButton();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.pnlXuLy = new System.Windows.Forms.Panel();
+            this.btnXuLyTinhLuong = new FontAwesome.Sharp.IconButton();
             this.btnXuLyChamCong = new FontAwesome.Sharp.IconButton();
             this.btnXuLyPhanCa = new FontAwesome.Sharp.IconButton();
             this.btnXuLy = new FontAwesome.Sharp.IconButton();
@@ -67,7 +68,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.btnXuLyTinhLuong = new FontAwesome.Sharp.IconButton();
             this.pnLeft.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlThongKe.SuspendLayout();
@@ -388,6 +388,30 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlXuLy.Name = "pnlXuLy";
             this.pnlXuLy.Size = new System.Drawing.Size(296, 195);
             this.pnlXuLy.TabIndex = 15;
+            // 
+            // btnXuLyTinhLuong
+            // 
+            this.btnXuLyTinhLuong.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnXuLyTinhLuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXuLyTinhLuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXuLyTinhLuong.FlatAppearance.BorderSize = 0;
+            this.btnXuLyTinhLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuLyTinhLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuLyTinhLuong.ForeColor = System.Drawing.Color.White;
+            this.btnXuLyTinhLuong.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnXuLyTinhLuong.IconColor = System.Drawing.Color.White;
+            this.btnXuLyTinhLuong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXuLyTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuLyTinhLuong.Location = new System.Drawing.Point(0, 126);
+            this.btnXuLyTinhLuong.Name = "btnXuLyTinhLuong";
+            this.btnXuLyTinhLuong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnXuLyTinhLuong.Size = new System.Drawing.Size(296, 63);
+            this.btnXuLyTinhLuong.TabIndex = 10;
+            this.btnXuLyTinhLuong.Text = "Tính Lương";
+            this.btnXuLyTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuLyTinhLuong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXuLyTinhLuong.UseVisualStyleBackColor = false;
+            this.btnXuLyTinhLuong.Click += new System.EventHandler(this.btnXuLyTinhLuong_Click_1);
             // 
             // btnXuLyChamCong
             // 
@@ -810,30 +834,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1062, 1052);
             this.pnlBody.TabIndex = 4;
-            // 
-            // btnXuLyTinhLuong
-            // 
-            this.btnXuLyTinhLuong.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnXuLyTinhLuong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXuLyTinhLuong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXuLyTinhLuong.FlatAppearance.BorderSize = 0;
-            this.btnXuLyTinhLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXuLyTinhLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuLyTinhLuong.ForeColor = System.Drawing.Color.White;
-            this.btnXuLyTinhLuong.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnXuLyTinhLuong.IconColor = System.Drawing.Color.White;
-            this.btnXuLyTinhLuong.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXuLyTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuLyTinhLuong.Location = new System.Drawing.Point(0, 126);
-            this.btnXuLyTinhLuong.Name = "btnXuLyTinhLuong";
-            this.btnXuLyTinhLuong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnXuLyTinhLuong.Size = new System.Drawing.Size(296, 63);
-            this.btnXuLyTinhLuong.TabIndex = 10;
-            this.btnXuLyTinhLuong.Text = "Tính Lương";
-            this.btnXuLyTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuLyTinhLuong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXuLyTinhLuong.UseVisualStyleBackColor = false;
-            this.btnXuLyTinhLuong.Click += new System.EventHandler(this.btnXuLyTinhLuong_Click_1);
             // 
             // frmQuanLy
             // 

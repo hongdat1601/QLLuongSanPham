@@ -137,7 +137,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvwPhongBan.Focus();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             PhongBan pb = new PhongBan();
             pb.NgayThanhLap = DateTime.Now;
@@ -147,17 +147,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             LoadListPhongBan(_phongBan.GetPhongBans());
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if(lvwPhongBan.SelectedItems.Count > 0)
-            {
-                int id = ((PhongBan)lvwPhongBan.SelectedItems[0].Tag).ID;
-                _phongBan.DeletePhongBan(id);
-                LoadListPhongBan(_phongBan.GetPhongBans());
-            }
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnSua_Click_1(object sender, EventArgs e)
         {
             if (lvwPhongBan.SelectedItems.Count > 0)
             {
@@ -165,6 +155,16 @@ namespace QLLuongSanPham.GUI.QuanLy
                 pb.TenPhongBan = txtTenPhongBan.Text;
                 _phongBan.UpdatePhongBan(pb);
 
+                LoadListPhongBan(_phongBan.GetPhongBans());
+            }
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            if (lvwPhongBan.SelectedItems.Count > 0)
+            {
+                int id = ((PhongBan)lvwPhongBan.SelectedItems[0].Tag).ID;
+                _phongBan.DeletePhongBan(id);
                 LoadListPhongBan(_phongBan.GetPhongBans());
             }
         }

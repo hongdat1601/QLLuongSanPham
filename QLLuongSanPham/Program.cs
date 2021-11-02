@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLLuongSanPham.GUI.QuanLy;
+using QLLuongSanPham.GUI.NhanVienGUI;
 namespace QLLuongSanPham
 {
     static class Program

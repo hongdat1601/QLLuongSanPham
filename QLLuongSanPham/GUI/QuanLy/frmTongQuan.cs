@@ -68,7 +68,6 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(nv.SDT);
                 item.SubItems.Add(_chucVu.GetById(nv.IDChucVu.Value).TenChucVu);
                 item.SubItems.Add(nv.CMND);
-                item.SubItems.Add(_phongBan.GetById(nv.IDPhongBan.Value).TenPhongBan);
 
                 lvwNhanVien.Items.Add(item);
                 i++;
