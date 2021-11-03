@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using QLLuongSanPham.BLL;
-using QLLuongSanPham.DAL;
+using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
     public partial class frmPhongBan : Form
     {
-        private PhongBanBLL _phongBan = new PhongBanBLL();
-        private NhanVienBLL _nhanVien = new NhanVienBLL();
+        private PhongBanDAO phongBanDAO = new PhongBanDAO();
+        private NhanVienDAO nhanVienDAO = new NhanVienDAO();
 
         public frmPhongBan()
         {
@@ -49,7 +49,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(pb.NgayThanhLap.Value.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(pb.SoLuongNhanVien.ToString());
                 if (pb.IDQuanLy != null)
-                    item.SubItems.Add(_nhanVien.GetById(pb.IDQuanLy.Value).HoTen);
+                    item.SubItems.Add(nhanVienDAO.GetById(pb.IDQuanLy.Value).HoTen);
                 else
                     item.SubItems.Add("");
                 item.Tag = pb;
@@ -70,7 +70,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void frmPhongBan_Load(object sender, EventArgs e)
         {
             CreateList(lvwPhongBan);
-            LoadListPhongBan(_phongBan.GetPhongBans());
+            LoadListPhongBan(phongBanDAO.GetPhongBans());
 
             if (lvwPhongBan.Items.Count > 0)
                 lvwPhongBan.SelectedIndices.Add(0);
@@ -86,86 +86,12 @@ namespace QLLuongSanPham.GUI.QuanLy
                 txtSLNV.Text = pb.SoLuongNhanVien.ToString();
 
                 if (pb.IDQuanLy != null)
-                    txtTenQL.Text = _nhanVien.GetById(pb.IDQuanLy.Value).HoTen;
+                    txtTenQL.Text = nhanVienDAO.GetById(pb.IDQuanLy.Value).HoTen;
                 else
                     txtTenQL.Text = "";
 
-                
+
                 txtPos.Text = (lvwPhongBan.SelectedIndices[0] + 1).ToString();
-            }
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            if (lvwPhongBan.Items.Count > 0)
-            {
-                lvwPhongBan.SelectedIndices.Clear();
-                lvwPhongBan.SelectedIndices.Add((Convert.ToInt32(txtPos.Text)) % lvwPhongBan.Items.Count);
-            }
-            lvwPhongBan.Focus();
-        }
-
-        private void btnPrev_Click(object sender, EventArgs e)
-        {
-            if (lvwPhongBan.Items.Count > 0)
-            {
-                lvwPhongBan.SelectedIndices.Clear();
-                lvwPhongBan.SelectedIndices.Add((Convert.ToInt32(txtPos.Text) - 2 
-                    + lvwPhongBan.Items.Count) 
-                    % lvwPhongBan.Items.Count);
-            }
-            lvwPhongBan.Focus();
-        }
-
-        private void btnFirst_Click(object sender, EventArgs e)
-        {
-            if (lvwPhongBan.Items.Count > 0)
-            {
-                lvwPhongBan.SelectedIndices.Clear();
-                lvwPhongBan.SelectedIndices.Add(0);
-            }
-            lvwPhongBan.Focus();
-        }
-
-        private void btnLast_Click(object sender, EventArgs e)
-        {
-            if (lvwPhongBan.Items.Count > 0)
-            {
-                lvwPhongBan.SelectedIndices.Clear();
-                lvwPhongBan.SelectedIndices.Add(lvwPhongBan.Items.Count-1);
-            }
-            lvwPhongBan.Focus();
-        }
-
-        private void btnThem_Click_1(object sender, EventArgs e)
-        {
-            PhongBan pb = new PhongBan();
-            pb.NgayThanhLap = DateTime.Now;
-            pb.TenPhongBan = txtTenPhongBan.Text;
-
-            _phongBan.AddPhongBan(pb);
-            LoadListPhongBan(_phongBan.GetPhongBans());
-        }
-
-        private void btnSua_Click_1(object sender, EventArgs e)
-        {
-            if (lvwPhongBan.SelectedItems.Count > 0)
-            {
-                PhongBan pb = (PhongBan)lvwPhongBan.SelectedItems[0].Tag;
-                pb.TenPhongBan = txtTenPhongBan.Text;
-                _phongBan.UpdatePhongBan(pb);
-
-                LoadListPhongBan(_phongBan.GetPhongBans());
-            }
-        }
-
-        private void btnXoa_Click_1(object sender, EventArgs e)
-        {
-            if (lvwPhongBan.SelectedItems.Count > 0)
-            {
-                int id = ((PhongBan)lvwPhongBan.SelectedItems[0].Tag).ID;
-                _phongBan.DeletePhongBan(id);
-                LoadListPhongBan(_phongBan.GetPhongBans());
             }
         }
     }

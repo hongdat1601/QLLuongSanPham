@@ -134,7 +134,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtNgayKT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNgayKT.BackColor = System.Drawing.Color.White;
             this.txtNgayKT.Font = new System.Drawing.Font("Verdana", 12F);
-            this.txtNgayKT.Location = new System.Drawing.Point(291, 254);
+            this.txtNgayKT.Location = new System.Drawing.Point(282, 254);
             this.txtNgayKT.Name = "txtNgayKT";
             this.txtNgayKT.Size = new System.Drawing.Size(410, 32);
             this.txtNgayKT.TabIndex = 17;

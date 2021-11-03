@@ -46,7 +46,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             pnlXuLy.Visible = false;
             pnlTimKiem.Visible = false;
             pnlThongKe.Visible = false;
-            OpenFormChild(new frmTongQuan());
         }
 
         private void FocusBtn(Button btn)

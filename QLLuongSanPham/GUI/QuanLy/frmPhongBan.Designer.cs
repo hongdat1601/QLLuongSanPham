@@ -214,7 +214,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnLast.TabIndex = 8;
             this.btnLast.Text = ">>";
             this.btnLast.UseVisualStyleBackColor = false;
-            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // btnFirst
             // 
@@ -228,7 +227,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnFirst.TabIndex = 9;
             this.btnFirst.Text = "<<";
             this.btnFirst.UseVisualStyleBackColor = false;
-            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // btnPrev
             // 
@@ -242,7 +240,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnPrev.TabIndex = 10;
             this.btnPrev.Text = "<";
             this.btnPrev.UseVisualStyleBackColor = false;
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // btnNext
             // 
@@ -256,7 +253,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnNext.TabIndex = 11;
             this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // txtPos
             // 
@@ -297,7 +293,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
             // 
@@ -314,7 +309,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
             // 
             // btnThem
             // 
@@ -331,7 +325,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // frmPhongBan
             // 

@@ -8,20 +8,16 @@ using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.DAO
 {
-    class NhanVienDAO
+    class PhongBanDAO
     {
         private QLLuongSPContext context;
 
-        public NhanVienDAO()
+        public PhongBanDAO()
         {
             context = new QLLuongSPContext();
         }
 
-        public NhanVien GetById(int id)
-        {
-            return context.NhanVien
-                .Where(x => x.ID == id)
-                .FirstOrDefault();
-        }
+        public IEnumerable<PhongBan> GetPhongBans() => context.PhongBan;
+
     }
 }
