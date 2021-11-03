@@ -15,6 +15,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private Form activeForm = null;
         private Button activeBtn = null;
         private Panel activePnl = null;
+        private Button activeSubBtn = null;
 
         public frmQuanLy()
         {
@@ -74,6 +75,19 @@ namespace QLLuongSanPham.GUI.QuanLy
                 activePnl.Visible = false;
                 activePnl = pnl;
                 activePnl.Visible = true;
+            }
+
+        }
+
+        private void FocusSubBtn(Button btn)
+        {
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                if(activeSubBtn != null)
+                    activeSubBtn.BackColor = (Color)Constant.Colors["btnSub"];
+
+                activeSubBtn = btn;
+                activeSubBtn.BackColor = (Color)Constant.Colors["btnSubFocus"];
             }
 
         }
@@ -146,7 +160,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnXuLyTinhLuong_Click_1(object sender, EventArgs e)
         {
-            OpenFormChild(new frmTinhLuong());
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmTinhLuong());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnXuLyChamCong_Click_1(object sender, EventArgs e)
@@ -156,7 +175,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnXuLyPhanCa_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmPhanLich());
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmPhanLich());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnThongKeHC_Click(object sender, EventArgs e)
@@ -166,27 +190,52 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
-
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmSanPham());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnHopDong_Click(object sender, EventArgs e)
         {
-
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmHopDong());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnPhongBan_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmPhongBan());
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmPhongBan());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnCaLam_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmCaLamViec());
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmCaLamViec());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnCongDoan_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmCongDoan());
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmCongDoan());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnXuLyChamCong_Click(object sender, EventArgs e)
@@ -201,27 +250,52 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnTimKiemNV_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmTimKiemNV());
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmTimKiemNV());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnTimKiemSP_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmTimKiemSP());
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmTimKiemSP());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnTimKiemPB_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmTiemKiemPB());
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmTiemKiemPB());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnTimKiemHD_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmTiemKiemHD());
+            Button btn = (Button)sender;           
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmTiemKiemHD());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmNhanVien());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnThongKeSP_Click(object sender, EventArgs e)

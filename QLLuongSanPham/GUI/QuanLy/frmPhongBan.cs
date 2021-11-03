@@ -15,12 +15,14 @@ namespace QLLuongSanPham.GUI.QuanLy
 {
     public partial class frmPhongBan : Form
     {
-        private PhongBanDAO phongBanDAO = new PhongBanDAO();
-        private NhanVienDAO nhanVienDAO = new NhanVienDAO();
+        private PhongBanDAO phongBanDAO;
+        private NhanVienDAO nhanVienDAO;
 
         public frmPhongBan()
         {
             InitializeComponent();
+            phongBanDAO = new PhongBanDAO();
+            nhanVienDAO = new NhanVienDAO();
         }
 
         private void CreateList(ListView lvw)
@@ -82,16 +84,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 PhongBan pb = (PhongBan)lvwPhongBan.SelectedItems[0].Tag;
                 txtTenPhongBan.Text = pb.TenPhongBan;
-                txtNgayThanhLap.Text = pb.NgayThanhLap.Value.ToString("dd/MM/yyyy");
                 txtSLNV.Text = pb.SoLuongNhanVien.ToString();
 
                 if (pb.IDQuanLy != null)
                     txtTenQL.Text = nhanVienDAO.GetById(pb.IDQuanLy.Value).HoTen;
                 else
                     txtTenQL.Text = "";
-
-
-                txtPos.Text = (lvwPhongBan.SelectedIndices[0] + 1).ToString();
             }
         }
     }
