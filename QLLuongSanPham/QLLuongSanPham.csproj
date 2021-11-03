@@ -86,9 +86,8 @@
     <Compile Include="Entities\LoaiPhep.cs" />
     <Compile Include="Entities\NhanVien.cs" />
     <Compile Include="Entities\PhongBan.cs" />
-    <Compile Include="Entities\QLLuongSP.cs" />
+    <Compile Include="Entities\QLLuongSPContext.cs" />
     <Compile Include="Entities\SanPham.cs" />
-    <Compile Include="Entities\sysdiagrams.cs" />
     <Compile Include="Entities\TaiKhoan.cs" />
     <Compile Include="Entities\TrinhDoHocVan.cs" />
     <Compile Include="GUI\frmDangNhap.cs">

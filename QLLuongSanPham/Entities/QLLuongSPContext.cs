@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace QLLuongSanPham.Entities
 {
-    public partial class QLLuongSP : DbContext
+    public partial class QLLuongSPContext : DbContext
     {
-        public QLLuongSP()
+        public QLLuongSPContext()
             : base("name=QLLuongSP")
         {
         }
