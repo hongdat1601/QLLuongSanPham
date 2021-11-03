@@ -50,13 +50,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDateStart = new System.Windows.Forms.Label();
             this.txtStartDate = new System.Windows.Forms.TextBox();
             this.lblSeniority = new System.Windows.Forms.Label();
-            this.txtStudy = new System.Windows.Forms.TextBox();
-            this.txtPosition = new System.Windows.Forms.TextBox();
-            this.txtDeparment = new System.Windows.Forms.TextBox();
             this.lblStudy = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblDeparment = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.pnlLich.SuspendLayout();
             this.gbxInfor.SuspendLayout();
             this.gbxInfoWork.SuspendLayout();
@@ -122,7 +122,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboSex.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.cboSex.FormattingEnabled = true;
             this.cboSex.Items.AddRange(new object[] {
-            "Name",
+            "Nam",
             "Nữ"});
             this.cboSex.Location = new System.Drawing.Point(687, 69);
             this.cboSex.Name = "cboSex";
@@ -249,13 +249,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             // gbxInfoWork
             // 
             this.gbxInfoWork.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbxInfoWork.Controls.Add(this.comboBox3);
+            this.gbxInfoWork.Controls.Add(this.comboBox2);
+            this.gbxInfoWork.Controls.Add(this.comboBox1);
             this.gbxInfoWork.Controls.Add(this.txtSeniority);
             this.gbxInfoWork.Controls.Add(this.lblDateStart);
             this.gbxInfoWork.Controls.Add(this.txtStartDate);
             this.gbxInfoWork.Controls.Add(this.lblSeniority);
-            this.gbxInfoWork.Controls.Add(this.txtStudy);
-            this.gbxInfoWork.Controls.Add(this.txtPosition);
-            this.gbxInfoWork.Controls.Add(this.txtDeparment);
             this.gbxInfoWork.Controls.Add(this.lblStudy);
             this.gbxInfoWork.Controls.Add(this.lblPosition);
             this.gbxInfoWork.Controls.Add(this.lblDeparment);
@@ -312,36 +312,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblSeniority.TabIndex = 1;
             this.lblSeniority.Text = "Thâm niên công tác";
             // 
-            // txtStudy
-            // 
-            this.txtStudy.BackColor = System.Drawing.Color.White;
-            this.txtStudy.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtStudy.Location = new System.Drawing.Point(339, 128);
-            this.txtStudy.Name = "txtStudy";
-            this.txtStudy.Size = new System.Drawing.Size(410, 29);
-            this.txtStudy.TabIndex = 2;
-            this.txtStudy.Text = "Đại học";
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.BackColor = System.Drawing.Color.White;
-            this.txtPosition.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtPosition.Location = new System.Drawing.Point(339, 74);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(410, 29);
-            this.txtPosition.TabIndex = 2;
-            this.txtPosition.Text = "Nhân viên";
-            // 
-            // txtDeparment
-            // 
-            this.txtDeparment.BackColor = System.Drawing.Color.White;
-            this.txtDeparment.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtDeparment.Location = new System.Drawing.Point(339, 21);
-            this.txtDeparment.Name = "txtDeparment";
-            this.txtDeparment.Size = new System.Drawing.Size(410, 29);
-            this.txtDeparment.TabIndex = 2;
-            this.txtDeparment.Text = "Ban quản trị";
-            // 
             // lblStudy
             // 
             this.lblStudy.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -392,6 +362,30 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(339, 23);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(410, 24);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(339, 79);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(410, 24);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(339, 133);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(410, 24);
+            this.comboBox3.TabIndex = 3;
+            // 
             // frmTimKiemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -435,12 +429,12 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label lblDateStart;
         private System.Windows.Forms.TextBox txtStartDate;
         private System.Windows.Forms.Label lblSeniority;
-        private System.Windows.Forms.TextBox txtStudy;
-        private System.Windows.Forms.TextBox txtPosition;
-        private System.Windows.Forms.TextBox txtDeparment;
         private System.Windows.Forms.Label lblStudy;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblDeparment;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

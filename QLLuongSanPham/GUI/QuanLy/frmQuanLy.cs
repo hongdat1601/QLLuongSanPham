@@ -207,17 +207,17 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnTimKiemSP_Click(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmTimKiemSP());
         }
 
         private void btnTimKiemPB_Click(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmTiemKiemPB());
         }
 
         private void btnTimKiemHD_Click(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmTiemKiemHD());
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)

@@ -169,11 +169,29 @@
     <Compile Include="GUI\QuanLy\frmQuanLy.Designer.cs">
       <DependentUpon>frmQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QuanLy\frmTiemKiemHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLy\frmTiemKiemHD.Designer.cs">
+      <DependentUpon>frmTiemKiemHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLy\frmTiemKiemPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLy\frmTiemKiemPB.Designer.cs">
+      <DependentUpon>frmTiemKiemPB.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QuanLy\frmTimKiemNV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\QuanLy\frmTimKiemNV.Designer.cs">
       <DependentUpon>frmTimKiemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLy\frmTimKiemSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLy\frmTimKiemSP.Designer.cs">
+      <DependentUpon>frmTimKiemSP.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanLy\frmTinhLuong.cs">
       <SubType>Form</SubType>
@@ -245,8 +263,17 @@
     <EmbeddedResource Include="GUI\QuanLy\frmQuanLy.resx">
       <DependentUpon>frmQuanLy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLy\frmTiemKiemHD.resx">
+      <DependentUpon>frmTiemKiemHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLy\frmTiemKiemPB.resx">
+      <DependentUpon>frmTiemKiemPB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLy\frmTimKiemNV.resx">
       <DependentUpon>frmTimKiemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLy\frmTimKiemSP.resx">
+      <DependentUpon>frmTimKiemSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLy\frmTinhLuong.resx">
       <DependentUpon>frmTinhLuong.cs</DependentUpon>
