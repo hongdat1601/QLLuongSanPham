@@ -1,5 +1,4 @@
-﻿using QLLuongSanPham.GUI.QuanLy;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,31 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLuongSanPham.GUI
+namespace QLLuongSanPham
 {
-    public partial class frmDangNhap : Form
+    public partial class frmLogin : Form
     {
-        public frmDangNhap()
+        public frmLogin()
         {
             InitializeComponent();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            DialogResult msg = MessageBox.Show("Thoát khỏi chương trình.", "Thông báo", MessageBoxButtons.YesNo);
-
-            if (msg == DialogResult.Yes)
-            {
-                this.DialogResult = DialogResult.Yes;
-                this.Close();
-            }
+            this.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "demo" && txtPassword.Text == "123")
             {
-                frmQuanLy frm = new frmQuanLy();
+                frmManagement frm = new frmManagement();
                 this.Hide();
 
                 if (frm.ShowDialog() == DialogResult.Yes)

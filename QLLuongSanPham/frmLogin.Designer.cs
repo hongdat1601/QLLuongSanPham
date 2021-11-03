@@ -1,7 +1,7 @@
 ﻿
-namespace QLLuongSanPham.GUI
+namespace QLLuongSanPham
 {
-    partial class frmDangNhap
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -37,8 +37,8 @@ namespace QLLuongSanPham.GUI
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -91,18 +91,17 @@ namespace QLLuongSanPham.GUI
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(323, 43);
             this.txtUsername.TabIndex = 3;
-            this.txtUsername.WordWrap = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(101, 211);
+            this.label1.Location = new System.Drawing.Point(152, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 47);
+            this.label1.Size = new System.Drawing.Size(141, 45);
             this.label1.TabIndex = 7;
-            this.label1.Text = "ĐĂNG NHẬP";
+            this.label1.Text = "LOG IN";
             // 
             // txtPassword
             // 
@@ -116,7 +115,6 @@ namespace QLLuongSanPham.GUI
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(323, 43);
             this.txtPassword.TabIndex = 10;
-            this.txtPassword.WordWrap = false;
             // 
             // panel2
             // 
@@ -140,46 +138,46 @@ namespace QLLuongSanPham.GUI
             this.iconPictureBox3.TabIndex = 8;
             this.iconPictureBox3.TabStop = false;
             // 
-            // btnDangNhap
+            // btnLogin
             // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.White;
-            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangNhap.FlatAppearance.BorderSize = 0;
-            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnDangNhap.Location = new System.Drawing.Point(34, 508);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(373, 44);
-            this.btnDangNhap.TabIndex = 11;
-            this.btnDangNhap.Text = "ĐĂNG NHẬP";
-            this.btnDangNhap.UseVisualStyleBackColor = false;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.White;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnLogin.Location = new System.Drawing.Point(34, 508);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(373, 44);
+            this.btnLogin.TabIndex = 11;
+            this.btnLogin.Text = "LOG IN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // btnThoat
+            // btnClose
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(34, 571);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(373, 44);
-            this.btnThoat.TabIndex = 12;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(34, 571);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(373, 44);
+            this.btnClose.TabIndex = 12;
+            this.btnClose.Text = "Exit";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // frmDangNhap
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(444, 641);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.iconPictureBox3);
@@ -189,7 +187,7 @@ namespace QLLuongSanPham.GUI
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmDangNhap";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
@@ -210,8 +208,8 @@ namespace QLLuongSanPham.GUI
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

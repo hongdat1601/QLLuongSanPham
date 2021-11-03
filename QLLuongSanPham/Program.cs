@@ -1,10 +1,9 @@
-﻿using QLLuongSanPham.GUI.QuanLy;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLLuongSanPham.GUI.NhanVienGUI;
+
 namespace QLLuongSanPham
 {
     static class Program
@@ -17,7 +16,7 @@ namespace QLLuongSanPham
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQuanLy());
+            Application.Run(new frmLogin());
         }
     }
 }
