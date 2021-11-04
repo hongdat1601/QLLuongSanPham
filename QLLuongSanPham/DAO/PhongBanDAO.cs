@@ -26,6 +26,20 @@ namespace QLLuongSanPham.DAO
                 .FirstOrDefault();
         }
 
+        public int GetIDByName(string name)
+        {
+            return context.PhongBan
+                .Where(x => x.TenPhongBan == name)
+                .FirstOrDefault().ID;
+        }
+
+        public string GetNameByID(int id)
+        {
+            return context.PhongBan
+                .Where(x => x.ID == id)
+                .FirstOrDefault().TenPhongBan;
+        }
+
         public bool Add(PhongBan pb)
         {
             using (var tran = context.Database.BeginTransaction())

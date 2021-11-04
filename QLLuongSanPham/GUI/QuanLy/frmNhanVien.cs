@@ -70,7 +70,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 
                 lvwItem.SubItems.Add(nv.SDT);
                 lvwItem.SubItems.Add(nv.DiaChi);
-                lvwItem.SubItems.Add(pbDAO.GetDepByID(nv.IDPhongBan.Value).TenPhongBan);
+                lvwItem.SubItems.Add(pbDAO.GetById(nv.IDPhongBan.Value).TenPhongBan);
                 lvwItem.SubItems.Add(cvDAO.GetChucByID(nv.IDChucVu.Value).TenChucVu);
                 lvwItem.SubItems.Add(nv.LuongCanBan.ToString());
                 lvwItem.SubItems.Add(nv.ChiSoLuong.ToString());
