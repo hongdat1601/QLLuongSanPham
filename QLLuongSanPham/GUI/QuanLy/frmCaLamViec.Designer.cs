@@ -34,12 +34,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtCalam = new System.Windows.Forms.TextBox();
             this.txtTime = new System.Windows.Forms.TextBox();
             this.pnlDS = new System.Windows.Forms.Panel();
-            this.lvwList = new System.Windows.Forms.ListView();
+            this.lvwDSCA = new System.Windows.Forms.ListView();
             this.lblList = new System.Windows.Forms.Label();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.pnlDS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +47,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblCalam.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCalam.AutoSize = true;
             this.lblCalam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCalam.Location = new System.Drawing.Point(21, 17);
+            this.lblCalam.Location = new System.Drawing.Point(21, 41);
             this.lblCalam.Name = "lblCalam";
             this.lblCalam.Size = new System.Drawing.Size(73, 25);
             this.lblCalam.TabIndex = 0;
@@ -59,7 +58,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblTime.Location = new System.Drawing.Point(21, 104);
+            this.lblTime.Location = new System.Drawing.Point(21, 139);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(169, 25);
             this.lblTime.TabIndex = 0;
@@ -70,7 +69,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtCalam.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCalam.Enabled = false;
             this.txtCalam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCalam.Location = new System.Drawing.Point(350, 12);
+            this.txtCalam.Location = new System.Drawing.Point(350, 36);
             this.txtCalam.Name = "txtCalam";
             this.txtCalam.Size = new System.Drawing.Size(332, 30);
             this.txtCalam.TabIndex = 1;
@@ -80,7 +79,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTime.Enabled = false;
             this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTime.Location = new System.Drawing.Point(350, 99);
+            this.txtTime.Location = new System.Drawing.Point(350, 134);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(332, 30);
             this.txtTime.TabIndex = 1;
@@ -89,7 +88,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.pnlDS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlDS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlDS.Controls.Add(this.lvwList);
+            this.pnlDS.Controls.Add(this.lvwDSCA);
             this.pnlDS.Controls.Add(this.lblList);
             this.pnlDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pnlDS.Location = new System.Drawing.Point(26, 352);
@@ -97,14 +96,15 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDS.Size = new System.Drawing.Size(1111, 327);
             this.pnlDS.TabIndex = 3;
             // 
-            // lvwList
+            // lvwDSCA
             // 
-            this.lvwList.HideSelection = false;
-            this.lvwList.Location = new System.Drawing.Point(22, 64);
-            this.lvwList.Name = "lvwList";
-            this.lvwList.Size = new System.Drawing.Size(1049, 237);
-            this.lvwList.TabIndex = 1;
-            this.lvwList.UseCompatibleStateImageBehavior = false;
+            this.lvwDSCA.HideSelection = false;
+            this.lvwDSCA.Location = new System.Drawing.Point(19, 64);
+            this.lvwDSCA.Name = "lvwDSCA";
+            this.lvwDSCA.Size = new System.Drawing.Size(1068, 237);
+            this.lvwDSCA.TabIndex = 1;
+            this.lvwDSCA.UseCompatibleStateImageBehavior = false;
+            this.lvwDSCA.SelectedIndexChanged += new System.EventHandler(this.lvwDSCA_SelectedIndexChanged);
             // 
             // lblList
             // 
@@ -125,13 +125,14 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 25;
-            this.btnAdd.Location = new System.Drawing.Point(26, 191);
+            this.btnAdd.Location = new System.Drawing.Point(26, 239);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(109, 43);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -141,7 +142,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEdit.IconSize = 25;
-            this.btnEdit.Location = new System.Drawing.Point(305, 191);
+            this.btnEdit.Location = new System.Drawing.Point(295, 239);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(97, 43);
             this.btnEdit.TabIndex = 2;
@@ -149,6 +150,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -158,7 +160,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnDelete.IconColor = System.Drawing.Color.Red;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 25;
-            this.btnDelete.Location = new System.Drawing.Point(587, 191);
+            this.btnDelete.Location = new System.Drawing.Point(587, 239);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(95, 43);
             this.btnDelete.TabIndex = 2;
@@ -166,19 +168,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton5.IconColor = System.Drawing.Color.Black;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(1671, 249);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(145, 43);
-            this.iconButton5.TabIndex = 2;
-            this.iconButton5.Text = "iconButton1";
-            this.iconButton5.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmCaLamViec
             // 
@@ -189,7 +179,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.txtCalam);
             this.Controls.Add(this.lblTime);
@@ -198,6 +187,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Name = "frmCaLamViec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCaLamViec";
+            this.Load += new System.EventHandler(this.frmCaLamViec_Load);
             this.pnlDS.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,7 +204,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnAdd;
         private FontAwesome.Sharp.IconButton btnEdit;
         private FontAwesome.Sharp.IconButton btnDelete;
-        private System.Windows.Forms.ListView lvwList;
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private System.Windows.Forms.ListView lvwDSCA;
     }
 }
