@@ -3,34 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.DAO
 {
-    class PhongBanDAO
+    class ChucVuDAO
     {
         private QLLuongSPContext context;
 
-        public PhongBanDAO()
+        public ChucVuDAO()
         {
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<PhongBan> GetPhongBans() => context.PhongBan;
+        public IEnumerable<ChucVu> GetChucVus() => context.ChucVu;
 
-        public PhongBan GetDepByID(int id)
+        public ChucVu GetChucByID(int id)
         {
-            return context.PhongBan
+            return context.ChucVu
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public int GetIDByName(string name)
         {
-            var q = from i in context.PhongBan
-                    where i.TenPhongBan.Equals(name)
-                    select i.ID;
+            var q = from i in context.ChucVu
+                     where i.TenChucVu.Equals(name)
+                     select i.ID;
+
             int id = q.FirstOrDefault();
             return id;
         }
@@ -38,9 +38,9 @@ namespace QLLuongSanPham.DAO
         public string GetNameByID(int id)
         {
             string name;
-            var q = from i in context.PhongBan
+            var q = from i in context.ChucVu
                     where i.ID == id
-                    select i.TenPhongBan;
+                    select i.TenChucVu;
             name = q.FirstOrDefault();
 
             return name;

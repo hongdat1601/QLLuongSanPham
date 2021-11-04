@@ -29,93 +29,143 @@ namespace QLLuongSanPham.GUI.QuanLy
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.gboTT = new System.Windows.Forms.GroupBox();
+            this.btnChonAnh = new FontAwesome.Sharp.IconButton();
+            this.ptcAvata = new System.Windows.Forms.PictureBox();
+            this.txtDVT = new System.Windows.Forms.TextBox();
+            this.txtDG = new System.Windows.Forms.TextBox();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.lblDonVi = new System.Windows.Forms.Label();
+            this.lblDonGia = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.pnlList = new System.Windows.Forms.Panel();
             this.lblDS = new System.Windows.Forms.Label();
-            this.lvwPhongBan = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lvwDSSP = new System.Windows.Forms.ListView();
+            this.txtNameSearch = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lbNameSearch = new System.Windows.Forms.Label();
+            this.gboTT.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptcAvata)).BeginInit();
+            this.pnlList.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // gboTT
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.Controls.Add(this.iconButton1);
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 170);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(674, 264);
-            this.groupBox2.TabIndex = 20;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin hợp đồng";
+            this.gboTT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gboTT.Controls.Add(this.btnChonAnh);
+            this.gboTT.Controls.Add(this.ptcAvata);
+            this.gboTT.Controls.Add(this.txtDVT);
+            this.gboTT.Controls.Add(this.txtDG);
+            this.gboTT.Controls.Add(this.txtTenSP);
+            this.gboTT.Controls.Add(this.lblDonVi);
+            this.gboTT.Controls.Add(this.lblDonGia);
+            this.gboTT.Controls.Add(this.lblName);
+            this.gboTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboTT.Location = new System.Drawing.Point(12, 107);
+            this.gboTT.Name = "gboTT";
+            this.gboTT.Size = new System.Drawing.Size(674, 408);
+            this.gboTT.TabIndex = 20;
+            this.gboTT.TabStop = false;
+            this.gboTT.Text = "Thông tin hợp đồng";
             // 
-            // textBox3
+            // btnChonAnh
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(299, 139);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(365, 30);
-            this.textBox3.TabIndex = 2;
+            this.btnChonAnh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnChonAnh.Enabled = false;
+            this.btnChonAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnChonAnh.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
+            this.btnChonAnh.IconColor = System.Drawing.Color.Peru;
+            this.btnChonAnh.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnChonAnh.IconSize = 25;
+            this.btnChonAnh.Location = new System.Drawing.Point(6, 223);
+            this.btnChonAnh.Name = "btnChonAnh";
+            this.btnChonAnh.Size = new System.Drawing.Size(140, 40);
+            this.btnChonAnh.TabIndex = 34;
+            this.btnChonAnh.Text = "Chọn ảnh";
+            this.btnChonAnh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChonAnh.UseVisualStyleBackColor = true;
+            this.btnChonAnh.Click += new System.EventHandler(this.btnChonAnh_Click);
             // 
-            // textBox2
+            // ptcAvata
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(299, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(365, 30);
-            this.textBox2.TabIndex = 2;
+            this.ptcAvata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ptcAvata.Location = new System.Drawing.Point(6, 60);
+            this.ptcAvata.Name = "ptcAvata";
+            this.ptcAvata.Size = new System.Drawing.Size(140, 134);
+            this.ptcAvata.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptcAvata.TabIndex = 3;
+            this.ptcAvata.TabStop = false;
             // 
-            // label4
+            // txtDVT
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(152, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Đơn giá:";
+            this.txtDVT.Enabled = false;
+            this.txtDVT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDVT.Location = new System.Drawing.Point(342, 353);
+            this.txtDVT.Name = "txtDVT";
+            this.txtDVT.Size = new System.Drawing.Size(322, 30);
+            this.txtDVT.TabIndex = 2;
             // 
-            // label1
+            // txtDG
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên sản phẩm:";
+            this.txtDG.Enabled = false;
+            this.txtDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDG.Location = new System.Drawing.Point(342, 204);
+            this.txtDG.Name = "txtDG";
+            this.txtDG.Size = new System.Drawing.Size(322, 30);
+            this.txtDG.TabIndex = 2;
             // 
-            // panel1
+            // txtTenSP
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.lblDS);
-            this.panel1.Controls.Add(this.lvwPhongBan);
-            this.panel1.Location = new System.Drawing.Point(715, 105);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 495);
-            this.panel1.TabIndex = 19;
+            this.txtTenSP.Enabled = false;
+            this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSP.Location = new System.Drawing.Point(342, 60);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(322, 30);
+            this.txtTenSP.TabIndex = 2;
+            // 
+            // lblDonVi
+            // 
+            this.lblDonVi.AutoSize = true;
+            this.lblDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonVi.Location = new System.Drawing.Point(167, 358);
+            this.lblDonVi.Name = "lblDonVi";
+            this.lblDonVi.Size = new System.Drawing.Size(114, 25);
+            this.lblDonVi.TabIndex = 1;
+            this.lblDonVi.Text = "Đơn vị tính: ";
+            // 
+            // lblDonGia
+            // 
+            this.lblDonGia.AutoSize = true;
+            this.lblDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonGia.Location = new System.Drawing.Point(167, 209);
+            this.lblDonGia.Name = "lblDonGia";
+            this.lblDonGia.Size = new System.Drawing.Size(85, 25);
+            this.lblDonGia.TabIndex = 1;
+            this.lblDonGia.Text = "Đơn giá:";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(167, 65);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(144, 25);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Tên sản phẩm:";
+            // 
+            // pnlList
+            // 
+            this.pnlList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlList.Controls.Add(this.lblDS);
+            this.pnlList.Controls.Add(this.lvwDSSP);
+            this.pnlList.Location = new System.Drawing.Point(715, 105);
+            this.pnlList.Name = "pnlList";
+            this.pnlList.Size = new System.Drawing.Size(768, 495);
+            this.pnlList.TabIndex = 19;
             // 
             // lblDS
             // 
@@ -126,30 +176,31 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDS.Name = "lblDS";
             this.lblDS.Size = new System.Drawing.Size(764, 35);
             this.lblDS.TabIndex = 15;
-            this.lblDS.Text = "Danh sách hợp đồng";
+            this.lblDS.Text = "Danh sách sản phẩm";
             this.lblDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lvwPhongBan
+            // lvwDSSP
             // 
-            this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvwDSSP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvwPhongBan.HideSelection = false;
-            this.lvwPhongBan.Location = new System.Drawing.Point(6, 63);
-            this.lvwPhongBan.MultiSelect = false;
-            this.lvwPhongBan.Name = "lvwPhongBan";
-            this.lvwPhongBan.Size = new System.Drawing.Size(755, 425);
-            this.lvwPhongBan.TabIndex = 0;
-            this.lvwPhongBan.UseCompatibleStateImageBehavior = false;
+            this.lvwDSSP.HideSelection = false;
+            this.lvwDSSP.Location = new System.Drawing.Point(6, 63);
+            this.lvwDSSP.MultiSelect = false;
+            this.lvwDSSP.Name = "lvwDSSP";
+            this.lvwDSSP.Size = new System.Drawing.Size(755, 425);
+            this.lvwDSSP.TabIndex = 0;
+            this.lvwDSSP.UseCompatibleStateImageBehavior = false;
+            this.lvwDSSP.SelectedIndexChanged += new System.EventHandler(this.lvwDSSP_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtNameSearch
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(715, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(688, 38);
-            this.textBox1.TabIndex = 18;
+            this.txtNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameSearch.Location = new System.Drawing.Point(898, 48);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.Size = new System.Drawing.Size(463, 30);
+            this.txtNameSearch.TabIndex = 18;
             // 
             // btnTimKiem
             // 
@@ -166,33 +217,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiem.TabIndex = 17;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(152, 221);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Đơn vị tính: ";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(299, 218);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(365, 30);
-            this.textBox4.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 134);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -201,7 +225,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXoa.IconColor = System.Drawing.Color.Red;
             this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnXoa.IconSize = 25;
-            this.btnXoa.Location = new System.Drawing.Point(591, 460);
+            this.btnXoa.Location = new System.Drawing.Point(591, 552);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(95, 43);
             this.btnXoa.TabIndex = 33;
@@ -209,6 +233,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -218,7 +243,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSua.IconSize = 25;
-            this.btnSua.Location = new System.Drawing.Point(310, 460);
+            this.btnSua.Location = new System.Drawing.Point(311, 552);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(97, 43);
             this.btnSua.TabIndex = 32;
@@ -226,6 +251,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -235,29 +261,25 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.IconSize = 25;
-            this.btnThem.Location = new System.Drawing.Point(12, 460);
+            this.btnThem.Location = new System.Drawing.Point(12, 557);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(114, 43);
             this.btnThem.TabIndex = 31;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // iconButton1
+            // lbNameSearch
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
-            this.iconButton1.IconColor = System.Drawing.Color.Peru;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(6, 208);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(140, 40);
-            this.iconButton1.TabIndex = 34;
-            this.iconButton1.Text = "Chọn ảnh";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.lbNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbNameSearch.AutoSize = true;
+            this.lbNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameSearch.Location = new System.Drawing.Point(710, 53);
+            this.lbNameSearch.Name = "lbNameSearch";
+            this.lbNameSearch.Size = new System.Drawing.Size(144, 25);
+            this.lbNameSearch.TabIndex = 0;
+            this.lbNameSearch.Text = "Tên sản phẩm:";
             // 
             // frmSanPham
             // 
@@ -267,17 +289,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.gboTT);
+            this.Controls.Add(this.pnlList);
+            this.Controls.Add(this.txtNameSearch);
             this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.lbNameSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSanPham";
             this.Text = "frmSanPham";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmSanPham_Load);
+            this.gboTT.ResumeLayout(false);
+            this.gboTT.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptcAvata)).EndInit();
+            this.pnlList.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,22 +309,23 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox gboTT;
+        private System.Windows.Forms.TextBox txtDG;
+        private System.Windows.Forms.TextBox txtTenSP;
+        private System.Windows.Forms.Label lblDonGia;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Panel pnlList;
         private System.Windows.Forms.Label lblDS;
-        private System.Windows.Forms.ListView lvwPhongBan;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListView lvwDSSP;
+        private System.Windows.Forms.TextBox txtNameSearch;
         private FontAwesome.Sharp.IconButton btnTimKiem;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.TextBox txtDVT;
+        private System.Windows.Forms.Label lblDonVi;
+        private System.Windows.Forms.PictureBox ptcAvata;
+        private FontAwesome.Sharp.IconButton btnChonAnh;
         private FontAwesome.Sharp.IconButton btnXoa;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
+        private System.Windows.Forms.Label lbNameSearch;
     }
 }

@@ -3,55 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.DAO
 {
-    class NhanVienDAO
+    class SanPhamDAO
     {
         private QLLuongSPContext context;
 
-        public NhanVienDAO()
+        public SanPhamDAO()
         {
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<NhanVien> GetNhanViens() => context.NhanVien;
+        public IEnumerable<SanPham> GetSanPhams() => context.SanPham;
 
-        public NhanVien GetById(int id)
-        {
-            return context.NhanVien
-                .Where(x => x.ID == id)
-                .FirstOrDefault();
-        }
 
-        public bool AddEmployee(NhanVien nv)
-        {
-            using(var db = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    context.NhanVien.Add(nv);
-                    context.SaveChanges();
-                    db.Commit();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    db.Rollback();
-                    throw new Exception("Lỗi thêm nhân viên");
-                }
-            }
-        }
-
-        public bool RemoveEmployee(NhanVien nv)
+        public bool AddProcduct(SanPham sp)
         {
             using (var db = context.Database.BeginTransaction())
             {
                 try
                 {
-                    context.NhanVien.Remove(nv);
+                    context.SanPham.Add(sp);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -59,12 +33,31 @@ namespace QLLuongSanPham.DAO
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi xóa nhân viên");
+                    throw new Exception("Lỗi thêm sản phẩm");
                 }
             }
         }
 
-        public bool UpdateEmployee(NhanVien nv)
+        public bool RemoveProcduct(SanPham sp)
+        {
+            using (var db = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.SanPham.Remove(sp);
+                    context.SaveChanges();
+                    db.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    db.Rollback();
+                    throw new Exception("Lỗi xóa sản phẩm");
+                }
+            }
+        }
+
+        public bool UpdateEmployee(SanPham sp)
         {
             using (var db = context.Database.BeginTransaction())
             {
