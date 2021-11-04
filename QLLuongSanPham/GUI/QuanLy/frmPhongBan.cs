@@ -16,13 +16,12 @@ namespace QLLuongSanPham.GUI.QuanLy
     public partial class frmPhongBan : Form
     {
         private PhongBanDAO phongBanDAO;
-        private NhanVienDAO nhanVienDAO;
+        private PhongBan phongBan = null;
 
         public frmPhongBan()
         {
             InitializeComponent();
             phongBanDAO = new PhongBanDAO();
-            nhanVienDAO = new NhanVienDAO();
         }
 
         private void CreateList(ListView lvw)
@@ -31,16 +30,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.FullRowSelect = true;
             lvw.View = View.Details;
 
-            lvwPhongBan.Columns.Add("STT", 70);
-            lvwPhongBan.Columns.Add("Tên phòng", 210);
-            lvwPhongBan.Columns.Add("Ngày thành lập", 140);
-            lvwPhongBan.Columns.Add("Số lượng nhân viên", 140);
-            lvwPhongBan.Columns.Add("Tên quản lý", 210);
+            lstvPhongBan.Columns.Add("STT", 70);
+            lstvPhongBan.Columns.Add("Tên phòng", 210);
+            lstvPhongBan.Columns.Add("Ngày thành lập", 140);
+            lstvPhongBan.Columns.Add("Số lượng nhân viên", 140);
+            lstvPhongBan.Columns.Add("Tên quản lý", 210);
         }
 
         private void LoadListPhongBan(IEnumerable<PhongBan> list)
         {
-            lvwPhongBan.Items.Clear();
+            lstvPhongBan.Items.Clear();
 
             int i = 1;
             foreach (PhongBan pb in list)
@@ -50,46 +49,130 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(pb.TenPhongBan);
                 item.SubItems.Add(pb.NgayThanhLap.Value.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(pb.SoLuongNhanVien.ToString());
-                if (pb.IDQuanLy != null)
-                    item.SubItems.Add(nhanVienDAO.GetById(pb.IDQuanLy.Value).HoTen);
-                else
-                    item.SubItems.Add("");
+                item.SubItems.Add(pb.TenQuanLy);
                 item.Tag = pb;
 
 
-                lvwPhongBan.Items.Add(item);
+                lstvPhongBan.Items.Add(item);
 
                 i++;
             }
 
-            if (lvwPhongBan.Items.Count > 0)
-                lvwPhongBan.SelectedIndices.Add(0);
-
-
-            lvwPhongBan.Focus();
+            lstvPhongBan.Focus();
         }
 
         private void frmPhongBan_Load(object sender, EventArgs e)
         {
-            CreateList(lvwPhongBan);
+            CreateList(lstvPhongBan);
             LoadListPhongBan(phongBanDAO.GetPhongBans());
 
-            if (lvwPhongBan.Items.Count > 0)
-                lvwPhongBan.SelectedIndices.Add(0);
+            if (lstvPhongBan.Items.Count > 0)
+                lstvPhongBan.SelectedIndices.Add(0);
         }
 
         private void lvwPhongBan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lvwPhongBan.SelectedItems.Count > 0)
+            if (lstvPhongBan.SelectedItems.Count > 0)
             {
-                PhongBan pb = (PhongBan)lvwPhongBan.SelectedItems[0].Tag;
-                txtTenPhongBan.Text = pb.TenPhongBan;
-                txtSLNV.Text = pb.SoLuongNhanVien.ToString();
+                phongBan = (PhongBan)lstvPhongBan.SelectedItems[0].Tag;
+                txtTenPhongBan.Text = phongBan.TenPhongBan;
+                txtSLNV.Text = phongBan.SoLuongNhanVien.ToString();
+                txtTenQL.Text = phongBan.TenQuanLy;
+                dtmNgayThanhLap.Value = phongBan.NgayThanhLap.Value;
+            }
+        }
 
-                if (pb.IDQuanLy != null)
-                    txtTenQL.Text = nhanVienDAO.GetById(pb.IDQuanLy.Value).HoTen;
-                else
-                    txtTenQL.Text = "";
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (phongBan == null)
+            {
+                MessageBox.Show("Chưa chọn phòng ban!", "Thông báo");
+                return;
+            }
+
+            if (btnSua.Text == "Lưu")
+            {
+                phongBan.TenPhongBan = txtTenPhongBan.Text;
+                phongBan.TenQuanLy = txtSLNV.Text;
+                phongBan.NgayThanhLap = dtmNgayThanhLap.Value;
+                phongBan.TenQuanLy = txtTenQL.Text;
+                phongBanDAO.Update(phongBan);
+
+                txtTenPhongBan.Enabled = false;
+                dtmNgayThanhLap.Enabled = false;
+                txtTenQL.Enabled = false;
+                btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
+                btnSua.IconColor = Color.Orange;
+                btnSua.Text = "Sửa";
+
+                LoadListPhongBan(phongBanDAO.GetPhongBans());
+            }
+            else
+            {
+                txtTenPhongBan.Enabled = true;
+                dtmNgayThanhLap.Enabled = true;
+                txtTenQL.Enabled = true;
+                btnSua.IconChar = FontAwesome.Sharp.IconChar.Save;
+                btnSua.IconColor = Color.Blue;
+                btnSua.Text = "Lưu";
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (phongBan == null)
+            {
+                MessageBox.Show("Chưa chọn phòng ban!", "Thông báo");
+                return;
+            }
+
+            if (MessageBox.Show("Xác nhận xóa?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                phongBanDAO.Delete(phongBan);
+                LoadListPhongBan(phongBanDAO.GetPhongBans());
+                if (lstvPhongBan.Items.Count > 0)
+                {
+                    lstvPhongBan.SelectedIndices.Add(lstvPhongBan.Items.Count - 1);
+                }
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (btnThem.Text == "Lưu")
+            {
+                PhongBan pb = new PhongBan
+                {
+                    TenPhongBan = txtTenPhongBan.Text,
+                    NgayThanhLap = dtmNgayThanhLap.Value,
+                    TenQuanLy = txtTenQL.Text
+                };
+                phongBanDAO.Add(pb);
+
+                txtTenPhongBan.Enabled = false;
+                dtmNgayThanhLap.Enabled = false;
+                txtTenQL.Enabled = false;
+
+
+                btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+                btnThem.IconColor = Color.Green;
+                btnThem.Text = "Thêm";
+
+                LoadListPhongBan(phongBanDAO.GetPhongBans());
+                lstvPhongBan.SelectedIndices.Add(lstvPhongBan.Items.Count - 1);
+            }
+            else
+            {
+                txtTenPhongBan.Enabled = true;
+                dtmNgayThanhLap.Enabled = true;
+                txtTenQL.Enabled = true;
+                txtTenPhongBan.Text = "";
+                txtTenQL.Text = "";
+                dtmNgayThanhLap.Value = DateTime.Now;
+
+                btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
+                btnThem.IconColor = Color.Blue;
+                btnThem.Text = "Lưu";
             }
         }
     }

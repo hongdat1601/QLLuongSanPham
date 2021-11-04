@@ -31,16 +31,16 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDS = new System.Windows.Forms.Label();
-            this.lvwPhongBan = new System.Windows.Forms.ListView();
+            this.lstvHopDong = new System.Windows.Forms.ListView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cboTrangThai = new System.Windows.Forms.ComboBox();
+            this.dtmNgayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.dtmNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.txtDieuKhoan = new System.Windows.Forms.TextBox();
+            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
+            this.txtTenHopDong = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,24 +48,25 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlDSPC = new System.Windows.Forms.Panel();
-            this.lvwDSPC = new System.Windows.Forms.ListView();
+            this.lstvSanPham = new System.Windows.Forms.ListView();
             this.lblDSPhanCong = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstvCTHopDong = new System.Windows.Forms.ListView();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTenSanPham = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnLapHopDong = new FontAwesome.Sharp.IconButton();
+            this.btnCapNhat = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.pnlDSPC.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +74,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblDS);
-            this.panel1.Controls.Add(this.lvwPhongBan);
+            this.panel1.Controls.Add(this.lstvHopDong);
             this.panel1.Location = new System.Drawing.Point(715, 99);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(768, 495);
@@ -91,18 +92,18 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDS.Text = "Danh sách hợp đồng";
             this.lblDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lvwPhongBan
+            // lstvHopDong
             // 
-            this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lstvHopDong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvwPhongBan.HideSelection = false;
-            this.lvwPhongBan.Location = new System.Drawing.Point(6, 63);
-            this.lvwPhongBan.MultiSelect = false;
-            this.lvwPhongBan.Name = "lvwPhongBan";
-            this.lvwPhongBan.Size = new System.Drawing.Size(755, 425);
-            this.lvwPhongBan.TabIndex = 0;
-            this.lvwPhongBan.UseCompatibleStateImageBehavior = false;
+            this.lstvHopDong.HideSelection = false;
+            this.lstvHopDong.Location = new System.Drawing.Point(6, 63);
+            this.lstvHopDong.MultiSelect = false;
+            this.lstvHopDong.Name = "lstvHopDong";
+            this.lstvHopDong.Size = new System.Drawing.Size(755, 425);
+            this.lstvHopDong.TabIndex = 0;
+            this.lstvHopDong.UseCompatibleStateImageBehavior = false;
             // 
             // textBox1
             // 
@@ -131,12 +132,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.cboTrangThai);
+            this.groupBox2.Controls.Add(this.dtmNgayKetThuc);
+            this.groupBox2.Controls.Add(this.dtmNgayBatDau);
+            this.groupBox2.Controls.Add(this.txtDieuKhoan);
+            this.groupBox2.Controls.Add(this.txtTenKhachHang);
+            this.groupBox2.Controls.Add(this.txtTenHopDong);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -151,56 +152,56 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin hợp đồng";
             // 
-            // comboBox1
+            // cboTrangThai
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(172, 423);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 33);
-            this.comboBox1.TabIndex = 4;
+            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrangThai.FormattingEnabled = true;
+            this.cboTrangThai.Location = new System.Drawing.Point(172, 423);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(164, 33);
+            this.cboTrangThai.TabIndex = 4;
             // 
-            // dateTimePicker2
+            // dtmNgayKetThuc
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(172, 174);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(250, 30);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dtmNgayKetThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmNgayKetThuc.Location = new System.Drawing.Point(172, 174);
+            this.dtmNgayKetThuc.Name = "dtmNgayKetThuc";
+            this.dtmNgayKetThuc.Size = new System.Drawing.Size(308, 30);
+            this.dtmNgayKetThuc.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtmNgayBatDau
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(172, 117);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(250, 30);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtmNgayBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmNgayBatDau.Location = new System.Drawing.Point(172, 117);
+            this.dtmNgayBatDau.Name = "dtmNgayBatDau";
+            this.dtmNgayBatDau.Size = new System.Drawing.Size(308, 30);
+            this.dtmNgayBatDau.TabIndex = 3;
             // 
-            // textBox4
+            // txtDieuKhoan
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(172, 288);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(489, 108);
-            this.textBox4.TabIndex = 2;
+            this.txtDieuKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDieuKhoan.Location = new System.Drawing.Point(172, 288);
+            this.txtDieuKhoan.Multiline = true;
+            this.txtDieuKhoan.Name = "txtDieuKhoan";
+            this.txtDieuKhoan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDieuKhoan.Size = new System.Drawing.Size(489, 108);
+            this.txtDieuKhoan.TabIndex = 2;
             // 
-            // textBox3
+            // txtTenKhachHang
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(172, 231);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(489, 30);
-            this.textBox3.TabIndex = 2;
+            this.txtTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhachHang.Location = new System.Drawing.Point(172, 231);
+            this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.Size = new System.Drawing.Size(489, 30);
+            this.txtTenKhachHang.TabIndex = 2;
             // 
-            // textBox2
+            // txtTenHopDong
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(172, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(489, 30);
-            this.textBox2.TabIndex = 2;
+            this.txtTenHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenHopDong.Location = new System.Drawing.Point(172, 60);
+            this.txtTenHopDong.Name = "txtTenHopDong";
+            this.txtTenHopDong.Size = new System.Drawing.Size(489, 30);
+            this.txtTenHopDong.TabIndex = 2;
             // 
             // label6
             // 
@@ -266,24 +267,24 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.pnlDSPC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlDSPC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlDSPC.Controls.Add(this.lvwDSPC);
+            this.pnlDSPC.Controls.Add(this.lstvSanPham);
             this.pnlDSPC.Controls.Add(this.lblDSPhanCong);
             this.pnlDSPC.Location = new System.Drawing.Point(14, 649);
             this.pnlDSPC.Name = "pnlDSPC";
             this.pnlDSPC.Size = new System.Drawing.Size(306, 294);
             this.pnlDSPC.TabIndex = 22;
             // 
-            // lvwDSPC
+            // lstvSanPham
             // 
-            this.lvwDSPC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lstvSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvwDSPC.HideSelection = false;
-            this.lvwDSPC.Location = new System.Drawing.Point(15, 56);
-            this.lvwDSPC.Name = "lvwDSPC";
-            this.lvwDSPC.Size = new System.Drawing.Size(275, 231);
-            this.lvwDSPC.TabIndex = 1;
-            this.lvwDSPC.UseCompatibleStateImageBehavior = false;
+            this.lstvSanPham.HideSelection = false;
+            this.lstvSanPham.Location = new System.Drawing.Point(15, 56);
+            this.lstvSanPham.Name = "lstvSanPham";
+            this.lstvSanPham.Size = new System.Drawing.Size(275, 231);
+            this.lstvSanPham.TabIndex = 1;
+            this.lstvSanPham.UseCompatibleStateImageBehavior = false;
             // 
             // lblDSPhanCong
             // 
@@ -301,24 +302,24 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.lstvCTHopDong);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(911, 649);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(572, 294);
             this.panel2.TabIndex = 23;
             // 
-            // listView1
+            // lstvCTHopDong
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lstvCTHopDong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 56);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(541, 231);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lstvCTHopDong.HideSelection = false;
+            this.lstvCTHopDong.Location = new System.Drawing.Point(15, 56);
+            this.lstvCTHopDong.Name = "lstvCTHopDong";
+            this.lstvCTHopDong.Size = new System.Drawing.Size(541, 231);
+            this.lstvCTHopDong.TabIndex = 1;
+            this.lstvCTHopDong.UseCompatibleStateImageBehavior = false;
             // 
             // label7
             // 
@@ -332,14 +333,14 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label7.Text = "Chi tiết hợp đồng";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox5
+            // txtTenSanPham
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(514, 697);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(364, 30);
-            this.textBox5.TabIndex = 25;
+            this.txtTenSanPham.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSanPham.Location = new System.Drawing.Point(514, 697);
+            this.txtTenSanPham.Name = "txtTenSanPham";
+            this.txtTenSanPham.Size = new System.Drawing.Size(364, 30);
+            this.txtTenSanPham.TabIndex = 25;
             // 
             // label8
             // 
@@ -363,14 +364,14 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label9.TabIndex = 26;
             this.label9.Text = "Số lượng: ";
             // 
-            // numericUpDown1
+            // nudSoLuong
             // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(514, 767);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 30);
-            this.numericUpDown1.TabIndex = 27;
+            this.nudSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSoLuong.Location = new System.Drawing.Point(514, 767);
+            this.nudSoLuong.Name = "nudSoLuong";
+            this.nudSoLuong.Size = new System.Drawing.Size(120, 30);
+            this.nudSoLuong.TabIndex = 27;
             // 
             // btnXoa
             // 
@@ -380,7 +381,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXoa.IconColor = System.Drawing.Color.Red;
             this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnXoa.IconSize = 25;
-            this.btnXoa.Location = new System.Drawing.Point(746, 841);
+            this.btnXoa.Location = new System.Drawing.Point(782, 841);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(95, 43);
             this.btnXoa.TabIndex = 30;
@@ -397,7 +398,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSua.IconSize = 25;
-            this.btnSua.Location = new System.Drawing.Point(585, 841);
+            this.btnSua.Location = new System.Drawing.Point(576, 841);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(97, 43);
             this.btnSua.TabIndex = 29;
@@ -414,7 +415,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.IconSize = 25;
-            this.btnThem.Location = new System.Drawing.Point(406, 840);
+            this.btnThem.Location = new System.Drawing.Point(353, 841);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(114, 43);
             this.btnThem.TabIndex = 28;
@@ -422,34 +423,52 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // iconButton3
+            // btnLapHopDong
             // 
-            this.iconButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 25;
-            this.iconButton3.Location = new System.Drawing.Point(572, 551);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(114, 43);
-            this.iconButton3.TabIndex = 31;
-            this.iconButton3.Text = "Thêm";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.btnLapHopDong.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLapHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnLapHopDong.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnLapHopDong.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnLapHopDong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLapHopDong.IconSize = 25;
+            this.btnLapHopDong.Location = new System.Drawing.Point(380, 551);
+            this.btnLapHopDong.Name = "btnLapHopDong";
+            this.btnLapHopDong.Size = new System.Drawing.Size(150, 43);
+            this.btnLapHopDong.TabIndex = 31;
+            this.btnLapHopDong.Text = "Lập hợp đồng";
+            this.btnLapHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLapHopDong.UseVisualStyleBackColor = true;
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnCapNhat.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnCapNhat.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCapNhat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCapNhat.IconSize = 25;
+            this.btnCapNhat.Location = new System.Drawing.Point(536, 551);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(150, 43);
+            this.btnCapNhat.TabIndex = 32;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCapNhat.UseVisualStyleBackColor = true;
             // 
             // frmHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1495, 955);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.iconButton3);
+            this.Controls.Add(this.btnLapHopDong);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nudSoLuong);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtTenSanPham);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlDSPC);
@@ -465,7 +484,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox2.PerformLayout();
             this.pnlDSPC.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,7 +494,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDS;
-        private System.Windows.Forms.ListView lvwPhongBan;
+        private System.Windows.Forms.ListView lstvHopDong;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton btnTimKiem;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -485,25 +504,26 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cboTrangThai;
+        private System.Windows.Forms.DateTimePicker dtmNgayKetThuc;
+        private System.Windows.Forms.DateTimePicker dtmNgayBatDau;
+        private System.Windows.Forms.TextBox txtDieuKhoan;
+        private System.Windows.Forms.TextBox txtTenKhachHang;
+        private System.Windows.Forms.TextBox txtTenHopDong;
         private System.Windows.Forms.Panel pnlDSPC;
-        private System.Windows.Forms.ListView lvwDSPC;
+        private System.Windows.Forms.ListView lstvSanPham;
         private System.Windows.Forms.Label lblDSPhanCong;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstvCTHopDong;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTenSanPham;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudSoLuong;
         private FontAwesome.Sharp.IconButton btnXoa;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnLapHopDong;
+        private FontAwesome.Sharp.IconButton btnCapNhat;
     }
 }

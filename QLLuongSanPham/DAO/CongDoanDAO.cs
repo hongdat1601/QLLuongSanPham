@@ -1,38 +1,47 @@
-﻿using System;
+﻿using QLLuongSanPham.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using QLLuongSanPham.Entities;
-
 namespace QLLuongSanPham.DAO
 {
-    class PhongBanDAO
+    class CongDoanDAO
     {
         private QLLuongSPContext context;
 
-        public PhongBanDAO()
+        public CongDoanDAO()
         {
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<PhongBan> GetPhongBans() => context.PhongBan;
-
-        public PhongBan GetById(int id)
+        public IEnumerable<CongDoan> GetCongDoansByIdSanPham(int id)
         {
-            return context.PhongBan
+            return context.CongDoan.Where(x => x.IDSanPham == id);
+        }
+
+        public CongDoan GetById(int id)
+        {
+            return context.CongDoan
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
-        public bool Add(PhongBan pb)
+        public CongDoan GetByName(string name)
+        {
+            return context.CongDoan
+                .Where(x => x.TenCongDoan == name)
+                .FirstOrDefault();
+        }
+
+        public bool Add(CongDoan cd)
         {
             using (var tran = context.Database.BeginTransaction())
             {
                 try
                 {
-                    context.PhongBan.Add(pb);
+                    context.CongDoan.Add(cd);
                     context.SaveChanges();
                     tran.Commit();
                 }
@@ -46,13 +55,13 @@ namespace QLLuongSanPham.DAO
             return true;
         }
 
-        public bool Delete(PhongBan pb)
+        public bool Delete(CongDoan cd)
         {
             using (var tran = context.Database.BeginTransaction())
             {
                 try
                 {
-                    context.PhongBan.Remove(pb);
+                    context.CongDoan.Remove(cd);
                     context.SaveChanges();
                     tran.Commit();
                 }
@@ -66,18 +75,17 @@ namespace QLLuongSanPham.DAO
             return true;
         }
 
-        public bool Update(PhongBan pbNew)
+        public bool Update(CongDoan cdNew)
         {
 
             using (var tran = context.Database.BeginTransaction())
             {
                 try
                 {
-                    var pb = GetById(pbNew.ID);
+                    var cd = GetById(cdNew.ID);
 
-                    pb.TenPhongBan = pbNew.TenPhongBan;
-                    pb.NgayThanhLap = pbNew.NgayThanhLap;
-                    pb.TenQuanLy = pbNew.TenQuanLy;
+                    cd.TenCongDoan = cdNew.TenCongDoan;
+                    cd.DonGia = cdNew.DonGia;
 
                     context.SaveChanges();
                     tran.Commit();
@@ -91,6 +99,5 @@ namespace QLLuongSanPham.DAO
 
             return true;
         }
-
     }
 }

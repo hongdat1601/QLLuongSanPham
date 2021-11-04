@@ -23,9 +23,10 @@ namespace QLLuongSanPham.Entities
         [Column(TypeName = "date")]
         public DateTime? NgayThanhLap { get; set; }
 
-        public int? IDQuanLy { get; set; }
+        [StringLength(120)]
+        public string TenQuanLy { get; set; }
 
-        public int? SoLuongNhanVien { get; set; }
+        public int SoLuongNhanVien { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanVien> NhanVien { get; set; }

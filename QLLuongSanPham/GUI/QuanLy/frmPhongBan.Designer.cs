@@ -29,7 +29,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         /// </summary>
         private void InitializeComponent()
         {
-            this.lvwPhongBan = new System.Windows.Forms.ListView();
+            this.lstvPhongBan = new System.Windows.Forms.ListView();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,27 +41,27 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label2 = new System.Windows.Forms.Label();
             this.txtSLNV = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtmNgayThanhLap = new System.Windows.Forms.DateTimePicker();
+            this.txtTenQL = new System.Windows.Forms.TextBox();
             this.txtTenPhongBan = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTenQL = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lvwPhongBan
+            // lstvPhongBan
             // 
-            this.lvwPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lstvPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lvwPhongBan.HideSelection = false;
-            this.lvwPhongBan.Location = new System.Drawing.Point(6, 63);
-            this.lvwPhongBan.MultiSelect = false;
-            this.lvwPhongBan.Name = "lvwPhongBan";
-            this.lvwPhongBan.Size = new System.Drawing.Size(689, 372);
-            this.lvwPhongBan.TabIndex = 0;
-            this.lvwPhongBan.UseCompatibleStateImageBehavior = false;
-            this.lvwPhongBan.SelectedIndexChanged += new System.EventHandler(this.lvwPhongBan_SelectedIndexChanged);
+            this.lstvPhongBan.HideSelection = false;
+            this.lstvPhongBan.Location = new System.Drawing.Point(6, 63);
+            this.lstvPhongBan.MultiSelect = false;
+            this.lstvPhongBan.Name = "lstvPhongBan";
+            this.lstvPhongBan.Size = new System.Drawing.Size(689, 372);
+            this.lstvPhongBan.TabIndex = 0;
+            this.lstvPhongBan.UseCompatibleStateImageBehavior = false;
+            this.lstvPhongBan.SelectedIndexChanged += new System.EventHandler(this.lvwPhongBan_SelectedIndexChanged);
             // 
             // btnTimKiem
             // 
@@ -92,7 +92,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblDS);
-            this.panel1.Controls.Add(this.lvwPhongBan);
+            this.panel1.Controls.Add(this.lstvPhongBan);
             this.panel1.Location = new System.Drawing.Point(798, 118);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(703, 442);
@@ -126,6 +126,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -142,6 +143,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -158,6 +160,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label4
             // 
@@ -191,7 +194,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtmNgayThanhLap);
             this.groupBox2.Controls.Add(this.txtTenQL);
             this.groupBox2.Controls.Add(this.txtSLNV);
             this.groupBox2.Controls.Add(this.txtTenPhongBan);
@@ -207,8 +210,27 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin phòng ban";
             // 
+            // dtmNgayThanhLap
+            // 
+            this.dtmNgayThanhLap.Enabled = false;
+            this.dtmNgayThanhLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmNgayThanhLap.Location = new System.Drawing.Point(264, 171);
+            this.dtmNgayThanhLap.Name = "dtmNgayThanhLap";
+            this.dtmNgayThanhLap.Size = new System.Drawing.Size(448, 38);
+            this.dtmNgayThanhLap.TabIndex = 14;
+            // 
+            // txtTenQL
+            // 
+            this.txtTenQL.Enabled = false;
+            this.txtTenQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenQL.Location = new System.Drawing.Point(264, 259);
+            this.txtTenQL.Name = "txtTenQL";
+            this.txtTenQL.Size = new System.Drawing.Size(448, 38);
+            this.txtTenQL.TabIndex = 13;
+            // 
             // txtTenPhongBan
             // 
+            this.txtTenPhongBan.Enabled = false;
             this.txtTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenPhongBan.Location = new System.Drawing.Point(264, 71);
             this.txtTenPhongBan.Name = "txtTenPhongBan";
@@ -234,22 +256,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label3.Size = new System.Drawing.Size(169, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên Phòng Ban:";
-            // 
-            // txtTenQL
-            // 
-            this.txtTenQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenQL.Location = new System.Drawing.Point(264, 259);
-            this.txtTenQL.Name = "txtTenQL";
-            this.txtTenQL.Size = new System.Drawing.Size(448, 38);
-            this.txtTenQL.TabIndex = 13;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(264, 171);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(283, 30);
-            this.dateTimePicker1.TabIndex = 14;
             // 
             // frmPhongBan
             // 
@@ -278,7 +284,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         #endregion
         private FontAwesome.Sharp.IconButton btnTimKiem;
-        private System.Windows.Forms.ListView lvwPhongBan;
+        private System.Windows.Forms.ListView lstvPhongBan;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDS;
@@ -292,7 +298,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.TextBox txtTenPhongBan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtmNgayThanhLap;
         private System.Windows.Forms.TextBox txtTenQL;
     }
 }
