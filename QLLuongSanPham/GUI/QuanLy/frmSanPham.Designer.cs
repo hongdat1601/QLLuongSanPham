@@ -34,7 +34,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.ptcAvata = new System.Windows.Forms.PictureBox();
             this.txtDVT = new System.Windows.Forms.TextBox();
             this.txtDG = new System.Windows.Forms.TextBox();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
             this.lblDonVi = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.lbNameSearch = new System.Windows.Forms.Label();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
             this.gboTT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptcAvata)).BeginInit();
             this.pnlList.SuspendLayout();
@@ -116,15 +116,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtDG.Name = "txtDG";
             this.txtDG.Size = new System.Drawing.Size(322, 30);
             this.txtDG.TabIndex = 2;
-            // 
-            // txtTenSP
-            // 
-            this.txtTenSP.Enabled = false;
-            this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSP.Location = new System.Drawing.Point(342, 60);
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(322, 30);
-            this.txtTenSP.TabIndex = 2;
             // 
             // lblDonVi
             // 
@@ -281,6 +272,15 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lbNameSearch.TabIndex = 0;
             this.lbNameSearch.Text = "Tên sản phẩm:";
             // 
+            // txtTenSP
+            // 
+            this.txtTenSP.Enabled = false;
+            this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSP.Location = new System.Drawing.Point(342, 60);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(322, 30);
+            this.txtTenSP.TabIndex = 2;
+            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,7 +311,6 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private System.Windows.Forms.GroupBox gboTT;
         private System.Windows.Forms.TextBox txtDG;
-        private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Label lblDonGia;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Panel pnlList;
@@ -327,5 +326,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
         private System.Windows.Forms.Label lbNameSearch;
+        private System.Windows.Forms.TextBox txtTenSP;
     }
 }
