@@ -17,11 +17,69 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
+        public IEnumerable<NhanVien> GetNhanViens() => context.NhanVien;
+
         public NhanVien GetById(int id)
         {
             return context.NhanVien
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
+        }
+
+        public bool AddEmployee(NhanVien nv)
+        {
+            using(var db = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.NhanVien.Add(nv);
+                    context.SaveChanges();
+                    db.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    db.Rollback();
+                    throw new Exception("Lỗi thêm nhân viên");
+                }
+            }
+        }
+
+        public bool RemoveEmployee(NhanVien nv)
+        {
+            using (var db = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.NhanVien.Remove(nv);
+                    context.SaveChanges();
+                    db.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    db.Rollback();
+                    throw new Exception("Lỗi xóa nhân viên");
+                }
+            }
+        }
+
+        public bool UpdateEmployee(NhanVien nv)
+        {
+            using (var db = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.SaveChanges();
+                    db.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    db.Rollback();
+                    throw new Exception("Lỗi sửa nhân viên");
+                }
+            }
         }
     }
 }
