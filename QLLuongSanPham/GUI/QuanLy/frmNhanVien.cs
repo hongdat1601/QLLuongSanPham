@@ -160,7 +160,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             dtmDate.Value = DateTime.Today;
             txtCMND.Clear();
             txtAdress.Clear();
-            cboSex.Items.Clear();
+            cboSex.SelectedIndex = 0;
             cboPB.Items.Clear();
             cboCV.Items.Clear();
             cboHV.Items.Clear();
@@ -240,15 +240,22 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 ClearTxt();
                 EnabledTxT();
+
                 LoadDeparment(pbDAO.GetPhongBans());
                 cboPB.SelectedIndex = 0;
+
                 LoadChucVu(cvDAO.GetChucVus());
                 cboPB.SelectedIndex = 0;
+
                 LoadHocVan(hvDAO.GetTrinhDoHocVans());
                 cboPB.SelectedIndex = 0;
+
                 btnThem.Text = "Lưu";
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnThem.IconColor = Color.Blue;
+
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
             }
             else
             {
@@ -261,6 +268,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 nvDAO.AddEmployee(CreateEmployee(nv));
                 ClearTxt();
                 LoadListEmployee(nvDAO.GetNhanViens());
+
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
             }
         }
 
@@ -292,6 +302,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnSua.Text = "Lưu";
                 btnSua.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnSua.IconColor = Color.Blue;
+
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
             }
             else
             {
@@ -305,6 +318,9 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 ClearTxt();
                 LoadListEmployee(nvDAO.GetNhanViens());
+
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
             }
         }
     }

@@ -111,6 +111,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnThem.Text = "Lưu";
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnThem.IconColor = Color.Blue;
+
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
             }
             else
             {
@@ -124,6 +127,9 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 LoadData(spDAO.GetSanPhams());
                 ClearTxT();
+
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
             }
         }
 
@@ -135,6 +141,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnSua.Text = "Lưu";
                 btnSua.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnSua.IconColor = Color.Blue;
+
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
             }
             else
             {
@@ -147,6 +156,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 spDAO.UpdateEmployee(CreateProduct(sp));
                 LoadData(spDAO.GetSanPhams());
                 ClearTxT();
+
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
             }
         }
 
