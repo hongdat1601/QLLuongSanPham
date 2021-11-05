@@ -17,7 +17,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private PhongBanDAO pbDAO;
         private ChucVuDAO cvDAO;
         private TrinhDoHocVanDAO hvDAO;
-
+        
         public frmNhanVien()
         {
             InitializeComponent();
@@ -25,6 +25,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             pbDAO = new PhongBanDAO();
             cvDAO = new ChucVuDAO();
             hvDAO = new TrinhDoHocVanDAO();
+
+            CreateTitile(lvwDSNV);
+            LoadListEmployee(nvDAO.GetNhanViens());
+
+            //this.BackgroundImage = Image.FromFile(@"C:\Users\vomin\Pictures\Product\back3.jpg");
         }
 
         //Method
@@ -201,8 +206,10 @@ namespace QLLuongSanPham.GUI.QuanLy
         //Envents
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            CreateTitile(lvwDSNV);
-            LoadListEmployee(nvDAO.GetNhanViens());
+
+           
+
+            //this.BackgroundImage = Image.FromFile(@"C:\Users\vomin\Pictures\Product\back3.jpg");
         }
 
         private void lvwDSNV_SelectedIndexChanged(object sender, EventArgs e)
@@ -245,10 +252,10 @@ namespace QLLuongSanPham.GUI.QuanLy
                 cboPB.SelectedIndex = 0;
 
                 LoadChucVu(cvDAO.GetChucVus());
-                cboPB.SelectedIndex = 0;
+                cboCV.SelectedIndex = 0;
 
                 LoadHocVan(hvDAO.GetTrinhDoHocVans());
-                cboPB.SelectedIndex = 0;
+                cboHV.SelectedIndex = 0;
 
                 btnThem.Text = "Lưu";
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;

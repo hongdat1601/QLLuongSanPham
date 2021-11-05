@@ -16,5 +16,10 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             InitializeComponent();
         }
+
+        private void frmTiemKiemHD_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

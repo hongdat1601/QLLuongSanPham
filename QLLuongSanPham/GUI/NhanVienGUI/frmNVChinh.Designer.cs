@@ -1,7 +1,7 @@
 ﻿
 namespace QLLuongSanPham.GUI.NhanVienGUI
 {
-    partial class frmNhanVien
+    partial class frmNVChinh
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNVChinh));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnSalary = new FontAwesome.Sharp.IconButton();

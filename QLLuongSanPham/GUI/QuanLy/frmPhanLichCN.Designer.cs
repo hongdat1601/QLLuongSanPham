@@ -29,260 +29,142 @@ namespace QLLuongSanPham.GUI.QuanLy
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlDSSP = new System.Windows.Forms.Panel();
-            this.lvwDSSP = new System.Windows.Forms.ListView();
-            this.lblDSSP = new System.Windows.Forms.Label();
-            this.lblTenSP = new System.Windows.Forms.Label();
-            this.txtSpSearch = new System.Windows.Forms.TextBox();
-            this.btnTimDSSP = new FontAwesome.Sharp.IconButton();
-            this.lblNgay = new System.Windows.Forms.Label();
-            this.lblNameSP = new System.Windows.Forms.Label();
-            this.txtTenSpInput = new System.Windows.Forms.TextBox();
-            this.cboTenCD = new System.Windows.Forms.ComboBox();
-            this.lblTenCĐ = new System.Windows.Forms.Label();
-            this.lblCa = new System.Windows.Forms.Label();
-            this.cboCa = new System.Windows.Forms.ComboBox();
-            this.dtmNgay = new System.Windows.Forms.DateTimePicker();
-            this.pnlDSPC = new System.Windows.Forms.Panel();
-            this.lvwDSPC = new System.Windows.Forms.ListView();
-            this.lblDSPhanCong = new System.Windows.Forms.Label();
-            this.pnlDSNV = new System.Windows.Forms.Panel();
-            this.lvwDSNV = new System.Windows.Forms.ListView();
-            this.lsbDSNV = new System.Windows.Forms.Label();
-            this.pnlDSCV = new System.Windows.Forms.Panel();
-            this.lvwDSLich = new System.Windows.Forms.ListView();
-            this.lblDSLich = new System.Windows.Forms.Label();
-            this.txtNgaySearch = new System.Windows.Forms.TextBox();
-            this.lblDateSearch = new System.Windows.Forms.Label();
-            this.lblNameSearch = new System.Windows.Forms.Label();
-            this.txtTenSpSearch = new System.Windows.Forms.TextBox();
-            this.lblCDSearch = new System.Windows.Forms.Label();
-            this.txtCDSearch = new System.Windows.Forms.TextBox();
-            this.lblCaSearch = new System.Windows.Forms.Label();
-            this.btnTimDSSCa = new FontAwesome.Sharp.IconButton();
+            this.ptcNen = new System.Windows.Forms.PictureBox();
+            this.btnRight = new FontAwesome.Sharp.IconButton();
+            this.btnLeft = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.btnLeft = new FontAwesome.Sharp.IconButton();
-            this.btnRight = new FontAwesome.Sharp.IconButton();
+            this.pnlDSCV = new System.Windows.Forms.Panel();
+            this.lvwDSLich = new System.Windows.Forms.ListView();
+            this.lblDSLich = new System.Windows.Forms.Label();
+            this.lvwDSNV = new System.Windows.Forms.ListView();
             this.cboCaSearch = new System.Windows.Forms.ComboBox();
-            this.pnlDSSP.SuspendLayout();
-            this.pnlDSPC.SuspendLayout();
-            this.pnlDSNV.SuspendLayout();
+            this.btnTimDSSCa = new FontAwesome.Sharp.IconButton();
+            this.lsbDSNV = new System.Windows.Forms.Label();
+            this.pnlDSCN = new System.Windows.Forms.Panel();
+            this.pnlDSPC = new System.Windows.Forms.Panel();
+            this.lvwDSPC = new System.Windows.Forms.ListView();
+            this.lblDSPhanCong = new System.Windows.Forms.Label();
+            this.dtmNgay = new System.Windows.Forms.DateTimePicker();
+            this.cboCa = new System.Windows.Forms.ComboBox();
+            this.cboTenCD = new System.Windows.Forms.ComboBox();
+            this.txtNgaySearch = new System.Windows.Forms.TextBox();
+            this.txtCDSearch = new System.Windows.Forms.TextBox();
+            this.txtTenSpSearch = new System.Windows.Forms.TextBox();
+            this.txtTenSpInput = new System.Windows.Forms.TextBox();
+            this.lblCaSearch = new System.Windows.Forms.Label();
+            this.lblCa = new System.Windows.Forms.Label();
+            this.lblCDSearch = new System.Windows.Forms.Label();
+            this.lblTenCĐ = new System.Windows.Forms.Label();
+            this.lblNameSearch = new System.Windows.Forms.Label();
+            this.lblNameSP = new System.Windows.Forms.Label();
+            this.lblDateSearch = new System.Windows.Forms.Label();
+            this.lblNgay = new System.Windows.Forms.Label();
+            this.btnTimDSSP = new FontAwesome.Sharp.IconButton();
+            this.txtSpSearch = new System.Windows.Forms.TextBox();
+            this.lblTenSP = new System.Windows.Forms.Label();
+            this.pnlDSSP = new System.Windows.Forms.Panel();
+            this.lvwDSSP = new System.Windows.Forms.ListView();
+            this.lblDSSP = new System.Windows.Forms.Label();
+            this.gboTT = new System.Windows.Forms.GroupBox();
+            this.pnlXuly = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).BeginInit();
             this.pnlDSCV.SuspendLayout();
+            this.pnlDSCN.SuspendLayout();
+            this.pnlDSPC.SuspendLayout();
+            this.pnlDSSP.SuspendLayout();
+            this.gboTT.SuspendLayout();
+            this.pnlXuly.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlDSSP
+            // ptcNen
             // 
-            this.pnlDSSP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlDSSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlDSSP.Controls.Add(this.lvwDSSP);
-            this.pnlDSSP.Controls.Add(this.lblDSSP);
-            this.pnlDSSP.Location = new System.Drawing.Point(25, 72);
-            this.pnlDSSP.Name = "pnlDSSP";
-            this.pnlDSSP.Size = new System.Drawing.Size(389, 510);
-            this.pnlDSSP.TabIndex = 0;
+            this.ptcNen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
+            this.ptcNen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptcNen.Image = global::QLLuongSanPham.Properties.Resources.back3;
+            this.ptcNen.Location = new System.Drawing.Point(0, 0);
+            this.ptcNen.Name = "ptcNen";
+            this.ptcNen.Size = new System.Drawing.Size(1615, 966);
+            this.ptcNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptcNen.TabIndex = 0;
+            this.ptcNen.TabStop = false;
             // 
-            // lvwDSSP
+            // btnRight
             // 
-            this.lvwDSSP.HideSelection = false;
-            this.lvwDSSP.Location = new System.Drawing.Point(14, 46);
-            this.lvwDSSP.Name = "lvwDSSP";
-            this.lvwDSSP.Size = new System.Drawing.Size(355, 440);
-            this.lvwDSSP.TabIndex = 1;
-            this.lvwDSSP.UseCompatibleStateImageBehavior = false;
+            this.btnRight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRight.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.btnRight.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnRight.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRight.IconSize = 30;
+            this.btnRight.Location = new System.Drawing.Point(1218, 333);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(62, 56);
+            this.btnRight.TabIndex = 50;
+            this.btnRight.UseVisualStyleBackColor = true;
             // 
-            // lblDSSP
+            // btnLeft
             // 
-            this.lblDSSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblDSSP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDSSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDSSP.Location = new System.Drawing.Point(0, 0);
-            this.lblDSSP.Name = "lblDSSP";
-            this.lblDSSP.Size = new System.Drawing.Size(385, 33);
-            this.lblDSSP.TabIndex = 0;
-            this.lblDSSP.Text = "Danh sách sản phẩm";
-            this.lblDSSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLeft.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnLeft.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLeft.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLeft.IconSize = 30;
+            this.btnLeft.Location = new System.Drawing.Point(1218, 240);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(62, 59);
+            this.btnLeft.TabIndex = 49;
+            this.btnLeft.UseVisualStyleBackColor = true;
             // 
-            // lblTenSP
+            // btnXoa
             // 
-            this.lblTenSP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTenSP.AutoSize = true;
-            this.lblTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.Location = new System.Drawing.Point(21, 31);
-            this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(64, 20);
-            this.lblTenSP.TabIndex = 1;
-            this.lblTenSP.Text = "Tên SP";
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnXoa.IconColor = System.Drawing.Color.Red;
+            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXoa.IconSize = 25;
+            this.btnXoa.Location = new System.Drawing.Point(350, 12);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(95, 43);
+            this.btnXoa.TabIndex = 48;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // txtSpSearch
+            // btnSua
             // 
-            this.txtSpSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpSearch.Location = new System.Drawing.Point(96, 25);
-            this.txtSpSearch.Name = "txtSpSearch";
-            this.txtSpSearch.Size = new System.Drawing.Size(229, 26);
-            this.txtSpSearch.TabIndex = 2;
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSua.IconSize = 25;
+            this.btnSua.Location = new System.Drawing.Point(190, 12);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(97, 43);
+            this.btnSua.TabIndex = 47;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // btnTimDSSP
+            // btnThem
             // 
-            this.btnTimDSSP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimDSSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimDSSP.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnTimDSSP.IconColor = System.Drawing.Color.Blue;
-            this.btnTimDSSP.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimDSSP.IconSize = 20;
-            this.btnTimDSSP.Location = new System.Drawing.Point(351, 21);
-            this.btnTimDSSP.Name = "btnTimDSSP";
-            this.btnTimDSSP.Size = new System.Drawing.Size(63, 30);
-            this.btnTimDSSP.TabIndex = 3;
-            this.btnTimDSSP.UseVisualStyleBackColor = true;
-            // 
-            // lblNgay
-            // 
-            this.lblNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNgay.AutoSize = true;
-            this.lblNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNgay.Location = new System.Drawing.Point(438, 145);
-            this.lblNgay.Name = "lblNgay";
-            this.lblNgay.Size = new System.Drawing.Size(58, 25);
-            this.lblNgay.TabIndex = 4;
-            this.lblNgay.Text = "Ngày";
-            // 
-            // lblNameSP
-            // 
-            this.lblNameSP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNameSP.AutoSize = true;
-            this.lblNameSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNameSP.Location = new System.Drawing.Point(437, 231);
-            this.lblNameSP.Name = "lblNameSP";
-            this.lblNameSP.Size = new System.Drawing.Size(138, 25);
-            this.lblNameSP.TabIndex = 4;
-            this.lblNameSP.Text = "Tên sản phẩm";
-            // 
-            // txtTenSpInput
-            // 
-            this.txtTenSpInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenSpInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTenSpInput.Location = new System.Drawing.Point(602, 225);
-            this.txtTenSpInput.Name = "txtTenSpInput";
-            this.txtTenSpInput.Size = new System.Drawing.Size(274, 30);
-            this.txtTenSpInput.TabIndex = 5;
-            // 
-            // cboTenCD
-            // 
-            this.cboTenCD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboTenCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cboTenCD.FormattingEnabled = true;
-            this.cboTenCD.Location = new System.Drawing.Point(602, 313);
-            this.cboTenCD.Name = "cboTenCD";
-            this.cboTenCD.Size = new System.Drawing.Size(274, 33);
-            this.cboTenCD.TabIndex = 6;
-            // 
-            // lblTenCĐ
-            // 
-            this.lblTenCĐ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTenCĐ.AutoSize = true;
-            this.lblTenCĐ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblTenCĐ.Location = new System.Drawing.Point(438, 321);
-            this.lblTenCĐ.Name = "lblTenCĐ";
-            this.lblTenCĐ.Size = new System.Drawing.Size(144, 25);
-            this.lblTenCĐ.TabIndex = 4;
-            this.lblTenCĐ.Text = "Tên công đoạn";
-            // 
-            // lblCa
-            // 
-            this.lblCa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCa.AutoSize = true;
-            this.lblCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCa.Location = new System.Drawing.Point(437, 419);
-            this.lblCa.Name = "lblCa";
-            this.lblCa.Size = new System.Drawing.Size(38, 25);
-            this.lblCa.TabIndex = 4;
-            this.lblCa.Text = "Ca";
-            // 
-            // cboCa
-            // 
-            this.cboCa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cboCa.FormattingEnabled = true;
-            this.cboCa.Location = new System.Drawing.Point(602, 411);
-            this.cboCa.Name = "cboCa";
-            this.cboCa.Size = new System.Drawing.Size(274, 33);
-            this.cboCa.TabIndex = 6;
-            // 
-            // dtmNgay
-            // 
-            this.dtmNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtmNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dtmNgay.Location = new System.Drawing.Point(602, 140);
-            this.dtmNgay.Name = "dtmNgay";
-            this.dtmNgay.Size = new System.Drawing.Size(274, 30);
-            this.dtmNgay.TabIndex = 7;
-            // 
-            // pnlDSPC
-            // 
-            this.pnlDSPC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlDSPC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlDSPC.Controls.Add(this.lvwDSPC);
-            this.pnlDSPC.Controls.Add(this.lblDSPhanCong);
-            this.pnlDSPC.Location = new System.Drawing.Point(911, 72);
-            this.pnlDSPC.Name = "pnlDSPC";
-            this.pnlDSPC.Size = new System.Drawing.Size(306, 510);
-            this.pnlDSPC.TabIndex = 8;
-            // 
-            // lvwDSPC
-            // 
-            this.lvwDSPC.HideSelection = false;
-            this.lvwDSPC.Location = new System.Drawing.Point(14, 46);
-            this.lvwDSPC.Name = "lvwDSPC";
-            this.lvwDSPC.Size = new System.Drawing.Size(275, 440);
-            this.lvwDSPC.TabIndex = 1;
-            this.lvwDSPC.UseCompatibleStateImageBehavior = false;
-            // 
-            // lblDSPhanCong
-            // 
-            this.lblDSPhanCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblDSPhanCong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDSPhanCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDSPhanCong.Location = new System.Drawing.Point(0, 0);
-            this.lblDSPhanCong.Name = "lblDSPhanCong";
-            this.lblDSPhanCong.Size = new System.Drawing.Size(302, 33);
-            this.lblDSPhanCong.TabIndex = 0;
-            this.lblDSPhanCong.Text = "Danh sách phân công";
-            this.lblDSPhanCong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlDSNV
-            // 
-            this.pnlDSNV.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlDSNV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlDSNV.Controls.Add(this.lvwDSNV);
-            this.pnlDSNV.Controls.Add(this.lsbDSNV);
-            this.pnlDSNV.Location = new System.Drawing.Point(1291, 72);
-            this.pnlDSNV.Name = "pnlDSNV";
-            this.pnlDSNV.Size = new System.Drawing.Size(312, 510);
-            this.pnlDSNV.TabIndex = 9;
-            // 
-            // lvwDSNV
-            // 
-            this.lvwDSNV.HideSelection = false;
-            this.lvwDSNV.Location = new System.Drawing.Point(14, 46);
-            this.lvwDSNV.Name = "lvwDSNV";
-            this.lvwDSNV.Size = new System.Drawing.Size(279, 440);
-            this.lvwDSNV.TabIndex = 1;
-            this.lvwDSNV.UseCompatibleStateImageBehavior = false;
-            // 
-            // lsbDSNV
-            // 
-            this.lsbDSNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lsbDSNV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lsbDSNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lsbDSNV.Location = new System.Drawing.Point(0, 0);
-            this.lsbDSNV.Name = "lsbDSNV";
-            this.lsbDSNV.Size = new System.Drawing.Size(308, 33);
-            this.lsbDSNV.TabIndex = 0;
-            this.lsbDSNV.Text = "Danh sách công nhân";
-            this.lsbDSNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThem.IconSize = 25;
+            this.btnThem.Location = new System.Drawing.Point(10, 12);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(114, 43);
+            this.btnThem.TabIndex = 46;
+            this.btnThem.Text = "Phân lịch";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // pnlDSCV
             // 
@@ -290,10 +172,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDSCV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlDSCV.Controls.Add(this.lvwDSLich);
             this.pnlDSCV.Controls.Add(this.lblDSLich);
-            this.pnlDSCV.Location = new System.Drawing.Point(25, 651);
+            this.pnlDSCV.Location = new System.Drawing.Point(20, 647);
             this.pnlDSCV.Name = "pnlDSCV";
             this.pnlDSCV.Size = new System.Drawing.Size(1578, 303);
-            this.pnlDSCV.TabIndex = 10;
+            this.pnlDSCV.TabIndex = 44;
             // 
             // lvwDSLich
             // 
@@ -316,221 +198,389 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDSLich.Text = "Danh sách lịch làm việc";
             this.lblDSLich.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lvwDSNV
+            // 
+            this.lvwDSNV.HideSelection = false;
+            this.lvwDSNV.Location = new System.Drawing.Point(14, 46);
+            this.lvwDSNV.Name = "lvwDSNV";
+            this.lvwDSNV.Size = new System.Drawing.Size(279, 440);
+            this.lvwDSNV.TabIndex = 1;
+            this.lvwDSNV.UseCompatibleStateImageBehavior = false;
+            // 
+            // cboCaSearch
+            // 
+            this.cboCaSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboCaSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCaSearch.FormattingEnabled = true;
+            this.cboCaSearch.Location = new System.Drawing.Point(1246, 606);
+            this.cboCaSearch.Name = "cboCaSearch";
+            this.cboCaSearch.Size = new System.Drawing.Size(206, 33);
+            this.cboCaSearch.TabIndex = 51;
+            // 
+            // btnTimDSSCa
+            // 
+            this.btnTimDSSCa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTimDSSCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimDSSCa.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnTimDSSCa.IconColor = System.Drawing.Color.Blue;
+            this.btnTimDSSCa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTimDSSCa.IconSize = 20;
+            this.btnTimDSSCa.Location = new System.Drawing.Point(1477, 607);
+            this.btnTimDSSCa.Name = "btnTimDSSCa";
+            this.btnTimDSSCa.Size = new System.Drawing.Size(121, 32);
+            this.btnTimDSSCa.TabIndex = 45;
+            this.btnTimDSSCa.Text = "Tìm kiếm";
+            this.btnTimDSSCa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTimDSSCa.UseVisualStyleBackColor = true;
+            // 
+            // lsbDSNV
+            // 
+            this.lsbDSNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lsbDSNV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lsbDSNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lsbDSNV.Location = new System.Drawing.Point(0, 0);
+            this.lsbDSNV.Name = "lsbDSNV";
+            this.lsbDSNV.Size = new System.Drawing.Size(308, 33);
+            this.lsbDSNV.TabIndex = 0;
+            this.lsbDSNV.Text = "Danh sách công nhân";
+            this.lsbDSNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlDSCN
+            // 
+            this.pnlDSCN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlDSCN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlDSCN.Controls.Add(this.lvwDSNV);
+            this.pnlDSCN.Controls.Add(this.lsbDSNV);
+            this.pnlDSCN.Location = new System.Drawing.Point(1286, 68);
+            this.pnlDSCN.Name = "pnlDSCN";
+            this.pnlDSCN.Size = new System.Drawing.Size(312, 510);
+            this.pnlDSCN.TabIndex = 43;
+            // 
+            // pnlDSPC
+            // 
+            this.pnlDSPC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlDSPC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlDSPC.Controls.Add(this.lvwDSPC);
+            this.pnlDSPC.Controls.Add(this.lblDSPhanCong);
+            this.pnlDSPC.Location = new System.Drawing.Point(906, 68);
+            this.pnlDSPC.Name = "pnlDSPC";
+            this.pnlDSPC.Size = new System.Drawing.Size(306, 510);
+            this.pnlDSPC.TabIndex = 42;
+            // 
+            // lvwDSPC
+            // 
+            this.lvwDSPC.HideSelection = false;
+            this.lvwDSPC.Location = new System.Drawing.Point(14, 46);
+            this.lvwDSPC.Name = "lvwDSPC";
+            this.lvwDSPC.Size = new System.Drawing.Size(275, 440);
+            this.lvwDSPC.TabIndex = 1;
+            this.lvwDSPC.UseCompatibleStateImageBehavior = false;
+            // 
+            // lblDSPhanCong
+            // 
+            this.lblDSPhanCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblDSPhanCong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDSPhanCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDSPhanCong.Location = new System.Drawing.Point(0, 0);
+            this.lblDSPhanCong.Name = "lblDSPhanCong";
+            this.lblDSPhanCong.Size = new System.Drawing.Size(302, 33);
+            this.lblDSPhanCong.TabIndex = 0;
+            this.lblDSPhanCong.Text = "Danh sách phân công";
+            this.lblDSPhanCong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtmNgay
+            // 
+            this.dtmNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtmNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dtmNgay.Location = new System.Drawing.Point(172, 42);
+            this.dtmNgay.Name = "dtmNgay";
+            this.dtmNgay.Size = new System.Drawing.Size(274, 30);
+            this.dtmNgay.TabIndex = 41;
+            // 
+            // cboCa
+            // 
+            this.cboCa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cboCa.FormattingEnabled = true;
+            this.cboCa.Location = new System.Drawing.Point(172, 324);
+            this.cboCa.Name = "cboCa";
+            this.cboCa.Size = new System.Drawing.Size(274, 33);
+            this.cboCa.TabIndex = 40;
+            // 
+            // cboTenCD
+            // 
+            this.cboTenCD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTenCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cboTenCD.FormattingEnabled = true;
+            this.cboTenCD.Location = new System.Drawing.Point(172, 224);
+            this.cboTenCD.Name = "cboTenCD";
+            this.cboTenCD.Size = new System.Drawing.Size(274, 33);
+            this.cboTenCD.TabIndex = 39;
+            // 
             // txtNgaySearch
             // 
             this.txtNgaySearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNgaySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNgaySearch.Location = new System.Drawing.Point(83, 613);
+            this.txtNgaySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNgaySearch.Location = new System.Drawing.Point(104, 607);
             this.txtNgaySearch.Name = "txtNgaySearch";
-            this.txtNgaySearch.Size = new System.Drawing.Size(168, 26);
-            this.txtNgaySearch.TabIndex = 5;
-            // 
-            // lblDateSearch
-            // 
-            this.lblDateSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDateSearch.AutoSize = true;
-            this.lblDateSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblDateSearch.Location = new System.Drawing.Point(21, 616);
-            this.lblDateSearch.Name = "lblDateSearch";
-            this.lblDateSearch.Size = new System.Drawing.Size(47, 20);
-            this.lblDateSearch.TabIndex = 4;
-            this.lblDateSearch.Text = "Ngày";
-            // 
-            // lblNameSearch
-            // 
-            this.lblNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNameSearch.AutoSize = true;
-            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblNameSearch.Location = new System.Drawing.Point(347, 619);
-            this.lblNameSearch.Name = "lblNameSearch";
-            this.lblNameSearch.Size = new System.Drawing.Size(115, 20);
-            this.lblNameSearch.TabIndex = 4;
-            this.lblNameSearch.Text = "Tên sản phẩm";
-            // 
-            // txtTenSpSearch
-            // 
-            this.txtTenSpSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenSpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtTenSpSearch.Location = new System.Drawing.Point(490, 613);
-            this.txtTenSpSearch.Name = "txtTenSpSearch";
-            this.txtTenSpSearch.Size = new System.Drawing.Size(177, 26);
-            this.txtTenSpSearch.TabIndex = 5;
-            // 
-            // lblCDSearch
-            // 
-            this.lblCDSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCDSearch.AutoSize = true;
-            this.lblCDSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblCDSearch.Location = new System.Drawing.Point(777, 619);
-            this.lblCDSearch.Name = "lblCDSearch";
-            this.lblCDSearch.Size = new System.Drawing.Size(119, 20);
-            this.lblCDSearch.TabIndex = 4;
-            this.lblCDSearch.Text = "Tên công đoạn";
+            this.txtNgaySearch.Size = new System.Drawing.Size(168, 30);
+            this.txtNgaySearch.TabIndex = 38;
             // 
             // txtCDSearch
             // 
             this.txtCDSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCDSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtCDSearch.Location = new System.Drawing.Point(927, 613);
+            this.txtCDSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCDSearch.Location = new System.Drawing.Point(906, 609);
             this.txtCDSearch.Name = "txtCDSearch";
-            this.txtCDSearch.Size = new System.Drawing.Size(177, 26);
-            this.txtCDSearch.TabIndex = 5;
+            this.txtCDSearch.Size = new System.Drawing.Size(216, 30);
+            this.txtCDSearch.TabIndex = 37;
+            // 
+            // txtTenSpSearch
+            // 
+            this.txtTenSpSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTenSpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTenSpSearch.Location = new System.Drawing.Point(485, 609);
+            this.txtTenSpSearch.Name = "txtTenSpSearch";
+            this.txtTenSpSearch.Size = new System.Drawing.Size(195, 30);
+            this.txtTenSpSearch.TabIndex = 36;
+            // 
+            // txtTenSpInput
+            // 
+            this.txtTenSpInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTenSpInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTenSpInput.Location = new System.Drawing.Point(172, 126);
+            this.txtTenSpInput.Name = "txtTenSpInput";
+            this.txtTenSpInput.Size = new System.Drawing.Size(274, 30);
+            this.txtTenSpInput.TabIndex = 35;
             // 
             // lblCaSearch
             // 
             this.lblCaSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCaSearch.AutoSize = true;
-            this.lblCaSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblCaSearch.Location = new System.Drawing.Point(1185, 619);
+            this.lblCaSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
+            this.lblCaSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblCaSearch.Location = new System.Drawing.Point(1174, 614);
             this.lblCaSearch.Name = "lblCaSearch";
-            this.lblCaSearch.Size = new System.Drawing.Size(30, 20);
-            this.lblCaSearch.TabIndex = 4;
+            this.lblCaSearch.Size = new System.Drawing.Size(38, 25);
+            this.lblCaSearch.TabIndex = 34;
             this.lblCaSearch.Text = "Ca";
             // 
-            // btnTimDSSCa
+            // lblCa
             // 
-            this.btnTimDSSCa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimDSSCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimDSSCa.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnTimDSSCa.IconColor = System.Drawing.Color.Blue;
-            this.btnTimDSSCa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimDSSCa.IconSize = 20;
-            this.btnTimDSSCa.Location = new System.Drawing.Point(1480, 607);
-            this.btnTimDSSCa.Name = "btnTimDSSCa";
-            this.btnTimDSSCa.Size = new System.Drawing.Size(121, 32);
-            this.btnTimDSSCa.TabIndex = 11;
-            this.btnTimDSSCa.Text = "Tìm kiếm";
-            this.btnTimDSSCa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimDSSCa.UseVisualStyleBackColor = true;
+            this.lblCa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCa.AutoSize = true;
+            this.lblCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblCa.Location = new System.Drawing.Point(6, 332);
+            this.lblCa.Name = "lblCa";
+            this.lblCa.Size = new System.Drawing.Size(38, 25);
+            this.lblCa.TabIndex = 33;
+            this.lblCa.Text = "Ca";
             // 
-            // btnXoa
+            // lblCDSearch
             // 
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnXoa.IconColor = System.Drawing.Color.Red;
-            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXoa.IconSize = 25;
-            this.btnXoa.Location = new System.Drawing.Point(781, 539);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(95, 43);
-            this.btnXoa.TabIndex = 20;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.lblCDSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCDSearch.AutoSize = true;
+            this.lblCDSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
+            this.lblCDSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblCDSearch.Location = new System.Drawing.Point(727, 612);
+            this.lblCDSearch.Name = "lblCDSearch";
+            this.lblCDSearch.Size = new System.Drawing.Size(144, 25);
+            this.lblCDSearch.TabIndex = 32;
+            this.lblCDSearch.Text = "Tên công đoạn";
             // 
-            // btnSua
+            // lblTenCĐ
             // 
-            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSua.IconSize = 25;
-            this.btnSua.Location = new System.Drawing.Point(620, 539);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(97, 43);
-            this.btnSua.TabIndex = 19;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.lblTenCĐ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTenCĐ.AutoSize = true;
+            this.lblTenCĐ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblTenCĐ.Location = new System.Drawing.Point(6, 232);
+            this.lblTenCĐ.Name = "lblTenCĐ";
+            this.lblTenCĐ.Size = new System.Drawing.Size(144, 25);
+            this.lblTenCĐ.TabIndex = 31;
+            this.lblTenCĐ.Text = "Tên công đoạn";
             // 
-            // btnThem
+            // lblNameSearch
             // 
-            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThem.IconSize = 25;
-            this.btnThem.Location = new System.Drawing.Point(441, 539);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(114, 43);
-            this.btnThem.TabIndex = 18;
-            this.btnThem.Text = "Phân lịch";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.lblNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNameSearch.AutoSize = true;
+            this.lblNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
+            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblNameSearch.Location = new System.Drawing.Point(314, 612);
+            this.lblNameSearch.Name = "lblNameSearch";
+            this.lblNameSearch.Size = new System.Drawing.Size(138, 25);
+            this.lblNameSearch.TabIndex = 30;
+            this.lblNameSearch.Text = "Tên sản phẩm";
             // 
-            // btnLeft
+            // lblNameSP
             // 
-            this.btnLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLeft.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.btnLeft.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnLeft.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLeft.IconSize = 30;
-            this.btnLeft.Location = new System.Drawing.Point(1223, 244);
-            this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(62, 59);
-            this.btnLeft.TabIndex = 21;
-            this.btnLeft.UseVisualStyleBackColor = true;
+            this.lblNameSP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNameSP.AutoSize = true;
+            this.lblNameSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblNameSP.Location = new System.Drawing.Point(6, 131);
+            this.lblNameSP.Name = "lblNameSP";
+            this.lblNameSP.Size = new System.Drawing.Size(138, 25);
+            this.lblNameSP.TabIndex = 29;
+            this.lblNameSP.Text = "Tên sản phẩm";
             // 
-            // btnRight
+            // lblDateSearch
             // 
-            this.btnRight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRight.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.btnRight.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnRight.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRight.IconSize = 30;
-            this.btnRight.Location = new System.Drawing.Point(1223, 337);
-            this.btnRight.Name = "btnRight";
-            this.btnRight.Size = new System.Drawing.Size(62, 56);
-            this.btnRight.TabIndex = 21;
-            this.btnRight.UseVisualStyleBackColor = true;
+            this.lblDateSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDateSearch.AutoSize = true;
+            this.lblDateSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
+            this.lblDateSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblDateSearch.Location = new System.Drawing.Point(15, 612);
+            this.lblDateSearch.Name = "lblDateSearch";
+            this.lblDateSearch.Size = new System.Drawing.Size(58, 25);
+            this.lblDateSearch.TabIndex = 28;
+            this.lblDateSearch.Text = "Ngày";
             // 
-            // cboCaSearch
+            // lblNgay
             // 
-            this.cboCaSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboCaSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCaSearch.FormattingEnabled = true;
-            this.cboCaSearch.Location = new System.Drawing.Point(1244, 613);
-            this.cboCaSearch.Name = "cboCaSearch";
-            this.cboCaSearch.Size = new System.Drawing.Size(177, 28);
-            this.cboCaSearch.TabIndex = 22;
+            this.lblNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNgay.AutoSize = true;
+            this.lblNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblNgay.Location = new System.Drawing.Point(6, 47);
+            this.lblNgay.Name = "lblNgay";
+            this.lblNgay.Size = new System.Drawing.Size(58, 25);
+            this.lblNgay.TabIndex = 27;
+            this.lblNgay.Text = "Ngày";
+            // 
+            // btnTimDSSP
+            // 
+            this.btnTimDSSP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTimDSSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimDSSP.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnTimDSSP.IconColor = System.Drawing.Color.Blue;
+            this.btnTimDSSP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTimDSSP.IconSize = 20;
+            this.btnTimDSSP.Location = new System.Drawing.Point(346, 17);
+            this.btnTimDSSP.Name = "btnTimDSSP";
+            this.btnTimDSSP.Size = new System.Drawing.Size(63, 30);
+            this.btnTimDSSP.TabIndex = 26;
+            this.btnTimDSSP.UseVisualStyleBackColor = true;
+            // 
+            // txtSpSearch
+            // 
+            this.txtSpSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSpSearch.Location = new System.Drawing.Point(91, 21);
+            this.txtSpSearch.Name = "txtSpSearch";
+            this.txtSpSearch.Size = new System.Drawing.Size(229, 26);
+            this.txtSpSearch.TabIndex = 25;
+            // 
+            // lblTenSP
+            // 
+            this.lblTenSP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
+            this.lblTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.Location = new System.Drawing.Point(16, 27);
+            this.lblTenSP.Name = "lblTenSP";
+            this.lblTenSP.Size = new System.Drawing.Size(64, 20);
+            this.lblTenSP.TabIndex = 24;
+            this.lblTenSP.Text = "Tên SP";
+            // 
+            // pnlDSSP
+            // 
+            this.pnlDSSP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlDSSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlDSSP.Controls.Add(this.lvwDSSP);
+            this.pnlDSSP.Controls.Add(this.lblDSSP);
+            this.pnlDSSP.Location = new System.Drawing.Point(20, 68);
+            this.pnlDSSP.Name = "pnlDSSP";
+            this.pnlDSSP.Size = new System.Drawing.Size(389, 510);
+            this.pnlDSSP.TabIndex = 23;
+            // 
+            // lvwDSSP
+            // 
+            this.lvwDSSP.HideSelection = false;
+            this.lvwDSSP.Location = new System.Drawing.Point(14, 46);
+            this.lvwDSSP.Name = "lvwDSSP";
+            this.lvwDSSP.Size = new System.Drawing.Size(355, 440);
+            this.lvwDSSP.TabIndex = 1;
+            this.lvwDSSP.UseCompatibleStateImageBehavior = false;
+            // 
+            // lblDSSP
+            // 
+            this.lblDSSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblDSSP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDSSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDSSP.Location = new System.Drawing.Point(0, 0);
+            this.lblDSSP.Name = "lblDSSP";
+            this.lblDSSP.Size = new System.Drawing.Size(385, 33);
+            this.lblDSSP.TabIndex = 0;
+            this.lblDSSP.Text = "Danh sách sản phẩm";
+            this.lblDSSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gboTT
+            // 
+            this.gboTT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gboTT.Controls.Add(this.dtmNgay);
+            this.gboTT.Controls.Add(this.cboCa);
+            this.gboTT.Controls.Add(this.cboTenCD);
+            this.gboTT.Controls.Add(this.txtTenSpInput);
+            this.gboTT.Controls.Add(this.lblCa);
+            this.gboTT.Controls.Add(this.lblTenCĐ);
+            this.gboTT.Controls.Add(this.lblNameSP);
+            this.gboTT.Controls.Add(this.lblNgay);
+            this.gboTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboTT.Location = new System.Drawing.Point(425, 70);
+            this.gboTT.Name = "gboTT";
+            this.gboTT.Size = new System.Drawing.Size(466, 385);
+            this.gboTT.TabIndex = 52;
+            this.gboTT.TabStop = false;
+            this.gboTT.Text = "Thông tin lịch làm việc";
+            // 
+            // pnlXuly
+            // 
+            this.pnlXuly.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlXuly.Controls.Add(this.btnThem);
+            this.pnlXuly.Controls.Add(this.btnSua);
+            this.pnlXuly.Controls.Add(this.btnXoa);
+            this.pnlXuly.Location = new System.Drawing.Point(426, 511);
+            this.pnlXuly.Name = "pnlXuly";
+            this.pnlXuly.Size = new System.Drawing.Size(465, 67);
+            this.pnlXuly.TabIndex = 53;
             // 
             // frmPhanLichCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1615, 966);
-            this.Controls.Add(this.cboCaSearch);
+            this.Controls.Add(this.pnlXuly);
+            this.Controls.Add(this.gboTT);
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnLeft);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.btnTimDSSCa);
             this.Controls.Add(this.pnlDSCV);
-            this.Controls.Add(this.pnlDSNV);
+            this.Controls.Add(this.cboCaSearch);
+            this.Controls.Add(this.btnTimDSSCa);
+            this.Controls.Add(this.pnlDSCN);
             this.Controls.Add(this.pnlDSPC);
-            this.Controls.Add(this.dtmNgay);
-            this.Controls.Add(this.cboCa);
-            this.Controls.Add(this.cboTenCD);
             this.Controls.Add(this.txtNgaySearch);
             this.Controls.Add(this.txtCDSearch);
             this.Controls.Add(this.txtTenSpSearch);
-            this.Controls.Add(this.txtTenSpInput);
             this.Controls.Add(this.lblCaSearch);
-            this.Controls.Add(this.lblCa);
             this.Controls.Add(this.lblCDSearch);
-            this.Controls.Add(this.lblTenCĐ);
             this.Controls.Add(this.lblNameSearch);
-            this.Controls.Add(this.lblNameSP);
             this.Controls.Add(this.lblDateSearch);
-            this.Controls.Add(this.lblNgay);
             this.Controls.Add(this.btnTimDSSP);
             this.Controls.Add(this.txtSpSearch);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.pnlDSSP);
+            this.Controls.Add(this.ptcNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPhanLichCN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.pnlDSSP.ResumeLayout(false);
-            this.pnlDSPC.ResumeLayout(false);
-            this.pnlDSNV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).EndInit();
             this.pnlDSCV.ResumeLayout(false);
+            this.pnlDSCN.ResumeLayout(false);
+            this.pnlDSPC.ResumeLayout(false);
+            this.pnlDSSP.ResumeLayout(false);
+            this.gboTT.ResumeLayout(false);
+            this.gboTT.PerformLayout();
+            this.pnlXuly.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,42 +588,45 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlDSSP;
-        private System.Windows.Forms.Label lblDSSP;
-        private System.Windows.Forms.ListView lvwDSSP;
-        private System.Windows.Forms.Label lblTenSP;
-        private System.Windows.Forms.TextBox txtSpSearch;
-        private FontAwesome.Sharp.IconButton btnTimDSSP;
-        private System.Windows.Forms.Label lblNgay;
-        private System.Windows.Forms.Label lblNameSP;
-        private System.Windows.Forms.TextBox txtTenSpInput;
-        private System.Windows.Forms.ComboBox cboTenCD;
-        private System.Windows.Forms.Label lblTenCĐ;
-        private System.Windows.Forms.Label lblCa;
-        private System.Windows.Forms.ComboBox cboCa;
-        private System.Windows.Forms.DateTimePicker dtmNgay;
-        private System.Windows.Forms.Panel pnlDSPC;
-        private System.Windows.Forms.ListView lvwDSPC;
-        private System.Windows.Forms.Label lblDSPhanCong;
-        private System.Windows.Forms.Panel pnlDSNV;
-        private System.Windows.Forms.ListView lvwDSNV;
-        private System.Windows.Forms.Label lsbDSNV;
-        private System.Windows.Forms.Panel pnlDSCV;
-        private System.Windows.Forms.ListView lvwDSLich;
-        private System.Windows.Forms.Label lblDSLich;
-        private System.Windows.Forms.TextBox txtNgaySearch;
-        private System.Windows.Forms.Label lblDateSearch;
-        private System.Windows.Forms.Label lblNameSearch;
-        private System.Windows.Forms.TextBox txtTenSpSearch;
-        private System.Windows.Forms.Label lblCDSearch;
-        private System.Windows.Forms.TextBox txtCDSearch;
-        private System.Windows.Forms.Label lblCaSearch;
-        private FontAwesome.Sharp.IconButton btnTimDSSCa;
+        private System.Windows.Forms.PictureBox ptcNen;
+        private FontAwesome.Sharp.IconButton btnRight;
+        private FontAwesome.Sharp.IconButton btnLeft;
         private FontAwesome.Sharp.IconButton btnXoa;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
-        private FontAwesome.Sharp.IconButton btnLeft;
-        private FontAwesome.Sharp.IconButton btnRight;
+        private System.Windows.Forms.Panel pnlDSCV;
+        private System.Windows.Forms.ListView lvwDSLich;
+        private System.Windows.Forms.Label lblDSLich;
+        private System.Windows.Forms.ListView lvwDSNV;
         private System.Windows.Forms.ComboBox cboCaSearch;
+        private FontAwesome.Sharp.IconButton btnTimDSSCa;
+        private System.Windows.Forms.Label lsbDSNV;
+        private System.Windows.Forms.Panel pnlDSCN;
+        private System.Windows.Forms.Panel pnlDSPC;
+        private System.Windows.Forms.ListView lvwDSPC;
+        private System.Windows.Forms.Label lblDSPhanCong;
+        private System.Windows.Forms.DateTimePicker dtmNgay;
+        private System.Windows.Forms.ComboBox cboCa;
+        private System.Windows.Forms.ComboBox cboTenCD;
+        private System.Windows.Forms.TextBox txtNgaySearch;
+        private System.Windows.Forms.TextBox txtCDSearch;
+        private System.Windows.Forms.TextBox txtTenSpSearch;
+        private System.Windows.Forms.TextBox txtTenSpInput;
+        private System.Windows.Forms.Label lblCaSearch;
+        private System.Windows.Forms.Label lblCa;
+        private System.Windows.Forms.Label lblCDSearch;
+        private System.Windows.Forms.Label lblTenCĐ;
+        private System.Windows.Forms.Label lblNameSearch;
+        private System.Windows.Forms.Label lblNameSP;
+        private System.Windows.Forms.Label lblDateSearch;
+        private System.Windows.Forms.Label lblNgay;
+        private FontAwesome.Sharp.IconButton btnTimDSSP;
+        private System.Windows.Forms.TextBox txtSpSearch;
+        private System.Windows.Forms.Label lblTenSP;
+        private System.Windows.Forms.Panel pnlDSSP;
+        private System.Windows.Forms.ListView lvwDSSP;
+        private System.Windows.Forms.Label lblDSSP;
+        private System.Windows.Forms.GroupBox gboTT;
+        private System.Windows.Forms.Panel pnlXuly;
     }
 }

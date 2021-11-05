@@ -33,7 +33,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnHC = new FontAwesome.Sharp.IconButton();
             this.btnCongNhan = new FontAwesome.Sharp.IconButton();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.picNen = new System.Windows.Forms.PictureBox();
             this.tblNav.SuspendLayout();
+            this.pnlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.SuspendLayout();
             // 
             // tblNav
@@ -82,11 +85,24 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // pnlMain
             // 
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
+            this.pnlMain.Controls.Add(this.picNen);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 46);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1080, 726);
             this.pnlMain.TabIndex = 1;
+            // 
+            // picNen
+            // 
+            this.picNen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picNen.Image = global::QLLuongSanPham.Properties.Resources.PhanLich;
+            this.picNen.Location = new System.Drawing.Point(169, 121);
+            this.picNen.Name = "picNen";
+            this.picNen.Size = new System.Drawing.Size(758, 469);
+            this.picNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picNen.TabIndex = 0;
+            this.picNen.TabStop = false;
             // 
             // frmPhanLich
             // 
@@ -101,6 +117,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Text = "frmPhanLich";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tblNav.ResumeLayout(false);
+            this.pnlMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picNen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -111,5 +129,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnHC;
         private FontAwesome.Sharp.IconButton btnCongNhan;
         private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.PictureBox picNen;
     }
 }

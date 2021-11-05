@@ -29,9 +29,19 @@ namespace QLLuongSanPham.GUI.QuanLy
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlLich = new System.Windows.Forms.Panel();
-            this.lvwDSLich = new System.Windows.Forms.ListView();
-            this.lblDSLich = new System.Windows.Forms.Label();
+            this.picNen = new System.Windows.Forms.PictureBox();
+            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
+            this.gbxInfoWork = new System.Windows.Forms.GroupBox();
+            this.cboHV = new System.Windows.Forms.ComboBox();
+            this.cboCV = new System.Windows.Forms.ComboBox();
+            this.cboPB = new System.Windows.Forms.ComboBox();
+            this.txtSeniority = new System.Windows.Forms.TextBox();
+            this.lblDateStart = new System.Windows.Forms.Label();
+            this.txtStartDate = new System.Windows.Forms.TextBox();
+            this.lblSeniority = new System.Windows.Forms.Label();
+            this.lblStudy = new System.Windows.Forms.Label();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblDeparment = new System.Windows.Forms.Label();
             this.gbxInfor = new System.Windows.Forms.GroupBox();
             this.cboSex = new System.Windows.Forms.ComboBox();
             this.txtAdress = new System.Windows.Forms.TextBox();
@@ -45,54 +55,165 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lablBirthDay = new System.Windows.Forms.Label();
             this.lblSex = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.gbxInfoWork = new System.Windows.Forms.GroupBox();
-            this.txtSeniority = new System.Windows.Forms.TextBox();
-            this.lblDateStart = new System.Windows.Forms.Label();
-            this.txtStartDate = new System.Windows.Forms.TextBox();
-            this.lblSeniority = new System.Windows.Forms.Label();
-            this.lblStudy = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.lblDeparment = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.pnlLich.SuspendLayout();
-            this.gbxInfor.SuspendLayout();
+            this.pnlLich = new System.Windows.Forms.Panel();
+            this.lvwDSLich = new System.Windows.Forms.ListView();
+            this.lblDSLich = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.gbxInfoWork.SuspendLayout();
+            this.gbxInfor.SuspendLayout();
+            this.pnlLich.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlLich
+            // picNen
             // 
-            this.pnlLich.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlLich.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlLich.Controls.Add(this.lvwDSLich);
-            this.pnlLich.Controls.Add(this.lblDSLich);
-            this.pnlLich.Location = new System.Drawing.Point(18, 565);
-            this.pnlLich.Name = "pnlLich";
-            this.pnlLich.Size = new System.Drawing.Size(1467, 359);
-            this.pnlLich.TabIndex = 12;
+            this.picNen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picNen.Image = global::QLLuongSanPham.Properties.Resources.back3;
+            this.picNen.Location = new System.Drawing.Point(0, 0);
+            this.picNen.Name = "picNen";
+            this.picNen.Size = new System.Drawing.Size(1513, 936);
+            this.picNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picNen.TabIndex = 0;
+            this.picNen.TabStop = false;
             // 
-            // lvwDSLich
+            // btnTimKiem
             // 
-            this.lvwDSLich.HideSelection = false;
-            this.lvwDSLich.Location = new System.Drawing.Point(18, 52);
-            this.lvwDSLich.Name = "lvwDSLich";
-            this.lvwDSLich.Size = new System.Drawing.Size(1419, 286);
-            this.lvwDSLich.TabIndex = 1;
-            this.lvwDSLich.UseCompatibleStateImageBehavior = false;
+            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnTimKiem.IconColor = System.Drawing.Color.Blue;
+            this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTimKiem.IconSize = 30;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.Location = new System.Drawing.Point(966, 484);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(522, 52);
+            this.btnTimKiem.TabIndex = 20;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
-            // lblDSLich
+            // gbxInfoWork
             // 
-            this.lblDSLich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblDSLich.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDSLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDSLich.Location = new System.Drawing.Point(0, 0);
-            this.lblDSLich.Name = "lblDSLich";
-            this.lblDSLich.Size = new System.Drawing.Size(1463, 33);
-            this.lblDSLich.TabIndex = 0;
-            this.lblDSLich.Text = "Danh sách lịch làm việc";
-            this.lblDSLich.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbxInfoWork.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbxInfoWork.Controls.Add(this.cboHV);
+            this.gbxInfoWork.Controls.Add(this.cboCV);
+            this.gbxInfoWork.Controls.Add(this.cboPB);
+            this.gbxInfoWork.Controls.Add(this.txtSeniority);
+            this.gbxInfoWork.Controls.Add(this.lblDateStart);
+            this.gbxInfoWork.Controls.Add(this.txtStartDate);
+            this.gbxInfoWork.Controls.Add(this.lblSeniority);
+            this.gbxInfoWork.Controls.Add(this.lblStudy);
+            this.gbxInfoWork.Controls.Add(this.lblPosition);
+            this.gbxInfoWork.Controls.Add(this.lblDeparment);
+            this.gbxInfoWork.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gbxInfoWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbxInfoWork.Font = new System.Drawing.Font("Verdana", 8F);
+            this.gbxInfoWork.ForeColor = System.Drawing.Color.Black;
+            this.gbxInfoWork.Location = new System.Drawing.Point(43, 236);
+            this.gbxInfoWork.Name = "gbxInfoWork";
+            this.gbxInfoWork.Size = new System.Drawing.Size(886, 300);
+            this.gbxInfoWork.TabIndex = 19;
+            this.gbxInfoWork.TabStop = false;
+            this.gbxInfoWork.Text = "Thông tin công việc";
+            // 
+            // cboHV
+            // 
+            this.cboHV.FormattingEnabled = true;
+            this.cboHV.Location = new System.Drawing.Point(339, 133);
+            this.cboHV.Name = "cboHV";
+            this.cboHV.Size = new System.Drawing.Size(410, 24);
+            this.cboHV.TabIndex = 3;
+            // 
+            // cboCV
+            // 
+            this.cboCV.FormattingEnabled = true;
+            this.cboCV.Location = new System.Drawing.Point(339, 79);
+            this.cboCV.Name = "cboCV";
+            this.cboCV.Size = new System.Drawing.Size(410, 24);
+            this.cboCV.TabIndex = 3;
+            // 
+            // cboPB
+            // 
+            this.cboPB.FormattingEnabled = true;
+            this.cboPB.Location = new System.Drawing.Point(339, 23);
+            this.cboPB.Name = "cboPB";
+            this.cboPB.Size = new System.Drawing.Size(410, 24);
+            this.cboPB.TabIndex = 3;
+            // 
+            // txtSeniority
+            // 
+            this.txtSeniority.BackColor = System.Drawing.Color.White;
+            this.txtSeniority.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.txtSeniority.Location = new System.Drawing.Point(339, 249);
+            this.txtSeniority.Name = "txtSeniority";
+            this.txtSeniority.Size = new System.Drawing.Size(410, 29);
+            this.txtSeniority.TabIndex = 2;
+            this.txtSeniority.Text = "2 năm";
+            // 
+            // lblDateStart
+            // 
+            this.lblDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDateStart.AutoSize = true;
+            this.lblDateStart.Font = new System.Drawing.Font("Verdana", 10.8F);
+            this.lblDateStart.Location = new System.Drawing.Point(14, 195);
+            this.lblDateStart.Name = "lblDateStart";
+            this.lblDateStart.Size = new System.Drawing.Size(225, 23);
+            this.lblDateStart.TabIndex = 1;
+            this.lblDateStart.Text = "Ngày bắt đầu công tác";
+            // 
+            // txtStartDate
+            // 
+            this.txtStartDate.BackColor = System.Drawing.Color.White;
+            this.txtStartDate.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.txtStartDate.Location = new System.Drawing.Point(339, 189);
+            this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.Size = new System.Drawing.Size(410, 29);
+            this.txtStartDate.TabIndex = 2;
+            this.txtStartDate.Text = "15/10/2021";
+            // 
+            // lblSeniority
+            // 
+            this.lblSeniority.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSeniority.AutoSize = true;
+            this.lblSeniority.Font = new System.Drawing.Font("Verdana", 10.8F);
+            this.lblSeniority.Location = new System.Drawing.Point(14, 255);
+            this.lblSeniority.Name = "lblSeniority";
+            this.lblSeniority.Size = new System.Drawing.Size(199, 23);
+            this.lblSeniority.TabIndex = 1;
+            this.lblSeniority.Text = "Thâm niên công tác";
+            // 
+            // lblStudy
+            // 
+            this.lblStudy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblStudy.AutoSize = true;
+            this.lblStudy.Font = new System.Drawing.Font("Verdana", 10.8F);
+            this.lblStudy.Location = new System.Drawing.Point(14, 134);
+            this.lblStudy.Name = "lblStudy";
+            this.lblStudy.Size = new System.Drawing.Size(87, 23);
+            this.lblStudy.TabIndex = 1;
+            this.lblStudy.Text = "Học vấn";
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Font = new System.Drawing.Font("Verdana", 10.8F);
+            this.lblPosition.Location = new System.Drawing.Point(14, 80);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(87, 23);
+            this.lblPosition.TabIndex = 1;
+            this.lblPosition.Text = "Chức vụ";
+            // 
+            // lblDeparment
+            // 
+            this.lblDeparment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDeparment.AutoSize = true;
+            this.lblDeparment.Font = new System.Drawing.Font("Verdana", 10.8F);
+            this.lblDeparment.Location = new System.Drawing.Point(14, 24);
+            this.lblDeparment.Name = "lblDeparment";
+            this.lblDeparment.Size = new System.Drawing.Size(111, 23);
+            this.lblDeparment.TabIndex = 1;
+            this.lblDeparment.Text = "Phòng ban";
             // 
             // gbxInfor
             // 
@@ -110,10 +231,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gbxInfor.Controls.Add(this.lblSex);
             this.gbxInfor.Controls.Add(this.lblName);
             this.gbxInfor.Font = new System.Drawing.Font("Verdana", 8F);
-            this.gbxInfor.Location = new System.Drawing.Point(35, 24);
+            this.gbxInfor.Location = new System.Drawing.Point(40, 18);
             this.gbxInfor.Name = "gbxInfor";
             this.gbxInfor.Size = new System.Drawing.Size(889, 205);
-            this.gbxInfor.TabIndex = 13;
+            this.gbxInfor.TabIndex = 18;
             this.gbxInfor.TabStop = false;
             this.gbxInfor.Text = "Thông tin cá nhân";
             // 
@@ -246,171 +367,76 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Tên nhân viên";
             // 
-            // gbxInfoWork
+            // pnlLich
             // 
-            this.gbxInfoWork.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbxInfoWork.Controls.Add(this.comboBox3);
-            this.gbxInfoWork.Controls.Add(this.comboBox2);
-            this.gbxInfoWork.Controls.Add(this.comboBox1);
-            this.gbxInfoWork.Controls.Add(this.txtSeniority);
-            this.gbxInfoWork.Controls.Add(this.lblDateStart);
-            this.gbxInfoWork.Controls.Add(this.txtStartDate);
-            this.gbxInfoWork.Controls.Add(this.lblSeniority);
-            this.gbxInfoWork.Controls.Add(this.lblStudy);
-            this.gbxInfoWork.Controls.Add(this.lblPosition);
-            this.gbxInfoWork.Controls.Add(this.lblDeparment);
-            this.gbxInfoWork.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gbxInfoWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbxInfoWork.Font = new System.Drawing.Font("Verdana", 8F);
-            this.gbxInfoWork.ForeColor = System.Drawing.Color.Black;
-            this.gbxInfoWork.Location = new System.Drawing.Point(38, 242);
-            this.gbxInfoWork.Name = "gbxInfoWork";
-            this.gbxInfoWork.Size = new System.Drawing.Size(886, 300);
-            this.gbxInfoWork.TabIndex = 15;
-            this.gbxInfoWork.TabStop = false;
-            this.gbxInfoWork.Text = "Thông tin công việc";
+            this.pnlLich.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlLich.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlLich.Controls.Add(this.lvwDSLich);
+            this.pnlLich.Controls.Add(this.lblDSLich);
+            this.pnlLich.Location = new System.Drawing.Point(23, 559);
+            this.pnlLich.Name = "pnlLich";
+            this.pnlLich.Size = new System.Drawing.Size(1467, 359);
+            this.pnlLich.TabIndex = 17;
             // 
-            // txtSeniority
+            // lvwDSLich
             // 
-            this.txtSeniority.BackColor = System.Drawing.Color.White;
-            this.txtSeniority.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtSeniority.Location = new System.Drawing.Point(339, 249);
-            this.txtSeniority.Name = "txtSeniority";
-            this.txtSeniority.Size = new System.Drawing.Size(410, 29);
-            this.txtSeniority.TabIndex = 2;
-            this.txtSeniority.Text = "2 năm";
+            this.lvwDSLich.HideSelection = false;
+            this.lvwDSLich.Location = new System.Drawing.Point(18, 52);
+            this.lvwDSLich.Name = "lvwDSLich";
+            this.lvwDSLich.Size = new System.Drawing.Size(1419, 286);
+            this.lvwDSLich.TabIndex = 1;
+            this.lvwDSLich.UseCompatibleStateImageBehavior = false;
             // 
-            // lblDateStart
+            // lblDSLich
             // 
-            this.lblDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDateStart.AutoSize = true;
-            this.lblDateStart.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblDateStart.Location = new System.Drawing.Point(56, 195);
-            this.lblDateStart.Name = "lblDateStart";
-            this.lblDateStart.Size = new System.Drawing.Size(225, 23);
-            this.lblDateStart.TabIndex = 1;
-            this.lblDateStart.Text = "Ngày bắt đầu công tác";
-            // 
-            // txtStartDate
-            // 
-            this.txtStartDate.BackColor = System.Drawing.Color.White;
-            this.txtStartDate.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtStartDate.Location = new System.Drawing.Point(339, 189);
-            this.txtStartDate.Name = "txtStartDate";
-            this.txtStartDate.Size = new System.Drawing.Size(410, 29);
-            this.txtStartDate.TabIndex = 2;
-            this.txtStartDate.Text = "15/10/2021";
-            // 
-            // lblSeniority
-            // 
-            this.lblSeniority.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSeniority.AutoSize = true;
-            this.lblSeniority.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblSeniority.Location = new System.Drawing.Point(56, 255);
-            this.lblSeniority.Name = "lblSeniority";
-            this.lblSeniority.Size = new System.Drawing.Size(199, 23);
-            this.lblSeniority.TabIndex = 1;
-            this.lblSeniority.Text = "Thâm niên công tác";
-            // 
-            // lblStudy
-            // 
-            this.lblStudy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblStudy.AutoSize = true;
-            this.lblStudy.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblStudy.Location = new System.Drawing.Point(56, 134);
-            this.lblStudy.Name = "lblStudy";
-            this.lblStudy.Size = new System.Drawing.Size(87, 23);
-            this.lblStudy.TabIndex = 1;
-            this.lblStudy.Text = "Học vấn";
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblPosition.Location = new System.Drawing.Point(56, 80);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(87, 23);
-            this.lblPosition.TabIndex = 1;
-            this.lblPosition.Text = "Chức vụ";
-            // 
-            // lblDeparment
-            // 
-            this.lblDeparment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDeparment.AutoSize = true;
-            this.lblDeparment.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblDeparment.Location = new System.Drawing.Point(56, 27);
-            this.lblDeparment.Name = "lblDeparment";
-            this.lblDeparment.Size = new System.Drawing.Size(111, 23);
-            this.lblDeparment.TabIndex = 1;
-            this.lblDeparment.Text = "Phòng ban";
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Blue;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.Location = new System.Drawing.Point(961, 491);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(522, 52);
-            this.iconButton1.TabIndex = 16;
-            this.iconButton1.Text = "Tìm kiếm";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(339, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(410, 24);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(339, 79);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(410, 24);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(339, 133);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(410, 24);
-            this.comboBox3.TabIndex = 3;
+            this.lblDSLich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblDSLich.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDSLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDSLich.Location = new System.Drawing.Point(0, 0);
+            this.lblDSLich.Name = "lblDSLich";
+            this.lblDSLich.Size = new System.Drawing.Size(1463, 33);
+            this.lblDSLich.TabIndex = 0;
+            this.lblDSLich.Text = "Danh sách lịch làm việc";
+            this.lblDSLich.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmTimKiemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1513, 936);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.gbxInfoWork);
             this.Controls.Add(this.gbxInfor);
             this.Controls.Add(this.pnlLich);
+            this.Controls.Add(this.picNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTimKiemNV";
-            this.pnlLich.ResumeLayout(false);
-            this.gbxInfor.ResumeLayout(false);
-            this.gbxInfor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picNen)).EndInit();
             this.gbxInfoWork.ResumeLayout(false);
             this.gbxInfoWork.PerformLayout();
+            this.gbxInfor.ResumeLayout(false);
+            this.gbxInfor.PerformLayout();
+            this.pnlLich.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlLich;
-        private System.Windows.Forms.ListView lvwDSLich;
-        private System.Windows.Forms.Label lblDSLich;
+        private System.Windows.Forms.PictureBox picNen;
+        private FontAwesome.Sharp.IconButton btnTimKiem;
+        private System.Windows.Forms.GroupBox gbxInfoWork;
+        private System.Windows.Forms.ComboBox cboHV;
+        private System.Windows.Forms.ComboBox cboCV;
+        private System.Windows.Forms.ComboBox cboPB;
+        private System.Windows.Forms.TextBox txtSeniority;
+        private System.Windows.Forms.Label lblDateStart;
+        private System.Windows.Forms.TextBox txtStartDate;
+        private System.Windows.Forms.Label lblSeniority;
+        private System.Windows.Forms.Label lblStudy;
+        private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.Label lblDeparment;
         private System.Windows.Forms.GroupBox gbxInfor;
         private System.Windows.Forms.ComboBox cboSex;
         private System.Windows.Forms.TextBox txtAdress;
@@ -424,17 +450,8 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label lablBirthDay;
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.GroupBox gbxInfoWork;
-        private System.Windows.Forms.TextBox txtSeniority;
-        private System.Windows.Forms.Label lblDateStart;
-        private System.Windows.Forms.TextBox txtStartDate;
-        private System.Windows.Forms.Label lblSeniority;
-        private System.Windows.Forms.Label lblStudy;
-        private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.Label lblDeparment;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel pnlLich;
+        private System.Windows.Forms.ListView lvwDSLich;
+        private System.Windows.Forms.Label lblDSLich;
     }
 }
