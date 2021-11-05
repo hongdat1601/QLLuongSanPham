@@ -18,6 +18,12 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<SanPham> GetSanPhams() => context.SanPham;
 
+        public SanPham GetById(int id)
+        {
+            return context.SanPham
+                .Where(x => x.ID == id)
+                .FirstOrDefault();
+        }
 
         public bool AddProcduct(SanPham sp)
         {

@@ -26,11 +26,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             congDoanDAO = new CongDoanDAO();
         }
 
-        private void frmCongDoan_Load(object sender, EventArgs e)
-        {
-            CreateList();
-            LoadListSanPham(sanPhamDAO.GetSanPhams());
-        }
+        #region Method
 
         private void CreateList()
         {
@@ -84,6 +80,16 @@ namespace QLLuongSanPham.GUI.QuanLy
                 lstvCongDoan.Items.Add(item);
                 stt++;
             }
+        }
+
+        #endregion
+
+        #region Event
+
+        private void frmCongDoan_Load(object sender, EventArgs e)
+        {
+            CreateList();
+            LoadListSanPham(sanPhamDAO.GetSanPhams());
         }
 
         private void lstvSanPham_SelectedIndexChanged(object sender, EventArgs e)
@@ -203,5 +209,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 }
             }      
         }
+
+        #endregion
     }
 }
