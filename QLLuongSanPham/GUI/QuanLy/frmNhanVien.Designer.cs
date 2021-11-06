@@ -29,6 +29,16 @@ namespace QLLuongSanPham.GUI.QuanLy
         /// </summary>
         private void InitializeComponent()
         {
+            this.ptcNen = new System.Windows.Forms.PictureBox();
+            this.lblNameSearch = new System.Windows.Forms.Label();
+            this.btnXoa = new FontAwesome.Sharp.IconButton();
+            this.btnSua = new FontAwesome.Sharp.IconButton();
+            this.btnThem = new FontAwesome.Sharp.IconButton();
+            this.txtHV = new System.Windows.Forms.Panel();
+            this.lblDS = new System.Windows.Forms.Label();
+            this.lvwDSNV = new System.Windows.Forms.ListView();
+            this.txtNameSearch = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.gbxInfoSlary = new System.Windows.Forms.GroupBox();
             this.txtIndexSalary = new System.Windows.Forms.TextBox();
             this.txtBasicSalary = new System.Windows.Forms.TextBox();
@@ -38,7 +48,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboHV = new System.Windows.Forms.ComboBox();
             this.cboCV = new System.Windows.Forms.ComboBox();
             this.cboPB = new System.Windows.Forms.ComboBox();
+            this.txtNN = new System.Windows.Forms.TextBox();
             this.txtSeniority = new System.Windows.Forms.TextBox();
+            this.lblNN = new System.Windows.Forms.Label();
             this.lblSeniority = new System.Windows.Forms.Label();
             this.lblStudy = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
@@ -56,22 +68,151 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lablBirthDay = new System.Windows.Forms.Label();
             this.lblSex = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtHV = new System.Windows.Forms.Panel();
-            this.lblDS = new System.Windows.Forms.Label();
-            this.lvwDSNV = new System.Windows.Forms.ListView();
-            this.txtNameSearch = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
-            this.btnXoa = new FontAwesome.Sharp.IconButton();
-            this.btnSua = new FontAwesome.Sharp.IconButton();
-            this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.lblNameSearch = new System.Windows.Forms.Label();
-            this.lblNN = new System.Windows.Forms.Label();
-            this.txtNN = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).BeginInit();
+            this.txtHV.SuspendLayout();
             this.gbxInfoSlary.SuspendLayout();
             this.gbxInfoWork.SuspendLayout();
             this.gbxInfor.SuspendLayout();
-            this.txtHV.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // ptcNen
+            // 
+            this.ptcNen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptcNen.Image = global::QLLuongSanPham.Properties.Resources.back3;
+            this.ptcNen.Location = new System.Drawing.Point(0, 0);
+            this.ptcNen.Name = "ptcNen";
+            this.ptcNen.Size = new System.Drawing.Size(1485, 851);
+            this.ptcNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptcNen.TabIndex = 0;
+            this.ptcNen.TabStop = false;
+            // 
+            // lblNameSearch
+            // 
+            this.lblNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNameSearch.AutoSize = true;
+            this.lblNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
+            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameSearch.Location = new System.Drawing.Point(895, 34);
+            this.lblNameSearch.Name = "lblNameSearch";
+            this.lblNameSearch.Size = new System.Drawing.Size(137, 25);
+            this.lblNameSearch.TabIndex = 37;
+            this.lblNameSearch.Text = "Tên nhân viên";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnXoa.IconColor = System.Drawing.Color.Red;
+            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXoa.IconSize = 25;
+            this.btnXoa.Location = new System.Drawing.Point(452, 671);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(95, 43);
+            this.btnXoa.TabIndex = 36;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSua.IconSize = 25;
+            this.btnSua.Location = new System.Drawing.Point(244, 671);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(90, 43);
+            this.btnSua.TabIndex = 35;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(165)))), ((int)(((byte)(42)))));
+            this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThem.IconSize = 25;
+            this.btnThem.Location = new System.Drawing.Point(19, 671);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 43);
+            this.btnThem.TabIndex = 34;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtHV
+            // 
+            this.txtHV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtHV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtHV.Controls.Add(this.lblDS);
+            this.txtHV.Controls.Add(this.btnXoa);
+            this.txtHV.Controls.Add(this.lvwDSNV);
+            this.txtHV.Controls.Add(this.btnSua);
+            this.txtHV.Controls.Add(this.btnThem);
+            this.txtHV.Location = new System.Drawing.Point(900, 81);
+            this.txtHV.Name = "txtHV";
+            this.txtHV.Size = new System.Drawing.Size(566, 742);
+            this.txtHV.TabIndex = 33;
+            // 
+            // lblDS
+            // 
+            this.lblDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblDS.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDS.Location = new System.Drawing.Point(0, 0);
+            this.lblDS.Name = "lblDS";
+            this.lblDS.Size = new System.Drawing.Size(562, 35);
+            this.lblDS.TabIndex = 15;
+            this.lblDS.Text = "Danh sách nhân viên";
+            this.lblDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lvwDSNV
+            // 
+            this.lvwDSNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwDSNV.HideSelection = false;
+            this.lvwDSNV.Location = new System.Drawing.Point(19, 54);
+            this.lvwDSNV.MultiSelect = false;
+            this.lvwDSNV.Name = "lvwDSNV";
+            this.lvwDSNV.Size = new System.Drawing.Size(528, 575);
+            this.lvwDSNV.TabIndex = 0;
+            this.lvwDSNV.UseCompatibleStateImageBehavior = false;
+            this.lvwDSNV.SelectedIndexChanged += new System.EventHandler(this.lvwDSNV_SelectedIndexChanged);
+            // 
+            // txtNameSearch
+            // 
+            this.txtNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameSearch.Location = new System.Drawing.Point(1048, 31);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.Size = new System.Drawing.Size(328, 30);
+            this.txtNameSearch.TabIndex = 32;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTimKiem.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnTimKiem.IconColor = System.Drawing.Color.Blue;
+            this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTimKiem.IconSize = 24;
+            this.btnTimKiem.Location = new System.Drawing.Point(1401, 31);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(67, 30);
+            this.btnTimKiem.TabIndex = 31;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // gbxInfoSlary
             // 
@@ -81,10 +222,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gbxInfoSlary.Controls.Add(this.lblIndexSalary);
             this.gbxInfoSlary.Controls.Add(this.lblSalaryBasic);
             this.gbxInfoSlary.Font = new System.Drawing.Font("Verdana", 8F);
-            this.gbxInfoSlary.Location = new System.Drawing.Point(22, 647);
+            this.gbxInfoSlary.Location = new System.Drawing.Point(17, 660);
             this.gbxInfoSlary.Name = "gbxInfoSlary";
             this.gbxInfoSlary.Size = new System.Drawing.Size(818, 163);
-            this.gbxInfoSlary.TabIndex = 14;
+            this.gbxInfoSlary.TabIndex = 30;
             this.gbxInfoSlary.TabStop = false;
             this.gbxInfoSlary.Text = "Thông tin lương";
             // 
@@ -147,10 +288,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gbxInfoWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxInfoWork.Font = new System.Drawing.Font("Verdana", 8F);
             this.gbxInfoWork.ForeColor = System.Drawing.Color.Black;
-            this.gbxInfoWork.Location = new System.Drawing.Point(22, 273);
+            this.gbxInfoWork.Location = new System.Drawing.Point(17, 286);
             this.gbxInfoWork.Name = "gbxInfoWork";
             this.gbxInfoWork.Size = new System.Drawing.Size(818, 348);
-            this.gbxInfoWork.TabIndex = 13;
+            this.gbxInfoWork.TabIndex = 29;
             this.gbxInfoWork.TabStop = false;
             this.gbxInfoWork.Text = "Thông tin công việc";
             // 
@@ -184,6 +325,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboPB.Size = new System.Drawing.Size(410, 30);
             this.cboPB.TabIndex = 3;
             // 
+            // txtNN
+            // 
+            this.txtNN.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNN.Enabled = false;
+            this.txtNN.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.txtNN.Location = new System.Drawing.Point(339, 302);
+            this.txtNN.Name = "txtNN";
+            this.txtNN.Size = new System.Drawing.Size(410, 29);
+            this.txtNN.TabIndex = 2;
+            // 
             // txtSeniority
             // 
             this.txtSeniority.BackColor = System.Drawing.SystemColors.Window;
@@ -193,6 +344,17 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtSeniority.Name = "txtSeniority";
             this.txtSeniority.Size = new System.Drawing.Size(410, 29);
             this.txtSeniority.TabIndex = 2;
+            // 
+            // lblNN
+            // 
+            this.lblNN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNN.AutoSize = true;
+            this.lblNN.Font = new System.Drawing.Font("Verdana", 10.8F);
+            this.lblNN.Location = new System.Drawing.Point(22, 308);
+            this.lblNN.Name = "lblNN";
+            this.lblNN.Size = new System.Drawing.Size(271, 23);
+            this.lblNN.TabIndex = 1;
+            this.lblNN.Text = "Trình độ ngoại ngữ (IELTS)";
             // 
             // lblSeniority
             // 
@@ -241,6 +403,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // gbxInfor
             // 
             this.gbxInfor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbxInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.gbxInfor.Controls.Add(this.dtmDate);
             this.gbxInfor.Controls.Add(this.cboSex);
             this.gbxInfor.Controls.Add(this.txtAdress);
@@ -253,11 +416,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gbxInfor.Controls.Add(this.lablBirthDay);
             this.gbxInfor.Controls.Add(this.lblSex);
             this.gbxInfor.Controls.Add(this.lblName);
+            this.gbxInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxInfor.Font = new System.Drawing.Font("Verdana", 8F);
-            this.gbxInfor.Location = new System.Drawing.Point(22, 21);
+            this.gbxInfor.Location = new System.Drawing.Point(17, 34);
             this.gbxInfor.Name = "gbxInfor";
             this.gbxInfor.Size = new System.Drawing.Size(818, 226);
-            this.gbxInfor.TabIndex = 12;
+            this.gbxInfor.TabIndex = 28;
             this.gbxInfor.TabStop = false;
             this.gbxInfor.Text = "Thông tin cá nhân";
             // 
@@ -384,177 +548,32 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Tên nhân viên";
             // 
-            // txtHV
-            // 
-            this.txtHV.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtHV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtHV.Controls.Add(this.lblDS);
-            this.txtHV.Controls.Add(this.lvwDSNV);
-            this.txtHV.Location = new System.Drawing.Point(905, 68);
-            this.txtHV.Name = "txtHV";
-            this.txtHV.Size = new System.Drawing.Size(566, 628);
-            this.txtHV.TabIndex = 17;
-            // 
-            // lblDS
-            // 
-            this.lblDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblDS.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDS.Location = new System.Drawing.Point(0, 0);
-            this.lblDS.Name = "lblDS";
-            this.lblDS.Size = new System.Drawing.Size(562, 35);
-            this.lblDS.TabIndex = 15;
-            this.lblDS.Text = "Danh sách nhân viên";
-            this.lblDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lvwDSNV
-            // 
-            this.lvwDSNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvwDSNV.HideSelection = false;
-            this.lvwDSNV.Location = new System.Drawing.Point(19, 54);
-            this.lvwDSNV.MultiSelect = false;
-            this.lvwDSNV.Name = "lvwDSNV";
-            this.lvwDSNV.Size = new System.Drawing.Size(528, 558);
-            this.lvwDSNV.TabIndex = 0;
-            this.lvwDSNV.UseCompatibleStateImageBehavior = false;
-            this.lvwDSNV.SelectedIndexChanged += new System.EventHandler(this.lvwDSNV_SelectedIndexChanged);
-            // 
-            // txtNameSearch
-            // 
-            this.txtNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameSearch.Location = new System.Drawing.Point(1043, 16);
-            this.txtNameSearch.Name = "txtNameSearch";
-            this.txtNameSearch.Size = new System.Drawing.Size(328, 30);
-            this.txtNameSearch.TabIndex = 16;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimKiem.BackColor = System.Drawing.SystemColors.Control;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnTimKiem.IconColor = System.Drawing.Color.Blue;
-            this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKiem.IconSize = 24;
-            this.btnTimKiem.Location = new System.Drawing.Point(1397, 14);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(74, 32);
-            this.btnTimKiem.TabIndex = 15;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnXoa.IconColor = System.Drawing.Color.Red;
-            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXoa.IconSize = 25;
-            this.btnXoa.Location = new System.Drawing.Point(1378, 767);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(95, 43);
-            this.btnXoa.TabIndex = 26;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSua.IconSize = 25;
-            this.btnSua.Location = new System.Drawing.Point(1140, 767);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(90, 43);
-            this.btnSua.TabIndex = 25;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThem.IconSize = 25;
-            this.btnThem.Location = new System.Drawing.Point(905, 767);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 43);
-            this.btnThem.TabIndex = 24;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // lblNameSearch
-            // 
-            this.lblNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNameSearch.AutoSize = true;
-            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameSearch.Location = new System.Drawing.Point(900, 19);
-            this.lblNameSearch.Name = "lblNameSearch";
-            this.lblNameSearch.Size = new System.Drawing.Size(137, 25);
-            this.lblNameSearch.TabIndex = 27;
-            this.lblNameSearch.Text = "Tên nhân viên";
-            // 
-            // lblNN
-            // 
-            this.lblNN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNN.AutoSize = true;
-            this.lblNN.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblNN.Location = new System.Drawing.Point(22, 308);
-            this.lblNN.Name = "lblNN";
-            this.lblNN.Size = new System.Drawing.Size(271, 23);
-            this.lblNN.TabIndex = 1;
-            this.lblNN.Text = "Trình độ ngoại ngữ (IELTS)";
-            // 
-            // txtNN
-            // 
-            this.txtNN.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNN.Enabled = false;
-            this.txtNN.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtNN.Location = new System.Drawing.Point(339, 302);
-            this.txtNN.Name = "txtNN";
-            this.txtNN.Size = new System.Drawing.Size(410, 29);
-            this.txtNN.TabIndex = 2;
-            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1485, 851);
             this.Controls.Add(this.lblNameSearch);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtHV);
             this.Controls.Add(this.txtNameSearch);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.gbxInfoSlary);
             this.Controls.Add(this.gbxInfoWork);
             this.Controls.Add(this.gbxInfor);
+            this.Controls.Add(this.ptcNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).EndInit();
+            this.txtHV.ResumeLayout(false);
             this.gbxInfoSlary.ResumeLayout(false);
             this.gbxInfoSlary.PerformLayout();
             this.gbxInfoWork.ResumeLayout(false);
             this.gbxInfoWork.PerformLayout();
             this.gbxInfor.ResumeLayout(false);
             this.gbxInfor.PerformLayout();
-            this.txtHV.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -562,18 +581,34 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         #endregion
 
+        private System.Windows.Forms.PictureBox ptcNen;
+        private System.Windows.Forms.Label lblNameSearch;
+        private FontAwesome.Sharp.IconButton btnXoa;
+        private FontAwesome.Sharp.IconButton btnSua;
+        private FontAwesome.Sharp.IconButton btnThem;
+        private System.Windows.Forms.Panel txtHV;
+        private System.Windows.Forms.Label lblDS;
+        private System.Windows.Forms.ListView lvwDSNV;
+        private System.Windows.Forms.TextBox txtNameSearch;
+        private FontAwesome.Sharp.IconButton btnTimKiem;
         private System.Windows.Forms.GroupBox gbxInfoSlary;
         private System.Windows.Forms.TextBox txtIndexSalary;
         private System.Windows.Forms.TextBox txtBasicSalary;
         private System.Windows.Forms.Label lblIndexSalary;
         private System.Windows.Forms.Label lblSalaryBasic;
         private System.Windows.Forms.GroupBox gbxInfoWork;
+        private System.Windows.Forms.ComboBox cboHV;
+        private System.Windows.Forms.ComboBox cboCV;
+        private System.Windows.Forms.ComboBox cboPB;
+        private System.Windows.Forms.TextBox txtNN;
         private System.Windows.Forms.TextBox txtSeniority;
+        private System.Windows.Forms.Label lblNN;
         private System.Windows.Forms.Label lblSeniority;
         private System.Windows.Forms.Label lblStudy;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblDeparment;
         private System.Windows.Forms.GroupBox gbxInfor;
+        private System.Windows.Forms.DateTimePicker dtmDate;
         private System.Windows.Forms.ComboBox cboSex;
         private System.Windows.Forms.TextBox txtAdress;
         private System.Windows.Forms.TextBox txtPhone;
@@ -585,20 +620,5 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label lablBirthDay;
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Panel txtHV;
-        private System.Windows.Forms.Label lblDS;
-        private System.Windows.Forms.ListView lvwDSNV;
-        private System.Windows.Forms.TextBox txtNameSearch;
-        private FontAwesome.Sharp.IconButton btnTimKiem;
-        private FontAwesome.Sharp.IconButton btnXoa;
-        private FontAwesome.Sharp.IconButton btnSua;
-        private FontAwesome.Sharp.IconButton btnThem;
-        private System.Windows.Forms.ComboBox cboHV;
-        private System.Windows.Forms.ComboBox cboCV;
-        private System.Windows.Forms.ComboBox cboPB;
-        private System.Windows.Forms.DateTimePicker dtmDate;
-        private System.Windows.Forms.Label lblNameSearch;
-        private System.Windows.Forms.TextBox txtNN;
-        private System.Windows.Forms.Label lblNN;
     }
 }

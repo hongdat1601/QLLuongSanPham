@@ -29,6 +29,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLy));
             this.pnLeft = new System.Windows.Forms.Panel();
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.pnlMenu = new System.Windows.Forms.Panel();
@@ -63,11 +64,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtTen = new System.Windows.Forms.TextBox();
             this.pnlSeperate = new System.Windows.Forms.Panel();
             this.picAvatar = new FontAwesome.Sharp.IconPictureBox();
-            this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.pnlControl = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
+            this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.ptcMain = new System.Windows.Forms.PictureBox();
             this.pnLeft.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlThongKe.SuspendLayout();
@@ -78,12 +80,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.pnlControl.SuspendLayout();
+            this.pnlBody.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptcMain)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLeft
             // 
-            this.pnLeft.AutoSize = true;
-            this.pnLeft.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.pnLeft.Controls.Add(this.btnDangXuat);
             this.pnLeft.Controls.Add(this.pnlMenu);
             this.pnLeft.Controls.Add(this.pnlInfo);
@@ -120,7 +123,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // pnlMenu
             // 
             this.pnlMenu.AutoScroll = true;
-            this.pnlMenu.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.pnlMenu.Controls.Add(this.pnlThongKe);
             this.pnlMenu.Controls.Add(this.btnThongKe);
             this.pnlMenu.Controls.Add(this.pnlTimKiem);
@@ -222,7 +225,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // btnThongKe
             // 
-            this.btnThongKe.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
@@ -355,7 +358,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTimKiem.FlatAppearance.BorderSize = 0;
@@ -463,7 +466,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // btnXuLy
             // 
-            this.btnXuLy.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnXuLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.btnXuLy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXuLy.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnXuLy.FlatAppearance.BorderSize = 0;
@@ -546,7 +549,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhat.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCapNhat.FlatAppearance.BorderSize = 0;
@@ -679,7 +682,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // btnDanhMuc
             // 
-            this.btnDanhMuc.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.btnDanhMuc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDanhMuc.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDanhMuc.FlatAppearance.BorderSize = 0;
@@ -703,7 +706,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // pnlInfo
             // 
-            this.pnlInfo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.pnlInfo.Controls.Add(this.txtChucVu);
             this.pnlInfo.Controls.Add(this.txtTen);
             this.pnlInfo.Controls.Add(this.pnlSeperate);
@@ -716,7 +719,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // txtChucVu
             // 
-            this.txtChucVu.BackColor = System.Drawing.Color.RoyalBlue;
+            this.txtChucVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.txtChucVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChucVu.ForeColor = System.Drawing.Color.White;
@@ -730,7 +733,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // txtTen
             // 
-            this.txtTen.BackColor = System.Drawing.Color.RoyalBlue;
+            this.txtTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.txtTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.ForeColor = System.Drawing.Color.White;
@@ -764,23 +767,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAvatar.TabIndex = 0;
             this.picAvatar.TabStop = false;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnThoat.IconColor = System.Drawing.Color.Black;
-            this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThoat.IconSize = 28;
-            this.btnThoat.Location = new System.Drawing.Point(1019, 7);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(40, 40);
-            this.btnThoat.TabIndex = 2;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlControl
             // 
@@ -826,14 +812,43 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnHelp.TabIndex = 3;
             this.btnHelp.UseVisualStyleBackColor = false;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnThoat.IconColor = System.Drawing.Color.Black;
+            this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThoat.IconSize = 28;
+            this.btnThoat.Location = new System.Drawing.Point(1019, 7);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(40, 40);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.White;
+            this.pnlBody.Controls.Add(this.ptcMain);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBody.Location = new System.Drawing.Point(320, 50);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1062, 1052);
             this.pnlBody.TabIndex = 4;
+            // 
+            // ptcMain
+            // 
+            this.ptcMain.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ptcMain.Image = ((System.Drawing.Image)(resources.GetObject("ptcMain.Image")));
+            this.ptcMain.Location = new System.Drawing.Point(82, 217);
+            this.ptcMain.Name = "ptcMain";
+            this.ptcMain.Size = new System.Drawing.Size(915, 610);
+            this.ptcMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptcMain.TabIndex = 0;
+            this.ptcMain.TabStop = false;
             // 
             // frmQuanLy
             // 
@@ -860,8 +875,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.pnlControl.ResumeLayout(false);
+            this.pnlBody.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptcMain)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -905,5 +921,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnXuLyPhanCa;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnXuLyTinhLuong;
+        private System.Windows.Forms.PictureBox ptcMain;
     }
 }

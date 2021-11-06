@@ -454,6 +454,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Controls.Add(this.btnTimKiem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHopDong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHopDong";
             this.Load += new System.EventHandler(this.frmHopDong_Load);
             this.panel1.ResumeLayout(false);

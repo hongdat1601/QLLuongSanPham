@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace QLLuongSanPham.GUI.NhanVienGUI
 {
-    public partial class frmNhanVien : Form
+    public partial class frmNVChinh : Form
     {
         //Fields
         private IconButton cureentButton;
@@ -15,7 +15,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private Form activeForm;
 
         //Construstor
-        public frmNhanVien()
+        public frmNVChinh()
         {
             InitializeComponent();
             CollapseMenu();

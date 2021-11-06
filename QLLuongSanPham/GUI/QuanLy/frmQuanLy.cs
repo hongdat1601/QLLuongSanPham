@@ -16,7 +16,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private Button activeBtn = null;
         private Panel activePnl = null;
         private Button activeSubBtn = null;
-
+  
         public frmQuanLy()
         {
             InitializeComponent();

@@ -29,60 +29,35 @@ namespace QLLuongSanPham.GUI.QuanLy
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCalam = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.txtCalam = new System.Windows.Forms.TextBox();
-            this.txtTime = new System.Windows.Forms.TextBox();
+            this.ptcNen = new System.Windows.Forms.PictureBox();
             this.pnlDS = new System.Windows.Forms.Panel();
             this.lvwDSCA = new System.Windows.Forms.ListView();
             this.lblList = new System.Windows.Forms.Label();
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.btnEdit = new FontAwesome.Sharp.IconButton();
+            this.btnAdd = new FontAwesome.Sharp.IconButton();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtCalam = new System.Windows.Forms.TextBox();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblCalam = new System.Windows.Forms.Label();
+            this.gboTT = new System.Windows.Forms.GroupBox();
+            this.pnlXuLy = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).BeginInit();
             this.pnlDS.SuspendLayout();
+            this.gboTT.SuspendLayout();
+            this.pnlXuLy.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblCalam
+            // ptcNen
             // 
-            this.lblCalam.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCalam.AutoSize = true;
-            this.lblCalam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCalam.Location = new System.Drawing.Point(21, 41);
-            this.lblCalam.Name = "lblCalam";
-            this.lblCalam.Size = new System.Drawing.Size(73, 25);
-            this.lblCalam.TabIndex = 0;
-            this.lblCalam.Text = "Tên ca";
-            // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblTime.Location = new System.Drawing.Point(21, 139);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(169, 25);
-            this.lblTime.TabIndex = 0;
-            this.lblTime.Text = "Thời gian làm việc";
-            // 
-            // txtCalam
-            // 
-            this.txtCalam.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCalam.Enabled = false;
-            this.txtCalam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCalam.Location = new System.Drawing.Point(350, 36);
-            this.txtCalam.Name = "txtCalam";
-            this.txtCalam.Size = new System.Drawing.Size(332, 30);
-            this.txtCalam.TabIndex = 1;
-            // 
-            // txtTime
-            // 
-            this.txtTime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTime.Enabled = false;
-            this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTime.Location = new System.Drawing.Point(350, 134);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(332, 30);
-            this.txtTime.TabIndex = 1;
+            this.ptcNen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptcNen.Image = global::QLLuongSanPham.Properties.Resources.back3;
+            this.ptcNen.Location = new System.Drawing.Point(0, 0);
+            this.ptcNen.Name = "ptcNen";
+            this.ptcNen.Size = new System.Drawing.Size(1180, 709);
+            this.ptcNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptcNen.TabIndex = 0;
+            this.ptcNen.TabStop = false;
             // 
             // pnlDS
             // 
@@ -91,17 +66,17 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDS.Controls.Add(this.lvwDSCA);
             this.pnlDS.Controls.Add(this.lblList);
             this.pnlDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlDS.Location = new System.Drawing.Point(26, 352);
+            this.pnlDS.Location = new System.Drawing.Point(285, 370);
             this.pnlDS.Name = "pnlDS";
-            this.pnlDS.Size = new System.Drawing.Size(1111, 327);
-            this.pnlDS.TabIndex = 3;
+            this.pnlDS.Size = new System.Drawing.Size(677, 327);
+            this.pnlDS.TabIndex = 11;
             // 
             // lvwDSCA
             // 
             this.lvwDSCA.HideSelection = false;
             this.lvwDSCA.Location = new System.Drawing.Point(19, 64);
             this.lvwDSCA.Name = "lvwDSCA";
-            this.lvwDSCA.Size = new System.Drawing.Size(1068, 237);
+            this.lvwDSCA.Size = new System.Drawing.Size(631, 237);
             this.lvwDSCA.TabIndex = 1;
             this.lvwDSCA.UseCompatibleStateImageBehavior = false;
             this.lvwDSCA.SelectedIndexChanged += new System.EventHandler(this.lvwDSCA_SelectedIndexChanged);
@@ -112,45 +87,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblList.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblList.Location = new System.Drawing.Point(0, 0);
             this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(1107, 41);
+            this.lblList.Size = new System.Drawing.Size(673, 41);
             this.lblList.TabIndex = 0;
             this.lblList.Text = "Danh sách ca làm việc";
             this.lblList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdd.IconSize = 25;
-            this.btnAdd.Location = new System.Drawing.Point(26, 239);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(109, 43);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEdit.IconSize = 25;
-            this.btnEdit.Location = new System.Drawing.Point(295, 239);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(97, 43);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -160,50 +100,157 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnDelete.IconColor = System.Drawing.Color.Red;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 25;
-            this.btnDelete.Location = new System.Drawing.Point(587, 239);
+            this.btnDelete.Location = new System.Drawing.Point(570, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(95, 43);
-            this.btnDelete.TabIndex = 2;
+            this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEdit.IconSize = 25;
+            this.btnEdit.Location = new System.Drawing.Point(299, 12);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(97, 43);
+            this.btnEdit.TabIndex = 9;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(165)))), ((int)(((byte)(42)))));
+            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdd.IconSize = 25;
+            this.btnAdd.Location = new System.Drawing.Point(21, 12);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(109, 43);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtTime
+            // 
+            this.txtTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTime.Enabled = false;
+            this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTime.Location = new System.Drawing.Point(333, 107);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(332, 30);
+            this.txtTime.TabIndex = 6;
+            // 
+            // txtCalam
+            // 
+            this.txtCalam.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCalam.Enabled = false;
+            this.txtCalam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCalam.Location = new System.Drawing.Point(333, 21);
+            this.txtCalam.Name = "txtCalam";
+            this.txtCalam.Size = new System.Drawing.Size(332, 30);
+            this.txtCalam.TabIndex = 7;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblTime.Location = new System.Drawing.Point(16, 112);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(169, 25);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "Thời gian làm việc";
+            // 
+            // lblCalam
+            // 
+            this.lblCalam.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCalam.AutoSize = true;
+            this.lblCalam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblCalam.Location = new System.Drawing.Point(16, 38);
+            this.lblCalam.Name = "lblCalam";
+            this.lblCalam.Size = new System.Drawing.Size(73, 25);
+            this.lblCalam.TabIndex = 5;
+            this.lblCalam.Text = "Tên ca";
+            // 
+            // gboTT
+            // 
+            this.gboTT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gboTT.Controls.Add(this.txtTime);
+            this.gboTT.Controls.Add(this.txtCalam);
+            this.gboTT.Controls.Add(this.lblTime);
+            this.gboTT.Controls.Add(this.lblCalam);
+            this.gboTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboTT.Location = new System.Drawing.Point(285, 37);
+            this.gboTT.Name = "gboTT";
+            this.gboTT.Size = new System.Drawing.Size(677, 170);
+            this.gboTT.TabIndex = 12;
+            this.gboTT.TabStop = false;
+            this.gboTT.Text = "Thông tin ca làm việc";
+            // 
+            // pnlXuLy
+            // 
+            this.pnlXuLy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlXuLy.Controls.Add(this.btnAdd);
+            this.pnlXuLy.Controls.Add(this.btnEdit);
+            this.pnlXuLy.Controls.Add(this.btnDelete);
+            this.pnlXuLy.Location = new System.Drawing.Point(285, 254);
+            this.pnlXuLy.Name = "pnlXuLy";
+            this.pnlXuLy.Size = new System.Drawing.Size(677, 69);
+            this.pnlXuLy.TabIndex = 13;
+            // 
             // frmCaLamViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1180, 709);
+            this.Controls.Add(this.pnlXuLy);
+            this.Controls.Add(this.gboTT);
             this.Controls.Add(this.pnlDS);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtTime);
-            this.Controls.Add(this.txtCalam);
-            this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.lblCalam);
+            this.Controls.Add(this.ptcNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCaLamViec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCaLamViec";
             this.Load += new System.EventHandler(this.frmCaLamViec_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).EndInit();
             this.pnlDS.ResumeLayout(false);
+            this.gboTT.ResumeLayout(false);
+            this.gboTT.PerformLayout();
+            this.pnlXuLy.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblCalam;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.TextBox txtCalam;
-        private System.Windows.Forms.TextBox txtTime;
+
+        private System.Windows.Forms.PictureBox ptcNen;
         private System.Windows.Forms.Panel pnlDS;
-        private System.Windows.Forms.Label lblList;
-        private FontAwesome.Sharp.IconButton btnAdd;
-        private FontAwesome.Sharp.IconButton btnEdit;
-        private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.ListView lvwDSCA;
+        private System.Windows.Forms.Label lblList;
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private FontAwesome.Sharp.IconButton btnEdit;
+        private FontAwesome.Sharp.IconButton btnAdd;
+        private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.TextBox txtCalam;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblCalam;
+        private System.Windows.Forms.GroupBox gboTT;
+        private System.Windows.Forms.Panel pnlXuLy;
     }
 }

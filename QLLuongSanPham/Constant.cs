@@ -18,11 +18,10 @@ namespace QLLuongSanPham
         /// </summary>
         public static Hashtable Colors = new Hashtable
         {
-            { "primary", Color.RoyalBlue },
+            { "primary", Color.FromArgb(7, 142, 227)},
             { "btnSub", Color.CornflowerBlue },
             { "btnFocus", Color.MediumBlue },
             { "btnSubFocus", Color.LightSteelBlue }
-
         };
     }
 }

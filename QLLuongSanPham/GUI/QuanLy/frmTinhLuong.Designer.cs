@@ -31,13 +31,17 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tblNav = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHC = new FontAwesome.Sharp.IconButton();
             this.btnCongNhan = new FontAwesome.Sharp.IconButton();
+            this.pnlMain.SuspendLayout();
             this.tblNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.pictureBox1);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 46);
             this.pnlMain.Name = "pnlMain";
@@ -59,6 +63,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.tblNav.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblNav.Size = new System.Drawing.Size(1209, 46);
             this.tblNav.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::QLLuongSanPham.Properties.Resources.TinhLuong;
+            this.pictureBox1.Location = new System.Drawing.Point(153, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(922, 468);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnHC
             // 
@@ -99,7 +113,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Name = "frmTinhLuong";
             this.Text = "frmTinhLuong";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.pnlMain.ResumeLayout(false);
             this.tblNav.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,5 +126,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.TableLayoutPanel tblNav;
         private FontAwesome.Sharp.IconButton btnHC;
         private FontAwesome.Sharp.IconButton btnCongNhan;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

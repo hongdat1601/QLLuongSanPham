@@ -87,6 +87,9 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 txtCalam.Enabled = true;
                 txtTime.Enabled = true;
+
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
             }
             else
             {
@@ -104,6 +107,9 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 LoadListPB(caLamDAO.GetCaLams());
                 ClearTexbox();
+
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
             }
         }
 
@@ -126,6 +132,9 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 txtCalam.Enabled = true;
                 txtTime.Enabled = true;
+
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
             }
             else
             {
@@ -143,6 +152,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 caLamDAO.EditCaLam(ca);
                 LoadListPB(caLamDAO.GetCaLams());
                 ClearTexbox();
+
+                btnAdd.Enabled = true;
+                btnDelete.Enabled = true;
             }
             
         }

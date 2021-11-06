@@ -25,8 +25,8 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void CreateCtilte(ListView lvw)
         {
             lvw.Columns.Add("Tên sản phẩm", 120);
-            lvw.Columns.Add("Đơn vị tính",80);
-            lvw.Columns.Add("Đơn giá", 120);
+            lvw.Columns.Add("Đơn giá",80);
+            lvw.Columns.Add("Đơn vị tính", 120);
 
             lvw.View = View.Details;
             lvw.GridLines = true;
@@ -47,6 +47,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 lvwDSSP.Items.Add(listViewItem);
             }
+
+            if (lvwDSSP.Items.Count > 0)
+            {
+                lvwDSSP.SelectedIndices.Add(0);
+            }
+            lvwDSSP.Focus();
         }
 
         private SanPham CreateProduct(SanPham sp)
@@ -80,6 +86,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             txtDG.Clear();
             txtDVT.Clear();
             txtTenSP.Clear();
+            ptcAvata.ImageLocation = "";
         }
 
         //Envents
@@ -108,9 +115,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             if (btnThem.Text.Equals("Thêm"))
             {
                 EnaTxt();
+                ClearTxT();
                 btnThem.Text = "Lưu";
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnThem.IconColor = Color.Blue;
+
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
             }
             else
             {
@@ -122,8 +133,11 @@ namespace QLLuongSanPham.GUI.QuanLy
                 SanPham sp = new SanPham();
                 spDAO.AddProcduct(CreateProduct(sp));
 
-                LoadData(spDAO.GetSanPhams());
                 ClearTxT();
+                LoadData(spDAO.GetSanPhams());
+
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
             }
         }
 
@@ -135,6 +149,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnSua.Text = "Lưu";
                 btnSua.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnSua.IconColor = Color.Blue;
+
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
             }
             else
             {
@@ -147,6 +164,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 spDAO.UpdateEmployee(CreateProduct(sp));
                 LoadData(spDAO.GetSanPhams());
                 ClearTxT();
+
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
             }
         }
 
@@ -165,7 +185,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 SanPham sp = (SanPham)lvwDSSP.SelectedItems[0].Tag;
                 txtDG.Text = sp.DonGia.ToString();
                 txtDVT.Text = sp.DonViTinh;
-                txtTenSP.Text = sp.DonViTinh;
+                txtTenSP.Text = sp.TenSP;
                 ptcAvata.ImageLocation = sp.AnhSP;
             }
         }
