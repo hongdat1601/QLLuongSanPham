@@ -31,45 +31,45 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLy));
             this.pnLeft = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlThongKe = new System.Windows.Forms.Panel();
-            this.pnlTimKiem = new System.Windows.Forms.Panel();
-            this.pnlXuLy = new System.Windows.Forms.Panel();
-            this.pnlCapNhat = new System.Windows.Forms.Panel();
-            this.pnlDanhMuc = new System.Windows.Forms.Panel();
-            this.pnlInfo = new System.Windows.Forms.Panel();
-            this.txtChucVu = new System.Windows.Forms.TextBox();
-            this.txtTen = new System.Windows.Forms.TextBox();
-            this.pnlSeperate = new System.Windows.Forms.Panel();
-            this.pnlControl = new System.Windows.Forms.Panel();
-            this.pnlBody = new System.Windows.Forms.Panel();
-            this.ptcMain = new System.Windows.Forms.PictureBox();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.btnHelp = new FontAwesome.Sharp.IconButton();
-            this.btnThoat = new FontAwesome.Sharp.IconButton();
-            this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.btnThongKeCT = new FontAwesome.Sharp.IconButton();
             this.btnThongKeSP = new FontAwesome.Sharp.IconButton();
             this.btnThongKeHC = new FontAwesome.Sharp.IconButton();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
+            this.pnlTimKiem = new System.Windows.Forms.Panel();
             this.btnTimKiemHD = new FontAwesome.Sharp.IconButton();
             this.btnTimKiemPB = new FontAwesome.Sharp.IconButton();
             this.btnTimKiemSP = new FontAwesome.Sharp.IconButton();
             this.btnTimKiemNV = new FontAwesome.Sharp.IconButton();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
+            this.pnlXuLy = new System.Windows.Forms.Panel();
             this.btnXuLyTinhLuong = new FontAwesome.Sharp.IconButton();
             this.btnXuLyChamCong = new FontAwesome.Sharp.IconButton();
             this.btnXuLyPhanCa = new FontAwesome.Sharp.IconButton();
             this.btnXuLy = new FontAwesome.Sharp.IconButton();
+            this.pnlCapNhat = new System.Windows.Forms.Panel();
             this.btnCongDoan = new FontAwesome.Sharp.IconButton();
             this.btnCaLam = new FontAwesome.Sharp.IconButton();
             this.btnCapNhat = new FontAwesome.Sharp.IconButton();
+            this.pnlDanhMuc = new System.Windows.Forms.Panel();
             this.btnPhongBan = new FontAwesome.Sharp.IconButton();
             this.btnHopDong = new FontAwesome.Sharp.IconButton();
             this.btnSanPham = new FontAwesome.Sharp.IconButton();
             this.btnNhanVien = new FontAwesome.Sharp.IconButton();
             this.btnDanhMuc = new FontAwesome.Sharp.IconButton();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.txtChucVu = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.pnlSeperate = new System.Windows.Forms.Panel();
             this.picAvatar = new FontAwesome.Sharp.IconPictureBox();
+            this.pnlControl = new System.Windows.Forms.Panel();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnHelp = new FontAwesome.Sharp.IconButton();
+            this.btnThoat = new FontAwesome.Sharp.IconButton();
+            this.pnlBody = new System.Windows.Forms.Panel();
+            this.ptcMain = new System.Windows.Forms.PictureBox();
             this.pnLeft.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlThongKe.SuspendLayout();
@@ -78,15 +78,14 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlCapNhat.SuspendLayout();
             this.pnlDanhMuc.SuspendLayout();
             this.pnlInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.pnlControl.SuspendLayout();
             this.pnlBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptcMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLeft
             // 
-            this.pnLeft.AutoSize = true;
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
             this.pnLeft.Controls.Add(this.btnDangXuat);
             this.pnLeft.Controls.Add(this.pnlMenu);
@@ -96,6 +95,30 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(320, 1102);
             this.pnLeft.TabIndex = 1;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnDangXuat.IconColor = System.Drawing.Color.White;
+            this.btnDangXuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 1039);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDangXuat.Size = new System.Drawing.Size(320, 63);
+            this.btnDangXuat.TabIndex = 6;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // pnlMenu
             // 
@@ -127,210 +150,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(296, 191);
             this.pnlThongKe.TabIndex = 19;
-            // 
-            // pnlTimKiem
-            // 
-            this.pnlTimKiem.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlTimKiem.Controls.Add(this.btnTimKiemHD);
-            this.pnlTimKiem.Controls.Add(this.btnTimKiemPB);
-            this.pnlTimKiem.Controls.Add(this.btnTimKiemSP);
-            this.pnlTimKiem.Controls.Add(this.btnTimKiemNV);
-            this.pnlTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTimKiem.Location = new System.Drawing.Point(0, 841);
-            this.pnlTimKiem.Name = "pnlTimKiem";
-            this.pnlTimKiem.Size = new System.Drawing.Size(296, 263);
-            this.pnlTimKiem.TabIndex = 17;
-            // 
-            // pnlXuLy
-            // 
-            this.pnlXuLy.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlXuLy.Controls.Add(this.btnXuLyTinhLuong);
-            this.pnlXuLy.Controls.Add(this.btnXuLyChamCong);
-            this.pnlXuLy.Controls.Add(this.btnXuLyPhanCa);
-            this.pnlXuLy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlXuLy.Location = new System.Drawing.Point(0, 583);
-            this.pnlXuLy.Name = "pnlXuLy";
-            this.pnlXuLy.Size = new System.Drawing.Size(296, 195);
-            this.pnlXuLy.TabIndex = 15;
-            // 
-            // pnlCapNhat
-            // 
-            this.pnlCapNhat.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlCapNhat.Controls.Add(this.btnCongDoan);
-            this.pnlCapNhat.Controls.Add(this.btnCaLam);
-            this.pnlCapNhat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCapNhat.Location = new System.Drawing.Point(0, 386);
-            this.pnlCapNhat.Name = "pnlCapNhat";
-            this.pnlCapNhat.Size = new System.Drawing.Size(296, 134);
-            this.pnlCapNhat.TabIndex = 13;
-            // 
-            // pnlDanhMuc
-            // 
-            this.pnlDanhMuc.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlDanhMuc.Controls.Add(this.btnPhongBan);
-            this.pnlDanhMuc.Controls.Add(this.btnHopDong);
-            this.pnlDanhMuc.Controls.Add(this.btnSanPham);
-            this.pnlDanhMuc.Controls.Add(this.btnNhanVien);
-            this.pnlDanhMuc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDanhMuc.Location = new System.Drawing.Point(0, 63);
-            this.pnlDanhMuc.Name = "pnlDanhMuc";
-            this.pnlDanhMuc.Size = new System.Drawing.Size(296, 260);
-            this.pnlDanhMuc.TabIndex = 11;
-            // 
-            // pnlInfo
-            // 
-            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
-            this.pnlInfo.Controls.Add(this.txtChucVu);
-            this.pnlInfo.Controls.Add(this.txtTen);
-            this.pnlInfo.Controls.Add(this.pnlSeperate);
-            this.pnlInfo.Controls.Add(this.picAvatar);
-            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlInfo.Location = new System.Drawing.Point(0, 0);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(320, 318);
-            this.pnlInfo.TabIndex = 1;
-            // 
-            // txtChucVu
-            // 
-            this.txtChucVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
-            this.txtChucVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChucVu.ForeColor = System.Drawing.Color.White;
-            this.txtChucVu.Location = new System.Drawing.Point(0, 237);
-            this.txtChucVu.Multiline = true;
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Size = new System.Drawing.Size(320, 31);
-            this.txtChucVu.TabIndex = 3;
-            this.txtChucVu.Text = "Quản Lý";
-            this.txtChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTen
-            // 
-            this.txtTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
-            this.txtTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.ForeColor = System.Drawing.Color.White;
-            this.txtTen.Location = new System.Drawing.Point(0, 200);
-            this.txtTen.Multiline = true;
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(320, 31);
-            this.txtTen.TabIndex = 2;
-            this.txtTen.Text = "Nguyễn Hồng Đạt";
-            this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pnlSeperate
-            // 
-            this.pnlSeperate.BackColor = System.Drawing.Color.White;
-            this.pnlSeperate.Location = new System.Drawing.Point(3, 302);
-            this.pnlSeperate.Name = "pnlSeperate";
-            this.pnlSeperate.Size = new System.Drawing.Size(320, 1);
-            this.pnlSeperate.TabIndex = 2;
-            // 
-            // pnlControl
-            // 
-            this.pnlControl.Controls.Add(this.btnMinimize);
-            this.pnlControl.Controls.Add(this.btnHelp);
-            this.pnlControl.Controls.Add(this.btnThoat);
-            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlControl.Location = new System.Drawing.Point(320, 0);
-            this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(1062, 50);
-            this.pnlControl.TabIndex = 3;
-            // 
-            // pnlBody
-            // 
-            this.pnlBody.BackColor = System.Drawing.Color.White;
-            this.pnlBody.Controls.Add(this.ptcMain);
-            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(320, 50);
-            this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1062, 1052);
-            this.pnlBody.TabIndex = 4;
-            // 
-            // ptcMain
-            // 
-            this.ptcMain.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ptcMain.Image = ((System.Drawing.Image)(resources.GetObject("ptcMain.Image")));
-            this.ptcMain.Location = new System.Drawing.Point(82, 217);
-            this.ptcMain.Name = "ptcMain";
-            this.ptcMain.Size = new System.Drawing.Size(915, 610);
-            this.ptcMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptcMain.TabIndex = 0;
-            this.ptcMain.TabStop = false;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMinimize.IconColor = System.Drawing.Color.Black;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 28;
-            this.btnMinimize.Location = new System.Drawing.Point(927, 7);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(40, 40);
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnHelp.IconColor = System.Drawing.Color.Black;
-            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHelp.IconSize = 28;
-            this.btnHelp.Location = new System.Drawing.Point(973, 7);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(40, 40);
-            this.btnHelp.TabIndex = 3;
-            this.btnHelp.UseVisualStyleBackColor = false;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnThoat.IconColor = System.Drawing.Color.Black;
-            this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThoat.IconSize = 28;
-            this.btnThoat.Location = new System.Drawing.Point(1019, 7);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(40, 40);
-            this.btnThoat.TabIndex = 2;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDangXuat.FlatAppearance.BorderSize = 0;
-            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btnDangXuat.IconColor = System.Drawing.Color.White;
-            this.btnDangXuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 1039);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDangXuat.Size = new System.Drawing.Size(320, 63);
-            this.btnDangXuat.TabIndex = 6;
-            this.btnDangXuat.Text = "Đăng Xuất";
-            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangXuat.UseVisualStyleBackColor = false;
-            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnThongKeCT
             // 
@@ -427,6 +246,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKe.UseVisualStyleBackColor = false;
             this.btnThongKe.Click += new System.EventHandler(this.btnClick);
+            // 
+            // pnlTimKiem
+            // 
+            this.pnlTimKiem.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlTimKiem.Controls.Add(this.btnTimKiemHD);
+            this.pnlTimKiem.Controls.Add(this.btnTimKiemPB);
+            this.pnlTimKiem.Controls.Add(this.btnTimKiemSP);
+            this.pnlTimKiem.Controls.Add(this.btnTimKiemNV);
+            this.pnlTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTimKiem.Location = new System.Drawing.Point(0, 841);
+            this.pnlTimKiem.Name = "pnlTimKiem";
+            this.pnlTimKiem.Size = new System.Drawing.Size(296, 263);
+            this.pnlTimKiem.TabIndex = 17;
             // 
             // btnTimKiemHD
             // 
@@ -548,6 +380,18 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnClick);
             // 
+            // pnlXuLy
+            // 
+            this.pnlXuLy.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlXuLy.Controls.Add(this.btnXuLyTinhLuong);
+            this.pnlXuLy.Controls.Add(this.btnXuLyChamCong);
+            this.pnlXuLy.Controls.Add(this.btnXuLyPhanCa);
+            this.pnlXuLy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlXuLy.Location = new System.Drawing.Point(0, 583);
+            this.pnlXuLy.Name = "pnlXuLy";
+            this.pnlXuLy.Size = new System.Drawing.Size(296, 195);
+            this.pnlXuLy.TabIndex = 15;
+            // 
             // btnXuLyTinhLuong
             // 
             this.btnXuLyTinhLuong.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -644,6 +488,17 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXuLy.UseVisualStyleBackColor = false;
             this.btnXuLy.Click += new System.EventHandler(this.btnClick);
             // 
+            // pnlCapNhat
+            // 
+            this.pnlCapNhat.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlCapNhat.Controls.Add(this.btnCongDoan);
+            this.pnlCapNhat.Controls.Add(this.btnCaLam);
+            this.pnlCapNhat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCapNhat.Location = new System.Drawing.Point(0, 386);
+            this.pnlCapNhat.Name = "pnlCapNhat";
+            this.pnlCapNhat.Size = new System.Drawing.Size(296, 134);
+            this.pnlCapNhat.TabIndex = 13;
+            // 
             // btnCongDoan
             // 
             this.btnCongDoan.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -715,6 +570,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCapNhat.UseVisualStyleBackColor = false;
             this.btnCapNhat.Click += new System.EventHandler(this.btnClick);
+            // 
+            // pnlDanhMuc
+            // 
+            this.pnlDanhMuc.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlDanhMuc.Controls.Add(this.btnPhongBan);
+            this.pnlDanhMuc.Controls.Add(this.btnHopDong);
+            this.pnlDanhMuc.Controls.Add(this.btnSanPham);
+            this.pnlDanhMuc.Controls.Add(this.btnNhanVien);
+            this.pnlDanhMuc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDanhMuc.Location = new System.Drawing.Point(0, 63);
+            this.pnlDanhMuc.Name = "pnlDanhMuc";
+            this.pnlDanhMuc.Size = new System.Drawing.Size(296, 260);
+            this.pnlDanhMuc.TabIndex = 11;
             // 
             // btnPhongBan
             // 
@@ -836,6 +704,55 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnDanhMuc.UseVisualStyleBackColor = false;
             this.btnDanhMuc.Click += new System.EventHandler(this.btnClick);
             // 
+            // pnlInfo
+            // 
+            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
+            this.pnlInfo.Controls.Add(this.txtChucVu);
+            this.pnlInfo.Controls.Add(this.txtTen);
+            this.pnlInfo.Controls.Add(this.pnlSeperate);
+            this.pnlInfo.Controls.Add(this.picAvatar);
+            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlInfo.Location = new System.Drawing.Point(0, 0);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(320, 318);
+            this.pnlInfo.TabIndex = 1;
+            // 
+            // txtChucVu
+            // 
+            this.txtChucVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
+            this.txtChucVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChucVu.ForeColor = System.Drawing.Color.White;
+            this.txtChucVu.Location = new System.Drawing.Point(0, 237);
+            this.txtChucVu.Multiline = true;
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.Size = new System.Drawing.Size(320, 31);
+            this.txtChucVu.TabIndex = 3;
+            this.txtChucVu.Text = "Quản Lý";
+            this.txtChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTen
+            // 
+            this.txtTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
+            this.txtTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTen.ForeColor = System.Drawing.Color.White;
+            this.txtTen.Location = new System.Drawing.Point(0, 200);
+            this.txtTen.Multiline = true;
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(320, 31);
+            this.txtTen.TabIndex = 2;
+            this.txtTen.Text = "Nguyễn Hồng Đạt";
+            this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlSeperate
+            // 
+            this.pnlSeperate.BackColor = System.Drawing.Color.White;
+            this.pnlSeperate.Location = new System.Drawing.Point(3, 302);
+            this.pnlSeperate.Name = "pnlSeperate";
+            this.pnlSeperate.Size = new System.Drawing.Size(320, 1);
+            this.pnlSeperate.TabIndex = 2;
+            // 
             // picAvatar
             // 
             this.picAvatar.BackColor = System.Drawing.Color.White;
@@ -850,6 +767,88 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAvatar.TabIndex = 0;
             this.picAvatar.TabStop = false;
+            // 
+            // pnlControl
+            // 
+            this.pnlControl.Controls.Add(this.btnMinimize);
+            this.pnlControl.Controls.Add(this.btnHelp);
+            this.pnlControl.Controls.Add(this.btnThoat);
+            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlControl.Location = new System.Drawing.Point(320, 0);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(1062, 50);
+            this.pnlControl.TabIndex = 3;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinimize.IconColor = System.Drawing.Color.Black;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 28;
+            this.btnMinimize.Location = new System.Drawing.Point(927, 7);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(40, 40);
+            this.btnMinimize.TabIndex = 4;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnHelp.IconColor = System.Drawing.Color.Black;
+            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHelp.IconSize = 28;
+            this.btnHelp.Location = new System.Drawing.Point(973, 7);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(40, 40);
+            this.btnHelp.TabIndex = 3;
+            this.btnHelp.UseVisualStyleBackColor = false;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnThoat.IconColor = System.Drawing.Color.Black;
+            this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThoat.IconSize = 28;
+            this.btnThoat.Location = new System.Drawing.Point(1019, 7);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(40, 40);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // pnlBody
+            // 
+            this.pnlBody.BackColor = System.Drawing.Color.White;
+            this.pnlBody.Controls.Add(this.ptcMain);
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(320, 50);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(1062, 1052);
+            this.pnlBody.TabIndex = 4;
+            // 
+            // ptcMain
+            // 
+            this.ptcMain.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ptcMain.Image = ((System.Drawing.Image)(resources.GetObject("ptcMain.Image")));
+            this.ptcMain.Location = new System.Drawing.Point(82, 217);
+            this.ptcMain.Name = "ptcMain";
+            this.ptcMain.Size = new System.Drawing.Size(915, 610);
+            this.ptcMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptcMain.TabIndex = 0;
+            this.ptcMain.TabStop = false;
             // 
             // frmQuanLy
             // 
@@ -874,12 +873,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDanhMuc.ResumeLayout(false);
             this.pnlInfo.ResumeLayout(false);
             this.pnlInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.pnlControl.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptcMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
