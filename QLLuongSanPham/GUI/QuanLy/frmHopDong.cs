@@ -161,12 +161,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 chiTietHopDong = (ChiTietHopDong)lstvCTHopDong.SelectedItems[0].Tag;
                 txtTenSanPham.Text = sanPhamDAO.GetById(chiTietHopDong.IDSanPham).TenSP;
-                txtSoLuong.Text = chiTietHopDong.SoLuong.ToString();                
+                nudSoLuong.Text = chiTietHopDong.SoLuong.ToString();                
             }
             else if (lstvCTHopDong.SelectedItems.Count > 0 && btnLapHopDong.Text == "Lưu")
             {
                 txtTenSanPham.Text = lstvCTHopDong.SelectedItems[0].SubItems[0].Text;
-                txtSoLuong.Text = lstvCTHopDong.SelectedItems[0].SubItems[1].Text;
+                nudSoLuong.Text = lstvCTHopDong.SelectedItems[0].SubItems[1].Text;
             }
         }
 
@@ -181,7 +181,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 txtTenKhachHang.Enabled = false;
                 txtDieuKhoan.Enabled = false;
                 txtTenSanPham.Enabled = false;
-                txtSoLuong.Enabled = false;
+                nudSoLuong.Enabled = false;
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;
 
@@ -199,7 +199,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 dtmNgayKetThuc.Enabled = true;
                 txtTenKhachHang.Enabled = true;
                 txtDieuKhoan.Enabled = true;
-                txtSoLuong.Enabled = true;
+                nudSoLuong.Enabled = true;
                 btnThem.Enabled = true;
                 btnXoa.Enabled = true;
 
@@ -207,7 +207,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 txtTenKhachHang.Text = "";
                 txtDieuKhoan.Text = "";
                 txtTenSanPham.Text = "";
-                txtSoLuong.Text = "";
+                nudSoLuong.Text = "";
                 txtTrangThai.Text = "";
                 dtmNgayBatDau.Value = DateTime.Now;
                 dtmNgayKetThuc.Value = DateTime.Now;
@@ -235,7 +235,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             int stt = lstvCTHopDong.Items.Count + 1;
             ListViewItem item = new ListViewItem();
             item.Text = (sanPham.TenSP);
-            item.SubItems.Add(txtSoLuong.Text);
+            item.SubItems.Add(nudSoLuong.Text);
 
             lstvCTHopDong.Items.Add(item);
         }
@@ -247,5 +247,6 @@ namespace QLLuongSanPham.GUI.QuanLy
                 lstvCTHopDong.Items.Remove(lstvCTHopDong.SelectedItems[0]);
             }
         }
+
     }
 }

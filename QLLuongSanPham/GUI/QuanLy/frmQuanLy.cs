@@ -170,7 +170,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnXuLyChamCong_Click_1(object sender, EventArgs e)
         {
-
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmChamCong());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnXuLyPhanCa_Click(object sender, EventArgs e)
