@@ -36,9 +36,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDG = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pnlSP = new System.Windows.Forms.Panel();
-            this.lvwDSSP = new System.Windows.Forms.ListView();
+            this.lstvDSSP = new System.Windows.Forms.ListView();
             this.lblDSSP = new System.Windows.Forms.Label();
             this.gboTT = new System.Windows.Forms.GroupBox();
+            this.btnReset = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.pnlSP.SuspendLayout();
             this.gboTT.SuspendLayout();
@@ -72,6 +73,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtDonGia
             // 
@@ -117,21 +119,21 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.pnlSP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlSP.Controls.Add(this.lvwDSSP);
+            this.pnlSP.Controls.Add(this.lstvDSSP);
             this.pnlSP.Controls.Add(this.lblDSSP);
             this.pnlSP.Location = new System.Drawing.Point(32, 421);
             this.pnlSP.Name = "pnlSP";
             this.pnlSP.Size = new System.Drawing.Size(1150, 302);
             this.pnlSP.TabIndex = 18;
             // 
-            // lvwDSSP
+            // lstvDSSP
             // 
-            this.lvwDSSP.HideSelection = false;
-            this.lvwDSSP.Location = new System.Drawing.Point(22, 52);
-            this.lvwDSSP.Name = "lvwDSSP";
-            this.lvwDSSP.Size = new System.Drawing.Size(1103, 228);
-            this.lvwDSSP.TabIndex = 1;
-            this.lvwDSSP.UseCompatibleStateImageBehavior = false;
+            this.lstvDSSP.HideSelection = false;
+            this.lstvDSSP.Location = new System.Drawing.Point(22, 52);
+            this.lstvDSSP.Name = "lstvDSSP";
+            this.lstvDSSP.Size = new System.Drawing.Size(1103, 228);
+            this.lstvDSSP.TabIndex = 1;
+            this.lstvDSSP.UseCompatibleStateImageBehavior = false;
             // 
             // lblDSSP
             // 
@@ -159,6 +161,24 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gboTT.TabStop = false;
             this.gboTT.Text = "Thông tin sản phẩm";
             // 
+            // btnReset
+            // 
+            this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.IconChar = FontAwesome.Sharp.IconChar.Spinner;
+            this.btnReset.IconColor = System.Drawing.Color.Blue;
+            this.btnReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReset.IconSize = 30;
+            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReset.Location = new System.Drawing.Point(1008, 305);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(174, 52);
+            this.btnReset.TabIndex = 23;
+            this.btnReset.Text = "Reset";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // frmTimKiemSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,6 +186,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1211, 780);
             this.Controls.Add(this.gboTT);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.pnlSP);
             this.Controls.Add(this.picNen);
@@ -173,6 +194,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Name = "frmTimKiemSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTimKiemSP";
+            this.Load += new System.EventHandler(this.frmTimKiemSP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).EndInit();
             this.pnlSP.ResumeLayout(false);
             this.gboTT.ResumeLayout(false);
@@ -190,8 +212,9 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label lblDG;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Panel pnlSP;
-        private System.Windows.Forms.ListView lvwDSSP;
+        private System.Windows.Forms.ListView lstvDSSP;
         private System.Windows.Forms.Label lblDSSP;
         private System.Windows.Forms.GroupBox gboTT;
+        private FontAwesome.Sharp.IconButton btnReset;
     }
 }

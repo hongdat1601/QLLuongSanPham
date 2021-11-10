@@ -27,12 +27,14 @@ namespace QLLuongSanPham.DAO
 
         public int GetIDByName(string name)
         {
-            var q = from i in context.ChucVu
-                     where i.TenChucVu.Equals(name)
-                     select i.ID;
+            var q = context.ChucVu
+                .Where(x => x.TenChucVu == name)
+                .FirstOrDefault();
 
-            int id = q.FirstOrDefault();
-            return id;
+            if (q == null)
+                return -1;
+            else
+                return q.ID;
         }
 
         public string GetNameByID(int id)

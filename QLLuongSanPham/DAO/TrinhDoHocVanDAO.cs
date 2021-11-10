@@ -26,12 +26,14 @@ namespace QLLuongSanPham.DAO
 
         public int GetIDByName(string name)
         {
-            var q = from i in context.TrinhDoHocVan
-                     where i.TenTrinhDo.Equals(name)
-                     select i.ID;
+            var q = context.TrinhDoHocVan
+                .Where(x => x.TenTrinhDo == name)
+                .FirstOrDefault();
 
-            int id = q.FirstOrDefault(); 
-            return id;            
+            if (q == null)
+                return -1;
+            else
+                return q.ID;
         }
 
         public string GetNameByID(int id)

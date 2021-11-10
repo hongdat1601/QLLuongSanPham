@@ -80,5 +80,22 @@ namespace QLLuongSanPham.DAO
                 }
             }
         }
+
+        public IQueryable<SanPham> FindByNameAndPrice(string name, string _price)
+        {
+            decimal price = -1;
+
+            if (!string.IsNullOrEmpty(_price))
+            {
+                price = Convert.ToDecimal(_price);
+            }
+
+            if (price == -1)
+                return context.SanPham
+                    .Where(x => x.TenSP.Contains(name));
+            else
+                return context.SanPham
+                    .Where(x => x.TenSP.Contains(name) && x.DonGia == price);
+        }
     }
 }

@@ -28,9 +28,14 @@ namespace QLLuongSanPham.DAO
 
         public int GetIDByName(string name)
         {
-            return context.PhongBan
+            var pb = context.PhongBan
                 .Where(x => x.TenPhongBan == name)
-                .FirstOrDefault().ID;
+                .FirstOrDefault();
+
+            if (pb == null)
+                return -1;
+            else return pb.ID;
+                
         }
 
         public string GetNameByID(int id)
