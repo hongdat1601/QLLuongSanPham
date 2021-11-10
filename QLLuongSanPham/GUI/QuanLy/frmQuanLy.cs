@@ -43,7 +43,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void SettingDefault()
         {
             pnlDanhMuc.Visible = false;
-            pnlCapNhat.Visible = false;
             pnlXuLy.Visible = false;
             pnlTimKiem.Visible = false;
             pnlThongKe.Visible = false;
@@ -130,11 +129,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 FocusBtn(btnThongKe);
                 ToggleMenu(pnlThongKe);
-            }
-            else if (btn.Equals(btnCapNhat))
-            {
-                FocusBtn(btnCapNhat);
-                ToggleMenu(pnlCapNhat);
             }
             else if (btn.Equals(btnXuLy))
             {
@@ -314,6 +308,5 @@ namespace QLLuongSanPham.GUI.QuanLy
         }
 
         #endregion
-
     }
 }

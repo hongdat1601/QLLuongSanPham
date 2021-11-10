@@ -34,26 +34,21 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlThongKe = new System.Windows.Forms.Panel();
-            this.btnThongKeCT = new FontAwesome.Sharp.IconButton();
             this.btnThongKeSP = new FontAwesome.Sharp.IconButton();
             this.btnThongKeHC = new FontAwesome.Sharp.IconButton();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
             this.pnlTimKiem = new System.Windows.Forms.Panel();
-            this.btnTimKiemHD = new FontAwesome.Sharp.IconButton();
-            this.btnTimKiemPB = new FontAwesome.Sharp.IconButton();
             this.btnTimKiemSP = new FontAwesome.Sharp.IconButton();
             this.btnTimKiemNV = new FontAwesome.Sharp.IconButton();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.pnlXuLy = new System.Windows.Forms.Panel();
+            this.btnCongDoan = new FontAwesome.Sharp.IconButton();
             this.btnXuLyTinhLuong = new FontAwesome.Sharp.IconButton();
             this.btnXuLyChamCong = new FontAwesome.Sharp.IconButton();
             this.btnXuLyPhanCa = new FontAwesome.Sharp.IconButton();
             this.btnXuLy = new FontAwesome.Sharp.IconButton();
-            this.pnlCapNhat = new System.Windows.Forms.Panel();
-            this.btnCongDoan = new FontAwesome.Sharp.IconButton();
-            this.btnCaLam = new FontAwesome.Sharp.IconButton();
-            this.btnCapNhat = new FontAwesome.Sharp.IconButton();
             this.pnlDanhMuc = new System.Windows.Forms.Panel();
+            this.btnCaLam = new FontAwesome.Sharp.IconButton();
             this.btnPhongBan = new FontAwesome.Sharp.IconButton();
             this.btnHopDong = new FontAwesome.Sharp.IconButton();
             this.btnSanPham = new FontAwesome.Sharp.IconButton();
@@ -75,7 +70,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlThongKe.SuspendLayout();
             this.pnlTimKiem.SuspendLayout();
             this.pnlXuLy.SuspendLayout();
-            this.pnlCapNhat.SuspendLayout();
             this.pnlDanhMuc.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
@@ -130,8 +124,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlMenu.Controls.Add(this.btnTimKiem);
             this.pnlMenu.Controls.Add(this.pnlXuLy);
             this.pnlMenu.Controls.Add(this.btnXuLy);
-            this.pnlMenu.Controls.Add(this.pnlCapNhat);
-            this.pnlMenu.Controls.Add(this.btnCapNhat);
             this.pnlMenu.Controls.Add(this.pnlDanhMuc);
             this.pnlMenu.Controls.Add(this.btnDanhMuc);
             this.pnlMenu.Location = new System.Drawing.Point(0, 324);
@@ -142,38 +134,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             // pnlThongKe
             // 
             this.pnlThongKe.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlThongKe.Controls.Add(this.btnThongKeCT);
             this.pnlThongKe.Controls.Add(this.btnThongKeSP);
             this.pnlThongKe.Controls.Add(this.btnThongKeHC);
             this.pnlThongKe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlThongKe.Location = new System.Drawing.Point(0, 1167);
+            this.pnlThongKe.Location = new System.Drawing.Point(0, 966);
             this.pnlThongKe.Name = "pnlThongKe";
-            this.pnlThongKe.Size = new System.Drawing.Size(296, 191);
+            this.pnlThongKe.Size = new System.Drawing.Size(296, 127);
             this.pnlThongKe.TabIndex = 19;
-            // 
-            // btnThongKeCT
-            // 
-            this.btnThongKeCT.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnThongKeCT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKeCT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKeCT.FlatAppearance.BorderSize = 0;
-            this.btnThongKeCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeCT.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeCT.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnThongKeCT.IconColor = System.Drawing.Color.White;
-            this.btnThongKeCT.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongKeCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeCT.Location = new System.Drawing.Point(0, 126);
-            this.btnThongKeCT.Name = "btnThongKeCT";
-            this.btnThongKeCT.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnThongKeCT.Size = new System.Drawing.Size(296, 63);
-            this.btnThongKeCT.TabIndex = 11;
-            this.btnThongKeCT.Text = "Lương Toàn Công Ty";
-            this.btnThongKeCT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeCT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKeCT.UseVisualStyleBackColor = false;
-            this.btnThongKeCT.Click += new System.EventHandler(this.btnThongKeCT_Click);
             // 
             // btnThongKeSP
             // 
@@ -236,7 +203,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThongKe.IconColor = System.Drawing.Color.White;
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 1104);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 903);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThongKe.Size = new System.Drawing.Size(296, 63);
@@ -250,63 +217,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             // pnlTimKiem
             // 
             this.pnlTimKiem.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlTimKiem.Controls.Add(this.btnTimKiemHD);
-            this.pnlTimKiem.Controls.Add(this.btnTimKiemPB);
             this.pnlTimKiem.Controls.Add(this.btnTimKiemSP);
             this.pnlTimKiem.Controls.Add(this.btnTimKiemNV);
             this.pnlTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTimKiem.Location = new System.Drawing.Point(0, 841);
+            this.pnlTimKiem.Location = new System.Drawing.Point(0, 769);
             this.pnlTimKiem.Name = "pnlTimKiem";
-            this.pnlTimKiem.Size = new System.Drawing.Size(296, 263);
+            this.pnlTimKiem.Size = new System.Drawing.Size(296, 134);
             this.pnlTimKiem.TabIndex = 17;
-            // 
-            // btnTimKiemHD
-            // 
-            this.btnTimKiemHD.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTimKiemHD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimKiemHD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTimKiemHD.FlatAppearance.BorderSize = 0;
-            this.btnTimKiemHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemHD.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiemHD.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTimKiemHD.IconColor = System.Drawing.Color.White;
-            this.btnTimKiemHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKiemHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemHD.Location = new System.Drawing.Point(0, 189);
-            this.btnTimKiemHD.Name = "btnTimKiemHD";
-            this.btnTimKiemHD.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTimKiemHD.Size = new System.Drawing.Size(296, 63);
-            this.btnTimKiemHD.TabIndex = 11;
-            this.btnTimKiemHD.Text = "Hợp Đồng";
-            this.btnTimKiemHD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimKiemHD.UseVisualStyleBackColor = false;
-            this.btnTimKiemHD.Click += new System.EventHandler(this.btnTimKiemHD_Click);
-            // 
-            // btnTimKiemPB
-            // 
-            this.btnTimKiemPB.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTimKiemPB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimKiemPB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTimKiemPB.FlatAppearance.BorderSize = 0;
-            this.btnTimKiemPB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemPB.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiemPB.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTimKiemPB.IconColor = System.Drawing.Color.White;
-            this.btnTimKiemPB.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKiemPB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemPB.Location = new System.Drawing.Point(0, 126);
-            this.btnTimKiemPB.Name = "btnTimKiemPB";
-            this.btnTimKiemPB.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTimKiemPB.Size = new System.Drawing.Size(296, 63);
-            this.btnTimKiemPB.TabIndex = 10;
-            this.btnTimKiemPB.Text = "Phòng Ban";
-            this.btnTimKiemPB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemPB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimKiemPB.UseVisualStyleBackColor = false;
-            this.btnTimKiemPB.Click += new System.EventHandler(this.btnTimKiemPB_Click);
             // 
             // btnTimKiemSP
             // 
@@ -369,7 +286,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiem.IconColor = System.Drawing.Color.White;
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(0, 778);
+            this.btnTimKiem.Location = new System.Drawing.Point(0, 706);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnTimKiem.Size = new System.Drawing.Size(296, 63);
@@ -383,14 +300,39 @@ namespace QLLuongSanPham.GUI.QuanLy
             // pnlXuLy
             // 
             this.pnlXuLy.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlXuLy.Controls.Add(this.btnCongDoan);
             this.pnlXuLy.Controls.Add(this.btnXuLyTinhLuong);
             this.pnlXuLy.Controls.Add(this.btnXuLyChamCong);
             this.pnlXuLy.Controls.Add(this.btnXuLyPhanCa);
             this.pnlXuLy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlXuLy.Location = new System.Drawing.Point(0, 583);
+            this.pnlXuLy.Location = new System.Drawing.Point(0, 449);
             this.pnlXuLy.Name = "pnlXuLy";
-            this.pnlXuLy.Size = new System.Drawing.Size(296, 195);
+            this.pnlXuLy.Size = new System.Drawing.Size(296, 257);
             this.pnlXuLy.TabIndex = 15;
+            // 
+            // btnCongDoan
+            // 
+            this.btnCongDoan.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCongDoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCongDoan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCongDoan.FlatAppearance.BorderSize = 0;
+            this.btnCongDoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCongDoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCongDoan.ForeColor = System.Drawing.Color.White;
+            this.btnCongDoan.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCongDoan.IconColor = System.Drawing.Color.White;
+            this.btnCongDoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCongDoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCongDoan.Location = new System.Drawing.Point(0, 189);
+            this.btnCongDoan.Name = "btnCongDoan";
+            this.btnCongDoan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCongDoan.Size = new System.Drawing.Size(296, 63);
+            this.btnCongDoan.TabIndex = 21;
+            this.btnCongDoan.Text = "Công Đoạn";
+            this.btnCongDoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCongDoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCongDoan.UseVisualStyleBackColor = false;
+            this.btnCongDoan.Click += new System.EventHandler(this.btnCongDoan_Click);
             // 
             // btnXuLyTinhLuong
             // 
@@ -477,7 +419,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXuLy.IconColor = System.Drawing.Color.White;
             this.btnXuLy.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnXuLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuLy.Location = new System.Drawing.Point(0, 520);
+            this.btnXuLy.Location = new System.Drawing.Point(0, 386);
             this.btnXuLy.Name = "btnXuLy";
             this.btnXuLy.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnXuLy.Size = new System.Drawing.Size(296, 63);
@@ -488,40 +430,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXuLy.UseVisualStyleBackColor = false;
             this.btnXuLy.Click += new System.EventHandler(this.btnClick);
             // 
-            // pnlCapNhat
+            // pnlDanhMuc
             // 
-            this.pnlCapNhat.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlCapNhat.Controls.Add(this.btnCongDoan);
-            this.pnlCapNhat.Controls.Add(this.btnCaLam);
-            this.pnlCapNhat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCapNhat.Location = new System.Drawing.Point(0, 386);
-            this.pnlCapNhat.Name = "pnlCapNhat";
-            this.pnlCapNhat.Size = new System.Drawing.Size(296, 134);
-            this.pnlCapNhat.TabIndex = 13;
-            // 
-            // btnCongDoan
-            // 
-            this.btnCongDoan.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCongDoan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCongDoan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCongDoan.FlatAppearance.BorderSize = 0;
-            this.btnCongDoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCongDoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCongDoan.ForeColor = System.Drawing.Color.White;
-            this.btnCongDoan.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCongDoan.IconColor = System.Drawing.Color.White;
-            this.btnCongDoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCongDoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCongDoan.Location = new System.Drawing.Point(0, 63);
-            this.btnCongDoan.Name = "btnCongDoan";
-            this.btnCongDoan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCongDoan.Size = new System.Drawing.Size(296, 63);
-            this.btnCongDoan.TabIndex = 9;
-            this.btnCongDoan.Text = "Công Đoạn";
-            this.btnCongDoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCongDoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCongDoan.UseVisualStyleBackColor = false;
-            this.btnCongDoan.Click += new System.EventHandler(this.btnCongDoan_Click);
+            this.pnlDanhMuc.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pnlDanhMuc.Controls.Add(this.btnCaLam);
+            this.pnlDanhMuc.Controls.Add(this.btnPhongBan);
+            this.pnlDanhMuc.Controls.Add(this.btnHopDong);
+            this.pnlDanhMuc.Controls.Add(this.btnSanPham);
+            this.pnlDanhMuc.Controls.Add(this.btnNhanVien);
+            this.pnlDanhMuc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDanhMuc.Location = new System.Drawing.Point(0, 63);
+            this.pnlDanhMuc.Name = "pnlDanhMuc";
+            this.pnlDanhMuc.Size = new System.Drawing.Size(296, 323);
+            this.pnlDanhMuc.TabIndex = 11;
             // 
             // btnCaLam
             // 
@@ -536,53 +457,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnCaLam.IconColor = System.Drawing.Color.White;
             this.btnCaLam.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCaLam.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaLam.Location = new System.Drawing.Point(0, 0);
+            this.btnCaLam.Location = new System.Drawing.Point(0, 252);
             this.btnCaLam.Name = "btnCaLam";
             this.btnCaLam.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCaLam.Size = new System.Drawing.Size(296, 63);
-            this.btnCaLam.TabIndex = 8;
+            this.btnCaLam.TabIndex = 12;
             this.btnCaLam.Text = "Ca Làm";
             this.btnCaLam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaLam.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCaLam.UseVisualStyleBackColor = false;
             this.btnCaLam.Click += new System.EventHandler(this.btnCaLam_Click);
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
-            this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCapNhat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCapNhat.FlatAppearance.BorderSize = 0;
-            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnCapNhat.IconColor = System.Drawing.Color.White;
-            this.btnCapNhat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.Location = new System.Drawing.Point(0, 323);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCapNhat.Size = new System.Drawing.Size(296, 63);
-            this.btnCapNhat.TabIndex = 12;
-            this.btnCapNhat.Text = "Cập Nhật";
-            this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCapNhat.UseVisualStyleBackColor = false;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnClick);
-            // 
-            // pnlDanhMuc
-            // 
-            this.pnlDanhMuc.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pnlDanhMuc.Controls.Add(this.btnPhongBan);
-            this.pnlDanhMuc.Controls.Add(this.btnHopDong);
-            this.pnlDanhMuc.Controls.Add(this.btnSanPham);
-            this.pnlDanhMuc.Controls.Add(this.btnNhanVien);
-            this.pnlDanhMuc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDanhMuc.Location = new System.Drawing.Point(0, 63);
-            this.pnlDanhMuc.Name = "pnlDanhMuc";
-            this.pnlDanhMuc.Size = new System.Drawing.Size(296, 260);
-            this.pnlDanhMuc.TabIndex = 11;
             // 
             // btnPhongBan
             // 
@@ -869,7 +753,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlThongKe.ResumeLayout(false);
             this.pnlTimKiem.ResumeLayout(false);
             this.pnlXuLy.ResumeLayout(false);
-            this.pnlCapNhat.ResumeLayout(false);
             this.pnlDanhMuc.ResumeLayout(false);
             this.pnlInfo.ResumeLayout(false);
             this.pnlInfo.PerformLayout();
@@ -896,23 +779,16 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnHelp;
         private FontAwesome.Sharp.IconButton btnDanhMuc;
         private System.Windows.Forms.Panel pnlDanhMuc;
-        private System.Windows.Forms.Panel pnlCapNhat;
-        private FontAwesome.Sharp.IconButton btnCongDoan;
-        private FontAwesome.Sharp.IconButton btnCaLam;
-        private FontAwesome.Sharp.IconButton btnCapNhat;
         private FontAwesome.Sharp.IconButton btnPhongBan;
         private FontAwesome.Sharp.IconButton btnHopDong;
         private FontAwesome.Sharp.IconButton btnSanPham;
         private FontAwesome.Sharp.IconButton btnNhanVien;
         private FontAwesome.Sharp.IconButton btnXuLy;
         private System.Windows.Forms.Panel pnlThongKe;
-        private FontAwesome.Sharp.IconButton btnThongKeCT;
         private FontAwesome.Sharp.IconButton btnThongKeSP;
         private FontAwesome.Sharp.IconButton btnThongKeHC;
         private FontAwesome.Sharp.IconButton btnThongKe;
         private System.Windows.Forms.Panel pnlTimKiem;
-        private FontAwesome.Sharp.IconButton btnTimKiemHD;
-        private FontAwesome.Sharp.IconButton btnTimKiemPB;
         private FontAwesome.Sharp.IconButton btnTimKiemSP;
         private FontAwesome.Sharp.IconButton btnTimKiemNV;
         private FontAwesome.Sharp.IconButton btnTimKiem;
@@ -922,5 +798,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnXuLyTinhLuong;
         private System.Windows.Forms.PictureBox ptcMain;
+        private FontAwesome.Sharp.IconButton btnCongDoan;
+        private FontAwesome.Sharp.IconButton btnCaLam;
     }
 }
