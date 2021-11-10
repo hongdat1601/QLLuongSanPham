@@ -20,5 +20,25 @@ namespace QLLuongSanPham.DAO
         {
             return context.ChiTietHopDong.Where(x => x.IDHopDong == id);
         }
+
+        public bool Add(ChiTietHopDong cthd)
+        {
+            using (var tran = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.ChiTietHopDong.Add(cthd);
+                    context.SaveChanges();
+                    tran.Commit();
+                }
+                catch (Exception)
+                {
+                    tran.Rollback();
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

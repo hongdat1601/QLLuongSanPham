@@ -39,5 +39,30 @@ namespace QLLuongSanPham.DAO
             }     
             context.SaveChanges();
         }
+
+        public bool Add(HopDong hd)
+        {
+            using (var tran = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.HopDong.Add(hd);
+                    context.SaveChanges();
+                    tran.Commit();
+                }
+                catch (Exception)
+                {
+                    tran.Rollback();
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public HopDong GetLast()
+        {
+            return GetHopDongs().Last();
+        }
     }
 }

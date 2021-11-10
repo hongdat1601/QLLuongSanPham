@@ -170,10 +170,46 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
+        private void TaoHopDong()
+        {
+            HopDong hd = new HopDong
+            {
+                TenHopDong = txtTenHopDong.Text,
+                NgayBatDau = dtmNgayBatDau.Value,
+                NgayKetThuc = dtmNgayKetThuc.Value,
+                TenKhachHang = txtTenKhachHang.Text,
+                DieuKhoan = txtDieuKhoan.Text,
+                TrangThai = true
+            };
+
+            hopDongDAO.Add(hd);
+            hopDong = hopDongDAO.GetLast();
+
+            TaoCTHopDong(hopDong.ID);
+        }
+
+        private void TaoCTHopDong(int idHopDong)
+        {
+            foreach (ListViewItem item in lstvCTHopDong.Items)
+            {
+                SanPham sp = (SanPham)item.Tag;
+
+                ChiTietHopDong cthd = new ChiTietHopDong
+                {
+                    IDHopDong = idHopDong,
+                    IDSanPham = sp.ID,
+                    SoLuong = Convert.ToInt32(item.SubItems[1].Text)
+                };
+
+                ctHopDongDAO.Add(cthd);
+            }
+        }
+
         private void btnLapHopDong_Click(object sender, EventArgs e)
         {
             if (btnLapHopDong.Text == "Lưu")
             {
+                TaoHopDong();
 
                 txtTenHopDong.Enabled = false;
                 dtmNgayBatDau.Enabled = false;
@@ -191,6 +227,8 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 LoadListHopDong(hopDongDAO.GetHopDongs());
                 lstvHopDong.SelectedIndices.Add(lstvHopDong.Items.Count - 1);
+                lstvSanPham.Items.Clear();
+                sanPham = null;
             }
             else
             {
@@ -199,10 +237,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                 dtmNgayKetThuc.Enabled = true;
                 txtTenKhachHang.Enabled = true;
                 txtDieuKhoan.Enabled = true;
-                nudSoLuong.Enabled = true;
                 btnThem.Enabled = true;
                 btnXoa.Enabled = true;
-
                 txtTenHopDong.Text = "";
                 txtTenKhachHang.Text = "";
                 txtDieuKhoan.Text = "";
@@ -232,12 +268,53 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            int stt = lstvCTHopDong.Items.Count + 1;
-            ListViewItem item = new ListViewItem();
-            item.Text = (sanPham.TenSP);
-            item.SubItems.Add(nudSoLuong.Text);
+            if(btnThem.Text == "Lưu")
+            {
+                if(sanPham == null)
+                {
+                    MessageBox.Show("Chưa chọn sản phẩm!", "Thông báo");
 
-            lstvCTHopDong.Items.Add(item);
+                }
+                else if (!CheckSanPham(sanPham))
+                {
+                    MessageBox.Show("Đã có sản phẩm trong danh sách!", "Thông báo");
+                }
+                else
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.Text = sanPham.TenSP;
+                    item.SubItems.Add(nudSoLuong.Value.ToString());
+                    item.Tag = sanPham;
+
+                    lstvCTHopDong.Items.Add(item);
+                }
+
+
+                nudSoLuong.Enabled = false;
+
+                btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+                btnThem.IconColor = Color.Green;
+                btnThem.Text = "Thêm";
+            }
+            else
+            {
+                nudSoLuong.Enabled = true;
+
+                btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
+                btnThem.IconColor = Color.Blue;
+                btnThem.Text = "Lưu";
+            }
+        }
+
+        private bool CheckSanPham(SanPham sp)
+        {
+            foreach (ListViewItem item in lstvCTHopDong.Items)
+            {
+                if (sp.Equals((SanPham)item.Tag))
+                    return false;
+            }
+
+            return true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
