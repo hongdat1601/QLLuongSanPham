@@ -31,9 +31,9 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             this.tblNav = new System.Windows.Forms.TableLayoutPanel();
             this.btnHC = new FontAwesome.Sharp.IconButton();
-            this.btnCongNhan = new FontAwesome.Sharp.IconButton();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.picNen = new System.Windows.Forms.PictureBox();
+            this.btnCongNhan = new FontAwesome.Sharp.IconButton();
             this.tblNav.SuspendLayout();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
@@ -57,6 +57,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // btnHC
             // 
+            this.btnHC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnHC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnHC.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnHC.IconColor = System.Drawing.Color.Black;
@@ -66,22 +68,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnHC.Size = new System.Drawing.Size(529, 34);
             this.btnHC.TabIndex = 0;
             this.btnHC.Text = "Nhân viên hành chánh";
-            this.btnHC.UseVisualStyleBackColor = true;
+            this.btnHC.UseVisualStyleBackColor = false;
             this.btnHC.Click += new System.EventHandler(this.btnHC_Click);
-            // 
-            // btnCongNhan
-            // 
-            this.btnCongNhan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCongNhan.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCongNhan.IconColor = System.Drawing.Color.Black;
-            this.btnCongNhan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCongNhan.Location = new System.Drawing.Point(544, 6);
-            this.btnCongNhan.Name = "btnCongNhan";
-            this.btnCongNhan.Size = new System.Drawing.Size(530, 34);
-            this.btnCongNhan.TabIndex = 1;
-            this.btnCongNhan.Text = "Công nhân";
-            this.btnCongNhan.UseVisualStyleBackColor = true;
-            this.btnCongNhan.Click += new System.EventHandler(this.btnCongNhan_Click);
             // 
             // pnlMain
             // 
@@ -103,6 +91,22 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.picNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picNen.TabIndex = 0;
             this.picNen.TabStop = false;
+            // 
+            // btnCongNhan
+            // 
+            this.btnCongNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnCongNhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCongNhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCongNhan.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCongNhan.IconColor = System.Drawing.Color.Black;
+            this.btnCongNhan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCongNhan.Location = new System.Drawing.Point(544, 6);
+            this.btnCongNhan.Name = "btnCongNhan";
+            this.btnCongNhan.Size = new System.Drawing.Size(530, 34);
+            this.btnCongNhan.TabIndex = 1;
+            this.btnCongNhan.Text = "Công nhân";
+            this.btnCongNhan.UseVisualStyleBackColor = false;
+            this.btnCongNhan.Click += new System.EventHandler(this.btnCongNhan_Click);
             // 
             // frmPhanLich
             // 
@@ -127,8 +131,8 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private System.Windows.Forms.TableLayoutPanel tblNav;
         private FontAwesome.Sharp.IconButton btnHC;
-        private FontAwesome.Sharp.IconButton btnCongNhan;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.PictureBox picNen;
+        private FontAwesome.Sharp.IconButton btnCongNhan;
     }
 }

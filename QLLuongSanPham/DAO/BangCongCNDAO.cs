@@ -3,60 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.DAO
 {
-    class NhanVienDAO
+    class BangCongCNDAO
     {
         private QLLuongSPContext context;
 
-        public NhanVienDAO()
+        public BangCongCNDAO()
         {
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<NhanVien> GetNhanViens() => context.NhanVien;
+        public IEnumerable<BangCongSP> GetBangCongSPs() => context.BangCongSP;
 
-        public IEnumerable<NhanVien> GetListNVByID(int id)
+        public BangCongSP GetByIDCD(int id)
         {
-            return context.NhanVien.Where(x => x.ID == id);
-        }
-        
-        public NhanVien GetById(int id)
-        {
-            return context.NhanVien
-                .Where(x => x.ID == id)
+            return context.BangCongSP
+                .Where(x => x.IDCongDoan == id)
                 .FirstOrDefault();
         }
-
-        public bool AddEmployee(NhanVien nv)
-        {
-            using(var db = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    context.NhanVien.Add(nv);
-                    context.SaveChanges();
-                    db.Commit();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    db.Rollback();
-                    throw new Exception("Lỗi thêm nhân viên");
-                }
-            }
-        }
-
-        public bool RemoveEmployee(NhanVien nv)
+        public bool AddBCCN(BangCongSP bc)
         {
             using (var db = context.Database.BeginTransaction())
             {
                 try
                 {
-                    context.NhanVien.Remove(nv);
+                    context.BangCongSP.Add(bc);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -64,12 +38,32 @@ namespace QLLuongSanPham.DAO
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi xóa nhân viên");
+                    throw new Exception("Lỗi thêm bảng công cho công nhân");
+                }
+                
+            }
+        }
+
+        public bool RemoveBCCN(BangCongSP bc)
+        {
+            using (var db = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.BangCongSP.Remove(bc);
+                    context.SaveChanges();
+                    db.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    db.Rollback();
+                    throw new Exception("Lỗi xóa bảng công cho công nhân");
                 }
             }
         }
 
-        public bool UpdateEmployee(NhanVien nv)
+        public bool UpdateBCCN(BangCongSP bc)
         {
             using (var db = context.Database.BeginTransaction())
             {
@@ -82,9 +76,10 @@ namespace QLLuongSanPham.DAO
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi sửa nhân viên");
+                    throw new Exception("Lỗi cập nhật bảng công cho công nhân");
                 }
             }
         }
+
     }
 }

@@ -23,6 +23,8 @@ namespace QLLuongSanPham.Entities
 
         public int? SoLuongNguoi { get; set; }
 
+        public DateTime? NgayDiLam { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_BangCongSP> CT_BangCongSP { get; set; }
 
