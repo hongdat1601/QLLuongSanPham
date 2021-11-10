@@ -16,11 +16,11 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
+        public IEnumerable<CongDoan> GetCongDoans() => context.CongDoan;
         public IEnumerable<CongDoan> GetCongDoansByIdSanPham(int id)
         {
             return context.CongDoan.Where(x => x.IDSanPham == id);
         }
-
         public CongDoan GetById(int id)
         {
             return context.CongDoan
@@ -99,5 +99,6 @@ namespace QLLuongSanPham.DAO
 
             return true;
         }
+
     }
 }

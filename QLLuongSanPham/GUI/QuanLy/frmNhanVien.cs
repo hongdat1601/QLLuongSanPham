@@ -207,9 +207,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
 
-           
-
-            //this.BackgroundImage = Image.FromFile(@"C:\Users\vomin\Pictures\Product\back3.jpg");
         }
 
         private void lvwDSNV_SelectedIndexChanged(object sender, EventArgs e)

@@ -16,6 +16,25 @@ namespace QLLuongSanPham.DAO
         }
 
         public IEnumerable<CaLam> GetCaLams() => context.CaLam;
+        public IEnumerable<CaLam> GetCaByIDSP(int id)
+        {
+            return context.CaLam
+                .Where(x => x.ID == id);
+        }
+
+        public CaLam GetByID(int id)
+        {
+            return context.CaLam
+                .Where(x => x.ID.Equals(id))
+                .FirstOrDefault();
+        }
+
+        public CaLam GetIDByName(string name)
+        {
+            return context.CaLam
+                .Where(x => x.TenCa.Equals(name))
+                .FirstOrDefault();
+        }
 
         public bool AddCaLam(CaLam ca)
         {

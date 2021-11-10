@@ -38,11 +38,15 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnCongNhan_Click(object sender, EventArgs e)
         {
+            btnCongNhan.BackColor = Color.FromArgb(173, 147, 212);
+            btnHC.BackColor = Color.FromArgb(128, 255, 128);
             OpenFormChild(new frmPhanLichCN());
         }
 
         private void btnHC_Click(object sender, EventArgs e)
         {
+            btnHC.BackColor = Color.FromArgb(173, 147, 212);
+            btnCongNhan.BackColor = Color.FromArgb(128, 255, 128);
             OpenFormChild(new frmPhanLichHC());
         }
     }

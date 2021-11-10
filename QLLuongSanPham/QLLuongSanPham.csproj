@@ -62,7 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constant.cs" />
+    <Compile Include="DAO\BangCongCNDAO.cs" />
+    <Compile Include="DAO\BangCongHCDAO.cs" />
+    <Compile Include="DAO\BCCN_CT_NVDAO.cs" />
     <Compile Include="DAO\CaLamDAO.cs" />
+    <Compile Include="DAO\ChiTiet_BCSPDAO.cs" />
     <Compile Include="DAO\CongDoanDAO.cs" />
     <Compile Include="DAO\ChucVuDAO.cs" />
     <Compile Include="DAO\CTHopDongDAO.cs" />

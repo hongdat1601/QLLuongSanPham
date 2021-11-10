@@ -57,6 +57,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // btnHC
             // 
+            this.btnHC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnHC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnHC.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnHC.IconColor = System.Drawing.Color.Black;
@@ -66,11 +68,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnHC.Size = new System.Drawing.Size(529, 34);
             this.btnHC.TabIndex = 0;
             this.btnHC.Text = "Nhân viên hành chánh";
-            this.btnHC.UseVisualStyleBackColor = true;
+            this.btnHC.UseVisualStyleBackColor = false;
             this.btnHC.Click += new System.EventHandler(this.btnHC_Click);
             // 
             // btnCongNhan
             // 
+            this.btnCongNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnCongNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCongNhan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCongNhan.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCongNhan.IconColor = System.Drawing.Color.Black;
@@ -80,7 +84,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnCongNhan.Size = new System.Drawing.Size(530, 34);
             this.btnCongNhan.TabIndex = 1;
             this.btnCongNhan.Text = "Công nhân";
-            this.btnCongNhan.UseVisualStyleBackColor = true;
+            this.btnCongNhan.UseVisualStyleBackColor = false;
             this.btnCongNhan.Click += new System.EventHandler(this.btnCongNhan_Click);
             // 
             // pnlMain

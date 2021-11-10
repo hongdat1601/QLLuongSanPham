@@ -3,60 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using QLLuongSanPham.Entities;
+using QLLuongSanPham.Entities; 
 
 namespace QLLuongSanPham.DAO
 {
-    class NhanVienDAO
+    class BangCongHCDAO
     {
         private QLLuongSPContext context;
 
-        public NhanVienDAO()
+        public BangCongHCDAO()
         {
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<NhanVien> GetNhanViens() => context.NhanVien;
+        public IEnumerable<BangCongHC> GetBangCongHCs() => context.BangCongHC;
 
-        public IEnumerable<NhanVien> GetListNVByID(int id)
-        {
-            return context.NhanVien.Where(x => x.ID == id);
-        }
-        
-        public NhanVien GetById(int id)
-        {
-            return context.NhanVien
-                .Where(x => x.ID == id)
-                .FirstOrDefault();
-        }
-
-        public bool AddEmployee(NhanVien nv)
-        {
-            using(var db = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    context.NhanVien.Add(nv);
-                    context.SaveChanges();
-                    db.Commit();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    db.Rollback();
-                    throw new Exception("Lỗi thêm nhân viên");
-                }
-            }
-        }
-
-        public bool RemoveEmployee(NhanVien nv)
+        public bool AddLich(BangCongHC lich)
         {
             using (var db = context.Database.BeginTransaction())
             {
                 try
                 {
-                    context.NhanVien.Remove(nv);
+                    context.BangCongHC.Add(lich);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -64,12 +32,13 @@ namespace QLLuongSanPham.DAO
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi xóa nhân viên");
+                    throw new Exception("Lỗi thêm lịch");
                 }
+               
             }
         }
 
-        public bool UpdateEmployee(NhanVien nv)
+        public bool UpdateBangCong(BangCongHC bc)
         {
             using (var db = context.Database.BeginTransaction())
             {
@@ -82,7 +51,26 @@ namespace QLLuongSanPham.DAO
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi sửa nhân viên");
+                    throw new Exception("Lỗi sữa nhân viên");
+                }
+            }
+        }
+
+        public bool RemoveBangCong(BangCongHC bc)
+        {
+            using (var db = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.BangCongHC.Remove(bc);
+                    context.SaveChanges();
+                    db.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    db.Rollback();
+                    throw new Exception("Lỗi sữa nhân viên");
                 }
             }
         }

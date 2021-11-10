@@ -3,41 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.DAO
 {
-    class NhanVienDAO
+    class ChiTiet_BCSPDAO
     {
         private QLLuongSPContext context;
 
-        public NhanVienDAO()
+        public ChiTiet_BCSPDAO()
         {
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<NhanVien> GetNhanViens() => context.NhanVien;
+        public IEnumerable<CT_BangCongSP> GetChiTiets() => context.CT_BangCongSP;
 
-        public IEnumerable<NhanVien> GetListNVByID(int id)
-        {
-            return context.NhanVien.Where(x => x.ID == id);
-        }
         
-        public NhanVien GetById(int id)
-        {
-            return context.NhanVien
-                .Where(x => x.ID == id)
-                .FirstOrDefault();
-        }
 
-        public bool AddEmployee(NhanVien nv)
+        public bool AddCTBC(CT_BangCongSP ct)
         {
             using(var db = context.Database.BeginTransaction())
             {
                 try
                 {
-                    context.NhanVien.Add(nv);
+                    context.CT_BangCongSP.Add(ct);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -45,18 +34,20 @@ namespace QLLuongSanPham.DAO
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi thêm nhân viên");
+                    throw new Exception("Lỗi thêm chi tiết bảng công sản phẩm");
                 }
-            }
+               
+            } 
         }
 
-        public bool RemoveEmployee(NhanVien nv)
+
+        public bool RemoveCTBC(CT_BangCongSP ct)
         {
             using (var db = context.Database.BeginTransaction())
             {
                 try
                 {
-                    context.NhanVien.Remove(nv);
+                    context.CT_BangCongSP.Remove(ct);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -64,17 +55,19 @@ namespace QLLuongSanPham.DAO
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi xóa nhân viên");
+                    throw new Exception("Lỗi xóa chi tiết bảng công sản phẩm");
                 }
+
             }
         }
 
-        public bool UpdateEmployee(NhanVien nv)
+        public bool UpdateCTBC(CT_BangCongSP ct)
         {
             using (var db = context.Database.BeginTransaction())
             {
                 try
                 {
+                    context.CT_BangCongSP.Add(ct);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -82,8 +75,9 @@ namespace QLLuongSanPham.DAO
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi sửa nhân viên");
+                    throw new Exception("Lỗi sửa chi tiết bảng công sản phẩm");
                 }
+
             }
         }
     }

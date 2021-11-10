@@ -112,6 +112,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         }
 
         private void btnClose_Click(object sender, EventArgs e)
+        
         {
             DialogResult msg = MessageBox.Show("Thoát khỏi chương trình.", "Thông báo", MessageBoxButtons.YesNo);
 
