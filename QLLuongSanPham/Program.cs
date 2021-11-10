@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLLuongSanPham.GUI.NhanVienGUI;
+using QLLuongSanPham.GUI;
+
 namespace QLLuongSanPham
 {
     static class Program
@@ -17,7 +19,7 @@ namespace QLLuongSanPham
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQuanLy());
+            Application.Run(new frmDangNhap());
         }
     }
 }

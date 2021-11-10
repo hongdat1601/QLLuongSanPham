@@ -479,6 +479,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThongtinNV";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.frmThongtinNV_Load);
             this.gbxInfoSlary.ResumeLayout(false);
             this.gbxInfoSlary.PerformLayout();
             this.gbxInfoWork.ResumeLayout(false);

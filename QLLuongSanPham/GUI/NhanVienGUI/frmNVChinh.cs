@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.NhanVienGUI
 {
@@ -13,15 +14,17 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private IconButton cureentButton;
         private Panel leftBorderBtn;
         private Form activeForm;
+        private NhanVien nhanVien;
 
         //Construstor
-        public frmNVChinh()
+        public frmNVChinh(NhanVien nhanVien)
         {
             InitializeComponent();
             CollapseMenu();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
+            this.nhanVien = nhanVien;
         }
 
         private void frmMainEmployee_Load(object sender, EventArgs e)
@@ -99,7 +102,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private void btnInfor_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColor.color2);
-            frmThongtinNV frmTT = new frmThongtinNV();
+            frmThongtinNV frmTT = new frmThongtinNV(nhanVien);
             OpenFormChild(frmTT);
         }
 
