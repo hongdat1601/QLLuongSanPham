@@ -288,6 +288,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboTenCD.Name = "cboTenCD";
             this.cboTenCD.Size = new System.Drawing.Size(274, 33);
             this.cboTenCD.TabIndex = 39;
+            this.cboTenCD.SelectedIndexChanged += new System.EventHandler(this.cboTenCD_SelectedIndexChanged);
             // 
             // txtTenSpInput
             // 

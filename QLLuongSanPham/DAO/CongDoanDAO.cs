@@ -17,6 +17,7 @@ namespace QLLuongSanPham.DAO
         }
 
         public IEnumerable<CongDoan> GetCongDoans() => context.CongDoan;
+
         public IEnumerable<CongDoan> GetCongDoansByIdSanPham(int id)
         {
             return context.CongDoan.Where(x => x.IDSanPham == id);
