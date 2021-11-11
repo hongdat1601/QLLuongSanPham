@@ -125,7 +125,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         }
 
-        private void LoadListCN(SanPham sp, IEnumerable<NhanVien> nhanViens)
+        private void LoadListCN(IEnumerable<NhanVien> nhanViens)
         {
             lvwDSNV.Items.Clear();
 
@@ -137,7 +137,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     {
                         lvwDSNV.Items.Add(CreateItems(nv));
                     }
-                    else if (nv.ID == GetIDNVByCD(cdDAO.GetByName(cboTenCD.Text).ID, bcDAO.GetBangCongSPs()) && CheckName(lvwDSPC, nv) == false)
+                    else if (nv.ID != GetIDNVByCD(cdDAO.GetByName(cboTenCD.Text).ID, bcDAO.GetBangCongSPs()) && CheckName(lvwDSPC, nv) == false)
                     {
                         lvwDSNV.Items.Add(CreateItems(nv));
                     }
@@ -145,7 +145,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
-        private void LoadListPC(SanPham sp, IEnumerable<NhanVien> nhanViens)
+        private void LoadListPC(IEnumerable<NhanVien> nhanViens)
         {
             lvwDSPC.Items.Clear();
 
@@ -153,13 +153,15 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 if (CreateItems(nv) != null)
                 {
-                    if (lvwDSNV.Items.Count == 0)
+                    if (CheckName(lvwDSNV, nv) == false)
                     {
-                        lvwDSPC.Items.Add(CreateItems(nv));
-                    }
-                    else if (nv.ID == GetIDNVByCD(cdDAO.GetByName(cboTenCD.Text).ID, bcDAO.GetBangCongSPs()) && CheckName(lvwDSNV, nv) == false)
-                    {
-                        lvwDSPC.Items.Add(CreateItems(nv));
+                        foreach (BangCongSP bc in bcDAO.GetByIDCd(cdDAO.GetByName(cboTenCD.Text).ID))
+                        {
+                            if(bc.ID_NhanVien == nv.ID)
+                            {
+                                lvwDSPC.Items.Add(CreateItems(nv));
+                            }
+                        }
                     }
                 }
             }
@@ -250,19 +252,21 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
-        private void LoadListLich(IEnumerable<BangCongSP> bangCongSPs)
+        private void LoadListLich(int idCD, IEnumerable<BangCongSP> bangCongSPs)
         {
             lvwDSLich.Items.Clear();
 
             foreach (BangCongSP bc in bangCongSPs)
             {
-                ListViewItem item = new ListViewItem();
-                item.Text = nvDAO.GetById(bc.ID_NhanVien.Value).HoTen;
-                item.SubItems.Add(bc.NgayDiLam.Value.Date.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(cdDAO.GetById(bc.IDCongDoan.Value).TenCongDoan);
-                item.SubItems.Add(caDAO.GetByID(bc.IDCaLam.Value).TenCa);
-
-                lvwDSLich.Items.Add(item);
+                if (idCD == bc.IDCongDoan)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.Text = nvDAO.GetById(bc.ID_NhanVien.Value).HoTen;
+                    item.SubItems.Add(bc.NgayDiLam.Value.Date.ToString("dd/MM/yyyy"));
+                    item.SubItems.Add(cdDAO.GetById(bc.IDCongDoan.Value).TenCongDoan);
+                    item.SubItems.Add(caDAO.GetByID(bc.IDCaLam.Value).TenCa);
+                    lvwDSLich.Items.Add(item);
+                }
             }
         }
         #endregion
@@ -289,6 +293,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                 lvwDSNV.Items.Clear();
                 SanPham sp = (SanPham)lvwDSSP.SelectedItems[0].Tag;
                 IEnumerable<CongDoan> listCD = cdDAO.GetCongDoansByIdSanPham(sp.ID);
+                LoadCa(caDAO.GetCaLams());
+                LoadCD(cdDAO.GetCongDoansByIdSanPham(sp.ID));
 
                 txtTenSpInput.Text = sp.TenSP;
                 if (cboTenCD.Items.Count == 0)
@@ -300,24 +306,26 @@ namespace QLLuongSanPham.GUI.QuanLy
                     }
                     cboTenCD.SelectedIndex = 0;
                 }
-                int idCD = cdDAO.GetByName(cboTenCD.Text).ID;
 
-                if (GetIDCaByCD(idCD, bcDAO.GetBangCongSPs()) != 0)
-                {
-                    cboCa.Text = caDAO.GetByID(GetIDCaByCD(idCD, bcDAO.GetBangCongSPs())).TenCa;
-                    LoadListPC(sp, nvDAO.GetNhanViens());
-                    LoadListLich(bcDAO.GetBangCongSPs());
-                }
-                else
-                {
-                    cboCa.Items.Clear();
-                    foreach (CaLam ca in caDAO.GetCaLams())
-                    {
-                        cboCa.Items.Add(ca.TenCa);
-                    }
-                    cboCa.SelectedIndex = 0;
-                    LoadListCN(sp, nvDAO.GetNhanViens());
-                }
+                //int idCD = cdDAO.GetByName(cboTenCD.Text).ID;
+                //if (GetIDCaByCD(idCD, bcDAO.GetBangCongSPs()) != 0)
+                //{
+                //    cboCa.Text = caDAO.GetByID(GetIDCaByCD(idCD, bcDAO.GetBangCongSPs())).TenCa;
+                //    LoadListCN(nvDAO.GetNhanViens());
+                //    LoadListPC(nvDAO.GetNhanViens());
+                //    LoadListLich(idCD, bcDAO.GetBangCongSPs());
+                //}
+                //else
+                //{
+                //    cboCa.Items.Clear();
+                //    foreach (CaLam ca in caDAO.GetCaLams())
+                //    {
+                //        cboCa.Items.Add(ca.TenCa);
+                //    }
+                //    cboCa.SelectedIndex = 0;
+                //    LoadListCN(nvDAO.GetNhanViens());
+                //    LoadListLich(idCD, bcDAO.GetBangCongSPs());
+                //}
             }
         }
 
@@ -379,22 +387,14 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             if (lvwDSSP.SelectedItems.Count > 0)
             {
-                SanPham sp = (SanPham)lvwDSSP.SelectedItems[0].Tag;
                 if (btnThem.Text.Equals("Phân lịch"))
                 {
-                    LoadCa(caDAO.GetCaLams());
-                    LoadCD(cdDAO.GetCongDoansByIdSanPham(sp.ID));
-
                     ClearTxt();
                     EnableTxt();
-
 
                     btnThem.Text = "Lưu";
                     btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
                     btnThem.IconColor = Color.Blue;
-
-                    btnSua.Enabled = false;
-                    btnXoa.Enabled = false;
                 }
                 else
                 {
@@ -405,11 +405,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     btnThem.IconColor = Color.FromArgb(128, 255, 128);
 
                     AddLich();
-
-                    btnSua.Enabled = true;
-                    btnXoa.Enabled = true;
-
-                    //LoadListLich();
+                    LoadListLich(cdDAO.GetByName(cboTenCD.Text).ID, bcDAO.GetBangCongSPs());
                 }
             }
             else
@@ -422,20 +418,19 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             LoadListSanPham(spDAO.GetSPByChar(txtSpSearch.Text));
         }
+
         #endregion
 
         private void cboTenCD_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SanPham sp = (SanPham)lvwDSSP.SelectedItems[0].Tag;
             int idCD = cdDAO.GetByName(cboTenCD.Text).ID;
-
             if (GetIDCaByCD(idCD, bcDAO.GetBangCongSPs()) != 0)
             {
                 lvwDSNV.Items.Clear();
                 cboCa.Text = caDAO.GetByID(GetIDCaByCD(idCD, bcDAO.GetBangCongSPs())).TenCa;
-                LoadListPC(sp, nvDAO.GetNhanViens());
-                LoadListLich(bcDAO.GetBangCongSPs());
-                LoadListCN(sp, nvDAO.GetNhanViens());
+                LoadListPC(nvDAO.GetNhanViens());
+                LoadListLich(idCD, bcDAO.GetBangCongSPs());
+                LoadListCN(nvDAO.GetNhanViens());
             }
             else
             {
@@ -446,7 +441,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                     cboCa.Items.Add(ca.TenCa);
                 }
                 cboCa.SelectedIndex = 0;
-                LoadListCN(sp, nvDAO.GetNhanViens());
+                LoadListCN(nvDAO.GetNhanViens());
+                LoadListLich(idCD, bcDAO.GetBangCongSPs());
             }
         }
     }
