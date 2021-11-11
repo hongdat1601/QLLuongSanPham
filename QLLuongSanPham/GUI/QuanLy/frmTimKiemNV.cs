@@ -121,7 +121,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             var lstNV = nhanVienDAO.Find(txtName.Text,
                 txtPhone.Text, 
-                dtmNgaySinh.Value,
+                txtNgaySinh.Text,
                 gioiTinh,
                 txtID.Text,
                 txtAdress.Text,

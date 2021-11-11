@@ -94,7 +94,7 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<NhanVien> Find(string ten, 
             string sdt, 
-            DateTime ngaySinh, 
+            string ngaySinh, 
             bool gioiTinh,
             string cmnd,
             string diaChi,
@@ -109,7 +109,7 @@ namespace QLLuongSanPham.DAO
             && x.CMND.Contains(cmnd)
             && x.SDT.Contains(sdt)
             && x.GioiTinh == gioiTinh
-            && x.NgaySinh.Value.ToString("dd/MM/yyyy").Contains(ngaySinh.ToString("dd/MM/yyyy"))
+            && x.NgaySinh.Value.ToString("dd/MM/yyyy").Contains(ngaySinh)
             && x.DiaChi.Contains(diaChi));
 
             if (idPB != -1)

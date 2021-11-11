@@ -55,8 +55,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlLich = new System.Windows.Forms.Panel();
             this.lstvNhanVien = new System.Windows.Forms.ListView();
             this.lblDSLich = new System.Windows.Forms.Label();
-            this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnReset = new FontAwesome.Sharp.IconButton();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.gbxInfoWork.SuspendLayout();
             this.gbxInfor.SuspendLayout();
@@ -197,11 +197,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             // gbxInfor
             // 
             this.gbxInfor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbxInfor.Controls.Add(this.dtmNgaySinh);
             this.gbxInfor.Controls.Add(this.cboSex);
             this.gbxInfor.Controls.Add(this.txtAdress);
             this.gbxInfor.Controls.Add(this.txtPhone);
             this.gbxInfor.Controls.Add(this.txtID);
+            this.gbxInfor.Controls.Add(this.txtNgaySinh);
             this.gbxInfor.Controls.Add(this.txtName);
             this.gbxInfor.Controls.Add(this.lblAdress);
             this.gbxInfor.Controls.Add(this.lblID);
@@ -364,14 +364,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDSLich.Text = "Danh sách nhân viên";
             this.lblDSLich.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dtmNgaySinh
-            // 
-            this.dtmNgaySinh.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmNgaySinh.Location = new System.Drawing.Point(211, 72);
-            this.dtmNgaySinh.Name = "dtmNgaySinh";
-            this.dtmNgaySinh.Size = new System.Drawing.Size(265, 29);
-            this.dtmNgaySinh.TabIndex = 4;
-            // 
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -389,6 +381,15 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.txtNgaySinh.Location = new System.Drawing.Point(211, 72);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(265, 29);
+            this.txtNgaySinh.TabIndex = 2;
+            this.txtNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmTimKiemNV
             // 
@@ -443,7 +444,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Panel pnlLich;
         private System.Windows.Forms.ListView lstvNhanVien;
         private System.Windows.Forms.Label lblDSLich;
-        private System.Windows.Forms.DateTimePicker dtmNgaySinh;
         private FontAwesome.Sharp.IconButton btnReset;
+        private System.Windows.Forms.TextBox txtNgaySinh;
     }
 }

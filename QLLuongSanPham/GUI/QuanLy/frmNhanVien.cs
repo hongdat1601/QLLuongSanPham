@@ -17,7 +17,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private PhongBanDAO pbDAO;
         private ChucVuDAO cvDAO;
         private TrinhDoHocVanDAO hvDAO;
-        
+
         public frmNhanVien()
         {
             InitializeComponent();
@@ -64,7 +64,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 lvwItem.Text = nv.CMND;
                 lvwItem.SubItems.Add(nv.HoTen);
                 lvwItem.SubItems.Add(nv.NgaySinh.Value.ToString("dd/MM/yyyy"));
-                if(nv.GioiTinh == true)
+                if (nv.GioiTinh == true)
                 {
                     lvwItem.SubItems.Add("Nam");
                 }
@@ -72,7 +72,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 {
                     lvwItem.SubItems.Add("Nữ");
                 }
-                
+
                 lvwItem.SubItems.Add(nv.SDT);
                 lvwItem.SubItems.Add(nv.DiaChi);
                 lvwItem.SubItems.Add(pbDAO.GetById(nv.IDPhongBan.Value).TenPhongBan);
@@ -87,7 +87,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 lvwDSNV.Items.Add(lvwItem);
             }
 
-            if(lvwDSNV.Items.Count > 0)
+            if (lvwDSNV.Items.Count > 0)
             {
                 lvwDSNV.SelectedIndices.Add(0);
             }
@@ -195,11 +195,30 @@ namespace QLLuongSanPham.GUI.QuanLy
             nv.IDPhongBan = pbDAO.GetIDByName(cboPB.Text);
             nv.IDChucVu = cvDAO.GetIDByName(cboCV.Text);
             nv.IDTrinhDoHocVan = hvDAO.GetIDByName(cboHV.Text);
-            nv.ThamNienCongTac = Convert.ToInt32(txtSeniority.Text.Substring(0, 2));
-            nv.LuongCanBan = Convert.ToDecimal(txtBasicSalary.Text);
-            nv.ChiSoLuong = Convert.ToDouble(txtIndexSalary.Text);
-            nv.TrinhDoNgoaiNgu = Convert.ToDouble(txtNN.Text);
-
+            if (txtSeniority.Text != "")
+            {
+                nv.ThamNienCongTac = Convert.ToInt32(txtSeniority.Text.Substring(0, 2));
+            }
+            else
+                nv.ThamNienCongTac = 0;
+            if (txtBasicSalary.Text != "")
+            {
+                nv.LuongCanBan = Convert.ToDecimal(txtBasicSalary.Text);
+            }
+            else
+                nv.LuongCanBan = 0;
+            if (txtIndexSalary.Text != "")
+            {
+                nv.ChiSoLuong = Convert.ToDouble(txtIndexSalary.Text);
+            }
+            else
+                nv.ChiSoLuong = 0;
+            if (txtNN.Text != "")
+            {
+                nv.TrinhDoNgoaiNgu = Convert.ToDouble(txtNN.Text);
+            }
+            else
+                nv.TrinhDoNgoaiNgu = 0;
             return nv;
         }
 
@@ -236,7 +255,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 txtNN.Text = nv.TrinhDoNgoaiNgu.ToString();
             }
         }
-        
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -280,7 +299,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(lvwDSNV.SelectedItems.Count > 0)
+            if (lvwDSNV.SelectedItems.Count > 0)
             {
                 NhanVien nv = (NhanVien)lvwDSNV.SelectedItems[0].Tag;
                 nvDAO.RemoveEmployee(nv);
@@ -295,7 +314,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(btnSua.Text.Equals("Sửa"))
+            if (btnSua.Text.Equals("Sửa"))
             {
                 EnabledTxT();
 
@@ -325,6 +344,17 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 btnThem.Enabled = true;
                 btnXoa.Enabled = true;
+            }
+        }
+
+        private void cboCV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCV.Text.StartsWith("Công"))
+            {
+                txtSeniority.Enabled = false;
+                txtNN.Enabled = false;
+                txtBasicSalary.Enabled = false;
+                txtIndexSalary.Enabled = false;
             }
         }
 

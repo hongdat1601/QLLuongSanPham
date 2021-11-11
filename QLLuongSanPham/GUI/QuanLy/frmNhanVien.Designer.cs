@@ -316,6 +316,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboCV.Name = "cboCV";
             this.cboCV.Size = new System.Drawing.Size(410, 30);
             this.cboCV.TabIndex = 3;
+            this.cboCV.SelectedIndexChanged += new System.EventHandler(this.cboCV_SelectedIndexChanged);
             // 
             // cboPB
             // 
