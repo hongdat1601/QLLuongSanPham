@@ -65,9 +65,7 @@
     <Compile Include="DAO\BangCongCNDAO.cs" />
     <Compile Include="DAO\BangCongHCDAO.cs" />
     <Compile Include="DAO\BangLuongDAO.cs" />
-    <Compile Include="DAO\BCCN_CT_NVDAO.cs" />
     <Compile Include="DAO\CaLamDAO.cs" />
-    <Compile Include="DAO\ChiTiet_BCSPDAO.cs" />
     <Compile Include="DAO\CongDoanDAO.cs" />
     <Compile Include="DAO\ChucVuDAO.cs" />
     <Compile Include="DAO\CTHopDongDAO.cs" />
@@ -85,13 +83,13 @@
     <Compile Include="Entities\ChiTietHopDong.cs" />
     <Compile Include="Entities\ChucVu.cs" />
     <Compile Include="Entities\CongDoan.cs" />
-    <Compile Include="Entities\CT_BangCongSP.cs" />
     <Compile Include="Entities\HopDong.cs" />
     <Compile Include="Entities\LoaiPhep.cs" />
     <Compile Include="Entities\NhanVien.cs" />
     <Compile Include="Entities\PhongBan.cs" />
     <Compile Include="Entities\QLLuongSPContext.cs" />
     <Compile Include="Entities\SanPham.cs" />
+    <Compile Include="Entities\sysdiagrams.cs" />
     <Compile Include="Entities\TaiKhoan.cs" />
     <Compile Include="Entities\TrinhDoHocVan.cs" />
     <Compile Include="GUI\frmDangNhap.cs">

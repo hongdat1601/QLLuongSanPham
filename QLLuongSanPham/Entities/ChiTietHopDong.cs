@@ -19,7 +19,7 @@ namespace QLLuongSanPham.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IDHopDong { get; set; }
 
-        public int SoLuong { get; set; }
+        public int? SoLuong { get; set; }
 
         public virtual HopDong HopDong { get; set; }
 

@@ -15,7 +15,6 @@ namespace QLLuongSanPham.GUI.QuanLy
     public partial class frmChamCongCN : Form
     {
         BangCongCNDAO bangCongDAO;
-        ChiTiet_BCSPDAO bangCongCTDAO;
         CaLamDAO caLamDAO;
         CongDoanDAO congDoanDAO;
         NhanVienDAO nhanVienDAO;
@@ -24,7 +23,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             InitializeComponent();
             bangCongDAO = new BangCongCNDAO();
-            bangCongCTDAO = new ChiTiet_BCSPDAO();
             caLamDAO = new CaLamDAO();
             congDoanDAO = new CongDoanDAO();
             nhanVienDAO = new NhanVienDAO();
@@ -59,20 +57,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void LoadData(BangCongSP bangCong)
         {
-            var data = bangCongCTDAO.GetByIDBangCong(bangCong.ID);
-            int stt = 1;
-
-            foreach(CT_BangCongSP ct in data)
-            {
-                ListViewItem item = new ListViewItem();
-
-                item.Text = stt.ToString();
-                item.SubItems.Add(nhanVienDAO.GetById(ct.ID_NV).HoTen);
-
-
-                lstvLich.Items.Add(item);
-                stt++;
-            }
+            
         }
 
         private void dtmNgayLam_ValueChanged(object sender, EventArgs e)

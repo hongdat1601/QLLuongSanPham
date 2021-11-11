@@ -13,8 +13,8 @@ namespace QLLuongSanPham.Entities
         public NhanVien()
         {
             BangCongHC = new HashSet<BangCongHC>();
+            BangCongSP = new HashSet<BangCongSP>();
             BangLuong = new HashSet<BangLuong>();
-            CT_BangCongSP = new HashSet<CT_BangCongSP>();
             TaiKhoan = new HashSet<TaiKhoan>();
         }
 
@@ -58,10 +58,10 @@ namespace QLLuongSanPham.Entities
         public virtual ICollection<BangCongHC> BangCongHC { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BangLuong> BangLuong { get; set; }
+        public virtual ICollection<BangCongSP> BangCongSP { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CT_BangCongSP> CT_BangCongSP { get; set; }
+        public virtual ICollection<BangLuong> BangLuong { get; set; }
 
         public virtual ChucVu ChucVu { get; set; }
 

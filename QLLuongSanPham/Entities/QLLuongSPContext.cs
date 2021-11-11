@@ -8,7 +8,7 @@ namespace QLLuongSanPham.Entities
     public partial class QLLuongSPContext : DbContext
     {
         public QLLuongSPContext()
-            : base("name=QLLuongSP")
+            : base("name=QLLuongSPContext")
         {
         }
 
@@ -17,7 +17,6 @@ namespace QLLuongSanPham.Entities
         public virtual DbSet<BangLuong> BangLuong { get; set; }
         public virtual DbSet<CaLam> CaLam { get; set; }
         public virtual DbSet<CongDoan> CongDoan { get; set; }
-        public virtual DbSet<CT_BangCongSP> CT_BangCongSP { get; set; }
         public virtual DbSet<ChiTietHopDong> ChiTietHopDong { get; set; }
         public virtual DbSet<ChucVu> ChucVu { get; set; }
         public virtual DbSet<HopDong> HopDong { get; set; }
@@ -25,17 +24,12 @@ namespace QLLuongSanPham.Entities
         public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<PhongBan> PhongBan { get; set; }
         public virtual DbSet<SanPham> SanPham { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
         public virtual DbSet<TrinhDoHocVan> TrinhDoHocVan { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BangCongSP>()
-                .HasMany(e => e.CT_BangCongSP)
-                .WithRequired(e => e.BangCongSP)
-                .HasForeignKey(e => e.ID_BCSP)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<BangLuong>()
                 .Property(e => e.TienLuong)
                 .HasPrecision(19, 4);
@@ -100,16 +94,16 @@ namespace QLLuongSanPham.Entities
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<NhanVien>()
+                .HasMany(e => e.BangCongSP)
+                .WithOptional(e => e.NhanVien)
+                .HasForeignKey(e => e.ID_NhanVien)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<NhanVien>()
                 .HasMany(e => e.BangLuong)
                 .WithOptional(e => e.NhanVien)
                 .HasForeignKey(e => e.IDNhanVien)
                 .WillCascadeOnDelete();
-
-            modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.CT_BangCongSP)
-                .WithRequired(e => e.NhanVien)
-                .HasForeignKey(e => e.ID_NV)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<NhanVien>()
                 .HasMany(e => e.TaiKhoan)

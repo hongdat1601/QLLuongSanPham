@@ -14,11 +14,11 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
 {
     public partial class frmLuongNhanVien : Form
     {
-        BangLuongDAO blDAO;
-        BangCongCNDAO bcDAO;
-        ChiTiet_BCSPDAO ctDAO;
-        CaLamDAO caDAO;
-        CongDoanDAO cdDAO;
+        //BangLuongDAO blDAO;
+        //BangCongCNDAO bcDAO;
+        //ChiTiet_BCSPDAO ctDAO;
+        //CaLamDAO caDAO;
+        //CongDoanDAO cdDAO;
         BangCongHCDAO hcDAO;
         LoaiPhepDAO phepDAO;
         private NhanVien _nhanVien;
@@ -26,11 +26,11 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         public frmLuongNhanVien(NhanVien nhanVien)
         {
             InitializeComponent();
-            blDAO = new BangLuongDAO();
-            bcDAO = new BangCongCNDAO();
-            ctDAO = new ChiTiet_BCSPDAO();
-            caDAO = new CaLamDAO();
-            cdDAO = new CongDoanDAO();
+            //blDAO = new BangLuongDAO();
+            //bcDAO = new BangCongCNDAO();
+            //ctDAO = new ChiTiet_BCSPDAO();
+            //caDAO = new CaLamDAO();
+            //cdDAO = new CongDoanDAO();
             hcDAO = new BangCongHCDAO();
             phepDAO = new LoaiPhepDAO();
 
@@ -39,16 +39,16 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
 
         private void frmLuongNhanVien_Load(object sender, EventArgs e)
         {
-            if(_nhanVien.IDChucVu == 7)
-            {
-                CreateTitleCN(lvwSalary);
-                LoadLuongCN();
-            }
-            else
-            {
-                CreateTitleNV(lvwSalary);
-                LoadLuongHC();
-            }
+        //    if(_nhanVien.IDChucVu == 7)
+        //    {
+        //        CreateTitleCN(lvwSalary);
+        //        LoadLuongCN();
+        //    }
+        //    else
+        //    {
+        //        CreateTitleNV(lvwSalary);
+        //        LoadLuongHC();
+        //    }
            
         }
 
@@ -79,28 +79,28 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             lvw.FullRowSelect = true;
         }
 
-        private void LoadLuongCN()
-        {
-            lvwSalary.Items.Clear();
+        //private void LoadLuongCN()
+        //{
+        //    lvwSalary.Items.Clear();
 
-            foreach (CT_BangCongSP ct in ctDAO.GetChiTiets())
-            {
-                foreach (BangCongSP bc in bcDAO.GetBangCongSPs())
-                {
-                    if (ct.ID_BCSP == bc.ID && ct.ID_NV == _nhanVien.ID)
-                    {
-                        ListViewItem item = new ListViewItem();
-                        item.Text = bcDAO.GetByID(bc.ID).NgayDiLam.Value.Date.ToString("dd/MM/yyyy");
-                        item.SubItems.Add(caDAO.GetByID(bcDAO.GetByID(bc.ID).IDCaLam.Value).TenCa);
-                        item.SubItems.Add(cdDAO.GetById(bcDAO.GetByID(bc.ID).IDCongDoan.Value).TenCongDoan);
-                        item.SubItems.Add(Convert.ToDecimal(cdDAO.GetById(bcDAO.GetByID(bc.ID).IDCongDoan.Value).DonGia).ToString());
-                        item.SubItems.Add(0.ToString());
+        //    foreach (CT_BangCongSP ct in ctDAO.GetChiTiets())
+        //    {
+        //        foreach (BangCongSP bc in bcDAO.GetBangCongSPs())
+        //        {
+        //            if (ct.ID_BCSP == bc.ID && ct.ID_NV == _nhanVien.ID)
+        //            {
+        //                ListViewItem item = new ListViewItem();
+        //                item.Text = bcDAO.GetByID(bc.ID).NgayDiLam.Value.Date.ToString("dd/MM/yyyy");
+        //                item.SubItems.Add(caDAO.GetByID(bcDAO.GetByID(bc.ID).IDCaLam.Value).TenCa);
+        //                item.SubItems.Add(cdDAO.GetById(bcDAO.GetByID(bc.ID).IDCongDoan.Value).TenCongDoan);
+        //                item.SubItems.Add(Convert.ToDecimal(cdDAO.GetById(bcDAO.GetByID(bc.ID).IDCongDoan.Value).DonGia).ToString());
+        //                item.SubItems.Add(0.ToString());
 
-                        lvwSalary.Items.Add(item);
-                    }
-                }
-            }
-        }
+        //                lvwSalary.Items.Add(item);
+        //            }
+        //        }
+        //    }
+        //}
 
         private void LoadLuongHC()
         {

@@ -9,27 +9,23 @@ namespace QLLuongSanPham.Entities
     [Table("BangCongSP")]
     public partial class BangCongSP
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public BangCongSP()
-        {
-            CT_BangCongSP = new HashSet<CT_BangCongSP>();
-        }
-
         public int ID { get; set; }
 
         public int? IDCongDoan { get; set; }
 
         public int? IDCaLam { get; set; }
 
-        public int? SoLuongNguoi { get; set; }
-
+        [Column(TypeName = "date")]
         public DateTime? NgayDiLam { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CT_BangCongSP> CT_BangCongSP { get; set; }
+        public int? ID_NhanVien { get; set; }
+
+        public int? SoLuongSP { get; set; }
 
         public virtual CaLam CaLam { get; set; }
 
         public virtual CongDoan CongDoan { get; set; }
+
+        public virtual NhanVien NhanVien { get; set; }
     }
 }
