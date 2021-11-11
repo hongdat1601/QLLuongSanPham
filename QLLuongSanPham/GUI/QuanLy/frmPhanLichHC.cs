@@ -355,5 +355,10 @@ namespace QLLuongSanPham.GUI.QuanLy
                 LoadNgayDiLam();
             }
         }
+
+        private void btnSearchNV_Click(object sender, EventArgs e)
+        {
+            LoadListEmployee(nvDAO.GetListNVByName(txtTenNV.Text));
+        }
     }
 }

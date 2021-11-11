@@ -26,7 +26,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             congDoanDAO = new CongDoanDAO();
         }
 
-        #region Method
+        #region Methods
 
         private void CreateList()
         {
@@ -84,7 +84,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         #endregion
 
-        #region Event
+        #region Events
 
         private void frmCongDoan_Load(object sender, EventArgs e)
         {
@@ -94,7 +94,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void lstvSanPham_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lstvSanPham.SelectedItems.Count > 0)
+            if (lstvSanPham.SelectedItems.Count > 0)
             {
                 sanPham = (SanPham)lstvSanPham.SelectedItems[0].Tag;
                 txtTenSPCapNhat.Text = sanPham.TenSP;
@@ -130,6 +130,9 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             if (btnSua.Text == "Lưu")
             {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+
                 congDoan.TenCongDoan = txtCongDoanCapNhat.Text;
                 congDoan.DonGia = Convert.ToDecimal(txtDonGiaCapNhat.Text);
                 congDoanDAO.Update(congDoan);
@@ -149,6 +152,9 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnSua.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnSua.IconColor = Color.Blue;
                 btnSua.Text = "Lưu";
+
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
             }
         }
 
@@ -162,15 +168,19 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             if (btnThem.Text == "Lưu")
             {
-                CongDoan cd = new CongDoan {
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+
+                CongDoan cd = new CongDoan
+                {
                     IDSanPham = sanPham.ID,
                     TenCongDoan = txtCongDoanCapNhat.Text,
                     DonGia = Convert.ToDecimal(txtDonGiaCapNhat.Text)
                 };
                 congDoanDAO.Add(cd);
 
-                txtCongDoanCapNhat.Enabled = false;               
-                txtDonGiaCapNhat.Enabled = false;   
+                txtCongDoanCapNhat.Enabled = false;
+                txtDonGiaCapNhat.Enabled = false;
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
                 btnThem.IconColor = Color.Green;
                 btnThem.Text = "Thêm";
@@ -187,8 +197,10 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnThem.IconColor = Color.Blue;
                 btnThem.Text = "Lưu";
-            }    
-            
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+            }
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -207,9 +219,14 @@ namespace QLLuongSanPham.GUI.QuanLy
                 {
                     lstvCongDoan.SelectedIndices.Add(lstvCongDoan.Items.Count - 1);
                 }
-            }      
+            }
         }
 
         #endregion
+
+        private void btnTimKimSP_Click(object sender, EventArgs e)
+        {
+                LoadListSanPham(sanPhamDAO.GetSPByChar(txtTenSearch.Text));
+        }
     }
 }

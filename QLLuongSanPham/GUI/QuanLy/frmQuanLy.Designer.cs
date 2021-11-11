@@ -64,6 +64,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.ptcMain = new System.Windows.Forms.PictureBox();
             this.pnLeft.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -626,7 +627,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(320, 31);
             this.txtTen.TabIndex = 2;
-            this.txtTen.Text = "Nguyễn Hồng Đạt";
             this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pnlSeperate
@@ -716,12 +716,25 @@ namespace QLLuongSanPham.GUI.QuanLy
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.White;
+            this.pnlBody.Controls.Add(this.lblWelcome);
             this.pnlBody.Controls.Add(this.ptcMain);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBody.Location = new System.Drawing.Point(320, 50);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1062, 1052);
             this.pnlBody.TabIndex = 4;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(142)))), ((int)(((byte)(227)))));
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(82, 54);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(915, 90);
+            this.lblWelcome.TabIndex = 1;
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ptcMain
             // 
@@ -800,5 +813,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.PictureBox ptcMain;
         private FontAwesome.Sharp.IconButton btnCongDoan;
         private FontAwesome.Sharp.IconButton btnCaLam;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

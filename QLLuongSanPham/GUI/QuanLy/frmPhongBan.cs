@@ -105,6 +105,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnSua.IconColor = Color.Orange;
                 btnSua.Text = "Sửa";
 
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
                 LoadListPhongBan(phongBanDAO.GetPhongBans());
             }
             else
@@ -115,6 +117,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnSua.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnSua.IconColor = Color.Blue;
                 btnSua.Text = "Lưu";
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
             }
         }
 
@@ -158,6 +162,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnThem.IconColor = Color.Green;
                 btnThem.Text = "Thêm";
 
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
                 LoadListPhongBan(phongBanDAO.GetPhongBans());
                 lstvPhongBan.SelectedIndices.Add(lstvPhongBan.Items.Count - 1);
             }
@@ -173,7 +179,15 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnThem.IconColor = Color.Blue;
                 btnThem.Text = "Lưu";
+
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            LoadListPhongBan(phongBanDAO.GetListPBByName(txtTenSearch.Text));
         }
     }
 }

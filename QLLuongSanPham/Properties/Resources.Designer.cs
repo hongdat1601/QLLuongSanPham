@@ -93,6 +93,16 @@ namespace QLLuongSanPham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap timekeeping {
+            get {
+                object obj = ResourceManager.GetObject("timekeeping", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TinhLuong {
             get {
                 object obj = ResourceManager.GetObject("TinhLuong", resourceCulture);

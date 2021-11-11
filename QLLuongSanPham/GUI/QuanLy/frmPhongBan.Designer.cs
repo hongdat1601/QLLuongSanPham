@@ -261,6 +261,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiem.Size = new System.Drawing.Size(74, 38);
             this.btnTimKiem.TabIndex = 24;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // ptcNen
             // 
@@ -289,10 +290,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNameSearch.AutoSize = true;
             this.lblNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameSearch.ForeColor = System.Drawing.Color.White;
             this.lblNameSearch.Location = new System.Drawing.Point(785, 53);
             this.lblNameSearch.Name = "lblNameSearch";
-            this.lblNameSearch.Size = new System.Drawing.Size(145, 25);
+            this.lblNameSearch.Size = new System.Drawing.Size(158, 25);
             this.lblNameSearch.TabIndex = 32;
             this.lblNameSearch.Text = "Tên phòng ban";
             // 

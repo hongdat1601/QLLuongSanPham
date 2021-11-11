@@ -189,5 +189,10 @@ namespace QLLuongSanPham.GUI.QuanLy
                 ptcAvata.ImageLocation = sp.AnhSP;
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            LoadData(spDAO.GetSPByChar(txtNameSearch.Text));
+        }
     }
 }

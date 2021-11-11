@@ -211,10 +211,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lbNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbNameSearch.AutoSize = true;
             this.lbNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lbNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameSearch.ForeColor = System.Drawing.Color.White;
             this.lbNameSearch.Location = new System.Drawing.Point(710, 96);
             this.lbNameSearch.Name = "lbNameSearch";
-            this.lbNameSearch.Size = new System.Drawing.Size(144, 25);
+            this.lbNameSearch.Size = new System.Drawing.Size(157, 25);
             this.lbNameSearch.TabIndex = 34;
             this.lbNameSearch.Text = "Tên sản phẩm:";
             // 
@@ -280,11 +281,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiem.IconColor = System.Drawing.Color.Blue;
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTimKiem.IconSize = 24;
-            this.btnTimKiem.Location = new System.Drawing.Point(1409, 85);
+            this.btnTimKiem.Location = new System.Drawing.Point(1409, 91);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(74, 38);
+            this.btnTimKiem.Size = new System.Drawing.Size(74, 32);
             this.btnTimKiem.TabIndex = 35;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // ptcNen
             // 

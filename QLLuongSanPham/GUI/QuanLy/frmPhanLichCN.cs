@@ -81,7 +81,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         //Load data
         private void LoadListSanPham(IEnumerable<SanPham> sanPhams)
         {
-            lvwDSLich.Items.Clear();
+            lvwDSSP.Items.Clear();
             ListViewItem item;
 
             foreach (SanPham sp in sanPhams)
@@ -477,8 +477,12 @@ namespace QLLuongSanPham.GUI.QuanLy
                 MessageBox.Show("Bạn chưa chọn sản phẩm", "Thông báo", MessageBoxButtons.OK);
             }
         }
+
         #endregion
 
-
+        private void btnTimDSSP_Click(object sender, EventArgs e)
+        {
+            LoadListSanPham(spDAO.GetSPByChar(txtSpSearch.Text));
+        }
     }
 }

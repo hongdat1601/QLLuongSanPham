@@ -327,5 +327,10 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnXoa.Enabled = true;
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            LoadListEmployee(nvDAO.GetListNVByName(txtNameSearch.Text));
+        }
     }
 }

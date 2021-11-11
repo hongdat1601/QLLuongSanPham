@@ -359,6 +359,7 @@
     <None Include="Resources\back3.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\timekeeping.jpg" />
     <None Include="Resources\back1.jpg" />
     <Content Include="Resources\PhanLich.jpg" />
     <None Include="Resources\TinhLuong.jpg" />

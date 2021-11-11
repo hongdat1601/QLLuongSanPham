@@ -16,5 +16,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             InitializeComponent();
         }
+
     }
 }
