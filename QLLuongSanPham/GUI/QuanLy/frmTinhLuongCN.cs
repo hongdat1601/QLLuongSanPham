@@ -156,7 +156,13 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnTinhLuong_Click(object sender, EventArgs e)
         {
-            if (bangCongSPs == null)
+            if (nhanVien == null)
+            {
+                MessageBox.Show("Chưa chọn nhân viên!", "Thông báo");
+                return;
+            }
+
+            if (bangCongSPs.Count() <= 0)
             {
                 MessageBox.Show("Không có bảng công!", "Thông báo");
                 return;

@@ -87,6 +87,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTen
             // 

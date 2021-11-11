@@ -64,8 +64,11 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void LoadDataNhanVien(IEnumerable<NhanVien> data)
         {
             data = data.Where(x => x.IDChucVu.Value != 7);
-
             lstvNhanVien.Items.Clear();
+
+            if (data == null)
+                return;
+
             foreach (var nv in data)
             {
                 ListViewItem item = new ListViewItem();
@@ -130,7 +133,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.Text = stt.ToString();
                 item.SubItems.Add(nhanVienDAO.GetById(bl.IDNhanVien.Value).HoTen);
                 item.SubItems.Add(bl.NgayLap.Value.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(bl.TienLuong.Value.ToString());
+                item.SubItems.Add(bl.TienLuong.Value.ToString() + " VND");
 
                 item.Tag = bl;
 
@@ -225,7 +228,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 return;
             }
 
-            if (bangCongHCs == null)
+            if (bangCongHCs.Count() <= 0)
             {
                 MessageBox.Show("Nhân viên không có lịch để tính", "Thông báo");
                 return;
@@ -265,7 +268,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 IDNhanVien = nhanVien.ID,
                 NgayLap = DateTime.Now,
                 SoBuoiLamThem = Convert.ToInt32(nudSoBuoiLamThem.Text),
-                TienLuong = tongTien
+                TienLuong = Math.Round(tongTien, 0)
             };
 
             bangLuongDAO.Add(bl);
@@ -281,6 +284,11 @@ namespace QLLuongSanPham.GUI.QuanLy
                     Convert.ToInt32(cboNam.Text));
 
             LoadDataCongViec(bangCongHCs);
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            LoadDataNhanVien(nhanVienDAO.GetNhanViens().Where(x => x.HoTen.Contains(txtTen.Text)));
         }
     }
 }
