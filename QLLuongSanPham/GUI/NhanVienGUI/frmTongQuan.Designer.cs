@@ -29,99 +29,55 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSalaryDestop = new FontAwesome.Sharp.IconButton();
-            this.btnInfoDesktop = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picNen = new System.Windows.Forms.PictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblWelcome
+            // picNen
             // 
-            this.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lblWelcome.Location = new System.Drawing.Point(384, 313);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(431, 23);
-            this.lblWelcome.TabIndex = 10;
-            this.lblWelcome.Text = "Chào mừng nhân viên Võ Minh Phương";
+            this.picNen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picNen.Image = global::QLLuongSanPham.Properties.Resources.back1;
+            this.picNen.Location = new System.Drawing.Point(225, 127);
+            this.picNen.Name = "picNen";
+            this.picNen.Size = new System.Drawing.Size(685, 502);
+            this.picNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNen.TabIndex = 1;
+            this.picNen.TabStop = false;
             // 
-            // pictureBox1
+            // lblName
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(423, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 183);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnSalaryDestop
-            // 
-            this.btnSalaryDestop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalaryDestop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalaryDestop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnSalaryDestop.FlatAppearance.BorderSize = 2;
-            this.btnSalaryDestop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnSalaryDestop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalaryDestop.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSalaryDestop.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
-            this.btnSalaryDestop.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnSalaryDestop.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalaryDestop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalaryDestop.Location = new System.Drawing.Point(824, 599);
-            this.btnSalaryDestop.Name = "btnSalaryDestop";
-            this.btnSalaryDestop.Size = new System.Drawing.Size(253, 129);
-            this.btnSalaryDestop.TabIndex = 7;
-            this.btnSalaryDestop.Text = "Lương";
-            this.btnSalaryDestop.UseVisualStyleBackColor = true;
-            // 
-            // btnInfoDesktop
-            // 
-            this.btnInfoDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnInfoDesktop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInfoDesktop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnInfoDesktop.FlatAppearance.BorderSize = 2;
-            this.btnInfoDesktop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnInfoDesktop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfoDesktop.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnInfoDesktop.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.btnInfoDesktop.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(61)))), ((int)(((byte)(191)))));
-            this.btnInfoDesktop.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInfoDesktop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfoDesktop.Location = new System.Drawing.Point(152, 599);
-            this.btnInfoDesktop.Name = "btnInfoDesktop";
-            this.btnInfoDesktop.Size = new System.Drawing.Size(253, 129);
-            this.btnInfoDesktop.TabIndex = 8;
-            this.btnInfoDesktop.Text = "Thông tin cá nhân";
-            this.btnInfoDesktop.UseVisualStyleBackColor = true;
-            this.btnInfoDesktop.Click += new System.EventHandler(this.btnInfoDesktop_Click);
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblName.Location = new System.Drawing.Point(225, 43);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(685, 72);
+            this.lblName.TabIndex = 2;
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmTongQuan
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1239, 814);
-            this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSalaryDestop);
-            this.Controls.Add(this.btnInfoDesktop);
+            this.ClientSize = new System.Drawing.Size(1127, 653);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.picNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTongQuan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTongQuan";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmTongQuan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picNen)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton btnSalaryDestop;
-        private FontAwesome.Sharp.IconButton btnInfoDesktop;
+        private System.Windows.Forms.PictureBox picNen;
+        private System.Windows.Forms.Label lblName;
     }
 }

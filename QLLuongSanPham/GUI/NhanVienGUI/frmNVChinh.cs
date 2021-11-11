@@ -29,7 +29,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
 
         private void frmMainEmployee_Load(object sender, EventArgs e)
         {
-            OpenFormChild(new frmTongQuan());
+            OpenFormChild(new frmTongQuan(nhanVien));
         }
 
         //Structs
@@ -96,7 +96,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private void btnHome_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColor.color1);
-            OpenFormChild(new frmTongQuan());
+            OpenFormChild(new frmTongQuan(nhanVien));
         }
 
         private void btnInfor_Click(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private void btnSalary_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColor.color3);
-            OpenFormChild(new frmLuongNhanVien());
+            OpenFormChild(new frmLuongNhanVien(nhanVien));
         }
 
         private void btnBars_Click(object sender, EventArgs e)

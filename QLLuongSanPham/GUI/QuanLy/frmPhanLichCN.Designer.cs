@@ -39,8 +39,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lvwDSLich = new System.Windows.Forms.ListView();
             this.lblDSLich = new System.Windows.Forms.Label();
             this.lvwDSNV = new System.Windows.Forms.ListView();
-            this.cboCaSearch = new System.Windows.Forms.ComboBox();
-            this.btnTimDSSCa = new FontAwesome.Sharp.IconButton();
             this.lsbDSNV = new System.Windows.Forms.Label();
             this.pnlDSCN = new System.Windows.Forms.Panel();
             this.pnlDSPC = new System.Windows.Forms.Panel();
@@ -49,17 +47,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.dtmNgay = new System.Windows.Forms.DateTimePicker();
             this.cboCa = new System.Windows.Forms.ComboBox();
             this.cboTenCD = new System.Windows.Forms.ComboBox();
-            this.txtNgaySearch = new System.Windows.Forms.TextBox();
-            this.txtCDSearch = new System.Windows.Forms.TextBox();
-            this.txtTenSpSearch = new System.Windows.Forms.TextBox();
             this.txtTenSpInput = new System.Windows.Forms.TextBox();
-            this.lblCaSearch = new System.Windows.Forms.Label();
             this.lblCa = new System.Windows.Forms.Label();
-            this.lblCDSearch = new System.Windows.Forms.Label();
             this.lblTenCĐ = new System.Windows.Forms.Label();
-            this.lblNameSearch = new System.Windows.Forms.Label();
             this.lblNameSP = new System.Windows.Forms.Label();
-            this.lblDateSearch = new System.Windows.Forms.Label();
             this.lblNgay = new System.Windows.Forms.Label();
             this.btnTimDSSP = new FontAwesome.Sharp.IconButton();
             this.txtSpSearch = new System.Windows.Forms.TextBox();
@@ -175,7 +166,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDSCV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlDSCV.Controls.Add(this.lvwDSLich);
             this.pnlDSCV.Controls.Add(this.lblDSLich);
-            this.pnlDSCV.Location = new System.Drawing.Point(20, 647);
+            this.pnlDSCV.Location = new System.Drawing.Point(20, 633);
             this.pnlDSCV.Name = "pnlDSCV";
             this.pnlDSCV.Size = new System.Drawing.Size(1578, 303);
             this.pnlDSCV.TabIndex = 44;
@@ -210,32 +201,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lvwDSNV.Size = new System.Drawing.Size(279, 449);
             this.lvwDSNV.TabIndex = 1;
             this.lvwDSNV.UseCompatibleStateImageBehavior = false;
-            // 
-            // cboCaSearch
-            // 
-            this.cboCaSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboCaSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCaSearch.FormattingEnabled = true;
-            this.cboCaSearch.Location = new System.Drawing.Point(1246, 606);
-            this.cboCaSearch.Name = "cboCaSearch";
-            this.cboCaSearch.Size = new System.Drawing.Size(206, 33);
-            this.cboCaSearch.TabIndex = 51;
-            // 
-            // btnTimDSSCa
-            // 
-            this.btnTimDSSCa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimDSSCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimDSSCa.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnTimDSSCa.IconColor = System.Drawing.Color.Blue;
-            this.btnTimDSSCa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimDSSCa.IconSize = 20;
-            this.btnTimDSSCa.Location = new System.Drawing.Point(1477, 607);
-            this.btnTimDSSCa.Name = "btnTimDSSCa";
-            this.btnTimDSSCa.Size = new System.Drawing.Size(121, 32);
-            this.btnTimDSSCa.TabIndex = 45;
-            this.btnTimDSSCa.Text = "Tìm kiếm";
-            this.btnTimDSSCa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimDSSCa.UseVisualStyleBackColor = true;
             // 
             // lsbDSNV
             // 
@@ -324,33 +289,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboTenCD.Size = new System.Drawing.Size(274, 33);
             this.cboTenCD.TabIndex = 39;
             // 
-            // txtNgaySearch
-            // 
-            this.txtNgaySearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNgaySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNgaySearch.Location = new System.Drawing.Point(104, 607);
-            this.txtNgaySearch.Name = "txtNgaySearch";
-            this.txtNgaySearch.Size = new System.Drawing.Size(168, 30);
-            this.txtNgaySearch.TabIndex = 38;
-            // 
-            // txtCDSearch
-            // 
-            this.txtCDSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCDSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCDSearch.Location = new System.Drawing.Point(906, 609);
-            this.txtCDSearch.Name = "txtCDSearch";
-            this.txtCDSearch.Size = new System.Drawing.Size(216, 30);
-            this.txtCDSearch.TabIndex = 37;
-            // 
-            // txtTenSpSearch
-            // 
-            this.txtTenSpSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenSpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTenSpSearch.Location = new System.Drawing.Point(485, 609);
-            this.txtTenSpSearch.Name = "txtTenSpSearch";
-            this.txtTenSpSearch.Size = new System.Drawing.Size(195, 30);
-            this.txtTenSpSearch.TabIndex = 36;
-            // 
             // txtTenSpInput
             // 
             this.txtTenSpInput.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -360,19 +298,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtTenSpInput.Name = "txtTenSpInput";
             this.txtTenSpInput.Size = new System.Drawing.Size(274, 30);
             this.txtTenSpInput.TabIndex = 35;
-            // 
-            // lblCaSearch
-            // 
-            this.lblCaSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCaSearch.AutoSize = true;
-            this.lblCaSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblCaSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCaSearch.ForeColor = System.Drawing.Color.White;
-            this.lblCaSearch.Location = new System.Drawing.Point(1174, 614);
-            this.lblCaSearch.Name = "lblCaSearch";
-            this.lblCaSearch.Size = new System.Drawing.Size(40, 25);
-            this.lblCaSearch.TabIndex = 34;
-            this.lblCaSearch.Text = "Ca";
             // 
             // lblCa
             // 
@@ -385,19 +310,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblCa.TabIndex = 33;
             this.lblCa.Text = "Ca";
             // 
-            // lblCDSearch
-            // 
-            this.lblCDSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCDSearch.AutoSize = true;
-            this.lblCDSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblCDSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCDSearch.ForeColor = System.Drawing.Color.White;
-            this.lblCDSearch.Location = new System.Drawing.Point(727, 612);
-            this.lblCDSearch.Name = "lblCDSearch";
-            this.lblCDSearch.Size = new System.Drawing.Size(157, 25);
-            this.lblCDSearch.TabIndex = 32;
-            this.lblCDSearch.Text = "Tên công đoạn";
-            // 
             // lblTenCĐ
             // 
             this.lblTenCĐ.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -409,19 +321,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblTenCĐ.TabIndex = 31;
             this.lblTenCĐ.Text = "Tên công đoạn";
             // 
-            // lblNameSearch
-            // 
-            this.lblNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNameSearch.AutoSize = true;
-            this.lblNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNameSearch.ForeColor = System.Drawing.Color.White;
-            this.lblNameSearch.Location = new System.Drawing.Point(314, 612);
-            this.lblNameSearch.Name = "lblNameSearch";
-            this.lblNameSearch.Size = new System.Drawing.Size(150, 25);
-            this.lblNameSearch.TabIndex = 30;
-            this.lblNameSearch.Text = "Tên sản phẩm";
-            // 
             // lblNameSP
             // 
             this.lblNameSP.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -432,19 +331,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblNameSP.Size = new System.Drawing.Size(138, 25);
             this.lblNameSP.TabIndex = 29;
             this.lblNameSP.Text = "Tên sản phẩm";
-            // 
-            // lblDateSearch
-            // 
-            this.lblDateSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDateSearch.AutoSize = true;
-            this.lblDateSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblDateSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDateSearch.ForeColor = System.Drawing.Color.White;
-            this.lblDateSearch.Location = new System.Drawing.Point(15, 612);
-            this.lblDateSearch.Name = "lblDateSearch";
-            this.lblDateSearch.Size = new System.Drawing.Size(62, 25);
-            this.lblDateSearch.TabIndex = 28;
-            this.lblDateSearch.Text = "Ngày";
             // 
             // lblNgay
             // 
@@ -470,6 +356,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimDSSP.Size = new System.Drawing.Size(63, 30);
             this.btnTimDSSP.TabIndex = 26;
             this.btnTimDSSP.UseVisualStyleBackColor = true;
+            this.btnTimDSSP.Click += new System.EventHandler(this.btnTimDSSP_Click);
             // 
             // txtSpSearch
             // 
@@ -567,17 +454,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnLeft);
             this.Controls.Add(this.pnlDSCV);
-            this.Controls.Add(this.cboCaSearch);
-            this.Controls.Add(this.btnTimDSSCa);
             this.Controls.Add(this.pnlDSCN);
             this.Controls.Add(this.pnlDSPC);
-            this.Controls.Add(this.txtNgaySearch);
-            this.Controls.Add(this.txtCDSearch);
-            this.Controls.Add(this.txtTenSpSearch);
-            this.Controls.Add(this.lblCaSearch);
-            this.Controls.Add(this.lblCDSearch);
-            this.Controls.Add(this.lblNameSearch);
-            this.Controls.Add(this.lblDateSearch);
             this.Controls.Add(this.btnTimDSSP);
             this.Controls.Add(this.txtSpSearch);
             this.Controls.Add(this.lblTenSP);
@@ -612,8 +490,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Panel pnlDSCV;
         private System.Windows.Forms.ListView lvwDSLich;
         private System.Windows.Forms.Label lblDSLich;
-        private System.Windows.Forms.ComboBox cboCaSearch;
-        private FontAwesome.Sharp.IconButton btnTimDSSCa;
         private System.Windows.Forms.Label lsbDSNV;
         private System.Windows.Forms.Panel pnlDSCN;
         private System.Windows.Forms.Panel pnlDSPC;
@@ -621,17 +497,10 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.DateTimePicker dtmNgay;
         private System.Windows.Forms.ComboBox cboCa;
         private System.Windows.Forms.ComboBox cboTenCD;
-        private System.Windows.Forms.TextBox txtNgaySearch;
-        private System.Windows.Forms.TextBox txtCDSearch;
-        private System.Windows.Forms.TextBox txtTenSpSearch;
         private System.Windows.Forms.TextBox txtTenSpInput;
-        private System.Windows.Forms.Label lblCaSearch;
         private System.Windows.Forms.Label lblCa;
-        private System.Windows.Forms.Label lblCDSearch;
         private System.Windows.Forms.Label lblTenCĐ;
-        private System.Windows.Forms.Label lblNameSearch;
         private System.Windows.Forms.Label lblNameSP;
-        private System.Windows.Forms.Label lblDateSearch;
         private System.Windows.Forms.Label lblNgay;
         private FontAwesome.Sharp.IconButton btnTimDSSP;
         private System.Windows.Forms.TextBox txtSpSearch;

@@ -7,19 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.NhanVienGUI
 {
     public partial class frmTongQuan : Form
     {
-        public frmTongQuan()
+        private NhanVien _nv;
+        public frmTongQuan(NhanVien nv)
         {
             InitializeComponent();
+            this._nv = nv;
         }
 
-        private void btnInfoDesktop_Click(object sender, EventArgs e)
+        private void frmTongQuan_Load(object sender, EventArgs e)
         {
-           
+            lblName.Text = "Chào mừng nhân viên " + _nv.HoTen;
         }
     }
 }

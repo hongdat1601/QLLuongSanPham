@@ -19,6 +19,11 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<HopDong> GetHopDongs() => context.HopDong;
 
+        public IEnumerable<HopDong> GetHopDongByChar(string input)
+        {
+            return context.HopDong.Where(x => x.TenHopDong.Contains(input));
+        }
+
         public HopDong GetById(int id)
         {
             return context.HopDong

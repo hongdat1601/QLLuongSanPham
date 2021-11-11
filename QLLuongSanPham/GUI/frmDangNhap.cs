@@ -53,7 +53,7 @@ namespace QLLuongSanPham.GUI
 
             if (name == "QL")
             {
-                frmQuanLy frm = new frmQuanLy();
+                frmQuanLy frm = new frmQuanLy(nv);
                 //this.Hide();
 
                 if (frm.ShowDialog() == DialogResult.Yes)
@@ -72,7 +72,5 @@ namespace QLLuongSanPham.GUI
                 //this.Hide();
             }
         }
-
-
     }
 }

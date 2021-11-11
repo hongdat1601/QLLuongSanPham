@@ -19,6 +19,12 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<PhongBan> GetPhongBans() => context.PhongBan;
 
+        public IEnumerable<PhongBan> GetListPBByName(string name)
+        {
+            return context.PhongBan
+                .Where(x => x.TenPhongBan.Contains(name));
+        }
+
         public PhongBan GetById(int id)
         {
             return context.PhongBan

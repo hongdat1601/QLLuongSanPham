@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +18,14 @@ namespace QLLuongSanPham.GUI.QuanLy
         private Button activeBtn = null;
         private Panel activePnl = null;
         private Button activeSubBtn = null;
-  
-        public frmQuanLy()
+        private NhanVien _nv;
+        NhanVienDAO nvDAO;
+
+        public frmQuanLy(NhanVien nv)
         {
             InitializeComponent();
+            this._nv = nv;
+            nvDAO = new NhanVienDAO();
         }
 
         #region Methods
@@ -97,6 +103,8 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void frmQuanLy_Load(object sender, EventArgs e)
         {
             SettingDefault();
+            lblWelcome.Text ="Chào mừng quản lý " + nvDAO.GetById(_nv.ID).HoTen;
+            txtTen.Text = nvDAO.GetById(_nv.ID).HoTen;
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

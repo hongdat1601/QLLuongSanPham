@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +20,18 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<BangCongHC> GetBangCongHCs() => context.BangCongHC;
 
+        public BangCongHC GetByID(int id)
+        {
+            return context.BangCongHC
+                .Where(x => x.ID == id)
+                .FirstOrDefault();
+        }
+
+        public IEnumerable<BangCongHC> GetBCByIDNV(int id)
+        {
+            return context.BangCongHC
+                .Where(x=> x.IDNhanVien == id);
+        }
         public bool AddLich(BangCongHC lich)
         {
             using (var db = context.Database.BeginTransaction())
@@ -38,12 +52,17 @@ namespace QLLuongSanPham.DAO
             }
         }
 
-        public bool UpdateBangCong(BangCongHC bc)
+        public bool UpdateBangCong(BangCongHC bcNew)
         {
             using (var db = context.Database.BeginTransaction())
             {
                 try
                 {
+                    var bc = GetByID(bcNew.ID);
+                    bc.NgayCham = bcNew.NgayCham;
+                    bc.TrangThai = bcNew.TrangThai;
+                    bc.IDLoaiPhep = bcNew.IDLoaiPhep;
+
                     context.SaveChanges();
                     db.Commit();
                     return true;

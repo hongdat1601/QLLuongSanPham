@@ -18,6 +18,13 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<BangCongSP> GetBangCongSPs() => context.BangCongSP;
 
+        public BangCongSP GetByID(int id)
+        {
+            return context.BangCongSP
+                .Where(x => x.ID == id)
+                .FirstOrDefault();
+        }
+
         public BangCongSP GetByIDCD(int id)
         {
             return context.BangCongSP

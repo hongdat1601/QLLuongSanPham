@@ -30,7 +30,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void InitializeComponent()
         {
             this.ptcNen = new System.Windows.Forms.PictureBox();
-            this.btSearchLich = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.pnlLich = new System.Windows.Forms.Panel();
             this.lvwDSLich = new System.Windows.Forms.ListView();
@@ -38,10 +37,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnSearchNV = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.txtDateStart = new System.Windows.Forms.TextBox();
-            this.lblNgayBD = new System.Windows.Forms.Label();
-            this.txtTenNVLich = new System.Windows.Forms.TextBox();
-            this.lblname = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.lblTen = new System.Windows.Forms.Label();
             this.pnlDSSP = new System.Windows.Forms.Panel();
@@ -71,23 +66,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.ptcNen.TabIndex = 0;
             this.ptcNen.TabStop = false;
             // 
-            // btSearchLich
-            // 
-            this.btSearchLich.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btSearchLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchLich.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btSearchLich.IconColor = System.Drawing.Color.Blue;
-            this.btSearchLich.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btSearchLich.IconSize = 22;
-            this.btSearchLich.Location = new System.Drawing.Point(1037, 490);
-            this.btSearchLich.Name = "btSearchLich";
-            this.btSearchLich.Size = new System.Drawing.Size(161, 33);
-            this.btSearchLich.TabIndex = 41;
-            this.btSearchLich.Text = "Tìm kiếm";
-            this.btSearchLich.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSearchLich.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btSearchLich.UseVisualStyleBackColor = true;
-            // 
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -112,7 +90,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlLich.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlLich.Controls.Add(this.lvwDSLich);
             this.pnlLich.Controls.Add(this.lblDSLich);
-            this.pnlLich.Location = new System.Drawing.Point(27, 541);
+            this.pnlLich.Location = new System.Drawing.Point(27, 515);
             this.pnlLich.Name = "pnlLich";
             this.pnlLich.Size = new System.Drawing.Size(1171, 303);
             this.pnlLich.TabIndex = 37;
@@ -169,6 +147,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSearchNV.Size = new System.Drawing.Size(52, 30);
             this.btnSearchNV.TabIndex = 36;
             this.btnSearchNV.UseVisualStyleBackColor = true;
+            this.btnSearchNV.Click += new System.EventHandler(this.btnSearchNV_Click);
             // 
             // btnThem
             // 
@@ -187,50 +166,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // txtDateStart
-            // 
-            this.txtDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateStart.Location = new System.Drawing.Point(707, 493);
-            this.txtDateStart.Name = "txtDateStart";
-            this.txtDateStart.Size = new System.Drawing.Size(276, 30);
-            this.txtDateStart.TabIndex = 33;
-            // 
-            // lblNgayBD
-            // 
-            this.lblNgayBD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNgayBD.AutoSize = true;
-            this.lblNgayBD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblNgayBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayBD.ForeColor = System.Drawing.Color.White;
-            this.lblNgayBD.Location = new System.Drawing.Point(526, 496);
-            this.lblNgayBD.Name = "lblNgayBD";
-            this.lblNgayBD.Size = new System.Drawing.Size(140, 25);
-            this.lblNgayBD.TabIndex = 30;
-            this.lblNgayBD.Text = "Ngày bắt đầu";
-            // 
-            // txtTenNVLich
-            // 
-            this.txtTenNVLich.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenNVLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNVLich.Location = new System.Drawing.Point(188, 493);
-            this.txtTenNVLich.Name = "txtTenNVLich";
-            this.txtTenNVLich.Size = new System.Drawing.Size(295, 30);
-            this.txtTenNVLich.TabIndex = 34;
-            // 
-            // lblname
-            // 
-            this.lblname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblname.AutoSize = true;
-            this.lblname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.ForeColor = System.Drawing.Color.White;
-            this.lblname.Location = new System.Drawing.Point(22, 498);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(150, 25);
-            this.lblname.TabIndex = 31;
-            this.lblname.Text = "Tên nhân viên";
             // 
             // txtTenNV
             // 
@@ -323,7 +258,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.tblThu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tblThu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
             this.tblThu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tblThu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tblThu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
             this.tblThu.Location = new System.Drawing.Point(28, 128);
             this.tblThu.Name = "tblThu";
             this.tblThu.RowCount = 2;
@@ -376,13 +311,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1221, 856);
             this.Controls.Add(this.pnlXuLy);
-            this.Controls.Add(this.btSearchLich);
             this.Controls.Add(this.pnlLich);
             this.Controls.Add(this.btnSearchNV);
-            this.Controls.Add(this.txtDateStart);
-            this.Controls.Add(this.lblNgayBD);
-            this.Controls.Add(this.txtTenNVLich);
-            this.Controls.Add(this.lblname);
             this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.lblTen);
             this.Controls.Add(this.pnlDSSP);
@@ -406,7 +336,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         #endregion
 
         private System.Windows.Forms.PictureBox ptcNen;
-        private FontAwesome.Sharp.IconButton btSearchLich;
         private FontAwesome.Sharp.IconButton btnXoa;
         private System.Windows.Forms.Panel pnlLich;
         private System.Windows.Forms.ListView lvwDSLich;
@@ -414,10 +343,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnSearchNV;
         private FontAwesome.Sharp.IconButton btnThem;
-        private System.Windows.Forms.TextBox txtDateStart;
-        private System.Windows.Forms.Label lblNgayBD;
-        private System.Windows.Forms.TextBox txtTenNVLich;
-        private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Panel pnlDSSP;

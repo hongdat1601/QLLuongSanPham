@@ -91,10 +91,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNameSearch.AutoSize = true;
             this.lblNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameSearch.ForeColor = System.Drawing.Color.White;
             this.lblNameSearch.Location = new System.Drawing.Point(895, 34);
             this.lblNameSearch.Name = "lblNameSearch";
-            this.lblNameSearch.Size = new System.Drawing.Size(137, 25);
+            this.lblNameSearch.Size = new System.Drawing.Size(150, 25);
             this.lblNameSearch.TabIndex = 37;
             this.lblNameSearch.Text = "Tên nhân viên";
             // 
@@ -194,9 +195,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.txtNameSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameSearch.Location = new System.Drawing.Point(1048, 31);
+            this.txtNameSearch.Location = new System.Drawing.Point(1064, 31);
             this.txtNameSearch.Name = "txtNameSearch";
-            this.txtNameSearch.Size = new System.Drawing.Size(328, 30);
+            this.txtNameSearch.Size = new System.Drawing.Size(315, 30);
             this.txtNameSearch.TabIndex = 32;
             // 
             // btnTimKiem
@@ -213,6 +214,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiem.Size = new System.Drawing.Size(67, 30);
             this.btnTimKiem.TabIndex = 31;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // gbxInfoSlary
             // 

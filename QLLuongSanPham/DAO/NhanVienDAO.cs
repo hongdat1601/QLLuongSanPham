@@ -23,7 +23,12 @@ namespace QLLuongSanPham.DAO
         {
             return context.NhanVien.Where(x => x.ID == id);
         }
-        
+
+        public IEnumerable<NhanVien> GetListNVByName(string name)
+        {
+            return context.NhanVien.Where(x => x.HoTen.Contains(name));
+        }
+
         public NhanVien GetById(int id)
         {
             return context.NhanVien

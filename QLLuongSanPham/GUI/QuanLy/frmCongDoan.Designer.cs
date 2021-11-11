@@ -40,15 +40,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnTimKimSP = new FontAwesome.Sharp.IconButton();
-            this.btnTimKimCa = new FontAwesome.Sharp.IconButton();
             this.txtTenSearch = new System.Windows.Forms.TextBox();
             this.txtDonGiaCapNhat = new System.Windows.Forms.TextBox();
             this.txtTenSPCapNhat = new System.Windows.Forms.TextBox();
-            this.txtCDTK = new System.Windows.Forms.TextBox();
             this.txtCongDoanCapNhat = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblDongia = new System.Windows.Forms.Label();
-            this.lblNameCD = new System.Windows.Forms.Label();
             this.lblTenCD = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.gboTT = new System.Windows.Forms.GroupBox();
@@ -112,7 +109,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlCa.Controls.Add(this.lstvCongDoan);
             this.pnlCa.Controls.Add(this.lblList);
             this.pnlCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pnlCa.Location = new System.Drawing.Point(19, 561);
+            this.pnlCa.Location = new System.Drawing.Point(19, 545);
             this.pnlCa.Name = "pnlCa";
             this.pnlCa.Size = new System.Drawing.Size(1104, 341);
             this.pnlCa.TabIndex = 36;
@@ -200,34 +197,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKimSP.IconColor = System.Drawing.Color.Blue;
             this.btnTimKimSP.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTimKimSP.IconSize = 25;
-            this.btnTimKimSP.Location = new System.Drawing.Point(386, 17);
+            this.btnTimKimSP.Location = new System.Drawing.Point(386, 23);
             this.btnTimKimSP.Name = "btnTimKimSP";
-            this.btnTimKimSP.Size = new System.Drawing.Size(62, 34);
+            this.btnTimKimSP.Size = new System.Drawing.Size(62, 30);
             this.btnTimKimSP.TabIndex = 35;
             this.btnTimKimSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKimSP.UseVisualStyleBackColor = true;
-            // 
-            // btnTimKimCa
-            // 
-            this.btnTimKimCa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimKimCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnTimKimCa.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnTimKimCa.IconColor = System.Drawing.Color.Blue;
-            this.btnTimKimCa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKimCa.IconSize = 25;
-            this.btnTimKimCa.Location = new System.Drawing.Point(998, 508);
-            this.btnTimKimCa.Name = "btnTimKimCa";
-            this.btnTimKimCa.Size = new System.Drawing.Size(127, 43);
-            this.btnTimKimCa.TabIndex = 34;
-            this.btnTimKimCa.Text = "Tìm kiếm";
-            this.btnTimKimCa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimKimCa.UseVisualStyleBackColor = true;
+            this.btnTimKimSP.Click += new System.EventHandler(this.btnTimKimSP_Click);
             // 
             // txtTenSearch
             // 
             this.txtTenSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTenSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTenSearch.Location = new System.Drawing.Point(169, 21);
+            this.txtTenSearch.Location = new System.Drawing.Point(172, 23);
             this.txtTenSearch.Name = "txtTenSearch";
             this.txtTenSearch.Size = new System.Drawing.Size(191, 30);
             this.txtTenSearch.TabIndex = 30;
@@ -252,15 +234,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtTenSPCapNhat.Size = new System.Drawing.Size(371, 30);
             this.txtTenSPCapNhat.TabIndex = 28;
             // 
-            // txtCDTK
-            // 
-            this.txtCDTK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCDTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCDTK.Location = new System.Drawing.Point(667, 514);
-            this.txtCDTK.Name = "txtCDTK";
-            this.txtCDTK.Size = new System.Drawing.Size(305, 30);
-            this.txtCDTK.TabIndex = 27;
-            // 
             // txtCongDoanCapNhat
             // 
             this.txtCongDoanCapNhat.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -276,10 +249,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(16, 26);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(138, 25);
+            this.lblName.Size = new System.Drawing.Size(150, 25);
             this.lblName.TabIndex = 25;
             this.lblName.Text = "Tên sản phẩm";
             // 
@@ -293,18 +267,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDongia.Size = new System.Drawing.Size(79, 25);
             this.lblDongia.TabIndex = 24;
             this.lblDongia.Text = "Đơn giá";
-            // 
-            // lblNameCD
-            // 
-            this.lblNameCD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNameCD.AutoSize = true;
-            this.lblNameCD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblNameCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNameCD.Location = new System.Drawing.Point(487, 519);
-            this.lblNameCD.Name = "lblNameCD";
-            this.lblNameCD.Size = new System.Drawing.Size(144, 25);
-            this.lblNameCD.TabIndex = 22;
-            this.lblNameCD.Text = "Tên công đoạn";
             // 
             // lblTenCD
             // 
@@ -367,11 +329,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Controls.Add(this.pnlSP);
             this.Controls.Add(this.pnlCa);
             this.Controls.Add(this.btnTimKimSP);
-            this.Controls.Add(this.btnTimKimCa);
             this.Controls.Add(this.txtTenSearch);
-            this.Controls.Add(this.txtCDTK);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.lblNameCD);
             this.Controls.Add(this.ptcNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCongDoan";
@@ -401,15 +360,12 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
         private FontAwesome.Sharp.IconButton btnTimKimSP;
-        private FontAwesome.Sharp.IconButton btnTimKimCa;
         private System.Windows.Forms.TextBox txtTenSearch;
         private System.Windows.Forms.TextBox txtDonGiaCapNhat;
         private System.Windows.Forms.TextBox txtTenSPCapNhat;
-        private System.Windows.Forms.TextBox txtCDTK;
         private System.Windows.Forms.TextBox txtCongDoanCapNhat;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblDongia;
-        private System.Windows.Forms.Label lblNameCD;
         private System.Windows.Forms.Label lblTenCD;
         private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.GroupBox gboTT;

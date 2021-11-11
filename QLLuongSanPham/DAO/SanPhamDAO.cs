@@ -18,6 +18,10 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<SanPham> GetSanPhams() => context.SanPham;
 
+        public IEnumerable<SanPham> GetSPByChar(string input)
+        {
+            return context.SanPham.Where(x => x.TenSP.Contains(input));
+        }
         public SanPham GetById(int id)
         {
             return context.SanPham

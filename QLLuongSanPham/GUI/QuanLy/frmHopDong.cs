@@ -325,5 +325,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            LoadListHopDong(hopDongDAO.GetHopDongByChar(txtHDTK.Text));
+        }
     }
 }
