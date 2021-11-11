@@ -46,6 +46,8 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void LoadDataNhanVien(IEnumerable<NhanVien> data)
         {
+            data = data.Where(x => x.IDChucVu.Value == 7);
+
             lstvNhanVien.Items.Clear();
             foreach (var nv in data)
             {
@@ -85,6 +87,8 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void LoadDataLuong(IEnumerable<BangLuong> data)
         {
+            data = data.Where(x => nhanVienDao.GetById(x.IDNhanVien.Value).IDChucVu.Value == 7);
+
             lstvLuong.Items.Clear();
             int stt = 1;
             foreach (var bl in data)
@@ -160,9 +164,11 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             decimal tienLuong = Convert.ToDecimal(txtTP.Text);
 
+            List<int> ids = new List<int>();
             foreach (var bc in bangCongSPs)
             {
                 tienLuong += congDoanDAO.GetById(bc.IDCongDoan.Value).DonGia.Value * bc.SoLuongSP.Value;
+                ids.Add(bc.ID);
             }
 
             BangLuong bangLuong = new BangLuong
@@ -174,10 +180,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             };
 
             bangLuongDAO.Add(bangLuong);
-
-            bangCongSPs = null;
-            LoadDataLich(bangCongSPs);
             LoadDataLuong(bangLuongDAO.GetBangLuongs());
+
+            ids.ForEach(x => bangCongDAO.RemoveBCCN(bangCongDAO.GetByID(x)));
+            bangCongSPs = bangCongDAO.GetBangCongSPsByIDNhanVien(nhanVien.ID);
+            LoadDataLich(bangCongSPs);
+        }
+
+        private void btnTiemKiem_Click(object sender, EventArgs e)
+        {
+            LoadDataNhanVien(nhanVienDao.GetNhanViens().Where(x => x.HoTen.Contains(txtTen.Text)));
         }
     }
 }

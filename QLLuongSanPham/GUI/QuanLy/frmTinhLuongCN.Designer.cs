@@ -88,19 +88,20 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTiemKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTiemKiem.IconSize = 25;
             this.btnTiemKiem.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTiemKiem.Location = new System.Drawing.Point(374, 18);
+            this.btnTiemKiem.Location = new System.Drawing.Point(374, 23);
             this.btnTiemKiem.Name = "btnTiemKiem";
             this.btnTiemKiem.Size = new System.Drawing.Size(44, 38);
             this.btnTiemKiem.TabIndex = 15;
             this.btnTiemKiem.UseVisualStyleBackColor = true;
+            this.btnTiemKiem.Click += new System.EventHandler(this.btnTiemKiem_Click);
             // 
             // txtTen
             // 
             this.txtTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.Location = new System.Drawing.Point(182, 20);
+            this.txtTen.Location = new System.Drawing.Point(196, 27);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(178, 30);
+            this.txtTen.Size = new System.Drawing.Size(172, 30);
             this.txtTen.TabIndex = 14;
             // 
             // lblTen
@@ -108,11 +109,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTen.AutoSize = true;
             this.lblTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.lblTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTen.ForeColor = System.Drawing.Color.White;
-            this.lblTen.Location = new System.Drawing.Point(33, 27);
+            this.lblTen.Location = new System.Drawing.Point(33, 30);
             this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(132, 20);
+            this.lblTen.Size = new System.Drawing.Size(157, 25);
             this.lblTen.TabIndex = 13;
             this.lblTen.Text = "Tên công nhân";
             // 

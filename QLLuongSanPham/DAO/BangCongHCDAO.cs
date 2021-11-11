@@ -98,5 +98,13 @@ namespace QLLuongSanPham.DAO
         {
             return GetBangCongHCs().Where(x => x.NgayCham.Value.ToString("dd/MM/yyyy").Contains(date));
         }
+
+        public IEnumerable<BangCongHC> GetBangCongHCsByIDNVAndDate(int id, int month, int year)
+        {
+            return context.BangCongHC
+                .Where(x => x.IDNhanVien == id 
+                && x.NgayCham.Value.Month == month
+                && x.NgayCham.Value.Year == year);
+        }
     }
 }

@@ -114,7 +114,7 @@ namespace QLLuongSanPham.DAO
 
             if (idPB != -1)
                 nv = nv.Where(x => x.IDPhongBan == idPB);
-            if (idCV != -1)
+            if (idHV != -1)
                 nv = nv.Where(x => x.IDTrinhDoHocVan == idHV);
             if (idCV != -1)
                 nv = nv.Where(x => x.IDChucVu == idCV);
