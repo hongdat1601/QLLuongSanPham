@@ -32,8 +32,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.ptcNen = new System.Windows.Forms.PictureBox();
             this.btnRight = new FontAwesome.Sharp.IconButton();
             this.btnLeft = new FontAwesome.Sharp.IconButton();
-            this.btnXoa = new FontAwesome.Sharp.IconButton();
-            this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.pnlDSCV = new System.Windows.Forms.Panel();
             this.lvwDSLich = new System.Windows.Forms.ListView();
@@ -109,40 +107,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnLeft.UseVisualStyleBackColor = true;
             this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnXoa.IconColor = System.Drawing.Color.Red;
-            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXoa.IconSize = 25;
-            this.btnXoa.Location = new System.Drawing.Point(350, 12);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(95, 43);
-            this.btnXoa.TabIndex = 48;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSua.IconSize = 25;
-            this.btnSua.Location = new System.Drawing.Point(190, 12);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(97, 43);
-            this.btnSua.TabIndex = 47;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -151,7 +115,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.IconSize = 25;
-            this.btnThem.Location = new System.Drawing.Point(10, 12);
+            this.btnThem.Location = new System.Drawing.Point(188, 11);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(114, 43);
             this.btnThem.TabIndex = 46;
@@ -437,8 +401,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.pnlXuly.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlXuly.Controls.Add(this.btnThem);
-            this.pnlXuly.Controls.Add(this.btnSua);
-            this.pnlXuly.Controls.Add(this.btnXoa);
             this.pnlXuly.Location = new System.Drawing.Point(426, 511);
             this.pnlXuly.Name = "pnlXuly";
             this.pnlXuly.Size = new System.Drawing.Size(465, 67);
@@ -485,8 +447,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.PictureBox ptcNen;
         private FontAwesome.Sharp.IconButton btnRight;
         private FontAwesome.Sharp.IconButton btnLeft;
-        private FontAwesome.Sharp.IconButton btnXoa;
-        private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
         private System.Windows.Forms.Panel pnlDSCV;
         private System.Windows.Forms.ListView lvwDSLich;
