@@ -59,20 +59,20 @@ namespace QLLuongSanPham.DAO
                 try
                 {
                     var bc = GetByID(bcNew.ID);
-                    bc.NgayCham = bcNew.NgayCham;
                     bc.TrangThai = bcNew.TrangThai;
                     bc.IDLoaiPhep = bcNew.IDLoaiPhep;
 
                     context.SaveChanges();
                     db.Commit();
-                    return true;
                 }
                 catch (Exception)
                 {
                     db.Rollback();
-                    throw new Exception("Lỗi sữa nhân viên");
+                    return false;
                 }
             }
+
+            return true;
         }
 
         public bool RemoveBangCong(BangCongHC bc)
@@ -92,6 +92,11 @@ namespace QLLuongSanPham.DAO
                     throw new Exception("Lỗi sữa nhân viên");
                 }
             }
+        }
+
+        public IEnumerable<BangCongHC> GetBangCongHCsByDate(string date)
+        {
+            return GetBangCongHCs().Where(x => x.NgayCham.Value.ToString("dd/MM/yyyy").Contains(date));
         }
     }
 }

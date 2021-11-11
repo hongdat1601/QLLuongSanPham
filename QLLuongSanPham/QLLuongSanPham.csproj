@@ -89,7 +89,6 @@
     <Compile Include="Entities\PhongBan.cs" />
     <Compile Include="Entities\QLLuongSPContext.cs" />
     <Compile Include="Entities\SanPham.cs" />
-    <Compile Include="Entities\sysdiagrams.cs" />
     <Compile Include="Entities\TaiKhoan.cs" />
     <Compile Include="Entities\TrinhDoHocVan.cs" />
     <Compile Include="GUI\frmDangNhap.cs">
@@ -238,11 +237,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLLuongSPDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLLuongSPDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="GUI\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,17 +329,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLLuongSPDataSet.xsc">
-      <DependentUpon>QLLuongSPDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLLuongSPDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLLuongSPDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLLuongSPDataSet.xss">
-      <DependentUpon>QLLuongSPDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
