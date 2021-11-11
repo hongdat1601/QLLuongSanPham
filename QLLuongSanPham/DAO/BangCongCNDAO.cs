@@ -70,12 +70,16 @@ namespace QLLuongSanPham.DAO
             }
         }
 
-        public bool UpdateBCCN(BangCongSP bc)
+        public bool UpdateBCCN(BangCongSP bc_new)
         {
             using (var db = context.Database.BeginTransaction())
             {
                 try
                 {
+                    var bc = GetByID(bc_new.ID);
+
+                    bc.SoLuongSP = bc_new.SoLuongSP;
+
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -98,6 +102,11 @@ namespace QLLuongSanPham.DAO
             }
 
             return bc;
+        }
+
+        public IEnumerable<BangCongSP> GetBangCongSPsByIDNhanVien(int idNhanVien)
+        {
+            return GetBangCongSPs().Where(x => x.ID_NhanVien == idNhanVien);
         }
 
     }

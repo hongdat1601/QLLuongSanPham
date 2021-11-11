@@ -44,7 +44,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboPhep = new System.Windows.Forms.ComboBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.pnlCa.SuspendLayout();
             this.gbxTT.SuspendLayout();
@@ -66,7 +65,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.chkDiemDanh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chkDiemDanh.AutoSize = true;
             this.chkDiemDanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDiemDanh.Location = new System.Drawing.Point(238, 269);
+            this.chkDiemDanh.Location = new System.Drawing.Point(240, 276);
             this.chkDiemDanh.Name = "chkDiemDanh";
             this.chkDiemDanh.Size = new System.Drawing.Size(62, 29);
             this.chkDiemDanh.TabIndex = 71;
@@ -95,7 +94,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(21, 271);
+            this.label4.Location = new System.Drawing.Point(23, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 68;
@@ -106,7 +105,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(21, 206);
+            this.label1.Location = new System.Drawing.Point(23, 220);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 25);
             this.label1.TabIndex = 69;
@@ -116,7 +115,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.dtmDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtmDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmDate.Location = new System.Drawing.Point(846, 475);
+            this.dtmDate.Location = new System.Drawing.Point(156, 37);
             this.dtmDate.Name = "dtmDate";
             this.dtmDate.Size = new System.Drawing.Size(368, 30);
             this.dtmDate.TabIndex = 67;
@@ -127,7 +126,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtTenNV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTenNV.Enabled = false;
             this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTenNV.Location = new System.Drawing.Point(238, 138);
+            this.txtTenNV.Location = new System.Drawing.Point(240, 159);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(371, 30);
             this.txtTenNV.TabIndex = 66;
@@ -137,7 +136,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(21, 141);
+            this.label3.Location = new System.Drawing.Point(23, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 25);
             this.label3.TabIndex = 65;
@@ -184,6 +183,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gbxTT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbxTT.Controls.Add(this.cboPhep);
             this.gbxTT.Controls.Add(this.chkDiemDanh);
+            this.gbxTT.Controls.Add(this.dtmDate);
             this.gbxTT.Controls.Add(this.btnChamCong);
             this.gbxTT.Controls.Add(this.label4);
             this.gbxTT.Controls.Add(this.label1);
@@ -206,7 +206,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboPhep.FormattingEnabled = true;
             this.cboPhep.Items.AddRange(new object[] {
             "Không"});
-            this.cboPhep.Location = new System.Drawing.Point(238, 202);
+            this.cboPhep.Location = new System.Drawing.Point(240, 216);
             this.cboPhep.Name = "cboPhep";
             this.cboPhep.Size = new System.Drawing.Size(368, 33);
             this.cboPhep.TabIndex = 72;
@@ -218,7 +218,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtMaNV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMaNV.Enabled = false;
             this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtMaNV.Location = new System.Drawing.Point(238, 73);
+            this.txtMaNV.Location = new System.Drawing.Point(240, 101);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(371, 30);
             this.txtMaNV.TabIndex = 66;
@@ -228,24 +228,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(21, 76);
+            this.label5.Location = new System.Drawing.Point(23, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 25);
             this.label5.TabIndex = 65;
             this.label5.Text = "Mã nhân viên";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(218)))), ((int)(((byte)(161)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(731, 478);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 25);
-            this.label6.TabIndex = 62;
-            this.label6.Text = "Ngày Làm";
             // 
             // frmChamCongHC
             // 
@@ -254,8 +241,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1268, 785);
             this.Controls.Add(this.gbxTT);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dtmDate);
             this.Controls.Add(this.pnlCa);
             this.Controls.Add(this.picNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -267,7 +252,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gbxTT.ResumeLayout(false);
             this.gbxTT.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -288,6 +272,5 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.ComboBox cboPhep;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
     }
 }

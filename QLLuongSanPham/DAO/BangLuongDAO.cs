@@ -30,5 +30,25 @@ namespace QLLuongSanPham.DAO
             return context.BangLuong
                 .Where(x => x.IDNhanVien == idNV);
         }
+
+        public bool Add(BangLuong bl)
+        {
+            using (var db = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.BangLuong.Add(bl);
+                    context.SaveChanges();
+                    db.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    db.Rollback();
+                    throw new Exception("Lỗi thêm bảng công cho công nhân");
+                }
+
+            }
+        }
     }
 }

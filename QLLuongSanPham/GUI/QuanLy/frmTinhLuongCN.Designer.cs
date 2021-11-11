@@ -32,19 +32,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.picNen = new System.Windows.Forms.PictureBox();
             this.btnTinhLuong = new FontAwesome.Sharp.IconButton();
             this.btnTiemKiem = new FontAwesome.Sharp.IconButton();
-            this.txtTP = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.lblTen = new System.Windows.Forms.Label();
             this.pnlLuong = new System.Windows.Forms.Panel();
-            this.lvwDSLuong = new System.Windows.Forms.ListView();
+            this.lstvLuong = new System.Windows.Forms.ListView();
             this.lbluong = new System.Windows.Forms.Label();
             this.lblThuong = new System.Windows.Forms.Label();
             this.pnlChiTiet = new System.Windows.Forms.Panel();
-            this.lvwChiTiet = new System.Windows.Forms.ListView();
+            this.lstvLich = new System.Windows.Forms.ListView();
             this.lblCV = new System.Windows.Forms.Label();
             this.pnlDSNV = new System.Windows.Forms.Panel();
-            this.lvwDSNV = new System.Windows.Forms.ListView();
+            this.lstvNhanVien = new System.Windows.Forms.ListView();
             this.lblDSNV = new System.Windows.Forms.Label();
+            this.txtTP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.pnlLuong.SuspendLayout();
             this.pnlChiTiet.SuspendLayout();
@@ -77,6 +77,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTinhLuong.Text = "Tính lương";
             this.btnTinhLuong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTinhLuong.UseVisualStyleBackColor = true;
+            this.btnTinhLuong.Click += new System.EventHandler(this.btnTinhLuong_Click);
             // 
             // btnTiemKiem
             // 
@@ -92,15 +93,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTiemKiem.Size = new System.Drawing.Size(44, 38);
             this.btnTiemKiem.TabIndex = 15;
             this.btnTiemKiem.UseVisualStyleBackColor = true;
-            // 
-            // txtTP
-            // 
-            this.txtTP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTP.Location = new System.Drawing.Point(630, 550);
-            this.txtTP.Name = "txtTP";
-            this.txtTP.Size = new System.Drawing.Size(294, 30);
-            this.txtTP.TabIndex = 9;
             // 
             // txtTen
             // 
@@ -128,21 +120,21 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.pnlLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlLuong.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlLuong.Controls.Add(this.lvwDSLuong);
+            this.pnlLuong.Controls.Add(this.lstvLuong);
             this.pnlLuong.Controls.Add(this.lbluong);
             this.pnlLuong.Location = new System.Drawing.Point(37, 613);
             this.pnlLuong.Name = "pnlLuong";
             this.pnlLuong.Size = new System.Drawing.Size(1122, 340);
             this.pnlLuong.TabIndex = 12;
             // 
-            // lvwDSLuong
+            // lstvLuong
             // 
-            this.lvwDSLuong.HideSelection = false;
-            this.lvwDSLuong.Location = new System.Drawing.Point(14, 54);
-            this.lvwDSLuong.Name = "lvwDSLuong";
-            this.lvwDSLuong.Size = new System.Drawing.Size(1085, 269);
-            this.lvwDSLuong.TabIndex = 1;
-            this.lvwDSLuong.UseCompatibleStateImageBehavior = false;
+            this.lstvLuong.HideSelection = false;
+            this.lstvLuong.Location = new System.Drawing.Point(14, 54);
+            this.lstvLuong.Name = "lstvLuong";
+            this.lstvLuong.Size = new System.Drawing.Size(1085, 269);
+            this.lstvLuong.TabIndex = 1;
+            this.lstvLuong.UseCompatibleStateImageBehavior = false;
             // 
             // lbluong
             // 
@@ -173,21 +165,21 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.pnlChiTiet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlChiTiet.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlChiTiet.Controls.Add(this.lvwChiTiet);
+            this.pnlChiTiet.Controls.Add(this.lstvLich);
             this.pnlChiTiet.Controls.Add(this.lblCV);
             this.pnlChiTiet.Location = new System.Drawing.Point(447, 67);
             this.pnlChiTiet.Name = "pnlChiTiet";
             this.pnlChiTiet.Size = new System.Drawing.Size(712, 452);
             this.pnlChiTiet.TabIndex = 10;
             // 
-            // lvwChiTiet
+            // lstvLich
             // 
-            this.lvwChiTiet.HideSelection = false;
-            this.lvwChiTiet.Location = new System.Drawing.Point(14, 55);
-            this.lvwChiTiet.Name = "lvwChiTiet";
-            this.lvwChiTiet.Size = new System.Drawing.Size(679, 376);
-            this.lvwChiTiet.TabIndex = 1;
-            this.lvwChiTiet.UseCompatibleStateImageBehavior = false;
+            this.lstvLich.HideSelection = false;
+            this.lstvLich.Location = new System.Drawing.Point(14, 55);
+            this.lstvLich.Name = "lstvLich";
+            this.lstvLich.Size = new System.Drawing.Size(679, 376);
+            this.lstvLich.TabIndex = 1;
+            this.lstvLich.UseCompatibleStateImageBehavior = false;
             // 
             // lblCV
             // 
@@ -205,21 +197,22 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.pnlDSNV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlDSNV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlDSNV.Controls.Add(this.lvwDSNV);
+            this.pnlDSNV.Controls.Add(this.lstvNhanVien);
             this.pnlDSNV.Controls.Add(this.lblDSNV);
             this.pnlDSNV.Location = new System.Drawing.Point(37, 67);
             this.pnlDSNV.Name = "pnlDSNV";
             this.pnlDSNV.Size = new System.Drawing.Size(381, 513);
             this.pnlDSNV.TabIndex = 8;
             // 
-            // lvwDSNV
+            // lstvNhanVien
             // 
-            this.lvwDSNV.HideSelection = false;
-            this.lvwDSNV.Location = new System.Drawing.Point(14, 54);
-            this.lvwDSNV.Name = "lvwDSNV";
-            this.lvwDSNV.Size = new System.Drawing.Size(345, 437);
-            this.lvwDSNV.TabIndex = 1;
-            this.lvwDSNV.UseCompatibleStateImageBehavior = false;
+            this.lstvNhanVien.HideSelection = false;
+            this.lstvNhanVien.Location = new System.Drawing.Point(14, 54);
+            this.lstvNhanVien.Name = "lstvNhanVien";
+            this.lstvNhanVien.Size = new System.Drawing.Size(345, 437);
+            this.lstvNhanVien.TabIndex = 1;
+            this.lstvNhanVien.UseCompatibleStateImageBehavior = false;
+            this.lstvNhanVien.SelectedIndexChanged += new System.EventHandler(this.lstvNhanVien_SelectedIndexChanged);
             // 
             // lblDSNV
             // 
@@ -232,6 +225,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDSNV.TabIndex = 0;
             this.lblDSNV.Text = "Danh sách công nhân";
             this.lblDSNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTP
+            // 
+            this.txtTP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTP.Location = new System.Drawing.Point(630, 550);
+            this.txtTP.Name = "txtTP";
+            this.txtTP.Size = new System.Drawing.Size(294, 30);
+            this.txtTP.TabIndex = 9;
+            this.txtTP.Text = "0";
             // 
             // frmTinhLuongCN
             // 
@@ -267,18 +270,18 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.PictureBox picNen;
         private FontAwesome.Sharp.IconButton btnTinhLuong;
         private FontAwesome.Sharp.IconButton btnTiemKiem;
-        private System.Windows.Forms.TextBox txtTP;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Panel pnlLuong;
-        private System.Windows.Forms.ListView lvwDSLuong;
+        private System.Windows.Forms.ListView lstvLuong;
         private System.Windows.Forms.Label lbluong;
         private System.Windows.Forms.Label lblThuong;
         private System.Windows.Forms.Panel pnlChiTiet;
-        private System.Windows.Forms.ListView lvwChiTiet;
+        private System.Windows.Forms.ListView lstvLich;
         private System.Windows.Forms.Label lblCV;
         private System.Windows.Forms.Panel pnlDSNV;
-        private System.Windows.Forms.ListView lvwDSNV;
+        private System.Windows.Forms.ListView lstvNhanVien;
         private System.Windows.Forms.Label lblDSNV;
+        private System.Windows.Forms.TextBox txtTP;
     }
 }
