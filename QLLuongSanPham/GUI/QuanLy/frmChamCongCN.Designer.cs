@@ -258,12 +258,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // lstvLich
             // 
-            this.lstvCongDoan.HideSelection = false;
-            this.lstvCongDoan.Location = new System.Drawing.Point(16, 55);
-            this.lstvCongDoan.Name = "lstvCongDoan";
-            this.lstvCongDoan.Size = new System.Drawing.Size(1117, 178);
-            this.lstvCongDoan.TabIndex = 1;
-            this.lstvCongDoan.UseCompatibleStateImageBehavior = false;
+            this.lstvLich.HideSelection = false;
+            this.lstvLich.Location = new System.Drawing.Point(16, 55);
+            this.lstvLich.Name = "lstvCongDoan";
+            this.lstvLich.Size = new System.Drawing.Size(1117, 178);
+            this.lstvLich.TabIndex = 1;
+            this.lstvLich.UseCompatibleStateImageBehavior = false;
             // 
             // lblList
             // 

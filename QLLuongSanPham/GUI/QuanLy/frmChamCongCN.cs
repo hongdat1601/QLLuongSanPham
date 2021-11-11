@@ -47,8 +47,6 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void LoadCombobox()
         {
-            caLamDAO.GetCaLams().ToList().ForEach(x => cboTenCa.Items.Add(x.TenCa));
-            cboTenCa.SelectedIndex = 0;
         }
 
         private void CreateColumn()
