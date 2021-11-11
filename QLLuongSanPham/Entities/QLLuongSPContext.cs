@@ -24,7 +24,6 @@ namespace QLLuongSanPham.Entities
         public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<PhongBan> PhongBan { get; set; }
         public virtual DbSet<SanPham> SanPham { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
         public virtual DbSet<TrinhDoHocVan> TrinhDoHocVan { get; set; }
 
