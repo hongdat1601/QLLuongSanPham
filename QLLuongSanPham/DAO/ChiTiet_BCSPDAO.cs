@@ -80,5 +80,10 @@ namespace QLLuongSanPham.DAO
 
             }
         }
+
+        public IEnumerable<CT_BangCongSP> GetByIDBangCong(int id)
+        {
+            return context.CT_BangCongSP.Where(x => x.ID_BCSP == id);
+        }
     }
 }

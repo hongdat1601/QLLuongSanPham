@@ -29,11 +29,14 @@ namespace QLLuongSanPham.DAO
                 .FirstOrDefault();
         }
 
-        public CaLam GetIDByName(string name)
+        public int GetIDByName(string name)
         {
-            return context.CaLam
-                .Where(x => x.TenCa.Equals(name))
-                .FirstOrDefault();
+            var ca = GetCaLams().Where(x => x.TenCa == name).FirstOrDefault();
+
+            if (ca == null)
+                return -1;
+            else
+                return ca.ID;
         }
 
         public bool AddCaLam(CaLam ca)

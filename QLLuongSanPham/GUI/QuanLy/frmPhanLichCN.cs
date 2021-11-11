@@ -251,7 +251,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 CT_BangCongSP ct;
                 dynamic nv;
 
-                bc.IDCaLam = caDAO.GetIDByName(cboCa.Text).ID;
+                bc.IDCaLam = caDAO.GetIDByName(cboCa.Text);
                 bc.IDCongDoan = cdDAO.GetByName(cboTenCD.Text).ID;
                 bc.SoLuongNguoi = count;
                 bc.NgayDiLam = dtmNgay.Value;

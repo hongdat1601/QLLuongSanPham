@@ -81,5 +81,17 @@ namespace QLLuongSanPham.DAO
             }
         }
 
+        public IEnumerable<BangCongSP> GetBangCongSPsByDateAndCa(string date, int idCa)
+        {
+            var bc = GetBangCongSPs().Where(x => x.NgayDiLam.Value.ToString("dd/MM/yyyy").Contains(date));
+
+            if (idCa != -1)
+            {
+                bc = bc.Where(x => x.IDCaLam == idCa);
+            }
+
+            return bc;
+        }
+
     }
 }
