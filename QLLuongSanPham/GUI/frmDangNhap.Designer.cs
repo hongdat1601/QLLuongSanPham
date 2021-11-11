@@ -91,6 +91,7 @@ namespace QLLuongSanPham.GUI
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(323, 43);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.Text = "CN_001";
             this.txtUsername.WordWrap = false;
             // 
             // label1
@@ -116,6 +117,7 @@ namespace QLLuongSanPham.GUI
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(323, 43);
             this.txtPassword.TabIndex = 10;
+            this.txtPassword.Text = "123";
             this.txtPassword.WordWrap = false;
             // 
             // panel2

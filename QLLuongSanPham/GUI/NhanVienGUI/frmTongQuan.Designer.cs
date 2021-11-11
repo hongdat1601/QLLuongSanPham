@@ -30,10 +30,10 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private void InitializeComponent()
         {
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picAvata = new System.Windows.Forms.PictureBox();
             this.btnSalaryDestop = new FontAwesome.Sharp.IconButton();
             this.btnInfoDesktop = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvata)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -47,16 +47,16 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.lblWelcome.TabIndex = 10;
             this.lblWelcome.Text = "Chào mừng nhân viên Võ Minh Phương";
             // 
-            // pictureBox1
+            // picAvata
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(423, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 183);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.picAvata.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picAvata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picAvata.Location = new System.Drawing.Point(423, 78);
+            this.picAvata.Name = "picAvata";
+            this.picAvata.Size = new System.Drawing.Size(360, 183);
+            this.picAvata.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvata.TabIndex = 9;
+            this.picAvata.TabStop = false;
             // 
             // btnSalaryDestop
             // 
@@ -77,6 +77,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.btnSalaryDestop.TabIndex = 7;
             this.btnSalaryDestop.Text = "Lương";
             this.btnSalaryDestop.UseVisualStyleBackColor = true;
+            this.btnSalaryDestop.Click += new System.EventHandler(this.btnSalaryDestop_Click);
             // 
             // btnInfoDesktop
             // 
@@ -105,13 +106,13 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1239, 814);
             this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picAvata);
             this.Controls.Add(this.btnSalaryDestop);
             this.Controls.Add(this.btnInfoDesktop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTongQuan";
             this.Text = "frmTongQuan";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,7 +121,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         #endregion
 
         private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picAvata;
         private FontAwesome.Sharp.IconButton btnSalaryDestop;
         private FontAwesome.Sharp.IconButton btnInfoDesktop;
     }

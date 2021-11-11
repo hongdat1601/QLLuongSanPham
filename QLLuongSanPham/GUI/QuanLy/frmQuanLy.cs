@@ -270,22 +270,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnTimKiemPB_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
-            {
-                OpenFormChild(new frmTiemKiemPB());
-            }
-            FocusSubBtn(btn);
+           
         }
 
         private void btnTimKiemHD_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;           
-            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
-            {
-                OpenFormChild(new frmTiemKiemHD());
-            }
-            FocusSubBtn(btn);
+           
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)

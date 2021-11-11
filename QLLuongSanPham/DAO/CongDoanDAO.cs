@@ -21,6 +21,7 @@ namespace QLLuongSanPham.DAO
         {
             return context.CongDoan.Where(x => x.IDSanPham == id);
         }
+
         public CongDoan GetById(int id)
         {
             return context.CongDoan

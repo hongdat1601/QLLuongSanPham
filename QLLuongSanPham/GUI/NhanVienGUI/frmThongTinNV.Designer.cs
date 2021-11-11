@@ -38,8 +38,8 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.lblSalaryBasic = new System.Windows.Forms.Label();
             this.gbxInfoWork = new System.Windows.Forms.GroupBox();
             this.txtSeniority = new System.Windows.Forms.TextBox();
-            this.lblDateStart = new System.Windows.Forms.Label();
-            this.txtStartDate = new System.Windows.Forms.TextBox();
+            this.lblEnglish = new System.Windows.Forms.Label();
+            this.txtEnglish = new System.Windows.Forms.TextBox();
             this.lblSeniority = new System.Windows.Forms.Label();
             this.txtStudy = new System.Windows.Forms.TextBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
@@ -62,6 +62,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.lblName = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.picImage = new System.Windows.Forms.PictureBox();
+            this.btnChonAnh = new FontAwesome.Sharp.IconButton();
             this.gbxInfoSlary.SuspendLayout();
             this.gbxInfoWork.SuspendLayout();
             this.gbxInfor.SuspendLayout();
@@ -96,6 +97,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.btnFixInfo.TabIndex = 12;
             this.btnFixInfo.Text = "Sữa thông tin";
             this.btnFixInfo.UseVisualStyleBackColor = true;
+            this.btnFixInfo.Click += new System.EventHandler(this.btnFixInfo_Click);
             // 
             // gbxInfoSlary
             // 
@@ -121,7 +123,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtIndexSalary.Name = "txtIndexSalary";
             this.txtIndexSalary.Size = new System.Drawing.Size(410, 29);
             this.txtIndexSalary.TabIndex = 2;
-            this.txtIndexSalary.Text = "4.2";
             // 
             // txtBasicSalary
             // 
@@ -132,7 +133,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtBasicSalary.Name = "txtBasicSalary";
             this.txtBasicSalary.Size = new System.Drawing.Size(410, 29);
             this.txtBasicSalary.TabIndex = 2;
-            this.txtBasicSalary.Text = "15.000.000 VNĐ";
             // 
             // lblIndexSalary
             // 
@@ -160,8 +160,8 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             // 
             this.gbxInfoWork.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbxInfoWork.Controls.Add(this.txtSeniority);
-            this.gbxInfoWork.Controls.Add(this.lblDateStart);
-            this.gbxInfoWork.Controls.Add(this.txtStartDate);
+            this.gbxInfoWork.Controls.Add(this.lblEnglish);
+            this.gbxInfoWork.Controls.Add(this.txtEnglish);
             this.gbxInfoWork.Controls.Add(this.lblSeniority);
             this.gbxInfoWork.Controls.Add(this.txtStudy);
             this.gbxInfoWork.Controls.Add(this.txtPosition);
@@ -173,7 +173,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.gbxInfoWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxInfoWork.Font = new System.Drawing.Font("Verdana", 8F);
             this.gbxInfoWork.ForeColor = System.Drawing.Color.Black;
-            this.gbxInfoWork.Location = new System.Drawing.Point(35, 287);
+            this.gbxInfoWork.Location = new System.Drawing.Point(35, 305);
             this.gbxInfoWork.Name = "gbxInfoWork";
             this.gbxInfoWork.Size = new System.Drawing.Size(818, 300);
             this.gbxInfoWork.TabIndex = 9;
@@ -189,29 +189,27 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtSeniority.Name = "txtSeniority";
             this.txtSeniority.Size = new System.Drawing.Size(410, 29);
             this.txtSeniority.TabIndex = 2;
-            this.txtSeniority.Text = "2 năm";
             // 
-            // lblDateStart
+            // lblEnglish
             // 
-            this.lblDateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDateStart.AutoSize = true;
-            this.lblDateStart.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblDateStart.Location = new System.Drawing.Point(22, 195);
-            this.lblDateStart.Name = "lblDateStart";
-            this.lblDateStart.Size = new System.Drawing.Size(225, 23);
-            this.lblDateStart.TabIndex = 1;
-            this.lblDateStart.Text = "Ngày bắt đầu công tác";
+            this.lblEnglish.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEnglish.AutoSize = true;
+            this.lblEnglish.Font = new System.Drawing.Font("Verdana", 10.8F);
+            this.lblEnglish.Location = new System.Drawing.Point(22, 195);
+            this.lblEnglish.Name = "lblEnglish";
+            this.lblEnglish.Size = new System.Drawing.Size(271, 23);
+            this.lblEnglish.TabIndex = 1;
+            this.lblEnglish.Text = "Trình độ ngoại ngữ (IELTS)";
             // 
-            // txtStartDate
+            // txtEnglish
             // 
-            this.txtStartDate.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtStartDate.Enabled = false;
-            this.txtStartDate.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtStartDate.Location = new System.Drawing.Point(339, 189);
-            this.txtStartDate.Name = "txtStartDate";
-            this.txtStartDate.Size = new System.Drawing.Size(410, 29);
-            this.txtStartDate.TabIndex = 2;
-            this.txtStartDate.Text = "15/10/2021";
+            this.txtEnglish.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtEnglish.Enabled = false;
+            this.txtEnglish.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.txtEnglish.Location = new System.Drawing.Point(339, 189);
+            this.txtEnglish.Name = "txtEnglish";
+            this.txtEnglish.Size = new System.Drawing.Size(410, 29);
+            this.txtEnglish.TabIndex = 2;
             // 
             // lblSeniority
             // 
@@ -233,7 +231,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtStudy.Name = "txtStudy";
             this.txtStudy.Size = new System.Drawing.Size(410, 29);
             this.txtStudy.TabIndex = 2;
-            this.txtStudy.Text = "Đại học";
             // 
             // txtPosition
             // 
@@ -244,7 +241,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(410, 29);
             this.txtPosition.TabIndex = 2;
-            this.txtPosition.Text = "Nhân viên";
             // 
             // txtDeparment
             // 
@@ -255,7 +251,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtDeparment.Name = "txtDeparment";
             this.txtDeparment.Size = new System.Drawing.Size(410, 29);
             this.txtDeparment.TabIndex = 2;
-            this.txtDeparment.Text = "Ban quản trị";
             // 
             // lblStudy
             // 
@@ -324,7 +319,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.cboSex.Name = "cboSex";
             this.cboSex.Size = new System.Drawing.Size(121, 30);
             this.cboSex.TabIndex = 3;
-            this.cboSex.Text = "Nam";
             // 
             // txtAdress
             // 
@@ -333,7 +327,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.Size = new System.Drawing.Size(658, 29);
             this.txtAdress.TabIndex = 2;
-            this.txtAdress.Text = "số 41 đường 20 phường Hiệp Bình chánh TP Thủ Đức";
             this.txtAdress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPhone
@@ -343,7 +336,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(182, 29);
             this.txtPhone.TabIndex = 2;
-            this.txtPhone.Text = "0396887293";
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtID
@@ -353,7 +345,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(265, 29);
             this.txtID.TabIndex = 2;
-            this.txtID.Text = "321736242";
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBirhDay
@@ -363,7 +354,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtBirhDay.Name = "txtBirhDay";
             this.txtBirhDay.Size = new System.Drawing.Size(265, 29);
             this.txtBirhDay.TabIndex = 2;
-            this.txtBirhDay.Text = "28/12/2001";
             this.txtBirhDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtName
@@ -373,7 +363,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(265, 29);
             this.txtName.TabIndex = 2;
-            this.txtName.Text = "VÕ MINH PHƯƠNG";
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblAdress
@@ -447,11 +436,10 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.lblRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.lblRole.Location = new System.Drawing.Point(32, 234);
+            this.lblRole.Location = new System.Drawing.Point(32, 245);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(181, 18);
+            this.lblRole.Size = new System.Drawing.Size(0, 18);
             this.lblRole.TabIndex = 7;
-            this.lblRole.Text = "Nhân viên hành chính";
             // 
             // picImage
             // 
@@ -464,11 +452,29 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.picImage.TabIndex = 6;
             this.picImage.TabStop = false;
             // 
+            // btnChonAnh
+            // 
+            this.btnChonAnh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnChonAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnChonAnh.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
+            this.btnChonAnh.IconColor = System.Drawing.Color.Peru;
+            this.btnChonAnh.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnChonAnh.IconSize = 25;
+            this.btnChonAnh.Location = new System.Drawing.Point(141, 234);
+            this.btnChonAnh.Name = "btnChonAnh";
+            this.btnChonAnh.Size = new System.Drawing.Size(115, 40);
+            this.btnChonAnh.TabIndex = 35;
+            this.btnChonAnh.Text = "Chọn ảnh";
+            this.btnChonAnh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChonAnh.UseVisualStyleBackColor = true;
+            this.btnChonAnh.Click += new System.EventHandler(this.btnChonAnh_Click);
+            // 
             // frmThongtinNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1205, 809);
+            this.Controls.Add(this.btnChonAnh);
             this.Controls.Add(this.btnFixPassWord);
             this.Controls.Add(this.btnFixInfo);
             this.Controls.Add(this.gbxInfoSlary);
@@ -503,8 +509,8 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private System.Windows.Forms.Label lblSalaryBasic;
         private System.Windows.Forms.GroupBox gbxInfoWork;
         private System.Windows.Forms.TextBox txtSeniority;
-        private System.Windows.Forms.Label lblDateStart;
-        private System.Windows.Forms.TextBox txtStartDate;
+        private System.Windows.Forms.Label lblEnglish;
+        private System.Windows.Forms.TextBox txtEnglish;
         private System.Windows.Forms.Label lblSeniority;
         private System.Windows.Forms.TextBox txtStudy;
         private System.Windows.Forms.TextBox txtPosition;
@@ -527,5 +533,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.PictureBox picImage;
+        private FontAwesome.Sharp.IconButton btnChonAnh;
     }
 }

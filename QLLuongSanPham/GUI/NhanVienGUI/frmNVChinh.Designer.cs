@@ -236,6 +236,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.btnHide.Size = new System.Drawing.Size(41, 37);
             this.btnHide.TabIndex = 2;
             this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnShow
             // 
@@ -280,7 +281,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.pnlDesktop.Size = new System.Drawing.Size(976, 774);
             this.pnlDesktop.TabIndex = 3;
             // 
-            // frmNhanVien
+            // frmNVChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -290,7 +291,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.Controls.Add(this.panelTab);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmNhanVien";
+            this.Name = "frmNVChinh";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainEmployee_Load);
             this.panelMenu.ResumeLayout(false);

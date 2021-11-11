@@ -64,6 +64,7 @@
     <Compile Include="Constant.cs" />
     <Compile Include="DAO\BangCongCNDAO.cs" />
     <Compile Include="DAO\BangCongHCDAO.cs" />
+    <Compile Include="DAO\BangLuongDAO.cs" />
     <Compile Include="DAO\BCCN_CT_NVDAO.cs" />
     <Compile Include="DAO\CaLamDAO.cs" />
     <Compile Include="DAO\ChiTiet_BCSPDAO.cs" />

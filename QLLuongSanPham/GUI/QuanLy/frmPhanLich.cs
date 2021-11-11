@@ -33,7 +33,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             pnlMain.Controls.Add(activeForm);
             activeForm.BringToFront();
             activeForm.Show();
-
         }
 
         private void btnCongNhan_Click(object sender, EventArgs e)

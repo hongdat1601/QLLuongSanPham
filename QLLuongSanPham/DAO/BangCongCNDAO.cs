@@ -17,6 +17,13 @@ namespace QLLuongSanPham.DAO
         }
 
         public IEnumerable<BangCongSP> GetBangCongSPs() => context.BangCongSP;
+        
+        public BangCongSP GetByID(int id)
+        {
+            return context.BangCongSP
+                .Where(x => x.ID == id)
+                .FirstOrDefault();
+        }
 
         public BangCongSP GetByIDCD(int id)
         {
@@ -24,6 +31,7 @@ namespace QLLuongSanPham.DAO
                 .Where(x => x.IDCongDoan == id)
                 .FirstOrDefault();
         }
+
         public bool AddBCCN(BangCongSP bc)
         {
             using (var db = context.Database.BeginTransaction())
