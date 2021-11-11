@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLuongSanPham.Entities;
+using QLLuongSanPham.DAO;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
     public partial class frmChamCongHC : Form
     {
+
         public frmChamCongHC()
         {
             InitializeComponent();
+        }
+
+        private void btnTimKimSP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

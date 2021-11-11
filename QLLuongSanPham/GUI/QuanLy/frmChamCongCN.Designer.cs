@@ -279,6 +279,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // gbxTT
             // 
+            this.gbxTT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbxTT.Controls.Add(this.btnTinhLuong);
             this.gbxTT.Controls.Add(this.numericUpDown1);
             this.gbxTT.Controls.Add(this.dateTimePicker1);

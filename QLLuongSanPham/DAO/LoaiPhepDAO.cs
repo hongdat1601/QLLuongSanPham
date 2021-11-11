@@ -23,5 +23,12 @@ namespace QLLuongSanPham.DAO
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
+
+        public LoaiPhep GetByName(string name)
+        {
+            return context.LoaiPhep
+                .Where(x => x.TenPhep == name)
+                .FirstOrDefault();
+        }
     }
 }

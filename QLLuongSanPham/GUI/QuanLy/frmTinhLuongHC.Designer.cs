@@ -50,13 +50,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDSNV = new System.Windows.Forms.Panel();
             this.lvwDSNV = new System.Windows.Forms.ListView();
             this.lblDSNV = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gboLuong = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.pnlLuong.SuspendLayout();
             this.pnlNgayNghi.SuspendLayout();
             this.pnlCongViec.SuspendLayout();
             this.pnlDSNV.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gboLuong.SuspendLayout();
             this.SuspendLayout();
             // 
             // picNen
@@ -299,19 +299,20 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDSNV.Text = "Danh sách nhân viên hành chánh";
             this.lblDSNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // groupBox1
+            // gboLuong
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtThuongPhat);
-            this.groupBox1.Controls.Add(this.lblTP);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(28, 367);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 233);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cập nhật lương";
+            this.gboLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gboLuong.Controls.Add(this.textBox3);
+            this.gboLuong.Controls.Add(this.label1);
+            this.gboLuong.Controls.Add(this.txtThuongPhat);
+            this.gboLuong.Controls.Add(this.lblTP);
+            this.gboLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboLuong.Location = new System.Drawing.Point(28, 367);
+            this.gboLuong.Name = "gboLuong";
+            this.gboLuong.Size = new System.Drawing.Size(700, 233);
+            this.gboLuong.TabIndex = 25;
+            this.gboLuong.TabStop = false;
+            this.gboLuong.Text = "Cập nhật lương";
             // 
             // frmTinhLuongHC
             // 
@@ -319,7 +320,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1336, 994);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gboLuong);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.lblTen);
@@ -339,8 +340,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlNgayNghi.ResumeLayout(false);
             this.pnlCongViec.ResumeLayout(false);
             this.pnlDSNV.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gboLuong.ResumeLayout(false);
+            this.gboLuong.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,6 +370,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Panel pnlDSNV;
         private System.Windows.Forms.ListView lvwDSNV;
         private System.Windows.Forms.Label lblDSNV;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gboLuong;
     }
 }
