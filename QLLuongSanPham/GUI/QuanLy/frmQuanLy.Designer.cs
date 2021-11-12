@@ -740,7 +740,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.ptcMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptcMain.Image = ((System.Drawing.Image)(resources.GetObject("ptcMain.Image")));
-            this.ptcMain.Location = new System.Drawing.Point(82, 217);
+            this.ptcMain.Location = new System.Drawing.Point(87, 239);
             this.ptcMain.Name = "ptcMain";
             this.ptcMain.Size = new System.Drawing.Size(915, 610);
             this.ptcMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

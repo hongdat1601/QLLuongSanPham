@@ -133,7 +133,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.Text = stt.ToString();
                 item.SubItems.Add(nhanVienDAO.GetById(bl.IDNhanVien.Value).HoTen);
                 item.SubItems.Add(bl.NgayLap.Value.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(bl.TienLuong.Value.ToString() + " VND");
+                item.SubItems.Add(bl.TienLuong.ToString() + " VND");
 
                 item.Tag = bl;
 

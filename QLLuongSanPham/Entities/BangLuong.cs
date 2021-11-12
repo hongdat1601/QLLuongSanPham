@@ -15,7 +15,7 @@ namespace QLLuongSanPham.Entities
         public DateTime? NgayLap { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal? TienLuong { get; set; }
+        public decimal TienLuong { get; set; }
 
         public int? IDNhanVien { get; set; }
 
