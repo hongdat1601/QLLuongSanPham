@@ -15,18 +15,18 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<TrinhDoHocVan> GetTrinhDoHocVans() => context.TrinhDoHocVan;
+        public IEnumerable<TrinhDoHocVan> GetTrinhDoHocVans() => context.TrinhDoHocVans;
 
         public TrinhDoHocVan GetHVByID(int id)
         {
-            return context.TrinhDoHocVan
+            return context.TrinhDoHocVans
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public int GetIDByName(string name)
         {
-            var q = context.TrinhDoHocVan
+            var q = context.TrinhDoHocVans
                 .Where(x => x.TenTrinhDo == name)
                 .FirstOrDefault();
 
@@ -39,7 +39,7 @@ namespace QLLuongSanPham.DAO
         public string GetNameByID(int id)
         {
             string name;
-            var q = from i in context.TrinhDoHocVan
+            var q = from i in context.TrinhDoHocVans
                     where i.ID == id
                     select i.TenTrinhDo;
             name = q.FirstOrDefault();

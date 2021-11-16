@@ -18,18 +18,18 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<BangCongHC> GetBangCongHCs() => context.BangCongHC;
+        public IEnumerable<BangCongHC> GetBangCongHCs() => context.BangCongHCs;
 
         public BangCongHC GetByID(int id)
         {
-            return context.BangCongHC
+            return context.BangCongHCs
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public IEnumerable<BangCongHC> GetBCByIDNV(int id)
         {
-            return context.BangCongHC
+            return context.BangCongHCs
                 .Where(x=> x.IDNhanVien == id);
         }
         public bool AddLich(BangCongHC lich)
@@ -38,7 +38,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.BangCongHC.Add(lich);
+                    context.BangCongHCs.Add(lich);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -81,7 +81,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.BangCongHC.Remove(bc);
+                    context.BangCongHCs.Remove(bc);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -101,7 +101,7 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<BangCongHC> GetBangCongHCsByIDNVAndDate(int id, int month, int year)
         {
-            return context.BangCongHC
+            return context.BangCongHCs
                 .Where(x => x.IDNhanVien == id 
                 && x.NgayCham.Value.Month == month
                 && x.NgayCham.Value.Year == year);

@@ -16,15 +16,15 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<SanPham> GetSanPhams() => context.SanPham;
+        public IEnumerable<SanPham> GetSanPhams() => context.SanPhams;
 
         public IEnumerable<SanPham> GetSPByChar(string input)
         {
-            return context.SanPham.Where(x => x.TenSP.Contains(input));
+            return context.SanPhams.Where(x => x.TenSP.Contains(input));
         }
         public SanPham GetById(int id)
         {
-            return context.SanPham
+            return context.SanPhams
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
@@ -35,7 +35,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.SanPham.Add(sp);
+                    context.SanPhams.Add(sp);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -54,7 +54,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.SanPham.Remove(sp);
+                    context.SanPhams.Remove(sp);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -95,10 +95,10 @@ namespace QLLuongSanPham.DAO
             }
 
             if (price == -1)
-                return context.SanPham
+                return context.SanPhams
                     .Where(x => x.TenSP.Contains(name));
             else
-                return context.SanPham
+                return context.SanPhams
                     .Where(x => x.TenSP.Contains(name) && x.DonGia == price);
         }
     }

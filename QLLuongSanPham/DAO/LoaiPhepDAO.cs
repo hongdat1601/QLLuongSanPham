@@ -15,18 +15,18 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<LoaiPhep> GetLoaiPheps() => context.LoaiPhep;
+        public IEnumerable<LoaiPhep> GetLoaiPheps() => context.LoaiPheps;
 
         public LoaiPhep GetByID(int id)
         {
-            return context.LoaiPhep
+            return context.LoaiPheps
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public LoaiPhep GetByName(string name)
         {
-            return context.LoaiPhep
+            return context.LoaiPheps
                 .Where(x => x.TenPhep == name)
                 .FirstOrDefault();
         }

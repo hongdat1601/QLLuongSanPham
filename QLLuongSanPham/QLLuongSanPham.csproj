@@ -107,6 +107,7 @@
     <Compile Include="Entities\PhongBan.cs" />
     <Compile Include="Entities\QLLuongSPContext.cs" />
     <Compile Include="Entities\SanPham.cs" />
+    <Compile Include="Entities\sysdiagram.cs" />
     <Compile Include="Entities\TaiKhoan.cs" />
     <Compile Include="Entities\TrinhDoHocVan.cs" />
     <Compile Include="GUI\frmDangNhap.cs">
@@ -364,6 +365,7 @@
     <Content Include="Resources\PhanLich.jpg" />
     <None Include="Resources\TinhLuong.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

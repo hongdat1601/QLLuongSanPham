@@ -33,15 +33,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDS = new System.Windows.Forms.Label();
             this.lstvPhongBan = new System.Windows.Forms.ListView();
             this.txtTenSearch = new System.Windows.Forms.TextBox();
-            this.gboTT = new System.Windows.Forms.GroupBox();
-            this.dtmNgayThanhLap = new System.Windows.Forms.DateTimePicker();
-            this.txtTenQL = new System.Windows.Forms.TextBox();
-            this.txtSLNV = new System.Windows.Forms.TextBox();
-            this.txtTenPhongBan = new System.Windows.Forms.TextBox();
-            this.lblNumber = new System.Windows.Forms.Label();
-            this.lblNgayTL = new System.Windows.Forms.Label();
-            this.lblTenQL = new System.Windows.Forms.Label();
-            this.lblTenPB = new System.Windows.Forms.Label();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
@@ -49,10 +40,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.ptcNen = new System.Windows.Forms.PictureBox();
             this.pnlXuLy = new System.Windows.Forms.Panel();
             this.lblNameSearch = new System.Windows.Forms.Label();
+            this.lblTenPB = new System.Windows.Forms.Label();
+            this.lblTenQL = new System.Windows.Forms.Label();
+            this.lblNgayTL = new System.Windows.Forms.Label();
+            this.lblNumber = new System.Windows.Forms.Label();
+            this.txtTenPhongBan = new System.Windows.Forms.TextBox();
+            this.txtSLNV = new System.Windows.Forms.TextBox();
+            this.txtTenQL = new System.Windows.Forms.TextBox();
+            this.dtmNgayThanhLap = new System.Windows.Forms.DateTimePicker();
+            this.gboTT = new System.Windows.Forms.GroupBox();
             this.pnlDSPB.SuspendLayout();
-            this.gboTT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).BeginInit();
             this.pnlXuLy.SuspendLayout();
+            this.gboTT.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDSPB
@@ -99,101 +99,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtTenSearch.Name = "txtTenSearch";
             this.txtTenSearch.Size = new System.Drawing.Size(400, 30);
             this.txtTenSearch.TabIndex = 26;
-            // 
-            // gboTT
-            // 
-            this.gboTT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gboTT.Controls.Add(this.dtmNgayThanhLap);
-            this.gboTT.Controls.Add(this.txtTenQL);
-            this.gboTT.Controls.Add(this.txtSLNV);
-            this.gboTT.Controls.Add(this.txtTenPhongBan);
-            this.gboTT.Controls.Add(this.lblNumber);
-            this.gboTT.Controls.Add(this.lblNgayTL);
-            this.gboTT.Controls.Add(this.lblTenQL);
-            this.gboTT.Controls.Add(this.lblTenPB);
-            this.gboTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboTT.Location = new System.Drawing.Point(19, 50);
-            this.gboTT.Name = "gboTT";
-            this.gboTT.Size = new System.Drawing.Size(739, 436);
-            this.gboTT.TabIndex = 25;
-            this.gboTT.TabStop = false;
-            this.gboTT.Text = "Thông tin phòng ban";
-            // 
-            // dtmNgayThanhLap
-            // 
-            this.dtmNgayThanhLap.Enabled = false;
-            this.dtmNgayThanhLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmNgayThanhLap.Location = new System.Drawing.Point(264, 171);
-            this.dtmNgayThanhLap.Name = "dtmNgayThanhLap";
-            this.dtmNgayThanhLap.Size = new System.Drawing.Size(448, 38);
-            this.dtmNgayThanhLap.TabIndex = 14;
-            // 
-            // txtTenQL
-            // 
-            this.txtTenQL.Enabled = false;
-            this.txtTenQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenQL.Location = new System.Drawing.Point(264, 259);
-            this.txtTenQL.Name = "txtTenQL";
-            this.txtTenQL.Size = new System.Drawing.Size(448, 38);
-            this.txtTenQL.TabIndex = 13;
-            // 
-            // txtSLNV
-            // 
-            this.txtSLNV.Enabled = false;
-            this.txtSLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSLNV.Location = new System.Drawing.Point(264, 355);
-            this.txtSLNV.Name = "txtSLNV";
-            this.txtSLNV.Size = new System.Drawing.Size(141, 38);
-            this.txtSLNV.TabIndex = 12;
-            // 
-            // txtTenPhongBan
-            // 
-            this.txtTenPhongBan.Enabled = false;
-            this.txtTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenPhongBan.Location = new System.Drawing.Point(264, 71);
-            this.txtTenPhongBan.Name = "txtTenPhongBan";
-            this.txtTenPhongBan.Size = new System.Drawing.Size(448, 38);
-            this.txtTenPhongBan.TabIndex = 10;
-            // 
-            // lblNumber
-            // 
-            this.lblNumber.AutoSize = true;
-            this.lblNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumber.Location = new System.Drawing.Point(22, 362);
-            this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(219, 25);
-            this.lblNumber.TabIndex = 8;
-            this.lblNumber.Text = "Số Lượng Nhân Viên:";
-            // 
-            // lblNgayTL
-            // 
-            this.lblNgayTL.AutoSize = true;
-            this.lblNgayTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTL.Location = new System.Drawing.Point(62, 174);
-            this.lblNgayTL.Name = "lblNgayTL";
-            this.lblNgayTL.Size = new System.Drawing.Size(179, 25);
-            this.lblNgayTL.TabIndex = 6;
-            this.lblNgayTL.Text = "Ngày Thành Lập:";
-            // 
-            // lblTenQL
-            // 
-            this.lblTenQL.AutoSize = true;
-            this.lblTenQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenQL.Location = new System.Drawing.Point(96, 266);
-            this.lblTenQL.Name = "lblTenQL";
-            this.lblTenQL.Size = new System.Drawing.Size(145, 25);
-            this.lblTenQL.TabIndex = 4;
-            this.lblTenQL.Text = "Tên Quản Lý:";
-            // 
-            // lblTenPB
-            // 
-            this.lblTenPB.AutoSize = true;
-            this.lblTenPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenPB.Location = new System.Drawing.Point(72, 78);
-            this.lblTenPB.Name = "lblTenPB";
-            this.lblTenPB.Size = new System.Drawing.Size(169, 25);
-            this.lblTenPB.TabIndex = 2;
-            this.lblTenPB.Text = "Tên Phòng Ban:";
             // 
             // btnXoa
             // 
@@ -298,6 +203,101 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblNameSearch.TabIndex = 32;
             this.lblNameSearch.Text = "Tên phòng ban";
             // 
+            // lblTenPB
+            // 
+            this.lblTenPB.AutoSize = true;
+            this.lblTenPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenPB.Location = new System.Drawing.Point(72, 78);
+            this.lblTenPB.Name = "lblTenPB";
+            this.lblTenPB.Size = new System.Drawing.Size(169, 25);
+            this.lblTenPB.TabIndex = 2;
+            this.lblTenPB.Text = "Tên Phòng Ban:";
+            // 
+            // lblTenQL
+            // 
+            this.lblTenQL.AutoSize = true;
+            this.lblTenQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenQL.Location = new System.Drawing.Point(96, 266);
+            this.lblTenQL.Name = "lblTenQL";
+            this.lblTenQL.Size = new System.Drawing.Size(145, 25);
+            this.lblTenQL.TabIndex = 4;
+            this.lblTenQL.Text = "Tên Quản Lý:";
+            // 
+            // lblNgayTL
+            // 
+            this.lblNgayTL.AutoSize = true;
+            this.lblNgayTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayTL.Location = new System.Drawing.Point(62, 174);
+            this.lblNgayTL.Name = "lblNgayTL";
+            this.lblNgayTL.Size = new System.Drawing.Size(179, 25);
+            this.lblNgayTL.TabIndex = 6;
+            this.lblNgayTL.Text = "Ngày Thành Lập:";
+            // 
+            // lblNumber
+            // 
+            this.lblNumber.AutoSize = true;
+            this.lblNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumber.Location = new System.Drawing.Point(22, 362);
+            this.lblNumber.Name = "lblNumber";
+            this.lblNumber.Size = new System.Drawing.Size(219, 25);
+            this.lblNumber.TabIndex = 8;
+            this.lblNumber.Text = "Số Lượng Nhân Viên:";
+            // 
+            // txtTenPhongBan
+            // 
+            this.txtTenPhongBan.Enabled = false;
+            this.txtTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenPhongBan.Location = new System.Drawing.Point(264, 71);
+            this.txtTenPhongBan.Name = "txtTenPhongBan";
+            this.txtTenPhongBan.Size = new System.Drawing.Size(448, 38);
+            this.txtTenPhongBan.TabIndex = 10;
+            // 
+            // txtSLNV
+            // 
+            this.txtSLNV.Enabled = false;
+            this.txtSLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSLNV.Location = new System.Drawing.Point(264, 355);
+            this.txtSLNV.Name = "txtSLNV";
+            this.txtSLNV.Size = new System.Drawing.Size(141, 38);
+            this.txtSLNV.TabIndex = 12;
+            // 
+            // txtTenQL
+            // 
+            this.txtTenQL.Enabled = false;
+            this.txtTenQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenQL.Location = new System.Drawing.Point(264, 259);
+            this.txtTenQL.Name = "txtTenQL";
+            this.txtTenQL.Size = new System.Drawing.Size(448, 38);
+            this.txtTenQL.TabIndex = 13;
+            // 
+            // dtmNgayThanhLap
+            // 
+            this.dtmNgayThanhLap.Enabled = false;
+            this.dtmNgayThanhLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmNgayThanhLap.Location = new System.Drawing.Point(264, 171);
+            this.dtmNgayThanhLap.Name = "dtmNgayThanhLap";
+            this.dtmNgayThanhLap.Size = new System.Drawing.Size(448, 38);
+            this.dtmNgayThanhLap.TabIndex = 14;
+            // 
+            // gboTT
+            // 
+            this.gboTT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gboTT.Controls.Add(this.dtmNgayThanhLap);
+            this.gboTT.Controls.Add(this.txtTenQL);
+            this.gboTT.Controls.Add(this.txtSLNV);
+            this.gboTT.Controls.Add(this.txtTenPhongBan);
+            this.gboTT.Controls.Add(this.lblNumber);
+            this.gboTT.Controls.Add(this.lblNgayTL);
+            this.gboTT.Controls.Add(this.lblTenQL);
+            this.gboTT.Controls.Add(this.lblTenPB);
+            this.gboTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboTT.Location = new System.Drawing.Point(19, 50);
+            this.gboTT.Name = "gboTT";
+            this.gboTT.Size = new System.Drawing.Size(739, 436);
+            this.gboTT.TabIndex = 25;
+            this.gboTT.TabStop = false;
+            this.gboTT.Text = "Thông tin phòng ban";
+            // 
             // frmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -317,10 +317,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Text = "frmQLPhongBan";
             this.Load += new System.EventHandler(this.frmPhongBan_Load);
             this.pnlDSPB.ResumeLayout(false);
-            this.gboTT.ResumeLayout(false);
-            this.gboTT.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).EndInit();
             this.pnlXuLy.ResumeLayout(false);
+            this.gboTT.ResumeLayout(false);
+            this.gboTT.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,17 +336,17 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label lblDS;
         private System.Windows.Forms.ListView lstvPhongBan;
         private System.Windows.Forms.TextBox txtTenSearch;
-        private System.Windows.Forms.GroupBox gboTT;
-        private System.Windows.Forms.DateTimePicker dtmNgayThanhLap;
-        private System.Windows.Forms.TextBox txtTenQL;
-        private System.Windows.Forms.TextBox txtSLNV;
-        private System.Windows.Forms.TextBox txtTenPhongBan;
-        private System.Windows.Forms.Label lblNumber;
-        private System.Windows.Forms.Label lblNgayTL;
-        private System.Windows.Forms.Label lblTenQL;
-        private System.Windows.Forms.Label lblTenPB;
         private FontAwesome.Sharp.IconButton btnTimKiem;
         private System.Windows.Forms.Panel pnlXuLy;
         private System.Windows.Forms.Label lblNameSearch;
+        private System.Windows.Forms.Label lblTenPB;
+        private System.Windows.Forms.Label lblTenQL;
+        private System.Windows.Forms.Label lblNgayTL;
+        private System.Windows.Forms.Label lblNumber;
+        private System.Windows.Forms.TextBox txtTenPhongBan;
+        private System.Windows.Forms.TextBox txtSLNV;
+        private System.Windows.Forms.TextBox txtTenQL;
+        private System.Windows.Forms.DateTimePicker dtmNgayThanhLap;
+        private System.Windows.Forms.GroupBox gboTT;
     }
 }
