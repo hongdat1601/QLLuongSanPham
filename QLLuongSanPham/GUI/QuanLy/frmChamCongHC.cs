@@ -155,10 +155,5 @@ namespace QLLuongSanPham.GUI.QuanLy
                 chkDiemDanh.Enabled = false;
             }
         }
-
-        private void btnTimKimSP_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

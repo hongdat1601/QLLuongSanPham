@@ -196,7 +196,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             Button btn = (Button)sender;
             if (activeSubBtn == null || !activeSubBtn.Equals(btn))
             {
-                OpenFormChild(new frmThongKeHC());
+                //OpenFormChild(new frmThongKeHC());
             }
             FocusSubBtn(btn);
         }
