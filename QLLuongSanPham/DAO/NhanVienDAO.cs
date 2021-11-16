@@ -95,7 +95,7 @@ namespace QLLuongSanPham.DAO
         public IEnumerable<NhanVien> Find(string ten, 
             string sdt, 
             string ngaySinh, 
-            bool gioiTinh,
+            bool? gioiTinh,
             string cmnd,
             string diaChi,
             int idPB,
@@ -108,9 +108,11 @@ namespace QLLuongSanPham.DAO
             nv = nv.Where(x => x.HoTen.Contains(ten)
             && x.CMND.Contains(cmnd)
             && x.SDT.Contains(sdt)
-            && x.GioiTinh == gioiTinh
             && x.NgaySinh.ToString("dd/MM/yyyy").Contains(ngaySinh)
             && x.DiaChi.Contains(diaChi));
+
+            if (gioiTinh != null)
+                nv = nv.Where(x => x.GioiTinh == gioiTinh);
 
             if (idPB != -1)
                 nv = nv.Where(x => x.IDPhongBan == idPB);

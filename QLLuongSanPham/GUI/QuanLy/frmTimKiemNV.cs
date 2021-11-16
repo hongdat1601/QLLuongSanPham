@@ -113,7 +113,18 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            bool gioiTinh = cboSex.Text == "Nam" ? true : false;
+            bool? gioiTinh;
+
+            if (cboSex.Text == "Khác")
+            {
+                gioiTinh = null;
+            }
+            else
+            {
+                gioiTinh = cboSex.Text == "Nam" ? true : false;
+            }
+
+
             int pb = phongBanDAO.GetIDByName(cboPB.Text);
             int cv = chucVuDAO.GetIDByName(cboCV.Text);
             int hv = hocVanDAO.GetIDByName(cboHV.Text);

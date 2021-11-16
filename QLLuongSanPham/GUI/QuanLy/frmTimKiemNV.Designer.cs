@@ -45,6 +45,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtAdress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblAdress = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lstvNhanVien = new System.Windows.Forms.ListView();
             this.lblDSLich = new System.Windows.Forms.Label();
             this.btnReset = new FontAwesome.Sharp.IconButton();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.gbxInfoWork.SuspendLayout();
             this.gbxInfor.SuspendLayout();
@@ -223,12 +223,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboSex.FormattingEnabled = true;
             this.cboSex.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nữ",
+            "Khác"});
             this.cboSex.Location = new System.Drawing.Point(687, 69);
             this.cboSex.Name = "cboSex";
             this.cboSex.Size = new System.Drawing.Size(121, 30);
             this.cboSex.TabIndex = 3;
-            this.cboSex.Text = "Nam";
+            this.cboSex.Text = "Khác";
             // 
             // txtAdress
             // 
@@ -256,6 +257,15 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtID.Size = new System.Drawing.Size(265, 29);
             this.txtID.TabIndex = 2;
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.txtNgaySinh.Location = new System.Drawing.Point(211, 72);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(265, 29);
+            this.txtNgaySinh.TabIndex = 2;
+            this.txtNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtName
             // 
@@ -381,15 +391,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtNgaySinh.Location = new System.Drawing.Point(211, 72);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(265, 29);
-            this.txtNgaySinh.TabIndex = 2;
-            this.txtNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmTimKiemNV
             // 
