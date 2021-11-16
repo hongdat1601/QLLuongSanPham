@@ -80,7 +80,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 ListViewItem lvwItem = new ListViewItem();
                 lvwItem.Text = nv.CMND;
                 lvwItem.SubItems.Add(nv.HoTen);
-                lvwItem.SubItems.Add(nv.NgaySinh.Value.ToString("dd/MM/yyyy"));
+                lvwItem.SubItems.Add(nv.NgaySinh.ToString("dd/MM/yyyy"));
                 if (nv.GioiTinh == true)
                 {
                     lvwItem.SubItems.Add("Nam");

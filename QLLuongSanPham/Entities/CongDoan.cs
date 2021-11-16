@@ -12,7 +12,7 @@ namespace QLLuongSanPham.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CongDoan()
         {
-            BangCongSP = new HashSet<BangCongSP>();
+            BangCongSPs = new HashSet<BangCongSP>();
         }
 
         public int ID { get; set; }
@@ -25,7 +25,7 @@ namespace QLLuongSanPham.Entities
         public int? IDSanPham { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BangCongSP> BangCongSP { get; set; }
+        public virtual ICollection<BangCongSP> BangCongSPs { get; set; }
 
         public virtual SanPham SanPham { get; set; }
     }

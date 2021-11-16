@@ -35,7 +35,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             picImage.ImageLocation = nhanVien.Anh;
             txtName.Text = nhanVien.HoTen;
             txtPhone.Text = nhanVien.SDT;
-            txtBirhDay.Text = nhanVien.NgaySinh.Value.Date.ToString("dd/MM/yyyy");
+            txtBirhDay.Text = nhanVien.NgaySinh.ToString("dd/MM/yyyy");
             if (nhanVien.GioiTinh == true)
             {
                 cboSex.Text = "Name";

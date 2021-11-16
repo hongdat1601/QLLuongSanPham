@@ -16,19 +16,20 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<BangLuong> GetBangLuongs() => context.BangLuong;
+        public IEnumerable<BangLuong> GetBangLuongs() => context.BangLuongs;
 
         public BangLuong GetByID(int id)
         {
-            return context.BangLuong
+            return context.BangLuongs
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
-        public IEnumerable<BangLuong> GetByIDNV(int idNV)
+        public BangLuong GetByIDNV(int idNV)
         {
-            return context.BangLuong
-                .Where(x => x.IDNhanVien == idNV);
+            return context.BangLuongs
+                .Where(x => x.IDNhanVien == idNV)
+                .FirstOrDefault();
         }
 
         public bool Add(BangLuong bl)
@@ -37,7 +38,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.BangLuong.Add(bl);
+                    context.BangLuongs.Add(bl);
                     context.SaveChanges();
                     db.Commit();
                     return true;

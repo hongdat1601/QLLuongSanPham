@@ -17,21 +17,21 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<NhanVien> GetNhanViens() => context.NhanVien;
+        public IEnumerable<NhanVien> GetNhanViens() => context.NhanViens;
 
         public IEnumerable<NhanVien> GetListNVByID(int id)
         {
-            return context.NhanVien.Where(x => x.ID == id);
+            return context.NhanViens.Where(x => x.ID == id);
         }
 
         public IEnumerable<NhanVien> GetListNVByName(string name)
         {
-            return context.NhanVien.Where(x => x.HoTen.Contains(name));
+            return context.NhanViens.Where(x => x.HoTen.Contains(name));
         }
 
         public NhanVien GetById(int id)
         {
-            return context.NhanVien
+            return context.NhanViens
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
@@ -42,7 +42,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.NhanVien.Add(nv);
+                    context.NhanViens.Add(nv);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -61,7 +61,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.NhanVien.Remove(nv);
+                    context.NhanViens.Remove(nv);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -103,13 +103,13 @@ namespace QLLuongSanPham.DAO
             int idHV,
             int thamNien)
         {
-            IEnumerable<NhanVien> nv = context.NhanVien;
+            IEnumerable<NhanVien> nv = context.NhanViens;
 
             nv = nv.Where(x => x.HoTen.Contains(ten)
             && x.CMND.Contains(cmnd)
             && x.SDT.Contains(sdt)
             && x.GioiTinh == gioiTinh
-            && x.NgaySinh.Value.ToString("dd/MM/yyyy").Contains(ngaySinh)
+            && x.NgaySinh.ToString("dd/MM/yyyy").Contains(ngaySinh)
             && x.DiaChi.Contains(diaChi));
 
             if (idPB != -1)

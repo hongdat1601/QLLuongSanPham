@@ -63,7 +63,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 ListViewItem lvwItem = new ListViewItem();
                 lvwItem.Text = nv.CMND;
                 lvwItem.SubItems.Add(nv.HoTen);
-                lvwItem.SubItems.Add(nv.NgaySinh.Value.ToString("dd/MM/yyyy"));
+                lvwItem.SubItems.Add(nv.NgaySinh.ToString("dd/MM/yyyy"));
                 if (nv.GioiTinh == true)
                 {
                     lvwItem.SubItems.Add("Nam");
@@ -235,7 +235,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 NhanVien nv = (NhanVien)lvwDSNV.SelectedItems[0].Tag;
                 txtName.Text = nv.HoTen;
                 txtPhone.Text = nv.SDT;
-                dtmDate.Value = nv.NgaySinh.Value;
+                dtmDate.Value = nv.NgaySinh.Date;
                 txtCMND.Text = nv.CMND;
                 txtAdress.Text = nv.DiaChi;
                 if (nv.GioiTinh == true)

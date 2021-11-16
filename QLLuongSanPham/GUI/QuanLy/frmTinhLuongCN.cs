@@ -87,7 +87,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void LoadDataLuong(IEnumerable<BangLuong> data)
         {
-            data = data.Where(x => nhanVienDao.GetById(x.IDNhanVien.Value).IDChucVu.Value == 7);
+            data = data.Where(x => nhanVienDao.GetById(x.IDNhanVien).IDChucVu.Value == 7);
 
             lstvLuong.Items.Clear();
             int stt = 1;
@@ -95,9 +95,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = stt.ToString();
-                item.SubItems.Add(nhanVienDao.GetById(bl.IDNhanVien.Value).HoTen);
-                item.SubItems.Add(bl.NgayLap.Value.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(bl.TienLuong.Value.ToString());
+                item.SubItems.Add(nhanVienDao.GetById(bl.IDNhanVien).HoTen);
+                item.SubItems.Add(bl.NgayLap.ToString("dd/MM/yyyy"));
+                item.SubItems.Add(bl.TienLuong.ToString());
 
                 item.Tag = bl;
 

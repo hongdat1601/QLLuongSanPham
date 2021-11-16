@@ -16,11 +16,11 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<TaiKhoan> GetTaiKhoans() => context.TaiKhoan;
+        public IEnumerable<TaiKhoan> GetTaiKhoans() => context.TaiKhoans;
 
         public TaiKhoan GetTaiKhoanByID(string user)
         {
-            return context.TaiKhoan
+            return context.TaiKhoans
                 .Where(x => x.Username == user)
                 .FirstOrDefault();
         }

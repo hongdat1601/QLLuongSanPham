@@ -12,52 +12,53 @@ namespace QLLuongSanPham.Entities
         {
         }
 
-        public virtual DbSet<BangCongHC> BangCongHC { get; set; }
-        public virtual DbSet<BangCongSP> BangCongSP { get; set; }
-        public virtual DbSet<BangLuong> BangLuong { get; set; }
-        public virtual DbSet<CaLam> CaLam { get; set; }
-        public virtual DbSet<CongDoan> CongDoan { get; set; }
-        public virtual DbSet<ChiTietHopDong> ChiTietHopDong { get; set; }
-        public virtual DbSet<ChucVu> ChucVu { get; set; }
-        public virtual DbSet<HopDong> HopDong { get; set; }
-        public virtual DbSet<LoaiPhep> LoaiPhep { get; set; }
-        public virtual DbSet<NhanVien> NhanVien { get; set; }
-        public virtual DbSet<PhongBan> PhongBan { get; set; }
-        public virtual DbSet<SanPham> SanPham { get; set; }
-        public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
-        public virtual DbSet<TrinhDoHocVan> TrinhDoHocVan { get; set; }
+        public virtual DbSet<BangCongHC> BangCongHCs { get; set; }
+        public virtual DbSet<BangCongSP> BangCongSPs { get; set; }
+        public virtual DbSet<BangLuong> BangLuongs { get; set; }
+        public virtual DbSet<CaLam> CaLams { get; set; }
+        public virtual DbSet<ChiTietHopDong> ChiTietHopDongs { get; set; }
+        public virtual DbSet<ChucVu> ChucVus { get; set; }
+        public virtual DbSet<CongDoan> CongDoans { get; set; }
+        public virtual DbSet<HopDong> HopDongs { get; set; }
+        public virtual DbSet<LoaiPhep> LoaiPheps { get; set; }
+        public virtual DbSet<NhanVien> NhanViens { get; set; }
+        public virtual DbSet<PhongBan> PhongBans { get; set; }
+        public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<TrinhDoHocVan> TrinhDoHocVans { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BangLuong>()
                 .Property(e => e.TienLuong)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<CaLam>()
-                .HasMany(e => e.BangCongSP)
-                .WithOptional(e => e.CaLam)
-                .HasForeignKey(e => e.IDCaLam);
-
-            modelBuilder.Entity<CongDoan>()
-                .Property(e => e.DonGia)
                 .HasPrecision(18, 0);
 
-            modelBuilder.Entity<CongDoan>()
-                .HasMany(e => e.BangCongSP)
-                .WithOptional(e => e.CongDoan)
-                .HasForeignKey(e => e.IDCongDoan);
+            modelBuilder.Entity<CaLam>()
+                .HasMany(e => e.BangCongSPs)
+                .WithOptional(e => e.CaLam)
+                .HasForeignKey(e => e.IDCaLam);
 
             modelBuilder.Entity<ChucVu>()
                 .Property(e => e.PhuCap)
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<ChucVu>()
-                .HasMany(e => e.NhanVien)
+                .HasMany(e => e.NhanViens)
                 .WithOptional(e => e.ChucVu)
                 .HasForeignKey(e => e.IDChucVu);
 
+            modelBuilder.Entity<CongDoan>()
+                .Property(e => e.DonGia)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<CongDoan>()
+                .HasMany(e => e.BangCongSPs)
+                .WithOptional(e => e.CongDoan)
+                .HasForeignKey(e => e.IDCongDoan);
+
             modelBuilder.Entity<HopDong>()
-                .HasMany(e => e.ChiTietHopDong)
+                .HasMany(e => e.ChiTietHopDongs)
                 .WithRequired(e => e.HopDong)
                 .HasForeignKey(e => e.IDHopDong);
 
@@ -66,7 +67,7 @@ namespace QLLuongSanPham.Entities
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<LoaiPhep>()
-                .HasMany(e => e.BangCongHC)
+                .HasMany(e => e.BangCongHCs)
                 .WithOptional(e => e.LoaiPhep)
                 .HasForeignKey(e => e.IDLoaiPhep);
 
@@ -87,31 +88,30 @@ namespace QLLuongSanPham.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.BangCongHC)
+                .HasMany(e => e.BangCongHCs)
                 .WithOptional(e => e.NhanVien)
                 .HasForeignKey(e => e.IDNhanVien)
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.BangCongSP)
+                .HasMany(e => e.BangCongSPs)
                 .WithOptional(e => e.NhanVien)
                 .HasForeignKey(e => e.ID_NhanVien)
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.BangLuong)
-                .WithOptional(e => e.NhanVien)
-                .HasForeignKey(e => e.IDNhanVien)
-                .WillCascadeOnDelete();
+                .HasMany(e => e.BangLuongs)
+                .WithRequired(e => e.NhanVien)
+                .HasForeignKey(e => e.IDNhanVien);
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.TaiKhoan)
+                .HasMany(e => e.TaiKhoans)
                 .WithOptional(e => e.NhanVien)
                 .HasForeignKey(e => e.IDNhanVien)
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<PhongBan>()
-                .HasMany(e => e.NhanVien)
+                .HasMany(e => e.NhanViens)
                 .WithOptional(e => e.PhongBan)
                 .HasForeignKey(e => e.IDPhongBan);
 
@@ -124,15 +124,15 @@ namespace QLLuongSanPham.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<SanPham>()
-                .HasMany(e => e.CongDoan)
+                .HasMany(e => e.ChiTietHopDongs)
+                .WithRequired(e => e.SanPham)
+                .HasForeignKey(e => e.IDSanPham);
+
+            modelBuilder.Entity<SanPham>()
+                .HasMany(e => e.CongDoans)
                 .WithOptional(e => e.SanPham)
                 .HasForeignKey(e => e.IDSanPham)
                 .WillCascadeOnDelete();
-
-            modelBuilder.Entity<SanPham>()
-                .HasMany(e => e.ChiTietHopDong)
-                .WithRequired(e => e.SanPham)
-                .HasForeignKey(e => e.IDSanPham);
 
             modelBuilder.Entity<TaiKhoan>()
                 .Property(e => e.Username)
@@ -143,7 +143,7 @@ namespace QLLuongSanPham.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<TrinhDoHocVan>()
-                .HasMany(e => e.NhanVien)
+                .HasMany(e => e.NhanViens)
                 .WithOptional(e => e.TrinhDoHocVan)
                 .HasForeignKey(e => e.IDTrinhDoHocVan);
         }

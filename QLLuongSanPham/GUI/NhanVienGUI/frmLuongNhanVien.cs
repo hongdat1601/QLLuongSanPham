@@ -1,24 +1,16 @@
 ﻿using QLLuongSanPham.DAO;
 using QLLuongSanPham.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLLuongSanPham.GUI.NhanVienGUI
 {
     public partial class frmLuongNhanVien : Form
     {
-        //BangLuongDAO blDAO;
-        //BangCongCNDAO bcDAO;
-        //ChiTiet_BCSPDAO ctDAO;
-        //CaLamDAO caDAO;
-        //CongDoanDAO cdDAO;
+        BangLuongDAO blDAO;
+        BangCongCNDAO bcDAO;
+        CaLamDAO caDAO;
+        CongDoanDAO cdDAO;
         BangCongHCDAO hcDAO;
         LoaiPhepDAO phepDAO;
         private NhanVien _nhanVien;
@@ -26,11 +18,10 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         public frmLuongNhanVien(NhanVien nhanVien)
         {
             InitializeComponent();
-            //blDAO = new BangLuongDAO();
-            //bcDAO = new BangCongCNDAO();
-            //ctDAO = new ChiTiet_BCSPDAO();
-            //caDAO = new CaLamDAO();
-            //cdDAO = new CongDoanDAO();
+            blDAO = new BangLuongDAO();
+            bcDAO = new BangCongCNDAO();
+            caDAO = new CaLamDAO();
+            cdDAO = new CongDoanDAO();
             hcDAO = new BangCongHCDAO();
             phepDAO = new LoaiPhepDAO();
 
@@ -39,17 +30,17 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
 
         private void frmLuongNhanVien_Load(object sender, EventArgs e)
         {
-        //    if(_nhanVien.IDChucVu == 7)
-        //    {
-        //        CreateTitleCN(lvwSalary);
-        //        LoadLuongCN();
-        //    }
-        //    else
-        //    {
-        //        CreateTitleNV(lvwSalary);
-        //        LoadLuongHC();
-        //    }
-           
+            if (_nhanVien.IDChucVu == 7)
+            {
+                CreateTitleCN(lvwSalary);
+                //LoadLuongCN();
+            }
+            else
+            {
+                CreateTitleNV(lvwSalary);
+                LoadLuongHC();
+            }
+
         }
 
         //Methods
@@ -72,6 +63,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         {
             lvw.Columns.Add("Ngày đi làm", 140);
             lvw.Columns.Add("Phụ cấp", 130);
+            lvw.Columns.Add("Số buổi làm thêm", 140);
             lvw.Columns.Add("Ghi chú", 430);
 
             lvw.View = View.Details;
@@ -111,20 +103,26 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
                 if(hc.IDNhanVien == _nhanVien.ID)
                 {
                     ListViewItem item = new ListViewItem();
-                    item.Text = hc.NgayCham.Value.Date.ToString("dd/MM/yyyy");
+                    if(hc.TrangThai == true)
+                    {
+                        item.Text = hc.NgayCham.Value.Date.ToString("dd/MM/yyyy");
+                    }
                     if(hc.IDLoaiPhep != null)
                     {
                         item.SubItems.Add(Convert.ToDecimal(phepDAO.GetByID(hc.IDLoaiPhep.Value).PhuCap).ToString());
                     }
-
+                    if (blDAO.GetByIDNV(_nhanVien.ID) != null)
+                    {
+                        item.SubItems.Add(blDAO.GetByIDNV(_nhanVien.ID).SoBuoiLamThem.ToString());
+                    }
                     lvwSalary.Items.Add(item);
                 }
             }
-        }
 
-        private void Search()
-        {
-            
+            if (blDAO.GetByIDNV(_nhanVien.ID) != null)
+            {
+                txtSumSalry.Text = blDAO.GetByIDNV(_nhanVien.ID).TienLuong.ToString() + " VNĐ";
+            }
         }
     }
 }

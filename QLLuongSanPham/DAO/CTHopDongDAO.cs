@@ -18,7 +18,7 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<ChiTietHopDong> GetCTHDsByIdHopDong(int id)
         {
-            return context.ChiTietHopDong.Where(x => x.IDHopDong == id);
+            return context.ChiTietHopDongs.Where(x => x.IDHopDong == id);
         }
 
         public bool Add(ChiTietHopDong cthd)
@@ -27,7 +27,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.ChiTietHopDong.Add(cthd);
+                    context.ChiTietHopDongs.Add(cthd);
                     context.SaveChanges();
                     tran.Commit();
                 }
