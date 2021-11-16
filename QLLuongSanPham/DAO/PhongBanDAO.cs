@@ -117,5 +117,15 @@ namespace QLLuongSanPham.DAO
             return true;
         }
 
+        public void UpdateSLNV(int idPhongBan)
+        {
+            var pb = GetById(idPhongBan);
+            if (pb != null)
+            {
+                pb.SoLuongNhanVien++;
+                context.SaveChanges();
+            }
+        }
+
     }
 }
