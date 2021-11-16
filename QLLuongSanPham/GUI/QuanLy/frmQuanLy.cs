@@ -193,7 +193,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnThongKeHC_Click(object sender, EventArgs e)
         {
-            
+            Button btn = (Button)sender;
+            if (activeSubBtn == null || !activeSubBtn.Equals(btn))
+            {
+                OpenFormChild(new frmThongKeHC());
+            }
+            FocusSubBtn(btn);
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)

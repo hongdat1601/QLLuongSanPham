@@ -24,7 +24,7 @@ namespace QLLuongSanPham.Entities
         public string HoTen { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? NgaySinh { get; set; }
+        public DateTime NgaySinh { get; set; }
 
         [StringLength(120)]
         public string DiaChi { get; set; }

@@ -306,26 +306,6 @@ namespace QLLuongSanPham.GUI.QuanLy
                     }
                     cboTenCD.SelectedIndex = 0;
                 }
-
-                //int idCD = cdDAO.GetByName(cboTenCD.Text).ID;
-                //if (GetIDCaByCD(idCD, bcDAO.GetBangCongSPs()) != 0)
-                //{
-                //    cboCa.Text = caDAO.GetByID(GetIDCaByCD(idCD, bcDAO.GetBangCongSPs())).TenCa;
-                //    LoadListCN(nvDAO.GetNhanViens());
-                //    LoadListPC(nvDAO.GetNhanViens());
-                //    LoadListLich(idCD, bcDAO.GetBangCongSPs());
-                //}
-                //else
-                //{
-                //    cboCa.Items.Clear();
-                //    foreach (CaLam ca in caDAO.GetCaLams())
-                //    {
-                //        cboCa.Items.Add(ca.TenCa);
-                //    }
-                //    cboCa.SelectedIndex = 0;
-                //    LoadListCN(nvDAO.GetNhanViens());
-                //    LoadListLich(idCD, bcDAO.GetBangCongSPs());
-                //}
             }
         }
 
