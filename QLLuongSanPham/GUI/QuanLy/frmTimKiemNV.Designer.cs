@@ -35,7 +35,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboHV = new System.Windows.Forms.ComboBox();
             this.cboCV = new System.Windows.Forms.ComboBox();
             this.cboPB = new System.Windows.Forms.ComboBox();
-            this.txtThamNien = new System.Windows.Forms.TextBox();
             this.lblSeniority = new System.Windows.Forms.Label();
             this.lblStudy = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
@@ -57,10 +56,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lstvNhanVien = new System.Windows.Forms.ListView();
             this.lblDSLich = new System.Windows.Forms.Label();
             this.btnReset = new FontAwesome.Sharp.IconButton();
+            this.nudThamNien = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.gbxInfoWork.SuspendLayout();
             this.gbxInfor.SuspendLayout();
             this.pnlLich.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudThamNien)).BeginInit();
             this.SuspendLayout();
             // 
             // picNen
@@ -95,10 +96,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             // gbxInfoWork
             // 
             this.gbxInfoWork.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbxInfoWork.Controls.Add(this.nudThamNien);
             this.gbxInfoWork.Controls.Add(this.cboHV);
             this.gbxInfoWork.Controls.Add(this.cboCV);
             this.gbxInfoWork.Controls.Add(this.cboPB);
-            this.gbxInfoWork.Controls.Add(this.txtThamNien);
             this.gbxInfoWork.Controls.Add(this.lblSeniority);
             this.gbxInfoWork.Controls.Add(this.lblStudy);
             this.gbxInfoWork.Controls.Add(this.lblPosition);
@@ -118,44 +119,44 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.cboHV.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHV.FormattingEnabled = true;
-            this.cboHV.Location = new System.Drawing.Point(339, 133);
+            this.cboHV.Items.AddRange(new object[] {
+            "Tất cả"});
+            this.cboHV.Location = new System.Drawing.Point(339, 140);
             this.cboHV.Name = "cboHV";
             this.cboHV.Size = new System.Drawing.Size(410, 30);
             this.cboHV.TabIndex = 3;
+            this.cboHV.Text = "Tất cả";
             // 
             // cboCV
             // 
             this.cboCV.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCV.FormattingEnabled = true;
-            this.cboCV.Location = new System.Drawing.Point(339, 79);
+            this.cboCV.Items.AddRange(new object[] {
+            "Tất cả"});
+            this.cboCV.Location = new System.Drawing.Point(339, 85);
             this.cboCV.Name = "cboCV";
             this.cboCV.Size = new System.Drawing.Size(410, 30);
             this.cboCV.TabIndex = 3;
+            this.cboCV.Text = "Tất cả";
             // 
             // cboPB
             // 
             this.cboPB.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPB.FormattingEnabled = true;
-            this.cboPB.Location = new System.Drawing.Point(339, 23);
+            this.cboPB.Items.AddRange(new object[] {
+            "Tất cả"});
+            this.cboPB.Location = new System.Drawing.Point(339, 30);
             this.cboPB.Name = "cboPB";
             this.cboPB.Size = new System.Drawing.Size(410, 30);
             this.cboPB.TabIndex = 3;
-            // 
-            // txtThamNien
-            // 
-            this.txtThamNien.BackColor = System.Drawing.Color.White;
-            this.txtThamNien.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtThamNien.Location = new System.Drawing.Point(339, 195);
-            this.txtThamNien.Name = "txtThamNien";
-            this.txtThamNien.Size = new System.Drawing.Size(410, 29);
-            this.txtThamNien.TabIndex = 2;
+            this.cboPB.Text = "Tất cả";
             // 
             // lblSeniority
             // 
             this.lblSeniority.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSeniority.AutoSize = true;
             this.lblSeniority.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblSeniority.Location = new System.Drawing.Point(14, 201);
+            this.lblSeniority.Location = new System.Drawing.Point(14, 199);
             this.lblSeniority.Name = "lblSeniority";
             this.lblSeniority.Size = new System.Drawing.Size(199, 23);
             this.lblSeniority.TabIndex = 1;
@@ -166,7 +167,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblStudy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblStudy.AutoSize = true;
             this.lblStudy.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblStudy.Location = new System.Drawing.Point(14, 134);
+            this.lblStudy.Location = new System.Drawing.Point(14, 144);
             this.lblStudy.Name = "lblStudy";
             this.lblStudy.Size = new System.Drawing.Size(87, 23);
             this.lblStudy.TabIndex = 1;
@@ -177,7 +178,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblPosition.Location = new System.Drawing.Point(14, 80);
+            this.lblPosition.Location = new System.Drawing.Point(14, 89);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(87, 23);
             this.lblPosition.TabIndex = 1;
@@ -188,7 +189,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDeparment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDeparment.AutoSize = true;
             this.lblDeparment.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblDeparment.Location = new System.Drawing.Point(14, 24);
+            this.lblDeparment.Location = new System.Drawing.Point(14, 34);
             this.lblDeparment.Name = "lblDeparment";
             this.lblDeparment.Size = new System.Drawing.Size(111, 23);
             this.lblDeparment.TabIndex = 1;
@@ -222,9 +223,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboSex.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.cboSex.FormattingEnabled = true;
             this.cboSex.Items.AddRange(new object[] {
+            "Tất cả",
             "Nam",
-            "Nữ",
-            "Tất cả"});
+            "Nữ"});
             this.cboSex.Location = new System.Drawing.Point(687, 69);
             this.cboSex.Name = "cboSex";
             this.cboSex.Size = new System.Drawing.Size(121, 30);
@@ -392,6 +393,24 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // nudThamNien
+            // 
+            this.nudThamNien.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudThamNien.Location = new System.Drawing.Point(339, 196);
+            this.nudThamNien.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.nudThamNien.Name = "nudThamNien";
+            this.nudThamNien.Size = new System.Drawing.Size(169, 29);
+            this.nudThamNien.TabIndex = 4;
+            this.nudThamNien.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            // 
             // frmTimKiemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -413,6 +432,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gbxInfor.ResumeLayout(false);
             this.gbxInfor.PerformLayout();
             this.pnlLich.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudThamNien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,7 +445,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.ComboBox cboHV;
         private System.Windows.Forms.ComboBox cboCV;
         private System.Windows.Forms.ComboBox cboPB;
-        private System.Windows.Forms.TextBox txtThamNien;
         private System.Windows.Forms.Label lblSeniority;
         private System.Windows.Forms.Label lblStudy;
         private System.Windows.Forms.Label lblPosition;
@@ -447,5 +466,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label lblDSLich;
         private FontAwesome.Sharp.IconButton btnReset;
         private System.Windows.Forms.TextBox txtNgaySinh;
+        private System.Windows.Forms.NumericUpDown nudThamNien;
     }
 }

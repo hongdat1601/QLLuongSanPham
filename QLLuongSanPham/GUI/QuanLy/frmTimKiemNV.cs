@@ -121,7 +121,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             bool? gioiTinh;
 
-            if (cboSex.SelectedIndex == cboSex.Items.Count - 1)
+            if (cboSex.SelectedIndex == 0)
             {
                 gioiTinh = null;
             }
@@ -134,7 +134,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             int pb = phongBanDAO.GetIDByName(cboPB.Text);
             int cv = chucVuDAO.GetIDByName(cboCV.Text);
             int hv = hocVanDAO.GetIDByName(cboHV.Text);
-            int tnct = string.IsNullOrEmpty(txtThamNien.Text) ? -1 : Convert.ToInt32(txtThamNien.Text);
+            int tnct = Convert.ToInt32(nudThamNien.Value);
 
             var lstNV = nhanVienDAO.Find(txtName.Text,
                 txtPhone.Text, 
@@ -161,7 +161,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             cboPB.Text = "";
             cboHV.Text = "";
             cboCV.Text = "";
-            txtThamNien.Text = "";
+            nudThamNien.Value = -1;
 
         }
 
