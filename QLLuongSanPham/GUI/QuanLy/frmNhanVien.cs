@@ -353,6 +353,12 @@ namespace QLLuongSanPham.GUI.QuanLy
                 txtNN.Enabled = false;
                 txtBasicSalary.Enabled = false;
                 txtIndexSalary.Enabled = false;
+
+                txtSeniority.Text = 0.ToString() + " năm";
+                txtNN.Text = 0.ToString();
+                txtBasicSalary.Text = 0.ToString();
+                txtIndexSalary.Text = 0.ToString();
+
             }
         }
 
