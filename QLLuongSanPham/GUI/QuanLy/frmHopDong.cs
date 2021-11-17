@@ -174,10 +174,10 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             HopDong hd = new HopDong
             {
-                TenHopDong = txtTenHopDong.Text,
+                TenHopDong = txtTenHopDong.Text.Trim(),
                 NgayBatDau = dtmNgayBatDau.Value,
                 NgayKetThuc = dtmNgayKetThuc.Value,
-                TenKhachHang = txtTenKhachHang.Text,
+                TenKhachHang = txtTenKhachHang.Text.Trim(),
                 DieuKhoan = txtDieuKhoan.Text,
                 TrangThai = true
             };
