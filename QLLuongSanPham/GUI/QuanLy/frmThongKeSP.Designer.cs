@@ -33,13 +33,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.picNen = new System.Windows.Forms.PictureBox();
-            this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlLuong = new System.Windows.Forms.Panel();
             this.lstvLuong = new System.Windows.Forms.ListView();
             this.lblDSLuong = new System.Windows.Forms.Label();
+            this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.pnlLuong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.SuspendLayout();
             // 
             // picNen
@@ -52,24 +52,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.picNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picNen.TabIndex = 0;
             this.picNen.TabStop = false;
-            // 
-            // chartThongKe
-            // 
-            this.chartThongKe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chartThongKe.BackColor = System.Drawing.Color.Aqua;
-            chartArea1.Name = "ChartArea1";
-            this.chartThongKe.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartThongKe.Legends.Add(legend1);
-            this.chartThongKe.Location = new System.Drawing.Point(153, 45);
-            this.chartThongKe.Name = "chartThongKe";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "BangLuong";
-            this.chartThongKe.Series.Add(series1);
-            this.chartThongKe.Size = new System.Drawing.Size(1018, 491);
-            this.chartThongKe.TabIndex = 36;
-            this.chartThongKe.Text = "chart1";
             // 
             // pnlLuong
             // 
@@ -104,6 +86,24 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDSLuong.Text = "Danh sách bảng lương";
             this.lblDSLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // chartThongKe
+            // 
+            this.chartThongKe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chartThongKe.BackColor = System.Drawing.Color.Aqua;
+            chartArea1.Name = "ChartArea1";
+            this.chartThongKe.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartThongKe.Legends.Add(legend1);
+            this.chartThongKe.Location = new System.Drawing.Point(153, 45);
+            this.chartThongKe.Name = "chartThongKe";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "BangLuong";
+            this.chartThongKe.Series.Add(series1);
+            this.chartThongKe.Size = new System.Drawing.Size(1018, 491);
+            this.chartThongKe.TabIndex = 36;
+            this.chartThongKe.Text = "chart1";
+            // 
             // frmThongKeSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,8 +117,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.Text = "frmThongKeSP";
             this.Load += new System.EventHandler(this.frmThongKeSP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.pnlLuong.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,9 +126,9 @@ namespace QLLuongSanPham.GUI.QuanLy
         #endregion
 
         private System.Windows.Forms.PictureBox picNen;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartThongKe;
         private System.Windows.Forms.Panel pnlLuong;
         private System.Windows.Forms.ListView lstvLuong;
         private System.Windows.Forms.Label lblDSLuong;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartThongKe;
     }
 }
