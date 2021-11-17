@@ -224,12 +224,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboSex.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
-            "Khác"});
+            "Tất cả"});
             this.cboSex.Location = new System.Drawing.Point(687, 69);
             this.cboSex.Name = "cboSex";
             this.cboSex.Size = new System.Drawing.Size(121, 30);
             this.cboSex.TabIndex = 3;
-            this.cboSex.Text = "Khác";
+            this.cboSex.Text = "Tất cả";
             // 
             // txtAdress
             // 

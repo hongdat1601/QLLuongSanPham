@@ -28,6 +28,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             hocVanDAO = new TrinhDoHocVanDAO();
         }
 
+        #region Method
+
         private void CreateTitle(ListView lvw)
         {
             lvw.Columns.Add("CMND/CCCD", 120);
@@ -49,13 +51,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.FullRowSelect = true;
         }
 
-        private void frmTimKiemNV_Load(object sender, EventArgs e)
-        {
-            CreateTitle(lstvNhanVien);
-            LoadListEmployee(nhanVienDAO.GetNhanViens());
-            LoadComboboxs();
-        }
-
         private void LoadComboboxs()
         {
             phongBanDAO.GetPhongBans()
@@ -70,6 +65,10 @@ namespace QLLuongSanPham.GUI.QuanLy
                 .ToList()
                 .ForEach(x => cboHV.Items.Add(x.TenTrinhDo));
         }
+
+        #endregion
+
+        #region Event
 
         private void LoadListEmployee(IEnumerable<NhanVien> nhanViens)
         {
@@ -111,11 +110,18 @@ namespace QLLuongSanPham.GUI.QuanLy
             lstvNhanVien.Focus();
         }
 
+        private void frmTimKiemNV_Load(object sender, EventArgs e)
+        {
+            CreateTitle(lstvNhanVien);
+            LoadListEmployee(nhanVienDAO.GetNhanViens());
+            LoadComboboxs();
+        }
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             bool? gioiTinh;
 
-            if (cboSex.Text == "Khác")
+            if (cboSex.SelectedIndex == cboSex.Items.Count - 1)
             {
                 gioiTinh = null;
             }
@@ -158,5 +164,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             txtThamNien.Text = "";
 
         }
+
+        #endregion
     }
 }
