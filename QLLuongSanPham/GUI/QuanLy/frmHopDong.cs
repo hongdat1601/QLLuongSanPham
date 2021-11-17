@@ -205,30 +205,56 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
+        private bool KiemTraThongTin()
+        {
+            if (string.IsNullOrEmpty(txtTenHopDong.Text.Trim()))
+            {
+                MessageBox.Show("Tên hợp đồng bị bỏ trống!", "Lỗi");
+                return false;
+            }
+
+            if (dtmNgayBatDau.Value.CompareTo(dtmNgayKetThuc.Value) >= 0)
+            {
+                MessageBox.Show("Ngày bắt đầu phải trước ngày ngày kết thúc!", "Lỗi");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txtTenKhachHang.Text.Trim()))
+            {
+                MessageBox.Show("Tên khách hàng bị bỏ trống!", "Lỗi");
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnLapHopDong_Click(object sender, EventArgs e)
         {
             if (btnLapHopDong.Text == "Lưu")
             {
-                TaoHopDong();
+                if (KiemTraThongTin())
+                {
+                    TaoHopDong();
 
-                txtTenHopDong.Enabled = false;
-                dtmNgayBatDau.Enabled = false;
-                dtmNgayKetThuc.Enabled = false;
-                txtTenKhachHang.Enabled = false;
-                txtDieuKhoan.Enabled = false;
-                txtTenSanPham.Enabled = false;
-                nudSoLuong.Enabled = false;
-                btnThem.Enabled = false;
-                btnXoa.Enabled = false;
+                    txtTenHopDong.Enabled = false;
+                    dtmNgayBatDau.Enabled = false;
+                    dtmNgayKetThuc.Enabled = false;
+                    txtTenKhachHang.Enabled = false;
+                    txtDieuKhoan.Enabled = false;
+                    txtTenSanPham.Enabled = false;
+                    nudSoLuong.Enabled = false;
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = false;
 
-                btnLapHopDong.IconChar = FontAwesome.Sharp.IconChar.Plus;
-                btnLapHopDong.IconColor = Color.Green;
-                btnLapHopDong.Text = "Thêm";
+                    btnLapHopDong.IconChar = FontAwesome.Sharp.IconChar.Plus;
+                    btnLapHopDong.IconColor = Color.Green;
+                    btnLapHopDong.Text = "Thêm";
 
-                LoadListHopDong(hopDongDAO.GetHopDongs());
-                lstvHopDong.SelectedIndices.Add(lstvHopDong.Items.Count - 1);
-                lstvSanPham.Items.Clear();
-                sanPham = null;
+                    LoadListHopDong(hopDongDAO.GetHopDongs());
+                    lstvHopDong.SelectedIndices.Add(lstvHopDong.Items.Count - 1);
+                    lstvSanPham.Items.Clear();
+                    sanPham = null;
+                }    
             }
             else
             {
