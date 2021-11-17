@@ -119,12 +119,24 @@ namespace QLLuongSanPham.DAO
 
         public void UpdateSLNV(int idPhongBan)
         {
-            var pb = GetById(idPhongBan);
-            if (pb != null)
+            using (var db = context.Database.BeginTransaction())
             {
-                pb.SoLuongNhanVien++;
-                context.SaveChanges();
+                try
+                {
+                    var pb = GetById(idPhongBan);
+                    if (pb != null)
+                    {
+                        pb.SoLuongNhanVien++;
+                        context.SaveChanges();
+                        db.Commit();
+                    }
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Lỗi cập nhật số lượng nv");
+                }
             }
+           
         }
 
     }

@@ -17,11 +17,13 @@ namespace QLLuongSanPham.GUI.QuanLy
     {
         private PhongBanDAO phongBanDAO;
         private PhongBan phongBan = null;
+        private NhanVienDAO nvDAO;
 
         public frmPhongBan()
         {
             InitializeComponent();
             phongBanDAO = new PhongBanDAO();
+            nvDAO = new NhanVienDAO();
         }
 
         private void CreateList(ListView lvw)
@@ -37,10 +39,24 @@ namespace QLLuongSanPham.GUI.QuanLy
             lstvPhongBan.Columns.Add("Tên quản lý", 210);
         }
 
+        private void SLNV()
+        {
+            foreach (NhanVien nv in nvDAO.GetNhanViens())
+            {
+                foreach (PhongBan pb in phongBanDAO.GetPhongBans())
+                {
+                    if(nv.IDPhongBan == pb.ID)
+                    {
+                        pb.SoLuongNhanVien++;
+                    }
+                }
+            }
+        }
+
         private void LoadListPhongBan(IEnumerable<PhongBan> list)
         {
             lstvPhongBan.Items.Clear();
-
+            SLNV();
             int i = 1;
             foreach (PhongBan pb in list)
             {
