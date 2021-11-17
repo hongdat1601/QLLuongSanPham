@@ -17,7 +17,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private PhongBanDAO pbDAO;
         private ChucVuDAO cvDAO;
         private TrinhDoHocVanDAO hvDAO;
-
+       
         public frmNhanVien()
         {
             InitializeComponent();
@@ -28,8 +28,6 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             CreateTitile(lvwDSNV);
             LoadListEmployee(nvDAO.GetNhanViens());
-
-            //this.BackgroundImage = Image.FromFile(@"C:\Users\vomin\Pictures\Product\back3.jpg");
         }
 
         //Method
