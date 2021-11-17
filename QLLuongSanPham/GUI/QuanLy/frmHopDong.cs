@@ -29,12 +29,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             ctHopDongDAO = new CTHopDongDAO();
         }
 
-        private void frmHopDong_Load(object sender, EventArgs e)
-        {
-            hopDongDAO.UpdateTrangThai();
-            CreateList();
-            LoadListHopDong(hopDongDAO.GetHopDongs());
-        }
+        #region Method
 
         private void CreateList()
         {
@@ -131,6 +126,63 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
+        private void TaoHopDong()
+        {
+            HopDong hd = new HopDong
+            {
+                TenHopDong = txtTenHopDong.Text.Trim(),
+                NgayBatDau = dtmNgayBatDau.Value,
+                NgayKetThuc = dtmNgayKetThuc.Value,
+                TenKhachHang = txtTenKhachHang.Text.Trim(),
+                DieuKhoan = txtDieuKhoan.Text,
+                TrangThai = true
+            };
+
+            hopDongDAO.Add(hd);
+            hopDong = hopDongDAO.GetLast();
+
+            TaoCTHopDong(hopDong.ID);
+        }
+
+        private void TaoCTHopDong(int idHopDong)
+        {
+            foreach (ListViewItem item in lstvCTHopDong.Items)
+            {
+                SanPham sp = (SanPham)item.Tag;
+
+                ChiTietHopDong cthd = new ChiTietHopDong
+                {
+                    IDHopDong = idHopDong,
+                    IDSanPham = sp.ID,
+                    SoLuong = Convert.ToInt32(item.SubItems[1].Text)
+                };
+
+                ctHopDongDAO.Add(cthd);
+            }
+        }
+
+        private bool CheckSanPham(SanPham sp)
+        {
+            foreach (ListViewItem item in lstvCTHopDong.Items)
+            {
+                if (sp.Equals((SanPham)item.Tag))
+                    return false;
+            }
+
+            return true;
+        }
+
+        #endregion
+
+        #region Event
+
+        private void frmHopDong_Load(object sender, EventArgs e)
+        {
+            hopDongDAO.UpdateTrangThai();
+            CreateList();
+            LoadListHopDong(hopDongDAO.GetHopDongs());
+        }
+
         private void lstvHopDong_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstvHopDong.SelectedItems.Count > 0 && btnLapHopDong.Text != "Lưu")
@@ -167,41 +219,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 txtTenSanPham.Text = lstvCTHopDong.SelectedItems[0].SubItems[0].Text;
                 nudSoLuong.Text = lstvCTHopDong.SelectedItems[0].SubItems[1].Text;
-            }
-        }
-
-        private void TaoHopDong()
-        {
-            HopDong hd = new HopDong
-            {
-                TenHopDong = txtTenHopDong.Text.Trim(),
-                NgayBatDau = dtmNgayBatDau.Value,
-                NgayKetThuc = dtmNgayKetThuc.Value,
-                TenKhachHang = txtTenKhachHang.Text.Trim(),
-                DieuKhoan = txtDieuKhoan.Text,
-                TrangThai = true
-            };
-
-            hopDongDAO.Add(hd);
-            hopDong = hopDongDAO.GetLast();
-
-            TaoCTHopDong(hopDong.ID);
-        }
-
-        private void TaoCTHopDong(int idHopDong)
-        {
-            foreach (ListViewItem item in lstvCTHopDong.Items)
-            {
-                SanPham sp = (SanPham)item.Tag;
-
-                ChiTietHopDong cthd = new ChiTietHopDong
-                {
-                    IDHopDong = idHopDong,
-                    IDSanPham = sp.ID,
-                    SoLuong = Convert.ToInt32(item.SubItems[1].Text)
-                };
-
-                ctHopDongDAO.Add(cthd);
             }
         }
 
@@ -332,17 +349,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
-        private bool CheckSanPham(SanPham sp)
-        {
-            foreach (ListViewItem item in lstvCTHopDong.Items)
-            {
-                if (sp.Equals((SanPham)item.Tag))
-                    return false;
-            }
-
-            return true;
-        }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (lstvCTHopDong.SelectedItems.Count > 0)
@@ -355,5 +361,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             LoadListHopDong(hopDongDAO.GetHopDongByChar(txtHDTK.Text));
         }
+
+        #endregion
     }
 }

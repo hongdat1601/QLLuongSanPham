@@ -28,11 +28,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             loaiPhepDAO = new LoaiPhepDAO();
         }
 
-        private void frmChamCongHC_Load(object sender, EventArgs e)
-        {
-            CreateList();
-            LoadCombobox();
-        }
+        #region Method
 
         private void LoadCombobox()
         {
@@ -47,7 +43,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 ListViewItem item = new ListViewItem();
 
-                item.Text = bc.IDNhanVien.ToString();
+                item.Text = nhanVienDAO.GetById(bc.IDNhanVien.Value).CMND;
                 item.SubItems.Add(nhanVienDAO.GetById(bc.IDNhanVien.Value).HoTen);
                 item.SubItems.Add(bc.NgayCham.Value.ToString("dd/MM/yyyy"));
 
@@ -78,12 +74,22 @@ namespace QLLuongSanPham.GUI.QuanLy
             lstvLich.View = View.Details;
 
             // Create Column
-            lstvLich.Columns.Add("ID NV", 100);
+            lstvLich.Columns.Add("CMND", 120);
             lstvLich.Columns.Add("Tên nhân viên", 210);
             lstvLich.Columns.Add("Ngày làm", 120);
             lstvLich.Columns.Add("Nghỉ phép", 120);
-            lstvLich.Columns.Add("Điểm danh", 120);
+            lstvLich.Columns.Add("Có mặt", 120);
 
+        }
+
+        #endregion
+
+        #region Event
+
+        private void frmChamCongHC_Load(object sender, EventArgs e)
+        {
+            CreateList();
+            LoadCombobox();
         }
 
         private void dtmDate_ValueChanged(object sender, EventArgs e)
@@ -155,5 +161,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 chkDiemDanh.Enabled = false;
             }
         }
+
+        #endregion
     }
 }

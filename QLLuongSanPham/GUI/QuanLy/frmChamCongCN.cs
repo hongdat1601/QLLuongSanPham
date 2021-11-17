@@ -29,10 +29,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             nhanVienDAO = new NhanVienDAO();
         }
 
-        private void frmChamCongCN_Load(object sender, EventArgs e)
-        {
-            CreateList();
-        }
+        #region Method
 
         private void CreateList()
         {
@@ -52,7 +49,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void CreateColumn()
         {
-            lstvLich.Columns.Add("ID NV", 70);
+            lstvLich.Columns.Add("CMND", 120);
             lstvLich.Columns.Add("Tên nhân viên", 210);
             lstvLich.Columns.Add("Ngày làm", 120);
             lstvLich.Columns.Add("Ca làm", 120);
@@ -67,7 +64,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 ListViewItem item = new ListViewItem();
 
-                item.Text = bc.ID_NhanVien.ToString();
+                item.Text = nhanVienDAO.GetById(bc.ID_NhanVien.Value).CMND;
                 item.SubItems.Add(nhanVienDAO.GetById(bc.ID_NhanVien.Value).HoTen);
                 item.SubItems.Add(bc.NgayDiLam.Value.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(caLamDAO.GetByID(bc.IDCaLam.Value).TenCa);
@@ -78,6 +75,15 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 lstvLich.Items.Add(item);
             }
+        }
+
+        #endregion
+
+        #region Event
+
+        private void frmChamCongCN_Load(object sender, EventArgs e)
+        {
+            CreateList();
         }
 
         private void dtmNgayLam_ValueChanged(object sender, EventArgs e)
@@ -129,5 +135,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 caLamDAO.GetIDByName(cboTenCa.Text)));
 
         }
+
+        #endregion
     }
 }
