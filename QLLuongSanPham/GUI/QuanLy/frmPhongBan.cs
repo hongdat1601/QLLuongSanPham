@@ -26,6 +26,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             nvDAO = new NhanVienDAO();
         }
 
+        #region Method
+
         private void CreateList(ListView lvw)
         {
             lvw.GridLines = true;
@@ -77,6 +79,33 @@ namespace QLLuongSanPham.GUI.QuanLy
             lstvPhongBan.Focus();
         }
 
+        private bool KiemTraThongTin()
+        {
+            if (string.IsNullOrEmpty(txtTenPhongBan.Text.Trim()))
+            {
+                MessageBox.Show("Tên phòng ban bị bỏ trống!", "Lỗi");
+                return false;
+            }
+
+            if (dtmNgayThanhLap.Value.CompareTo(DateTime.Now) > 0)
+            {
+                MessageBox.Show("Ngày thành lập không hợp lệ!", "Lỗi");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txtTenQL.Text.Trim()))
+            {
+                MessageBox.Show("Tên quản lý bị bỏ trống!", "Lỗi");
+                return false;
+            }
+
+            return true;
+        }
+
+        #endregion
+
+        #region Event
+
         private void frmPhongBan_Load(object sender, EventArgs e)
         {
             CreateList(lstvPhongBan);
@@ -108,22 +137,24 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             if (btnSua.Text == "Lưu")
             {
-                phongBan.TenPhongBan = txtTenPhongBan.Text;
-                phongBan.TenQuanLy = txtSLNV.Text;
-                phongBan.NgayThanhLap = dtmNgayThanhLap.Value;
-                phongBan.TenQuanLy = txtTenQL.Text;
-                phongBanDAO.Update(phongBan);
+                if (KiemTraThongTin())
+                {
+                    phongBan.TenPhongBan = txtTenPhongBan.Text.Trim();
+                    phongBan.NgayThanhLap = dtmNgayThanhLap.Value;
+                    phongBan.TenQuanLy = txtTenQL.Text.Trim();
+                    phongBanDAO.Update(phongBan);
 
-                txtTenPhongBan.Enabled = false;
-                dtmNgayThanhLap.Enabled = false;
-                txtTenQL.Enabled = false;
-                btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
-                btnSua.IconColor = Color.Orange;
-                btnSua.Text = "Sửa";
+                    txtTenPhongBan.Enabled = false;
+                    dtmNgayThanhLap.Enabled = false;
+                    txtTenQL.Enabled = false;
+                    btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
+                    btnSua.IconColor = Color.Orange;
+                    btnSua.Text = "Sửa";
 
-                btnThem.Enabled = true;
-                btnXoa.Enabled = true;
-                LoadListPhongBan(phongBanDAO.GetPhongBans());
+                    btnThem.Enabled = true;
+                    btnXoa.Enabled = true;
+                    LoadListPhongBan(phongBanDAO.GetPhongBans());
+                }
             }
             else
             {
@@ -161,27 +192,31 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             if (btnThem.Text == "Lưu")
             {
-                PhongBan pb = new PhongBan
+                if (KiemTraThongTin())
                 {
-                    TenPhongBan = txtTenPhongBan.Text,
-                    NgayThanhLap = dtmNgayThanhLap.Value,
-                    TenQuanLy = txtTenQL.Text
-                };
-                phongBanDAO.Add(pb);
+                    PhongBan pb = new PhongBan
+                    {
+                        TenPhongBan = txtTenPhongBan.Text.Trim(),
+                        NgayThanhLap = dtmNgayThanhLap.Value,
+                        TenQuanLy = txtTenQL.Text.Trim()
+                    };
 
-                txtTenPhongBan.Enabled = false;
-                dtmNgayThanhLap.Enabled = false;
-                txtTenQL.Enabled = false;
+                    phongBanDAO.Add(pb);
+
+                    txtTenPhongBan.Enabled = false;
+                    dtmNgayThanhLap.Enabled = false;
+                    txtTenQL.Enabled = false;
 
 
-                btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
-                btnThem.IconColor = Color.Green;
-                btnThem.Text = "Thêm";
+                    btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+                    btnThem.IconColor = Color.Green;
+                    btnThem.Text = "Thêm";
 
-                btnSua.Enabled = true;
-                btnXoa.Enabled = true;
-                LoadListPhongBan(phongBanDAO.GetPhongBans());
-                lstvPhongBan.SelectedIndices.Add(lstvPhongBan.Items.Count - 1);
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                    LoadListPhongBan(phongBanDAO.GetPhongBans());
+                    lstvPhongBan.SelectedIndices.Add(lstvPhongBan.Items.Count - 1);
+                }    
             }
             else
             {
@@ -190,6 +225,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 txtTenQL.Enabled = true;
                 txtTenPhongBan.Text = "";
                 txtTenQL.Text = "";
+                txtSLNV.Text = "0";
                 dtmNgayThanhLap.Value = DateTime.Now;
 
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -205,5 +241,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             LoadListPhongBan(phongBanDAO.GetListPBByName(txtTenSearch.Text));
         }
+
+        #endregion
     }
 }

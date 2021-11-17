@@ -140,13 +140,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
 
             if (btnSua.Text == "Lưu")
-            {
-
-                congDoan.TenCongDoan = txtCongDoanCapNhat.Text.Trim();
-                congDoan.DonGia = nudDonGiaCapNhat.Value;
-
+            { 
                 if (KiemTraThongTin())
                 {
+                    congDoan.TenCongDoan = txtCongDoanCapNhat.Text.Trim();
+                    congDoan.DonGia = nudDonGiaCapNhat.Value;
                     congDoanDAO.Update(congDoan);
 
                     btnThem.Enabled = true;
@@ -185,16 +183,16 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             if (btnThem.Text == "Lưu")
             {
-                
-                CongDoan cd = new CongDoan
-                {
-                    IDSanPham = sanPham.ID,
-                    TenCongDoan = txtCongDoanCapNhat.Text.Trim(),
-                    DonGia = nudDonGiaCapNhat.Value
-                };
-                
+                             
                 if (KiemTraThongTin())
                 {
+                    CongDoan cd = new CongDoan
+                    {
+                        IDSanPham = sanPham.ID,
+                        TenCongDoan = txtCongDoanCapNhat.Text.Trim(),
+                        DonGia = nudDonGiaCapNhat.Value
+                    };
+
                     congDoanDAO.Add(cd);
 
                     btnSua.Enabled = true;
