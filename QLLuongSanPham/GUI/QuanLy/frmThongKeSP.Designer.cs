@@ -29,32 +29,46 @@ namespace QLLuongSanPham.GUI.QuanLy
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.picNen = new System.Windows.Forms.PictureBox();
             this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlLuong = new System.Windows.Forms.Panel();
             this.lstvLuong = new System.Windows.Forms.ListView();
             this.lblDSLuong = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.pnlLuong.SuspendLayout();
             this.SuspendLayout();
             // 
+            // picNen
+            // 
+            this.picNen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picNen.Image = global::QLLuongSanPham.Properties.Resources.back3;
+            this.picNen.Location = new System.Drawing.Point(0, 0);
+            this.picNen.Name = "picNen";
+            this.picNen.Size = new System.Drawing.Size(1327, 974);
+            this.picNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picNen.TabIndex = 0;
+            this.picNen.TabStop = false;
+            // 
             // chartThongKe
             // 
             this.chartThongKe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea2.Name = "ChartArea1";
-            this.chartThongKe.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartThongKe.Legends.Add(legend2);
+            this.chartThongKe.BackColor = System.Drawing.Color.Aqua;
+            chartArea1.Name = "ChartArea1";
+            this.chartThongKe.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartThongKe.Legends.Add(legend1);
             this.chartThongKe.Location = new System.Drawing.Point(153, 45);
             this.chartThongKe.Name = "chartThongKe";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "BangLuong";
-            this.chartThongKe.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "BangLuong";
+            this.chartThongKe.Series.Add(series1);
             this.chartThongKe.Size = new System.Drawing.Size(1018, 491);
-            this.chartThongKe.TabIndex = 34;
+            this.chartThongKe.TabIndex = 36;
             this.chartThongKe.Text = "chart1";
             // 
             // pnlLuong
@@ -66,7 +80,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlLuong.Location = new System.Drawing.Point(22, 603);
             this.pnlLuong.Name = "pnlLuong";
             this.pnlLuong.Size = new System.Drawing.Size(1283, 327);
-            this.pnlLuong.TabIndex = 33;
+            this.pnlLuong.TabIndex = 35;
             // 
             // lstvLuong
             // 
@@ -97,10 +111,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.ClientSize = new System.Drawing.Size(1327, 974);
             this.Controls.Add(this.chartThongKe);
             this.Controls.Add(this.pnlLuong);
+            this.Controls.Add(this.picNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThongKeSP";
             this.Text = "frmThongKeSP";
             this.Load += new System.EventHandler(this.frmThongKeSP_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picNen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.pnlLuong.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -109,6 +125,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         #endregion
 
+        private System.Windows.Forms.PictureBox picNen;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartThongKe;
         private System.Windows.Forms.Panel pnlLuong;
         private System.Windows.Forms.ListView lstvLuong;

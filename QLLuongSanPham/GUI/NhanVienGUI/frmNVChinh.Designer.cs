@@ -86,6 +86,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSalary
             // 
@@ -196,9 +197,8 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(34, 154);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(187, 23);
+            this.lblName.Size = new System.Drawing.Size(0, 23);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "Võ Minh Phương";
             // 
             // pcbLogo
             // 
@@ -280,7 +280,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.pnlDesktop.Size = new System.Drawing.Size(976, 774);
             this.pnlDesktop.TabIndex = 3;
             // 
-            // frmNhanVien
+            // frmNVChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -290,7 +290,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.Controls.Add(this.panelTab);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmNhanVien";
+            this.Name = "frmNVChinh";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainEmployee_Load);
             this.panelMenu.ResumeLayout(false);

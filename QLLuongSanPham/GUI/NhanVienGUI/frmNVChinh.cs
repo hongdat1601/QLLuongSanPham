@@ -30,6 +30,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private void frmMainEmployee_Load(object sender, EventArgs e)
         {
             OpenFormChild(new frmTongQuan(nhanVien));
+            
         }
 
         //Structs
@@ -151,7 +152,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
                 pcbLogo.Visible = true;
                 btnBars.Dock = DockStyle.None;
                 panelLogo.BorderStyle = BorderStyle.Fixed3D;
-                lblName.Text = "Võ Minh Phương";
+                lblName.Text = nhanVien.HoTen;
                 btnHome.IconChar = IconChar.Home;
                 btnInfor.IconChar = IconChar.Info;
                 btnSalary.IconChar = IconChar.MoneyCheckAlt;
@@ -208,6 +209,16 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult hoi = MessageBox.Show("Bạn có muốn đăng xuất ?", "Thông báo", MessageBoxButtons.YesNo);
+            if(hoi == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.No;
+                this.Close();
+            }
         }
     }
 }
