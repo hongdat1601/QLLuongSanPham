@@ -22,6 +22,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         CongDoanDAO congDoanDAO;
         NhanVien nhanVien;
         IEnumerable<BangCongSP> bangCongSPs;
+        ChucVuDAO chucVuDAO;
 
         public frmTinhLuongCN()
         {
@@ -32,6 +33,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             phongBanDAO = new PhongBanDAO();
             congDoanDAO = new CongDoanDAO();
             caLamDAO = new CaLamDAO();
+            chucVuDAO = new ChucVuDAO();
         }
 
         private void frmTinhLuongCN_Load(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.Text = nv.CMND;
                 item.SubItems.Add(nv.HoTen);
                 item.SubItems.Add(phongBanDAO.GetById(nv.IDPhongBan.Value).TenPhongBan);
-
+                item.SubItems.Add(chucVuDAO.GetChucByID(nv.IDChucVu.Value).TenChucVu);
                 item.Tag = nv;
 
                 lstvNhanVien.Items.Add(item);
@@ -90,19 +92,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             data = data.Where(x => nhanVienDao.GetById(x.IDNhanVien).IDChucVu.Value == 7);
 
             lstvLuong.Items.Clear();
-            int stt = 1;
             foreach (var bl in data)
             {
                 ListViewItem item = new ListViewItem();
-                item.Text = stt.ToString();
+                item.Text = nhanVienDao.GetById(bl.IDNhanVien).CMND;
                 item.SubItems.Add(nhanVienDao.GetById(bl.IDNhanVien).HoTen);
+                item.SubItems.Add(phongBanDAO.GetById(nhanVienDao.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
+                item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDao.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
                 item.SubItems.Add(bl.NgayLap.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(bl.TienLuong.ToString());
+                item.SubItems.Add(bl.TienLuong.ToString() + " VND");
 
                 item.Tag = bl;
 
                 lstvLuong.Items.Add(item);
-                stt++;
             }
         }
 
@@ -111,6 +113,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.Columns.Add("CMND", 120);
             lvw.Columns.Add("Tên nhân viên", 170);
             lvw.Columns.Add("Phòng ban", 170);
+            lvw.Columns.Add("Chức vụ", 170);
 
             lvw.View = View.Details;
             lvw.GridLines = true;
@@ -131,10 +134,12 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void CreateTitleLuong(ListView lvw)
         {
-            lvw.Columns.Add("STT", 120);
+            lvw.Columns.Add("CMND", 120);
             lvw.Columns.Add("Tên nhân viên", 120);
+            lvw.Columns.Add("Phòng Ban", 120);
+            lvw.Columns.Add("Chức vụ", 170);
             lvw.Columns.Add("Ngày lập", 120);
-            lvw.Columns.Add("Tiền lương", 210);
+            lvw.Columns.Add("Tiền lương", 120);
 
             lvw.View = View.Details;
             lvw.GridLines = true;

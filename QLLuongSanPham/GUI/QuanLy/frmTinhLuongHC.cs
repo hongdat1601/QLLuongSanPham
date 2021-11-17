@@ -126,19 +126,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             data = data.Where(x => nhanVienDAO.GetById(x.IDNhanVien).IDChucVu.Value != 7);
 
             lstvLuong.Items.Clear();
-            int stt = 1;
             foreach (var bl in data)
             {
                 ListViewItem item = new ListViewItem();
-                item.Text = stt.ToString();
+                item.Text = nhanVienDAO.GetById(bl.IDNhanVien).CMND;
                 item.SubItems.Add(nhanVienDAO.GetById(bl.IDNhanVien).HoTen);
+                item.SubItems.Add(phongBanDAO.GetById(nhanVienDAO.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
+                item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDAO.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
                 item.SubItems.Add(bl.NgayLap.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(bl.TienLuong.ToString() + " VND");
 
                 item.Tag = bl;
 
                 lstvLuong.Items.Add(item);
-                stt++;
             }
         }
 
@@ -169,8 +169,10 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void CreateTitleLuong(ListView lvw)
         {
-            lvw.Columns.Add("STT", 120);
+            lvw.Columns.Add("CMND", 120);
             lvw.Columns.Add("Tên nhân viên", 120);
+            lvw.Columns.Add("Phòng Ban", 120);
+            lvw.Columns.Add("Chức vụ", 170);
             lvw.Columns.Add("Ngày lập", 120);
             lvw.Columns.Add("Tiền lương", 120);
 
