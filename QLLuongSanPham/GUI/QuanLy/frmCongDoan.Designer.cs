@@ -41,7 +41,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnTimKimSP = new FontAwesome.Sharp.IconButton();
             this.txtTenSearch = new System.Windows.Forms.TextBox();
-            this.txtDonGiaCapNhat = new System.Windows.Forms.TextBox();
             this.txtTenSPCapNhat = new System.Windows.Forms.TextBox();
             this.txtCongDoanCapNhat = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
@@ -50,11 +49,13 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblTenSP = new System.Windows.Forms.Label();
             this.gboTT = new System.Windows.Forms.GroupBox();
             this.pnlXuLy = new System.Windows.Forms.Panel();
+            this.nudDonGiaCapNhat = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).BeginInit();
             this.pnlSP.SuspendLayout();
             this.pnlCa.SuspendLayout();
             this.gboTT.SuspendLayout();
             this.pnlXuLy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDonGiaCapNhat)).BeginInit();
             this.SuspendLayout();
             // 
             // ptcNen
@@ -214,16 +215,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.txtTenSearch.Size = new System.Drawing.Size(191, 30);
             this.txtTenSearch.TabIndex = 30;
             // 
-            // txtDonGiaCapNhat
-            // 
-            this.txtDonGiaCapNhat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDonGiaCapNhat.Enabled = false;
-            this.txtDonGiaCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtDonGiaCapNhat.Location = new System.Drawing.Point(243, 232);
-            this.txtDonGiaCapNhat.Name = "txtDonGiaCapNhat";
-            this.txtDonGiaCapNhat.Size = new System.Drawing.Size(373, 30);
-            this.txtDonGiaCapNhat.TabIndex = 29;
-            // 
             // txtTenSPCapNhat
             // 
             this.txtTenSPCapNhat.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -293,7 +284,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // gboTT
             // 
             this.gboTT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gboTT.Controls.Add(this.txtDonGiaCapNhat);
+            this.gboTT.Controls.Add(this.nudDonGiaCapNhat);
             this.gboTT.Controls.Add(this.txtTenSPCapNhat);
             this.gboTT.Controls.Add(this.txtCongDoanCapNhat);
             this.gboTT.Controls.Add(this.lblDongia);
@@ -317,6 +308,21 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlXuLy.Name = "pnlXuLy";
             this.pnlXuLy.Size = new System.Drawing.Size(630, 69);
             this.pnlXuLy.TabIndex = 39;
+            // 
+            // nudDonGiaCapNhat
+            // 
+            this.nudDonGiaCapNhat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudDonGiaCapNhat.Enabled = false;
+            this.nudDonGiaCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudDonGiaCapNhat.Location = new System.Drawing.Point(243, 232);
+            this.nudDonGiaCapNhat.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nudDonGiaCapNhat.Name = "nudDonGiaCapNhat";
+            this.nudDonGiaCapNhat.Size = new System.Drawing.Size(371, 30);
+            this.nudDonGiaCapNhat.TabIndex = 30;
             // 
             // frmCongDoan
             // 
@@ -342,6 +348,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gboTT.ResumeLayout(false);
             this.gboTT.PerformLayout();
             this.pnlXuLy.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudDonGiaCapNhat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,7 +368,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private FontAwesome.Sharp.IconButton btnThem;
         private FontAwesome.Sharp.IconButton btnTimKimSP;
         private System.Windows.Forms.TextBox txtTenSearch;
-        private System.Windows.Forms.TextBox txtDonGiaCapNhat;
         private System.Windows.Forms.TextBox txtTenSPCapNhat;
         private System.Windows.Forms.TextBox txtCongDoanCapNhat;
         private System.Windows.Forms.Label lblName;
@@ -370,5 +376,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.GroupBox gboTT;
         private System.Windows.Forms.Panel pnlXuLy;
+        private System.Windows.Forms.NumericUpDown nudDonGiaCapNhat;
     }
 }

@@ -32,7 +32,7 @@ namespace QLLuongSanPham.DAO
         public CongDoan GetByName(string name)
         {
             return context.CongDoans
-                .Where(x => x.TenCongDoan == name)
+                .Where(x => x.TenCongDoan.Equals(name))
                 .FirstOrDefault();
         }
 

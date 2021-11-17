@@ -19,7 +19,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         ChucVuDAO cvDAO;
         TrinhDoHocVanDAO tdDAO;
         NhanVienDAO nvDAO;
-        private NhanVien _nv;
+
         public frmThongtinNV(NhanVien nhanVien)
         {
             InitializeComponent();

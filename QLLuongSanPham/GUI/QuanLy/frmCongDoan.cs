@@ -82,6 +82,17 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
+        private bool KiemTraThongTin()
+        {
+            if (string.IsNullOrEmpty(txtCongDoanCapNhat.Text.Trim()))
+            {
+                MessageBox.Show("Tên công đoạn bỏ trống!", "Lỗi");
+                return false;
+            }
+
+            return true;
+        }
+
         #endregion
 
         #region Events
@@ -115,7 +126,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 congDoan = (CongDoan)lstvCongDoan.SelectedItems[0].Tag;
                 txtCongDoanCapNhat.Text = congDoan.TenCongDoan;
-                txtDonGiaCapNhat.Text = congDoan.DonGia.Value.ToString();
+                nudDonGiaCapNhat.Value = congDoan.DonGia.Value;
                 lstvCongDoan.Focus();
             }
         }
@@ -130,31 +141,37 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             if (btnSua.Text == "Lưu")
             {
-                btnThem.Enabled = false;
-                btnXoa.Enabled = false;
 
-                congDoan.TenCongDoan = txtCongDoanCapNhat.Text;
-                congDoan.DonGia = Convert.ToDecimal(txtDonGiaCapNhat.Text);
-                congDoanDAO.Update(congDoan);
+                congDoan.TenCongDoan = txtCongDoanCapNhat.Text.Trim();
+                congDoan.DonGia = nudDonGiaCapNhat.Value;
 
-                txtCongDoanCapNhat.Enabled = false;
-                txtDonGiaCapNhat.Enabled = false;
-                btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
-                btnSua.IconColor = Color.Orange;
-                btnSua.Text = "Sửa";
+                if (KiemTraThongTin())
+                {
+                    congDoanDAO.Update(congDoan);
 
-                LoadListCongDoan(congDoanDAO.GetCongDoansByIdSanPham(sanPham.ID));
+                    btnThem.Enabled = true;
+                    btnXoa.Enabled = true;
+
+                    txtCongDoanCapNhat.Enabled = false;
+                    nudDonGiaCapNhat.Enabled = false;
+                    btnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
+                    btnSua.IconColor = Color.Orange;
+                    btnSua.Text = "Sửa";
+
+                    LoadListCongDoan(congDoanDAO.GetCongDoansByIdSanPham(sanPham.ID));
+                }
+                
             }
             else
             {
                 txtCongDoanCapNhat.Enabled = true;
-                txtDonGiaCapNhat.Enabled = true;
+                nudDonGiaCapNhat.Enabled = true;
                 btnSua.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnSua.IconColor = Color.Blue;
                 btnSua.Text = "Lưu";
 
-                btnThem.Enabled = true;
-                btnXoa.Enabled = true;
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
             }
         }
 
@@ -168,37 +185,42 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             if (btnThem.Text == "Lưu")
             {
-                btnSua.Enabled = false;
-                btnXoa.Enabled = false;
-
+                
                 CongDoan cd = new CongDoan
                 {
                     IDSanPham = sanPham.ID,
-                    TenCongDoan = txtCongDoanCapNhat.Text,
-                    DonGia = Convert.ToDecimal(txtDonGiaCapNhat.Text)
+                    TenCongDoan = txtCongDoanCapNhat.Text.Trim(),
+                    DonGia = nudDonGiaCapNhat.Value
                 };
-                congDoanDAO.Add(cd);
+                
+                if (KiemTraThongTin())
+                {
+                    congDoanDAO.Add(cd);
 
-                txtCongDoanCapNhat.Enabled = false;
-                txtDonGiaCapNhat.Enabled = false;
-                btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
-                btnThem.IconColor = Color.Green;
-                btnThem.Text = "Thêm";
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
 
-                LoadListCongDoan(congDoanDAO.GetCongDoansByIdSanPham(sanPham.ID));
-                lstvCongDoan.SelectedIndices.Add(lstvCongDoan.Items.Count - 1);
+                    txtCongDoanCapNhat.Enabled = false;
+                    nudDonGiaCapNhat.Enabled = false;
+                    btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+                    btnThem.IconColor = Color.Green;
+                    btnThem.Text = "Thêm";
+
+                    LoadListCongDoan(congDoanDAO.GetCongDoansByIdSanPham(sanPham.ID));
+                    lstvCongDoan.SelectedIndices.Add(lstvCongDoan.Items.Count - 1);
+                }      
             }
             else
             {
                 txtCongDoanCapNhat.Enabled = true;
-                txtDonGiaCapNhat.Enabled = true;
-                txtDonGiaCapNhat.Text = "";
+                nudDonGiaCapNhat.Enabled = true;
+                nudDonGiaCapNhat.Value = 0;
                 txtCongDoanCapNhat.Text = "";
                 btnThem.IconChar = FontAwesome.Sharp.IconChar.Save;
                 btnThem.IconColor = Color.Blue;
                 btnThem.Text = "Lưu";
-                btnSua.Enabled = true;
-                btnXoa.Enabled = true;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
             }
 
         }
@@ -222,11 +244,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
-        #endregion
-
         private void btnTimKimSP_Click(object sender, EventArgs e)
         {
                 LoadListSanPham(sanPhamDAO.GetSPByChar(txtTenSearch.Text));
         }
+
+        #endregion
+
     }
 }
