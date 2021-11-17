@@ -19,7 +19,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         ChucVuDAO cvDAO;
         TrinhDoHocVanDAO tdDAO;
         NhanVienDAO nvDAO;
-
+        private NhanVien _nv;
         public frmThongtinNV(NhanVien nhanVien)
         {
             InitializeComponent();
@@ -84,11 +84,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         }
 
         //Events
-        private void btnFixPassWord_Click(object sender, EventArgs e)
-        {
-            frmDoiMatKhau frm = new frmDoiMatKhau();
-            frm.Show();
-        }
 
         private void frmThongtinNV_Load(object sender, EventArgs e)
         {

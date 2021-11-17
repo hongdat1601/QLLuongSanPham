@@ -25,6 +25,12 @@ namespace QLLuongSanPham.DAO
                 .FirstOrDefault();
         }
 
+        public IEnumerable<BangLuong> GetListByIDNV(int idNV)
+        {
+            return context.BangLuongs
+                .Where(x => x.IDNhanVien == idNV);
+        }
+
         public BangLuong GetByIDNV(int idNV)
         {
             return context.BangLuongs

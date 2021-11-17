@@ -24,5 +24,23 @@ namespace QLLuongSanPham.DAO
                 .Where(x => x.Username == user)
                 .FirstOrDefault();
         }
+
+        public bool UpdateTaiKhoan(TaiKhoan tk)
+        {
+            using (var db = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.SaveChanges();
+                    db.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    db.Rollback();
+                    throw new Exception("Lỗi cập nhật tài khoản");
+                }
+            }
+        }
     }
 }

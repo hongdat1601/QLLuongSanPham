@@ -29,7 +29,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFixPassWord = new FontAwesome.Sharp.IconButton();
             this.btnFixInfo = new FontAwesome.Sharp.IconButton();
             this.gbxInfoSlary = new System.Windows.Forms.GroupBox();
             this.txtIndexSalary = new System.Windows.Forms.TextBox();
@@ -68,21 +67,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.gbxInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnFixPassWord
-            // 
-            this.btnFixPassWord.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnFixPassWord.Font = new System.Drawing.Font("Verdana", 8F);
-            this.btnFixPassWord.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnFixPassWord.IconColor = System.Drawing.Color.Black;
-            this.btnFixPassWord.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFixPassWord.Location = new System.Drawing.Point(825, 234);
-            this.btnFixPassWord.Name = "btnFixPassWord";
-            this.btnFixPassWord.Size = new System.Drawing.Size(161, 38);
-            this.btnFixPassWord.TabIndex = 11;
-            this.btnFixPassWord.Text = "Đổi mật khẩu";
-            this.btnFixPassWord.UseVisualStyleBackColor = true;
-            this.btnFixPassWord.Click += new System.EventHandler(this.btnFixPassWord_Click);
             // 
             // btnFixInfo
             // 
@@ -475,7 +459,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1205, 809);
             this.Controls.Add(this.btnChonAnh);
-            this.Controls.Add(this.btnFixPassWord);
             this.Controls.Add(this.btnFixInfo);
             this.Controls.Add(this.gbxInfoSlary);
             this.Controls.Add(this.gbxInfoWork);
@@ -499,8 +482,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton btnFixPassWord;
         private FontAwesome.Sharp.IconButton btnFixInfo;
         private System.Windows.Forms.GroupBox gbxInfoSlary;
         private System.Windows.Forms.TextBox txtIndexSalary;

@@ -32,8 +32,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.lvwSalary = new System.Windows.Forms.ListView();
             this.pnlList = new System.Windows.Forms.Panel();
             this.lblList = new System.Windows.Forms.Label();
-            this.lblSumSalary = new System.Windows.Forms.Label();
-            this.txtSumSalry = new System.Windows.Forms.TextBox();
             this.pnlList.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,36 +68,13 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.lblList.Text = "Chi tiết bảng lương";
             this.lblList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblSumSalary
-            // 
-            this.lblSumSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSumSalary.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lblSumSalary.Location = new System.Drawing.Point(416, 696);
-            this.lblSumSalary.Name = "lblSumSalary";
-            this.lblSumSalary.Size = new System.Drawing.Size(143, 46);
-            this.lblSumSalary.TabIndex = 2;
-            this.lblSumSalary.Text = "Tổng lương";
-            this.lblSumSalary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtSumSalry
-            // 
-            this.txtSumSalry.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSumSalry.Enabled = false;
-            this.txtSumSalry.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtSumSalry.Location = new System.Drawing.Point(668, 705);
-            this.txtSumSalry.Name = "txtSumSalry";
-            this.txtSumSalry.Size = new System.Drawing.Size(355, 29);
-            this.txtSumSalry.TabIndex = 3;
-            // 
             // frmLuongNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1468, 811);
-            this.Controls.Add(this.txtSumSalry);
             this.Controls.Add(this.pnlList);
-            this.Controls.Add(this.lblSumSalary);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLuongNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -107,7 +82,6 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
             this.Load += new System.EventHandler(this.frmLuongNhanVien_Load);
             this.pnlList.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -116,7 +90,5 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private System.Windows.Forms.ListView lvwSalary;
         private System.Windows.Forms.Panel pnlList;
         private System.Windows.Forms.Label lblList;
-        private System.Windows.Forms.Label lblSumSalary;
-        private System.Windows.Forms.TextBox txtSumSalry;
     }
 }
