@@ -36,15 +36,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             chucVuDAO = new ChucVuDAO();
         }
 
-        private void frmTinhLuongCN_Load(object sender, EventArgs e)
-        {
-            CreateTitleNV(lstvNhanVien);
-            CreateTitleCV(lstvLich);
-            CreateTitleLuong(lstvLuong);
-
-            LoadDataNhanVien(nhanVienDao.GetNhanViens());
-            LoadDataLuong(bangLuongDAO.GetBangLuongs());
-        }
+        #region Method
 
         private void LoadDataNhanVien(IEnumerable<NhanVien> data)
         {
@@ -146,6 +138,20 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.FullRowSelect = true;
         }
 
+        #endregion
+
+        #region Event
+
+        private void frmTinhLuongCN_Load(object sender, EventArgs e)
+        {
+            CreateTitleNV(lstvNhanVien);
+            CreateTitleCV(lstvLich);
+            CreateTitleLuong(lstvLuong);
+
+            LoadDataNhanVien(nhanVienDao.GetNhanViens());
+            LoadDataLuong(bangLuongDAO.GetBangLuongs());
+        }
+
         private void lstvNhanVien_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstvNhanVien.SelectedItems.Count > 0)
@@ -173,7 +179,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 return;
             }
 
-            decimal tienLuong = Convert.ToDecimal(txtTP.Text);
+            decimal tienLuong = nudTP.Value;
 
             List<int> ids = new List<int>();
             foreach (var bc in bangCongSPs)
@@ -196,11 +202,16 @@ namespace QLLuongSanPham.GUI.QuanLy
             ids.ForEach(x => bangCongDAO.RemoveBCCN(bangCongDAO.GetByID(x)));
             bangCongSPs = bangCongDAO.GetBangCongSPsByIDNhanVien(nhanVien.ID);
             LoadDataLich(bangCongSPs);
+
+            nudTP.Value = 0;
         }
 
         private void btnTiemKiem_Click(object sender, EventArgs e)
         {
             LoadDataNhanVien(nhanVienDao.GetNhanViens().Where(x => x.HoTen.Contains(txtTen.Text)));
         }
+
+        #endregion
+
     }
 }

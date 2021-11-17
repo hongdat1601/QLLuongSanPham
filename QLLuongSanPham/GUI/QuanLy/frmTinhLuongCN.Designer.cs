@@ -44,11 +44,12 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDSNV = new System.Windows.Forms.Panel();
             this.lstvNhanVien = new System.Windows.Forms.ListView();
             this.lblDSNV = new System.Windows.Forms.Label();
-            this.txtTP = new System.Windows.Forms.TextBox();
+            this.nudTP = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.pnlLuong.SuspendLayout();
             this.pnlChiTiet.SuspendLayout();
             this.pnlDSNV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTP)).BeginInit();
             this.SuspendLayout();
             // 
             // picNen
@@ -70,7 +71,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTinhLuong.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnTinhLuong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTinhLuong.IconSize = 22;
-            this.btnTinhLuong.Location = new System.Drawing.Point(1019, 537);
+            this.btnTinhLuong.Location = new System.Drawing.Point(1019, 546);
             this.btnTinhLuong.Name = "btnTinhLuong";
             this.btnTinhLuong.Size = new System.Drawing.Size(138, 43);
             this.btnTinhLuong.TabIndex = 11;
@@ -227,15 +228,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDSNV.Text = "Danh sách công nhân";
             this.lblDSNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtTP
+            // nudTP
             // 
-            this.txtTP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTP.Location = new System.Drawing.Point(630, 550);
-            this.txtTP.Name = "txtTP";
-            this.txtTP.Size = new System.Drawing.Size(294, 30);
-            this.txtTP.TabIndex = 9;
-            this.txtTP.Text = "0";
+            this.nudTP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudTP.Location = new System.Drawing.Point(612, 552);
+            this.nudTP.Maximum = new decimal(new int[] {
+            1215752192,
+            23,
+            0,
+            0});
+            this.nudTP.Name = "nudTP";
+            this.nudTP.Size = new System.Drawing.Size(384, 30);
+            this.nudTP.TabIndex = 16;
             // 
             // frmTinhLuongCN
             // 
@@ -243,9 +248,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1191, 968);
+            this.Controls.Add(this.nudTP);
             this.Controls.Add(this.btnTinhLuong);
             this.Controls.Add(this.btnTiemKiem);
-            this.Controls.Add(this.txtTP);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.lblTen);
             this.Controls.Add(this.pnlLuong);
@@ -261,6 +266,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlLuong.ResumeLayout(false);
             this.pnlChiTiet.ResumeLayout(false);
             this.pnlDSNV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudTP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,6 +289,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Panel pnlDSNV;
         private System.Windows.Forms.ListView lstvNhanVien;
         private System.Windows.Forms.Label lblDSNV;
-        private System.Windows.Forms.TextBox txtTP;
+        private System.Windows.Forms.NumericUpDown nudTP;
     }
 }

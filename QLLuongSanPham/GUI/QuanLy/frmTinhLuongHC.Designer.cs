@@ -38,7 +38,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lstvLuong = new System.Windows.Forms.ListView();
             this.lblDSLuong = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtThuongPhat = new System.Windows.Forms.TextBox();
             this.lblTP = new System.Windows.Forms.Label();
             this.pnlCongViec = new System.Windows.Forms.Panel();
             this.lstvCongViec = new System.Windows.Forms.ListView();
@@ -52,12 +51,14 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cboNam = new System.Windows.Forms.ComboBox();
+            this.nudThuongPhat = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.pnlLuong.SuspendLayout();
             this.pnlCongViec.SuspendLayout();
             this.pnlDSNV.SuspendLayout();
             this.gboLuong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoBuoiLamThem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudThuongPhat)).BeginInit();
             this.SuspendLayout();
             // 
             // picNen
@@ -173,16 +174,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.label1.TabIndex = 14;
             this.label1.Text = "Số buổi làm thêm";
             // 
-            // txtThuongPhat
-            // 
-            this.txtThuongPhat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtThuongPhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThuongPhat.Location = new System.Drawing.Point(247, 156);
-            this.txtThuongPhat.Name = "txtThuongPhat";
-            this.txtThuongPhat.Size = new System.Drawing.Size(417, 30);
-            this.txtThuongPhat.TabIndex = 17;
-            this.txtThuongPhat.Text = "0";
-            // 
             // lblTP
             // 
             this.lblTP.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -265,9 +256,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             // gboLuong
             // 
             this.gboLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gboLuong.Controls.Add(this.nudThuongPhat);
             this.gboLuong.Controls.Add(this.nudSoBuoiLamThem);
             this.gboLuong.Controls.Add(this.label1);
-            this.gboLuong.Controls.Add(this.txtThuongPhat);
             this.gboLuong.Controls.Add(this.lblTP);
             this.gboLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboLuong.Location = new System.Drawing.Point(28, 367);
@@ -333,6 +324,14 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboNam.TabIndex = 26;
             this.cboNam.SelectedIndexChanged += new System.EventHandler(this.cboNam_SelectedIndexChanged);
             // 
+            // nudThuongPhat
+            // 
+            this.nudThuongPhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudThuongPhat.Location = new System.Drawing.Point(247, 158);
+            this.nudThuongPhat.Name = "nudThuongPhat";
+            this.nudThuongPhat.Size = new System.Drawing.Size(417, 30);
+            this.nudThuongPhat.TabIndex = 18;
+            // 
             // frmTinhLuongHC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -364,6 +363,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gboLuong.ResumeLayout(false);
             this.gboLuong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoBuoiLamThem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudThuongPhat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,7 +380,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.ListView lstvLuong;
         private System.Windows.Forms.Label lblDSLuong;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtThuongPhat;
         private System.Windows.Forms.Label lblTP;
         private System.Windows.Forms.Panel pnlCongViec;
         private System.Windows.Forms.ListView lstvCongViec;
@@ -394,5 +393,6 @@ namespace QLLuongSanPham.GUI.QuanLy
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboNam;
+        private System.Windows.Forms.NumericUpDown nudThuongPhat;
     }
 }

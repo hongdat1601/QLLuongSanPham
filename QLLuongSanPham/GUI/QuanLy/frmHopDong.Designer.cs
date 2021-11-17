@@ -470,6 +470,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // gboChiTiet
             // 
+            this.gboChiTiet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gboChiTiet.Controls.Add(this.nudSoLuong);
             this.gboChiTiet.Controls.Add(this.label9);
             this.gboChiTiet.Controls.Add(this.txtTenSanPham);
@@ -484,6 +485,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // pnlXuly
             // 
+            this.pnlXuly.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlXuly.Controls.Add(this.btnXoa);
             this.pnlXuly.Controls.Add(this.btnThem);
             this.pnlXuly.Location = new System.Drawing.Point(337, 874);

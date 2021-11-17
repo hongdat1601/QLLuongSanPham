@@ -36,16 +36,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             bangLuongDAO = new BangLuongDAO();
         }
 
-        private void frmTinhLuongHC_Load(object sender, EventArgs e)
-        {
-            CreateTitleDSNV(lstvNhanVien);
-            CreateTitleCV(lstvCongViec);
-            CreateTitleLuong(lstvLuong);
-
-            LoadDataNhanVien(nhanVienDAO.GetNhanViens());
-            LoadDataLuong(bangLuongDAO.GetBangLuongs());
-            LoadCombobox();
-        }
+        #region Method
 
         private void LoadCombobox()
         {
@@ -181,6 +172,21 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.FullRowSelect = true;
         }
 
+        #endregion
+
+        #region Event
+
+        private void frmTinhLuongHC_Load(object sender, EventArgs e)
+        {
+            CreateTitleDSNV(lstvNhanVien);
+            CreateTitleCV(lstvCongViec);
+            CreateTitleLuong(lstvLuong);
+
+            LoadDataNhanVien(nhanVienDAO.GetNhanViens());
+            LoadDataLuong(bangLuongDAO.GetBangLuongs());
+            LoadCombobox();
+        }
+
         private void lstvNhanVien_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstvNhanVien.SelectedItems.Count > 0)
@@ -241,7 +247,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             int soNgayLam = bangCongHCs.Count();
             int soNgayLamThucTe = 0;
             decimal phuCap = chucVuDAO.GetChucByID(nhanVien.IDChucVu.Value).PhuCap.Value;
-            phuCap += Convert.ToDecimal(txtThuongPhat.Text);
+            phuCap += nudThuongPhat.Value;
 
             foreach (var bc in bangCongHCs)
             {
@@ -262,7 +268,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
 
             decimal tongTien = phuCap
-                + (Convert.ToDecimal((soNgayLamThucTe * 1.0 / soNgayLam)) * nhanVien.LuongCanBan.Value)
+                + (Convert.ToDecimal((soNgayLamThucTe * 1.0 / soNgayLam)) 
+                * nhanVien.LuongCanBan.Value * Convert.ToDecimal(nhanVien.ChiSoLuong.Value))
                 + (Convert.ToInt32(nudSoBuoiLamThem.Text) * 100000);
 
             BangLuong bl = new BangLuong
@@ -286,11 +293,15 @@ namespace QLLuongSanPham.GUI.QuanLy
                     Convert.ToInt32(cboNam.Text));
 
             LoadDataCongViec(bangCongHCs);
+            nudThuongPhat.Value = 0;
+            nudSoBuoiLamThem.Value = 0;
         }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
             LoadDataNhanVien(nhanVienDAO.GetNhanViens().Where(x => x.HoTen.Contains(txtTen.Text)));
         }
+
+        #endregion
     }
 }
