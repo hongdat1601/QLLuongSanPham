@@ -18,18 +18,18 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<BangCongHC> GetBangCongHCs() => context.BangCongHCs;
+        public IEnumerable<BangCongHC> GetBangCongHCs() => context.BangCongHC;
 
         public BangCongHC GetByID(int id)
         {
-            return context.BangCongHCs
+            return context.BangCongHC
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public IEnumerable<BangCongHC> GetBCByIDNV(int id)
         {
-            return context.BangCongHCs
+            return context.BangCongHC
                 .Where(x=> x.IDNhanVien == id);
         }
         public bool AddLich(BangCongHC lich)
@@ -38,7 +38,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.BangCongHCs.Add(lich);
+                    context.BangCongHC.Add(lich);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -52,28 +52,28 @@ namespace QLLuongSanPham.DAO
             }
         }
 
-        public bool UpdateBangCong(BangCongHC bcNew)
-        {
-            using (var db = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    var bc = GetByID(bcNew.ID);
-                    bc.TrangThai = bcNew.TrangThai;
-                    bc.IDLoaiPhep = bcNew.IDLoaiPhep;
+        //public bool UpdateBangCong(BangCongHC bcNew)
+        //{
+        //    using (var db = context.Database.BeginTransaction())
+        //    {
+        //        try
+        //        {
+        //            var bc = GetByID(bcNew.ID);
+        //            bc.TrangThai = bcNew.TrangThai;
+        //            bc.IDLoaiPhep = bcNew.IDLoaiPhep;
 
-                    context.SaveChanges();
-                    db.Commit();
-                }
-                catch (Exception)
-                {
-                    db.Rollback();
-                    return false;
-                }
-            }
+        //            context.SaveChanges();
+        //            db.Commit();
+        //        }
+        //        catch (Exception)
+        //        {
+        //            db.Rollback();
+        //            return false;
+        //        }
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
 
         public bool RemoveBangCong(BangCongHC bc)
         {
@@ -81,7 +81,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.BangCongHCs.Remove(bc);
+                    context.BangCongHC.Remove(bc);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -101,7 +101,7 @@ namespace QLLuongSanPham.DAO
 
         public IEnumerable<BangCongHC> GetBangCongHCsByIDNVAndDate(int id, int month, int year)
         {
-            return context.BangCongHCs
+            return context.BangCongHC
                 .Where(x => x.IDNhanVien == id 
                 && x.NgayCham.Value.Month == month
                 && x.NgayCham.Value.Year == year);

@@ -401,7 +401,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnXuLyPhanCa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnXuLyPhanCa.Size = new System.Drawing.Size(296, 63);
             this.btnXuLyPhanCa.TabIndex = 8;
-            this.btnXuLyPhanCa.Text = "Phân Lịch Làm Việc";
+            this.btnXuLyPhanCa.Text = "Phân Lịch Công Nhân";
             this.btnXuLyPhanCa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXuLyPhanCa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXuLyPhanCa.UseVisualStyleBackColor = false;

@@ -35,37 +35,37 @@ namespace QLLuongSanPham.GUI.QuanLy
             loaiPhepDAO.GetLoaiPheps().ToList().ForEach(x => cboPhep.Items.Add(x.TenPhep));
         }
 
-        private void LoadData(IEnumerable<BangCongHC> data)
-        {
-            lstvLich.Items.Clear();
+        //private void LoadData(IEnumerable<BangCongHC> data)
+        //{
+        //    lstvLich.Items.Clear();
 
-            foreach (var bc in data)
-            {
-                ListViewItem item = new ListViewItem();
+        //    foreach (var bc in data)
+        //    {
+        //        ListViewItem item = new ListViewItem();
 
-                item.Text = nhanVienDAO.GetById(bc.IDNhanVien.Value).CMND;
-                item.SubItems.Add(nhanVienDAO.GetById(bc.IDNhanVien.Value).HoTen);
-                item.SubItems.Add(bc.NgayCham.Value.ToString("dd/MM/yyyy"));
+        //        item.Text = nhanVienDAO.GetById(bc.IDNhanVien.Value).CMND;
+        //        item.SubItems.Add(nhanVienDAO.GetById(bc.IDNhanVien.Value).HoTen);
+        //        item.SubItems.Add(bc.NgayCham.Value.ToString("dd/MM/yyyy"));
 
-                if (bc.IDLoaiPhep == null)
-                    item.SubItems.Add("Không");
-                else
-                    item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).TenPhep);
+        //        if (bc.IDLoaiPhep == null)
+        //            item.SubItems.Add("Không");
+        //        else
+        //            item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).TenPhep);
 
-                if (bc.TrangThai == null)
-                {
-                    item.SubItems.Add("");
-                }
-                else
-                {
-                    item.SubItems.Add((bc.TrangThai.Value ? "Có" : "Không"));
-                }
+        //        if (bc.TrangThai == null)
+        //        {
+        //            item.SubItems.Add("");
+        //        }
+        //        else
+        //        {
+        //            item.SubItems.Add((bc.TrangThai.Value ? "Có" : "Không"));
+        //        }
 
-                item.Tag = bc;
+        //        item.Tag = bc;
 
-                lstvLich.Items.Add(item);
-            }
-        }
+        //        lstvLich.Items.Add(item);
+        //    }
+        //}
 
         private void CreateList()
         {
@@ -95,7 +95,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void dtmDate_ValueChanged(object sender, EventArgs e)
         {
             string date = dtmDate.Value.ToString("dd/MM/yyyy");
-            LoadData(bangCongDAO.GetBangCongHCsByDate(date));
+            //LoadData(bangCongDAO.GetBangCongHCsByDate(date));
 
             txtMaNV.Text = "";
             txtTenNV.Text = "";
@@ -104,51 +104,51 @@ namespace QLLuongSanPham.GUI.QuanLy
             bangCong = null;
         }
 
-        private void lstvLich_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lstvLich.SelectedItems.Count > 0)
-            {
-                ListViewItem item = lstvLich.SelectedItems[0];
-                bangCong = (BangCongHC)item.Tag;
+        //private void lstvLich_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (lstvLich.SelectedItems.Count > 0)
+        //    {
+        //        ListViewItem item = lstvLich.SelectedItems[0];
+        //        bangCong = (BangCongHC)item.Tag;
 
-                txtMaNV.Text = bangCong.IDNhanVien.ToString();
-                txtTenNV.Text = nhanVienDAO.GetById(bangCong.IDNhanVien.Value).HoTen;
+        //        txtMaNV.Text = bangCong.IDNhanVien.ToString();
+        //        txtTenNV.Text = nhanVienDAO.GetById(bangCong.IDNhanVien.Value).HoTen;
 
-                if (bangCong.IDLoaiPhep == null)
-                    cboPhep.Text = "Không";
-                else
-                    cboPhep.Text = loaiPhepDAO.GetByID(bangCong.IDLoaiPhep.Value).TenPhep;
+        //        if (bangCong.IDLoaiPhep == null)
+        //            cboPhep.Text = "Không";
+        //        else
+        //            cboPhep.Text = loaiPhepDAO.GetByID(bangCong.IDLoaiPhep.Value).TenPhep;
 
-                if (bangCong.TrangThai == null)
-                    chkDiemDanh.Checked = false;
-                else
-                    chkDiemDanh.Checked = bangCong.TrangThai.Value;
-            }
-        }
+        //        if (bangCong.TrangThai == null)
+        //            chkDiemDanh.Checked = false;
+        //        else
+        //            chkDiemDanh.Checked = bangCong.TrangThai.Value;
+        //    }
+        //}
 
-        private void btnChamCong_Click(object sender, EventArgs e)
-        {
-            if (bangCong == null)
-            {
-                MessageBox.Show("Chưa chọn lịch!", "Thông báo");
-                return;
-            }
+        //private void btnChamCong_Click(object sender, EventArgs e)
+        //{
+        //    if (bangCong == null)
+        //    {
+        //        MessageBox.Show("Chưa chọn lịch!", "Thông báo");
+        //        return;
+        //    }
 
-            if (cboPhep.SelectedIndex != 0)
-            {
-                bangCong.IDLoaiPhep = loaiPhepDAO.GetByName(cboPhep.Text).ID;
-                bangCong.TrangThai = false;
-            }
-            else
-            {
-                bangCong.IDLoaiPhep = null;
-                bangCong.TrangThai = chkDiemDanh.Checked;
-            }
+        //    if (cboPhep.SelectedIndex != 0)
+        //    {
+        //        bangCong.IDLoaiPhep = loaiPhepDAO.GetByName(cboPhep.Text).ID;
+        //        bangCong.TrangThai = false;
+        //    }
+        //    else
+        //    {
+        //        bangCong.IDLoaiPhep = null;
+        //        bangCong.TrangThai = chkDiemDanh.Checked;
+        //    }
 
-            bangCongDAO.UpdateBangCong(bangCong);
-            string date = dtmDate.Value.ToString("dd/MM/yyyy");
-            LoadData(bangCongDAO.GetBangCongHCsByDate(date));
-        }
+        //    bangCongDAO.UpdateBangCong(bangCong);
+        //    string date = dtmDate.Value.ToString("dd/MM/yyyy");
+        //    LoadData(bangCongDAO.GetBangCongHCsByDate(date));
+        //}
 
         private void cboPhep_SelectedIndexChanged(object sender, EventArgs e)
         {

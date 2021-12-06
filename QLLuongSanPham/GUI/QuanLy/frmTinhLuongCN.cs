@@ -91,7 +91,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(nhanVienDao.GetById(bl.IDNhanVien).HoTen);
                 item.SubItems.Add(phongBanDAO.GetById(nhanVienDao.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDao.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
-                item.SubItems.Add(bl.NgayLap.ToString("dd/MM/yyyy"));
+                item.SubItems.Add(bl.NgayLap.Value.Date.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(bl.TienLuong.ToString() + " VND");
 
                 item.Tag = bl;
@@ -192,7 +192,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 IDNhanVien = nhanVien.ID,
                 NgayLap = DateTime.Now,
-                SoBuoiLamThem = 0,
                 TienLuong = tienLuong
             };
 

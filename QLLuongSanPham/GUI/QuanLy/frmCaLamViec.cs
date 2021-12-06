@@ -159,6 +159,4 @@ namespace QLLuongSanPham.GUI.QuanLy
             
         }
     }
-
-
 }

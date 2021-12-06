@@ -12,14 +12,11 @@ namespace QLLuongSanPham.Entities
         public int ID { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime NgayLap { get; set; }
+        public DateTime? NgayLap { get; set; }
 
-        [Column(TypeName = "money")]
         public decimal TienLuong { get; set; }
 
         public int IDNhanVien { get; set; }
-
-        public int? SoBuoiLamThem { get; set; }
 
         public virtual NhanVien NhanVien { get; set; }
     }

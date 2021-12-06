@@ -87,7 +87,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnChamCong.Text = "Chấm công";
             this.btnChamCong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChamCong.UseVisualStyleBackColor = true;
-            this.btnChamCong.Click += new System.EventHandler(this.btnChamCong_Click);
             // 
             // label4
             // 
@@ -164,7 +163,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lstvLich.Size = new System.Drawing.Size(1125, 173);
             this.lstvLich.TabIndex = 1;
             this.lstvLich.UseCompatibleStateImageBehavior = false;
-            this.lstvLich.SelectedIndexChanged += new System.EventHandler(this.lstvLich_SelectedIndexChanged);
             // 
             // lblList
             // 

@@ -15,16 +15,16 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<CaLam> GetCaLams() => context.CaLams;
+        public IEnumerable<CaLam> GetCaLams() => context.CaLam;
         public IEnumerable<CaLam> GetCaByIDSP(int id)
         {
-            return context.CaLams
+            return context.CaLam
                 .Where(x => x.ID == id);
         }
 
         public CaLam GetByID(int id)
         {
-            return context.CaLams
+            return context.CaLam
                 .Where(x => x.ID.Equals(id))
                 .FirstOrDefault();
         }
@@ -45,7 +45,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.CaLams.Add(ca);
+                    context.CaLam.Add(ca);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -64,7 +64,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.CaLams.Remove(ca);
+                    context.CaLam.Remove(ca);
                     context.SaveChanges();
                     db.Commit();
 
@@ -84,7 +84,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    var update = from i in context.CaLams
+                    var update = from i in context.CaLam
                                  where i.ID == ca.ID
                                  select i;
                     update.First().TenCa = ca.TenCa;
