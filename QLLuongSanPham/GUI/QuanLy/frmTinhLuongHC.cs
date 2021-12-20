@@ -76,41 +76,41 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
-        private void LoadDataCongViec(IEnumerable<BangCongHC> data)
-        {
-            lstvCongViec.Items.Clear();
-            if (data == null)
-            {
-                return;
-            }
+        //private void LoadDataCongViec(IEnumerable<BangCongHC> data)
+        //{
+        //    lstvCongViec.Items.Clear();
+        //    if (data == null)
+        //    {
+        //        return;
+        //    }
 
-            foreach (var bc in data)
-            {
-                ListViewItem item = new ListViewItem();
+        //    foreach (var bc in data)
+        //    {
+        //        ListViewItem item = new ListViewItem();
 
-                item.Text = bc.NgayCham.Value.ToString("dd/MM/yyyy");
+        //        item.Text = bc.NgayCham.Value.ToString("dd/MM/yyyy");
 
-                if (bc.TrangThai == null)
-                    item.SubItems.Add("Không");
-                else
-                    item.SubItems.Add((bc.TrangThai.Value ? "Có" : "Không"));
+        //        if (bc.TrangThai == null)
+        //            item.SubItems.Add("Không");
+        //        else
+        //            item.SubItems.Add((bc.TrangThai.Value ? "Có" : "Không"));
 
-                if (bc.IDLoaiPhep == null)
-                {
-                    item.SubItems.Add("Không");
-                    item.SubItems.Add("0 VND");
-                }
-                else
-                {
-                    item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).TenPhep);
-                    item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap.ToString() + " VND");
-                } 
+        //        if (bc.IDLoaiPhep == null)
+        //        {
+        //            item.SubItems.Add("Không");
+        //            item.SubItems.Add("0 VND");
+        //        }
+        //        else
+        //        {
+        //            item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).TenPhep);
+        //            item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap.ToString() + " VND");
+        //        } 
 
-                item.Tag = bc;
+        //        item.Tag = bc;
 
-                lstvCongViec.Items.Add(item);
-            }
-        }
+        //        lstvCongViec.Items.Add(item);
+        //    }
+        //}
 
         private void LoadDataLuong(IEnumerable<BangLuong> data)
         {
@@ -124,7 +124,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(nhanVienDAO.GetById(bl.IDNhanVien).HoTen);
                 item.SubItems.Add(phongBanDAO.GetById(nhanVienDAO.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDAO.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
-                item.SubItems.Add(bl.NgayLap.ToString("dd/MM/yyyy"));
+                item.SubItems.Add(bl.NgayLap.Value.Date.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(bl.TienLuong.ToString() + " VND");
 
                 item.Tag = bl;
@@ -198,7 +198,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     cboThang.SelectedIndex+1, 
                     Convert.ToInt32(cboNam.Text));
 
-                LoadDataCongViec(bangCongHCs);
+                //LoadDataCongViec(bangCongHCs);
             }
         }
 
@@ -211,7 +211,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     cboThang.SelectedIndex + 1,
                     Convert.ToInt32(cboNam.Text));
 
-            LoadDataCongViec(bangCongHCs);
+            //LoadDataCongViec(bangCongHCs);
         }
 
         private void cboThang_SelectedIndexChanged(object sender, EventArgs e)
@@ -225,77 +225,77 @@ namespace QLLuongSanPham.GUI.QuanLy
 
 
 
-            LoadDataCongViec(bangCongHCs);
+            //LoadDataCongViec(bangCongHCs);
         }
 
-        private void btnTinh_Click(object sender, EventArgs e)
-        {
-            if (nhanVien == null)
-            {
-                MessageBox.Show("Chưa chọn nhân viên!", "Thông báo");
-                return;
-            }
+        //private void btnTinh_Click(object sender, EventArgs e)
+        //{
+        //    if (nhanVien == null)
+        //    {
+        //        MessageBox.Show("Chưa chọn nhân viên!", "Thông báo");
+        //        return;
+        //    }
 
-            if (bangCongHCs.Count() <= 0)
-            {
-                MessageBox.Show("Nhân viên không có lịch để tính", "Thông báo");
-                return;
-            }
+        //    if (bangCongHCs.Count() <= 0)
+        //    {
+        //        MessageBox.Show("Nhân viên không có lịch để tính", "Thông báo");
+        //        return;
+        //    }
 
-            List<int> ids = new List<int>();
+        //    List<int> ids = new List<int>();
 
-            int soNgayLam = bangCongHCs.Count();
-            int soNgayLamThucTe = 0;
-            decimal phuCap = chucVuDAO.GetChucByID(nhanVien.IDChucVu.Value).PhuCap.Value;
-            phuCap += nudThuongPhat.Value;
+        //    int soNgayLam = bangCongHCs.Count();
+        //    int soNgayLamThucTe = 0;
+        //    decimal phuCap = chucVuDAO.GetChucByID(nhanVien.IDChucVu.Value).PhuCap.Value;
+        //    phuCap += nudThuongPhat.Value;
 
-            foreach (var bc in bangCongHCs)
-            {
-                if (bc.TrangThai != null)
-                {
-                    if (bc.TrangThai.Value)
-                    {
-                        soNgayLamThucTe++;
-                    }
-                }
+        //    foreach (var bc in bangCongHCs)
+        //    {
+        //        if (bc.TrangThai != null)
+        //        {
+        //            if (bc.TrangThai.Value)
+        //            {
+        //                soNgayLamThucTe++;
+        //            }
+        //        }
 
-                if (bc.IDLoaiPhep != null)
-                {
-                    phuCap += loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap.Value;
-                }
+        //        if (bc.IDLoaiPhep != null)
+        //        {
+        //            phuCap += loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap.Value;
+        //        }
 
-                ids.Add(bc.ID);
-            }
+        //        ids.Add(bc.ID);
+        //    }
 
-            decimal tongTien = phuCap
-                + (Convert.ToDecimal((soNgayLamThucTe * 1.0 / soNgayLam)) 
-                * nhanVien.LuongCanBan.Value * Convert.ToDecimal(nhanVien.ChiSoLuong.Value))
-                + (Convert.ToInt32(nudSoBuoiLamThem.Text) * 100000);
+        //    decimal tongTien = phuCap
+        //        + (Convert.ToDecimal((soNgayLamThucTe * 1.0 / soNgayLam)) 
+        //        * nhanVien.LuongCanBan.Value * Convert.ToDecimal(nhanVien.ChiSoLuong.Value))
+        //        + (Convert.ToInt32(nudSoBuoiLamThem.Text) * 100000);
 
-            BangLuong bl = new BangLuong
-            {
-                IDNhanVien = nhanVien.ID,
-                NgayLap = DateTime.Now,
-                SoBuoiLamThem = Convert.ToInt32(nudSoBuoiLamThem.Text),
-                TienLuong = Math.Round(tongTien, 0)
-            };
+        //    BangLuong bl = new BangLuong
+        //    {
+        //        IDNhanVien = nhanVien.ID,
+        //        NgayLap = DateTime.Now,
+        //        SoBuoiLamThem = Convert.ToInt32(nudSoBuoiLamThem.Text),
+        //        TienLuong = Math.Round(tongTien, 0)
+        //    };
 
-            bangLuongDAO.Add(bl);
-            LoadDataLuong(bangLuongDAO.GetBangLuongs());
+        //    bangLuongDAO.Add(bl);
+        //    LoadDataLuong(bangLuongDAO.GetBangLuongs());
 
-            foreach (int id in ids)
-            {
-                bangCongDAO.RemoveBangCong(bangCongDAO.GetByID(id));
-            }
+        //    foreach (int id in ids)
+        //    {
+        //        bangCongDAO.RemoveBangCong(bangCongDAO.GetByID(id));
+        //    }
 
-            bangCongHCs = bangCongDAO.GetBangCongHCsByIDNVAndDate(nhanVien.ID,
-                    cboThang.SelectedIndex + 1,
-                    Convert.ToInt32(cboNam.Text));
+        //    bangCongHCs = bangCongDAO.GetBangCongHCsByIDNVAndDate(nhanVien.ID,
+        //            cboThang.SelectedIndex + 1,
+        //            Convert.ToInt32(cboNam.Text));
 
-            LoadDataCongViec(bangCongHCs);
-            nudThuongPhat.Value = 0;
-            nudSoBuoiLamThem.Value = 0;
-        }
+        //    LoadDataCongViec(bangCongHCs);
+        //    nudThuongPhat.Value = 0;
+        //    nudSoBuoiLamThem.Value = 0;
+        //}
 
         private void btnTim_Click(object sender, EventArgs e)
         {

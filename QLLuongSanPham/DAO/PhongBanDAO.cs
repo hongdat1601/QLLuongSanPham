@@ -17,24 +17,24 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<PhongBan> GetPhongBans() => context.PhongBans;
+        public IEnumerable<PhongBan> GetPhongBans() => context.PhongBan;
 
         public IEnumerable<PhongBan> GetListPBByName(string name)
         {
-            return context.PhongBans
+            return context.PhongBan
                 .Where(x => x.TenPhongBan.Contains(name));
         }
 
         public PhongBan GetById(int id)
         {
-            return context.PhongBans
+            return context.PhongBan
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public int GetIDByName(string name)
         {
-            var pb = context.PhongBans
+            var pb = context.PhongBan
                 .Where(x => x.TenPhongBan == name)
                 .FirstOrDefault();
 
@@ -46,7 +46,7 @@ namespace QLLuongSanPham.DAO
 
         public string GetNameByID(int id)
         {
-            return context.PhongBans
+            return context.PhongBan
                 .Where(x => x.ID == id)
                 .FirstOrDefault().TenPhongBan;
         }
@@ -57,7 +57,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.PhongBans.Add(pb);
+                    context.PhongBan.Add(pb);
                     context.SaveChanges();
                     tran.Commit();
                 }
@@ -77,7 +77,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.PhongBans.Remove(pb);
+                    context.PhongBan.Remove(pb);
                     context.SaveChanges();
                     tran.Commit();
                 }

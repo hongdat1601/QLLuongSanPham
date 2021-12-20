@@ -17,23 +17,23 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<HopDong> GetHopDongs() => context.HopDongs;
+        public IEnumerable<HopDong> GetHopDongs() => context.HopDong;
 
         public IEnumerable<HopDong> GetHopDongByChar(string input)
         {
-            return context.HopDongs.Where(x => x.TenHopDong.Contains(input));
+            return context.HopDong.Where(x => x.TenHopDong.Contains(input));
         }
 
         public HopDong GetById(int id)
         {
-            return context.HopDongs
+            return context.HopDong
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public void UpdateTrangThai()
         {
-            var list = context.HopDongs;
+            var list = context.HopDong;
 
             foreach (var item in list)
             {
@@ -51,7 +51,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.HopDongs.Add(hd);
+                    context.HopDong.Add(hd);
                     context.SaveChanges();
                     tran.Commit();
                 }

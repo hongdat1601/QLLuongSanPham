@@ -22,6 +22,8 @@ namespace QLLuongSanPham.Entities
 
         public int? SoLuongSP { get; set; }
 
+        public bool? TrangThai { get; set; }
+
         public virtual CaLam CaLam { get; set; }
 
         public virtual CongDoan CongDoan { get; set; }

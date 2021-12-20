@@ -12,7 +12,7 @@ namespace QLLuongSanPham.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HopDong()
         {
-            ChiTietHopDongs = new HashSet<ChiTietHopDong>();
+            ChiTietHopDong = new HashSet<ChiTietHopDong>();
         }
 
         public int ID { get; set; }
@@ -35,6 +35,6 @@ namespace QLLuongSanPham.Entities
         public bool? TrangThai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietHopDong> ChiTietHopDongs { get; set; }
+        public virtual ICollection<ChiTietHopDong> ChiTietHopDong { get; set; }
     }
 }

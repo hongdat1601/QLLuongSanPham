@@ -16,16 +16,16 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<BangCongSP> GetBangCongSPs() => context.BangCongSPs;
+        public IEnumerable<BangCongSP> GetBangCongSPs() => context.BangCongSP;
 
         public IEnumerable<BangCongSP> GetByIDCd(int id)
         {
-            return context.BangCongSPs
+            return context.BangCongSP
                 .Where(x => x.IDCongDoan == id);
         }
         public BangCongSP GetByID(int id)
         {
-            return context.BangCongSPs
+            return context.BangCongSP
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
@@ -36,7 +36,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.BangCongSPs.Add(bc);
+                    context.BangCongSP.Add(bc);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -56,7 +56,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.BangCongSPs.Remove(bc);
+                    context.BangCongSP.Remove(bc);
                     context.SaveChanges();
                     db.Commit();
                     return true;

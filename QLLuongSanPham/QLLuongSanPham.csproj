@@ -108,7 +108,6 @@
     <Compile Include="Entities\PhongBan.cs" />
     <Compile Include="Entities\QLLuongSPContext.cs" />
     <Compile Include="Entities\SanPham.cs" />
-    <Compile Include="Entities\sysdiagram.cs" />
     <Compile Include="Entities\TaiKhoan.cs" />
     <Compile Include="Entities\TrinhDoHocVan.cs" />
     <Compile Include="GUI\frmDangNhap.cs">
@@ -182,18 +181,6 @@
     </Compile>
     <Compile Include="GUI\QuanLy\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\QuanLy\frmPhanLichHC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLy\frmPhanLichHC.Designer.cs">
-      <DependentUpon>frmPhanLichHC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\QuanLy\frmPhanLich.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLy\frmPhanLich.Designer.cs">
-      <DependentUpon>frmPhanLich.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanLy\frmPhanLichCN.cs">
       <SubType>Form</SubType>
@@ -298,12 +285,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLy\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\frmPhanLichHC.resx">
-      <DependentUpon>frmPhanLichHC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\frmPhanLich.resx">
-      <DependentUpon>frmPhanLich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLy\frmPhanLichCN.resx">
       <DependentUpon>frmPhanLichCN.cs</DependentUpon>

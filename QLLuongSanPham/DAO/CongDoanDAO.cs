@@ -16,22 +16,22 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<CongDoan> GetCongDoans() => context.CongDoans;
+        public IEnumerable<CongDoan> GetCongDoans() => context.CongDoan;
 
         public IEnumerable<CongDoan> GetCongDoansByIdSanPham(int id)
         {
-            return context.CongDoans.Where(x => x.IDSanPham == id);
+            return context.CongDoan.Where(x => x.IDSanPham == id);
         }
         public CongDoan GetById(int id)
         {
-            return context.CongDoans
+            return context.CongDoan
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public CongDoan GetByName(string name)
         {
-            return context.CongDoans
+            return context.CongDoan
                 .Where(x => x.TenCongDoan.Equals(name))
                 .FirstOrDefault();
         }
@@ -42,7 +42,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.CongDoans.Add(cd);
+                    context.CongDoan.Add(cd);
                     context.SaveChanges();
                     tran.Commit();
                 }
@@ -62,7 +62,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.CongDoans.Remove(cd);
+                    context.CongDoan.Remove(cd);
                     context.SaveChanges();
                     tran.Commit();
                 }

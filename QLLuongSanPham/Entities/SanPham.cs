@@ -12,8 +12,8 @@ namespace QLLuongSanPham.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SanPham()
         {
-            ChiTietHopDongs = new HashSet<ChiTietHopDong>();
-            CongDoans = new HashSet<CongDoan>();
+            CongDoan = new HashSet<CongDoan>();
+            ChiTietHopDong = new HashSet<ChiTietHopDong>();
         }
 
         public int ID { get; set; }
@@ -30,9 +30,9 @@ namespace QLLuongSanPham.Entities
         public string AnhSP { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietHopDong> ChiTietHopDongs { get; set; }
+        public virtual ICollection<CongDoan> CongDoan { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CongDoan> CongDoans { get; set; }
+        public virtual ICollection<ChiTietHopDong> ChiTietHopDong { get; set; }
     }
 }

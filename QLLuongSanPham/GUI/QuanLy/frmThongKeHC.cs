@@ -50,7 +50,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(nhanVienDAO.GetById(bl.IDNhanVien).CMND);
                 item.SubItems.Add(phongBanDAO.GetById(nhanVienDAO.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDAO.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
-                item.SubItems.Add(bl.NgayLap.ToString("dd/MM/yyyy"));
+                item.SubItems.Add(bl.NgayLap.Value.Date.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(bl.TienLuong.ToString() + " VND");
 
                 item.Tag = bl;

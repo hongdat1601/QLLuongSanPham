@@ -16,18 +16,18 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<ChucVu> GetChucVus() => context.ChucVus;
+        public IEnumerable<ChucVu> GetChucVus() => context.ChucVu;
 
         public ChucVu GetChucByID(int id)
         {
-            return context.ChucVus
+            return context.ChucVu
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
 
         public int GetIDByName(string name)
         {
-            var q = context.ChucVus
+            var q = context.ChucVu
                 .Where(x => x.TenChucVu == name)
                 .FirstOrDefault();
 
@@ -40,7 +40,7 @@ namespace QLLuongSanPham.DAO
         public string GetNameByID(int id)
         {
             string name;
-            var q = from i in context.ChucVus
+            var q = from i in context.ChucVu
                     where i.ID == id
                     select i.TenChucVu;
             name = q.FirstOrDefault();

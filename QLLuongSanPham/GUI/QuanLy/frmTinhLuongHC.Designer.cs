@@ -128,7 +128,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTinh.Text = "Tính lương";
             this.btnTinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTinh.UseVisualStyleBackColor = true;
-            this.btnTinh.Click += new System.EventHandler(this.btnTinh_Click);
             // 
             // pnlLuong
             // 

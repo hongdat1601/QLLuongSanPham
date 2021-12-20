@@ -12,7 +12,7 @@ namespace QLLuongSanPham.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LoaiPhep()
         {
-            BangCongHCs = new HashSet<BangCongHC>();
+            BangCongHC = new HashSet<BangCongHC>();
         }
 
         public int ID { get; set; }
@@ -23,6 +23,6 @@ namespace QLLuongSanPham.Entities
         public decimal? PhuCap { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BangCongHC> BangCongHCs { get; set; }
+        public virtual ICollection<BangCongHC> BangCongHC { get; set; }
     }
 }

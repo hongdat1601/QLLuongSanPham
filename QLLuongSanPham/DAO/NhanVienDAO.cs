@@ -17,21 +17,21 @@ namespace QLLuongSanPham.DAO
             context = new QLLuongSPContext();
         }
 
-        public IEnumerable<NhanVien> GetNhanViens() => context.NhanViens;
+        public IEnumerable<NhanVien> GetNhanViens() => context.NhanVien;
 
         public IEnumerable<NhanVien> GetListNVByID(int id)
         {
-            return context.NhanViens.Where(x => x.ID == id);
+            return context.NhanVien.Where(x => x.ID == id);
         }
 
         public IEnumerable<NhanVien> GetListNVByName(string name)
         {
-            return context.NhanViens.Where(x => x.HoTen.Contains(name));
+            return context.NhanVien.Where(x => x.HoTen.Contains(name));
         }
 
         public NhanVien GetById(int id)
         {
-            return context.NhanViens
+            return context.NhanVien
                 .Where(x => x.ID == id)
                 .FirstOrDefault();
         }
@@ -42,7 +42,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.NhanViens.Add(nv);
+                    context.NhanVien.Add(nv);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -61,7 +61,7 @@ namespace QLLuongSanPham.DAO
             {
                 try
                 {
-                    context.NhanViens.Remove(nv);
+                    context.NhanVien.Remove(nv);
                     context.SaveChanges();
                     db.Commit();
                     return true;
@@ -103,7 +103,7 @@ namespace QLLuongSanPham.DAO
             int idHV,
             int thamNien)
         {
-            IEnumerable<NhanVien> nv = context.NhanViens;
+            IEnumerable<NhanVien> nv = context.NhanVien;
 
             nv = nv.Where(x => x.HoTen.Contains(ten)
             && x.CMND.Contains(cmnd)
