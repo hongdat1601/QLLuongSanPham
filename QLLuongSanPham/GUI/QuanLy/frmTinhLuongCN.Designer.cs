@@ -238,6 +238,11 @@ namespace QLLuongSanPham.GUI.QuanLy
             23,
             0,
             0});
+            this.nudTP.Minimum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            -2147483648});
             this.nudTP.Name = "nudTP";
             this.nudTP.Size = new System.Drawing.Size(384, 30);
             this.nudTP.TabIndex = 16;

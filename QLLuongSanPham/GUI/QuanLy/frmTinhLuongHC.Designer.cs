@@ -46,19 +46,19 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lstvNhanVien = new System.Windows.Forms.ListView();
             this.lblDSNV = new System.Windows.Forms.Label();
             this.gboLuong = new System.Windows.Forms.GroupBox();
+            this.nudThuongPhat = new System.Windows.Forms.NumericUpDown();
             this.nudSoBuoiLamThem = new System.Windows.Forms.NumericUpDown();
             this.cboThang = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cboNam = new System.Windows.Forms.ComboBox();
-            this.nudThuongPhat = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.picNen)).BeginInit();
             this.pnlLuong.SuspendLayout();
             this.pnlCongViec.SuspendLayout();
             this.pnlDSNV.SuspendLayout();
             this.gboLuong.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoBuoiLamThem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudThuongPhat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoBuoiLamThem)).BeginInit();
             this.SuspendLayout();
             // 
             // picNen
@@ -268,6 +268,24 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gboLuong.TabStop = false;
             this.gboLuong.Text = "Cập nhật lương";
             // 
+            // nudThuongPhat
+            // 
+            this.nudThuongPhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudThuongPhat.Location = new System.Drawing.Point(247, 158);
+            this.nudThuongPhat.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.nudThuongPhat.Minimum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            -2147483648});
+            this.nudThuongPhat.Name = "nudThuongPhat";
+            this.nudThuongPhat.Size = new System.Drawing.Size(417, 30);
+            this.nudThuongPhat.TabIndex = 18;
+            // 
             // nudSoBuoiLamThem
             // 
             this.nudSoBuoiLamThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -324,14 +342,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.cboNam.TabIndex = 26;
             this.cboNam.SelectedIndexChanged += new System.EventHandler(this.cboNam_SelectedIndexChanged);
             // 
-            // nudThuongPhat
-            // 
-            this.nudThuongPhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudThuongPhat.Location = new System.Drawing.Point(247, 158);
-            this.nudThuongPhat.Name = "nudThuongPhat";
-            this.nudThuongPhat.Size = new System.Drawing.Size(417, 30);
-            this.nudThuongPhat.TabIndex = 18;
-            // 
             // frmTinhLuongHC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,8 +372,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlDSNV.ResumeLayout(false);
             this.gboLuong.ResumeLayout(false);
             this.gboLuong.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoBuoiLamThem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudThuongPhat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoBuoiLamThem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
