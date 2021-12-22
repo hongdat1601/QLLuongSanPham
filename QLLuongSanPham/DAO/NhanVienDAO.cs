@@ -29,6 +29,18 @@ namespace QLLuongSanPham.DAO
             return context.NhanVien.Where(x => x.HoTen.Contains(name));
         }
 
+        public IEnumerable<NhanVien> GetNhanViensByNameAndIDPhongBan(string name, int idPhongBan)
+        {
+            var data = context.NhanVien.Where(x => x.HoTen.Contains(name));
+            
+            if (idPhongBan != -1)
+            {
+                data = data.Where(x => x.IDPhongBan == idPhongBan);
+            }
+
+            return data;
+        }
+
         public NhanVien GetById(int id)
         {
             return context.NhanVien

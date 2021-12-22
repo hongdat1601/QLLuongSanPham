@@ -25,17 +25,10 @@ namespace QLLuongSanPham.DAO
                 .FirstOrDefault();
         }
 
-        public IEnumerable<BangLuong> GetListByIDNV(int idNV)
+        public IEnumerable<BangLuong> GetBangLuongsByIDNV(int idNV)
         {
             return context.BangLuong
                 .Where(x => x.IDNhanVien == idNV);
-        }
-
-        public BangLuong GetByIDNV(int idNV)
-        {
-            return context.BangLuong
-                .Where(x => x.IDNhanVien == idNV)
-                .FirstOrDefault();
         }
 
         public bool Add(BangLuong bl)
@@ -56,6 +49,16 @@ namespace QLLuongSanPham.DAO
                 }
 
             }
+        }
+
+        public BangLuong CheckExist(int idNhanVien, int month, int year)
+        {
+            var bl  = GetBangLuongsByIDNV(idNhanVien)
+                .Where(x => x.NgayLap.Value.Month == month 
+                && x.NgayLap.Value.Year == year)
+                .FirstOrDefault();
+
+            return bl;
         }
     }
 }

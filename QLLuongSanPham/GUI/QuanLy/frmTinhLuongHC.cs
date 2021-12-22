@@ -18,8 +18,8 @@ namespace QLLuongSanPham.GUI.QuanLy
         ChucVuDAO chucVuDAO;
         NhanVienDAO nhanVienDAO;
         BangCongHCDAO bangCongDAO;
-        LoaiPhepDAO loaiPhepDAO;
         BangLuongDAO bangLuongDAO;
+        LoaiPhepDAO loaiPhepDAO;
 
         NhanVien nhanVien;
         IEnumerable<BangCongHC> bangCongHCs;
@@ -32,8 +32,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             chucVuDAO = new ChucVuDAO();
             nhanVienDAO = new NhanVienDAO();
             bangCongDAO = new BangCongHCDAO();
-            loaiPhepDAO = new LoaiPhepDAO();
             bangLuongDAO = new BangLuongDAO();
+            loaiPhepDAO = new LoaiPhepDAO();
         }
 
         #region Method
@@ -48,7 +48,6 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             cboNam.Items.Add((DateTime.Now.Year - 1).ToString());
             cboNam.Items.Add((DateTime.Now.Year).ToString());
-            cboNam.Items.Add((DateTime.Now.Year + 1).ToString());
             cboNam.SelectedIndex = 1;
         }
 
@@ -67,7 +66,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(nv.HoTen);
                 item.SubItems.Add(phongBanDAO.GetById(nv.IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nv.IDChucVu.Value).TenChucVu);
-                item.SubItems.Add(chucVuDAO.GetChucByID(nv.IDChucVu.Value).PhuCap.ToString() + " VND");
+                item.SubItems.Add(String.Format("{0:0,###}", chucVuDAO.GetChucByID(nv.IDChucVu.Value).PhuCap) + " VND");
 
 
                 item.Tag = nv;
@@ -76,41 +75,25 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
         }
 
-        //private void LoadDataCongViec(IEnumerable<BangCongHC> data)
-        //{
-        //    lstvCongViec.Items.Clear();
-        //    if (data == null)
-        //    {
-        //        return;
-        //    }
+        private void LoadDataNgayNghi(IEnumerable<BangCongHC> data)
+        {
+            if (data == null) return;
 
-        //    foreach (var bc in data)
-        //    {
-        //        ListViewItem item = new ListViewItem();
+            nudNgayNghi.Value = data.Count();
+            lstvNgayNghi.Items.Clear();
+            foreach(var bc in data)
+            {
+                ListViewItem item = new ListViewItem();
 
-        //        item.Text = bc.NgayCham.Value.ToString("dd/MM/yyyy");
+                item.Text = bc.NgayCham.Value.ToString("dd/MM/yyyy");
+                item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).TenPhep);
+                item.SubItems.Add(String.Format("{0:0,###}", loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap) + " VND");
+                item.Tag = bc;
 
-        //        if (bc.TrangThai == null)
-        //            item.SubItems.Add("Không");
-        //        else
-        //            item.SubItems.Add((bc.TrangThai.Value ? "Có" : "Không"));
-
-        //        if (bc.IDLoaiPhep == null)
-        //        {
-        //            item.SubItems.Add("Không");
-        //            item.SubItems.Add("0 VND");
-        //        }
-        //        else
-        //        {
-        //            item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).TenPhep);
-        //            item.SubItems.Add(loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap.ToString() + " VND");
-        //        } 
-
-        //        item.Tag = bc;
-
-        //        lstvCongViec.Items.Add(item);
-        //    }
-        //}
+                lstvNgayNghi.Items.Add(item);
+                nudTongPhuCap.Value += loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap.Value;
+            }
+        }
 
         private void LoadDataLuong(IEnumerable<BangLuong> data)
         {
@@ -125,7 +108,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(phongBanDAO.GetById(nhanVienDAO.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDAO.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
                 item.SubItems.Add(bl.NgayLap.Value.Date.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(bl.TienLuong.ToString() + " VND");
+                item.SubItems.Add(String.Format("{0:0,###}", bl.TienLuong) + " VND");
 
                 item.Tag = bl;
 
@@ -146,11 +129,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.FullRowSelect = true;
         }
 
-        private void CreateTitleCV(ListView lvw)
+        private void CreateTitleNgayNghi(ListView lvw)
         {
-            lvw.Columns.Add("Ngày đi làm", 120);
-            lvw.Columns.Add("Có mặt", 120);
-            lvw.Columns.Add("Phép", 170);
+            lvw.Columns.Add("Ngày nghỉ", 120);
+            lvw.Columns.Add("Loại phép", 170);
             lvw.Columns.Add("Phụ cấp", 170);
 
             lvw.View = View.Details;
@@ -165,7 +147,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.Columns.Add("Phòng Ban", 120);
             lvw.Columns.Add("Chức vụ", 170);
             lvw.Columns.Add("Ngày lập", 120);
-            lvw.Columns.Add("Tiền lương", 120);
+            lvw.Columns.Add("Tiền lương", 170);
 
             lvw.View = View.Details;
             lvw.GridLines = true;
@@ -179,7 +161,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void frmTinhLuongHC_Load(object sender, EventArgs e)
         {
             CreateTitleDSNV(lstvNhanVien);
-            CreateTitleCV(lstvCongViec);
+            CreateTitleNgayNghi(lstvNgayNghi);
             CreateTitleLuong(lstvLuong);
 
             LoadDataNhanVien(nhanVienDAO.GetNhanViens());
@@ -198,7 +180,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     cboThang.SelectedIndex+1, 
                     Convert.ToInt32(cboNam.Text));
 
-                //LoadDataCongViec(bangCongHCs);
+                LoadDataNgayNghi(bangCongHCs);
             }
         }
 
@@ -211,7 +193,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     cboThang.SelectedIndex + 1,
                     Convert.ToInt32(cboNam.Text));
 
-            //LoadDataCongViec(bangCongHCs);
+            LoadDataNgayNghi(bangCongHCs);
         }
 
         private void cboThang_SelectedIndexChanged(object sender, EventArgs e)
@@ -225,77 +207,9 @@ namespace QLLuongSanPham.GUI.QuanLy
 
 
 
-            //LoadDataCongViec(bangCongHCs);
+            LoadDataNgayNghi(bangCongHCs);
         }
 
-        //private void btnTinh_Click(object sender, EventArgs e)
-        //{
-        //    if (nhanVien == null)
-        //    {
-        //        MessageBox.Show("Chưa chọn nhân viên!", "Thông báo");
-        //        return;
-        //    }
-
-        //    if (bangCongHCs.Count() <= 0)
-        //    {
-        //        MessageBox.Show("Nhân viên không có lịch để tính", "Thông báo");
-        //        return;
-        //    }
-
-        //    List<int> ids = new List<int>();
-
-        //    int soNgayLam = bangCongHCs.Count();
-        //    int soNgayLamThucTe = 0;
-        //    decimal phuCap = chucVuDAO.GetChucByID(nhanVien.IDChucVu.Value).PhuCap.Value;
-        //    phuCap += nudThuongPhat.Value;
-
-        //    foreach (var bc in bangCongHCs)
-        //    {
-        //        if (bc.TrangThai != null)
-        //        {
-        //            if (bc.TrangThai.Value)
-        //            {
-        //                soNgayLamThucTe++;
-        //            }
-        //        }
-
-        //        if (bc.IDLoaiPhep != null)
-        //        {
-        //            phuCap += loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap.Value;
-        //        }
-
-        //        ids.Add(bc.ID);
-        //    }
-
-        //    decimal tongTien = phuCap
-        //        + (Convert.ToDecimal((soNgayLamThucTe * 1.0 / soNgayLam)) 
-        //        * nhanVien.LuongCanBan.Value * Convert.ToDecimal(nhanVien.ChiSoLuong.Value))
-        //        + (Convert.ToInt32(nudSoBuoiLamThem.Text) * 100000);
-
-        //    BangLuong bl = new BangLuong
-        //    {
-        //        IDNhanVien = nhanVien.ID,
-        //        NgayLap = DateTime.Now,
-        //        SoBuoiLamThem = Convert.ToInt32(nudSoBuoiLamThem.Text),
-        //        TienLuong = Math.Round(tongTien, 0)
-        //    };
-
-        //    bangLuongDAO.Add(bl);
-        //    LoadDataLuong(bangLuongDAO.GetBangLuongs());
-
-        //    foreach (int id in ids)
-        //    {
-        //        bangCongDAO.RemoveBangCong(bangCongDAO.GetByID(id));
-        //    }
-
-        //    bangCongHCs = bangCongDAO.GetBangCongHCsByIDNVAndDate(nhanVien.ID,
-        //            cboThang.SelectedIndex + 1,
-        //            Convert.ToInt32(cboNam.Text));
-
-        //    LoadDataCongViec(bangCongHCs);
-        //    nudThuongPhat.Value = 0;
-        //    nudSoBuoiLamThem.Value = 0;
-        //}
 
         private void btnTim_Click(object sender, EventArgs e)
         {
@@ -303,5 +217,61 @@ namespace QLLuongSanPham.GUI.QuanLy
         }
 
         #endregion
+
+        private void btnTinh_Click(object sender, EventArgs e)
+        {
+            if (nhanVien == null)
+            {
+                MessageBox.Show("Chưa chọn nhân viên!", "Thông báo");
+                return;
+            }
+
+            int month = Convert.ToInt32(cboThang.SelectedIndex + 1);
+            int year = Convert.ToInt32(cboNam.Text);
+            if (bangLuongDAO.CheckExist(nhanVien.ID, month, year) != null)
+            {
+                MessageBox.Show($"Tháng này nhân viên {nhanVien.HoTen} đã có lương", "Lỗi");
+                return;
+            }
+
+            BangLuong bl = new BangLuong();
+            bl.IDNhanVien = nhanVien.ID;
+            bl.NgayLap = DateTime.Now;
+
+            decimal luongCanBang = nhanVien.LuongCanBan.Value * Convert.ToDecimal(nhanVien.ChiSoLuong.Value);
+            bl.TienLuong = luongCanBang - (nudNgayNghi.Value / nudTongSoNgay.Value * luongCanBang)
+                + (nudSoBuoiLamThem.Value * nudLuongLamThem.Value)
+                + nudTongPhuCap.Value + nudThuongPhat.Value;
+
+            bl.TienLuong = Math.Round(bl.TienLuong, 3);
+
+            if (bangLuongDAO.Add(bl))
+            {
+                MessageBox.Show("Đã tính lương!", "Thông báo");
+                LoadDataLuong(bangLuongDAO.GetBangLuongs());
+
+                List<int> lst = bangCongHCs.Select(x => x.ID).ToList();
+                bangCongHCs = null;
+                foreach (int i in lst)
+                {
+                    bangCongDAO.Remove(bangCongDAO.GetByID(i));
+                }
+
+                bangCongHCs = bangCongDAO.GetBangCongHCsByIDNVAndDate(nhanVien.ID,
+                cboThang.SelectedIndex + 1,
+                Convert.ToInt32(cboNam.Text));
+
+                LoadDataNgayNghi(bangCongHCs);
+                nudThuongPhat.Value = 0;
+                nudSoBuoiLamThem.Value = 0;
+                nudNgayNghi.Value = 0;
+                nudTongPhuCap.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Lỗi tính lương!", "Thông báo");
+            }    
+
+        }
     }
 }

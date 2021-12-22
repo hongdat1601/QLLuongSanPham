@@ -73,7 +73,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 if (bc.TrangThai == null)
                 {
-                    item.SubItems.Add("");
+                    item.SubItems.Add("Chưa chấm");
                 }
                 else
                 {

@@ -59,7 +59,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         {
             lvwSalary.Items.Clear();
 
-            foreach (BangLuong hc in blDAO.GetListByIDNV(_nhanVien.ID))
+            foreach (BangLuong hc in blDAO.GetBangLuongsByIDNV(_nhanVien.ID))
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = hc.NgayLap.Value.Date.ToString("dd/MM/yyyy");
@@ -73,7 +73,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         {
             lvwSalary.Items.Clear();
 
-            foreach (BangLuong hc in blDAO.GetListByIDNV(_nhanVien.ID))
+            foreach (BangLuong hc in blDAO.GetBangLuongsByIDNV(_nhanVien.ID))
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = hc.NgayLap.Value.Date.ToString("dd/MM/yyyy");

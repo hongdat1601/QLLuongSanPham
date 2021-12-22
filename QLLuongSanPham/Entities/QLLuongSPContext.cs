@@ -8,7 +8,7 @@ namespace QLLuongSanPham.Entities
     public partial class QLLuongSPContext : DbContext
     {
         public QLLuongSPContext()
-            : base("name=QLLuongSanPhamContext")
+            : base("name=QLLuongSPContext1")
         {
         }
 
@@ -29,11 +29,6 @@ namespace QLLuongSanPham.Entities
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BangCongHC>()
-                .HasMany(e => e.LoaiPhep)
-                .WithMany(e => e.BangCongHC)
-                .Map(m => m.ToTable("BC_LP").MapLeftKey("ID_BC").MapRightKey("ID_LP"));
-
             modelBuilder.Entity<BangLuong>()
                 .Property(e => e.TienLuong)
                 .HasPrecision(18, 0);
@@ -69,6 +64,11 @@ namespace QLLuongSanPham.Entities
             modelBuilder.Entity<LoaiPhep>()
                 .Property(e => e.PhuCap)
                 .HasPrecision(18, 0);
+
+            modelBuilder.Entity<LoaiPhep>()
+                .HasMany(e => e.BangCongHC)
+                .WithOptional(e => e.LoaiPhep)
+                .HasForeignKey(e => e.IDLoaiPhep);
 
             modelBuilder.Entity<NhanVien>()
                 .Property(e => e.SDT)

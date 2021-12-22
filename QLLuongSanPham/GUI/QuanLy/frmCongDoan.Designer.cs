@@ -48,14 +48,14 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblTenCD = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.gboTT = new System.Windows.Forms.GroupBox();
-            this.pnlXuLy = new System.Windows.Forms.Panel();
             this.nudDonGiaCapNhat = new System.Windows.Forms.NumericUpDown();
+            this.pnlXuLy = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ptcNen)).BeginInit();
             this.pnlSP.SuspendLayout();
             this.pnlCa.SuspendLayout();
             this.gboTT.SuspendLayout();
-            this.pnlXuLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDonGiaCapNhat)).BeginInit();
+            this.pnlXuLy.SuspendLayout();
             this.SuspendLayout();
             // 
             // ptcNen
@@ -298,17 +298,6 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.gboTT.TabStop = false;
             this.gboTT.Text = "Thông tin công đoạn";
             // 
-            // pnlXuLy
-            // 
-            this.pnlXuLy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlXuLy.Controls.Add(this.btnThem);
-            this.pnlXuLy.Controls.Add(this.btnSua);
-            this.pnlXuLy.Controls.Add(this.btnXoa);
-            this.pnlXuLy.Location = new System.Drawing.Point(491, 400);
-            this.pnlXuLy.Name = "pnlXuLy";
-            this.pnlXuLy.Size = new System.Drawing.Size(630, 69);
-            this.pnlXuLy.TabIndex = 39;
-            // 
             // nudDonGiaCapNhat
             // 
             this.nudDonGiaCapNhat.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -323,6 +312,18 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.nudDonGiaCapNhat.Name = "nudDonGiaCapNhat";
             this.nudDonGiaCapNhat.Size = new System.Drawing.Size(371, 30);
             this.nudDonGiaCapNhat.TabIndex = 30;
+            this.nudDonGiaCapNhat.ThousandsSeparator = true;
+            // 
+            // pnlXuLy
+            // 
+            this.pnlXuLy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlXuLy.Controls.Add(this.btnThem);
+            this.pnlXuLy.Controls.Add(this.btnSua);
+            this.pnlXuLy.Controls.Add(this.btnXoa);
+            this.pnlXuLy.Location = new System.Drawing.Point(491, 400);
+            this.pnlXuLy.Name = "pnlXuLy";
+            this.pnlXuLy.Size = new System.Drawing.Size(630, 69);
+            this.pnlXuLy.TabIndex = 39;
             // 
             // frmCongDoan
             // 
@@ -347,8 +348,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlCa.ResumeLayout(false);
             this.gboTT.ResumeLayout(false);
             this.gboTT.PerformLayout();
-            this.pnlXuLy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudDonGiaCapNhat)).EndInit();
+            this.pnlXuLy.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

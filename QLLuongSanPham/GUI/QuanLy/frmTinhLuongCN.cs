@@ -50,6 +50,11 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(nv.HoTen);
                 item.SubItems.Add(phongBanDAO.GetById(nv.IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nv.IDChucVu.Value).TenChucVu);
+
+                int count = bangCongDAO.GetBangCongSPsByIDNhanVien(nv.ID).Count();
+
+                item.SubItems.Add(count > 0 ? "Còn" : "Không");
+
                 item.Tag = nv;
 
                 lstvNhanVien.Items.Add(item);
@@ -71,6 +76,16 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.Text = bc.NgayDiLam.Value.ToString("dd/MM/yyyy");
                 item.SubItems.Add(caLamDAO.GetByID(bc.IDCaLam.Value).TenCa);
                 item.SubItems.Add(congDoanDAO.GetById(bc.IDCongDoan.Value).TenCongDoan);
+
+                if (bc.TrangThai == null)
+                {
+                    item.SubItems.Add("Chưa chấm");
+                }
+                else
+                {
+                    item.SubItems.Add(bc.TrangThai.Value ? "Có" : "Không");
+                }    
+
                 item.SubItems.Add(bc.SoLuongSP.ToString());
 
                 item.Tag = bc;
@@ -92,7 +107,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(phongBanDAO.GetById(nhanVienDao.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDao.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
                 item.SubItems.Add(bl.NgayLap.Value.Date.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(bl.TienLuong.ToString() + " VND");
+                item.SubItems.Add(String.Format("{0:0,###}", bl.TienLuong) + " VND");
 
                 item.Tag = bl;
 
@@ -104,8 +119,9 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             lvw.Columns.Add("CMND", 120);
             lvw.Columns.Add("Tên nhân viên", 170);
-            lvw.Columns.Add("Phòng ban", 170);
-            lvw.Columns.Add("Chức vụ", 170);
+            lvw.Columns.Add("Phòng ban", 120);
+            lvw.Columns.Add("Chức vụ", 120);
+            lvw.Columns.Add("Còn công", 120);
 
             lvw.View = View.Details;
             lvw.GridLines = true;
@@ -117,6 +133,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.Columns.Add("Ngày làm", 120);
             lvw.Columns.Add("Ca làm việc", 120);
             lvw.Columns.Add("Công đoạn", 120);
+            lvw.Columns.Add("Có mặt", 120);
             lvw.Columns.Add("Số lượng sản phẩm", 150);
 
             lvw.View = View.Details;
@@ -129,7 +146,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.Columns.Add("CMND", 120);
             lvw.Columns.Add("Tên nhân viên", 120);
             lvw.Columns.Add("Phòng Ban", 120);
-            lvw.Columns.Add("Chức vụ", 170);
+            lvw.Columns.Add("Chức vụ", 120);
             lvw.Columns.Add("Ngày lập", 120);
             lvw.Columns.Add("Tiền lương", 120);
 
@@ -201,6 +218,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             ids.ForEach(x => bangCongDAO.RemoveBCCN(bangCongDAO.GetByID(x)));
             bangCongSPs = bangCongDAO.GetBangCongSPsByIDNhanVien(nhanVien.ID);
             LoadDataLich(bangCongSPs);
+            lstvNhanVien.SelectedItems[0].SubItems[lstvNhanVien.SelectedItems[0].SubItems.Count - 1].Text = "Không";
 
             nudTP.Value = 0;
         }

@@ -74,7 +74,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 ListViewItem item = new ListViewItem();
                 item.Text = stt.ToString();
                 item.SubItems.Add(cd.TenCongDoan);
-                item.SubItems.Add(cd.DonGia.Value.ToString());
+                item.SubItems.Add(String.Format("{0:#,###}", cd.DonGia.Value) + " VND");
                 item.Tag = cd;
 
                 lstvCongDoan.Items.Add(item);
