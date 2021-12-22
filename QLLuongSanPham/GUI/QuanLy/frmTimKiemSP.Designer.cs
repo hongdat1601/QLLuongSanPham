@@ -52,7 +52,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.picNen.Image = global::QLLuongSanPham.Properties.Resources.back3;
             this.picNen.Location = new System.Drawing.Point(0, 0);
             this.picNen.Name = "picNen";
-            this.picNen.Size = new System.Drawing.Size(1211, 780);
+            this.picNen.Size = new System.Drawing.Size(1583, 899);
             this.picNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picNen.TabIndex = 0;
             this.picNen.TabStop = false;
@@ -66,9 +66,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTimKiem.IconSize = 30;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiem.Location = new System.Drawing.Point(32, 305);
+            this.btnTimKiem.Location = new System.Drawing.Point(190, 288);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(522, 52);
+            this.btnTimKiem.Size = new System.Drawing.Size(351, 52);
             this.btnTimKiem.TabIndex = 23;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -78,29 +78,29 @@ namespace QLLuongSanPham.GUI.QuanLy
             // txtDonGia
             // 
             this.txtDonGia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDonGia.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtDonGia.Location = new System.Drawing.Point(197, 140);
+            this.txtDonGia.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold);
+            this.txtDonGia.Location = new System.Drawing.Point(562, 156);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(265, 29);
+            this.txtDonGia.Size = new System.Drawing.Size(649, 38);
             this.txtDonGia.TabIndex = 21;
             // 
             // txtName
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtName.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtName.Location = new System.Drawing.Point(197, 40);
+            this.txtName.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold);
+            this.txtName.Location = new System.Drawing.Point(562, 63);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(265, 29);
+            this.txtName.Size = new System.Drawing.Size(649, 38);
             this.txtName.TabIndex = 22;
             // 
             // lblDG
             // 
             this.lblDG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDG.AutoSize = true;
-            this.lblDG.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblDG.Location = new System.Drawing.Point(6, 146);
+            this.lblDG.Font = new System.Drawing.Font("Verdana", 15F);
+            this.lblDG.Location = new System.Drawing.Point(184, 154);
             this.lblDG.Name = "lblDG";
-            this.lblDG.Size = new System.Drawing.Size(85, 23);
+            this.lblDG.Size = new System.Drawing.Size(110, 31);
             this.lblDG.TabIndex = 19;
             this.lblDG.Text = "Đơn giá";
             // 
@@ -108,10 +108,10 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Verdana", 10.8F);
-            this.lblName.Location = new System.Drawing.Point(6, 46);
+            this.lblName.Font = new System.Drawing.Font("Verdana", 15F);
+            this.lblName.Location = new System.Drawing.Point(182, 63);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(145, 23);
+            this.lblName.Size = new System.Drawing.Size(193, 31);
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Tên sản phẩm";
             // 
@@ -121,9 +121,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlSP.Controls.Add(this.lstvDSSP);
             this.pnlSP.Controls.Add(this.lblDSSP);
-            this.pnlSP.Location = new System.Drawing.Point(32, 421);
+            this.pnlSP.Location = new System.Drawing.Point(33, 512);
             this.pnlSP.Name = "pnlSP";
-            this.pnlSP.Size = new System.Drawing.Size(1150, 302);
+            this.pnlSP.Size = new System.Drawing.Size(1519, 363);
             this.pnlSP.TabIndex = 18;
             // 
             // lstvDSSP
@@ -131,7 +131,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lstvDSSP.HideSelection = false;
             this.lstvDSSP.Location = new System.Drawing.Point(22, 52);
             this.lstvDSSP.Name = "lstvDSSP";
-            this.lstvDSSP.Size = new System.Drawing.Size(1103, 228);
+            this.lstvDSSP.Size = new System.Drawing.Size(1464, 286);
             this.lstvDSSP.TabIndex = 1;
             this.lstvDSSP.UseCompatibleStateImageBehavior = false;
             // 
@@ -142,7 +142,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDSSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblDSSP.Location = new System.Drawing.Point(0, 0);
             this.lblDSSP.Name = "lblDSSP";
-            this.lblDSSP.Size = new System.Drawing.Size(1146, 33);
+            this.lblDSSP.Size = new System.Drawing.Size(1515, 33);
             this.lblDSSP.TabIndex = 0;
             this.lblDSSP.Text = "Danh sách sản phẩm";
             this.lblDSSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,12 +151,14 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             this.gboTT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gboTT.Controls.Add(this.txtDonGia);
+            this.gboTT.Controls.Add(this.btnReset);
             this.gboTT.Controls.Add(this.txtName);
+            this.gboTT.Controls.Add(this.btnTimKiem);
             this.gboTT.Controls.Add(this.lblDG);
             this.gboTT.Controls.Add(this.lblName);
-            this.gboTT.Location = new System.Drawing.Point(32, 41);
+            this.gboTT.Location = new System.Drawing.Point(33, 64);
             this.gboTT.Name = "gboTT";
-            this.gboTT.Size = new System.Drawing.Size(492, 217);
+            this.gboTT.Size = new System.Drawing.Size(1517, 382);
             this.gboTT.TabIndex = 24;
             this.gboTT.TabStop = false;
             this.gboTT.Text = "Thông tin sản phẩm";
@@ -170,9 +172,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.btnReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReset.IconSize = 30;
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReset.Location = new System.Drawing.Point(1008, 305);
+            this.btnReset.Location = new System.Drawing.Point(828, 288);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(174, 52);
+            this.btnReset.Size = new System.Drawing.Size(383, 52);
             this.btnReset.TabIndex = 23;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -184,10 +186,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1211, 780);
+            this.ClientSize = new System.Drawing.Size(1583, 899);
             this.Controls.Add(this.gboTT);
-            this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.pnlSP);
             this.Controls.Add(this.picNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
