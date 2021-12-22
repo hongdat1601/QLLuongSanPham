@@ -1,14 +1,10 @@
-﻿using QLLuongSanPham.DAO;
-using QLLuongSanPham.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
@@ -81,7 +77,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             nudNgayNghi.Value = data.Count();
             lstvNgayNghi.Items.Clear();
-            foreach(var bc in data)
+            foreach (var bc in data)
             {
                 ListViewItem item = new ListViewItem();
 
@@ -176,8 +172,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                 ListViewItem item = lstvNhanVien.SelectedItems[0];
                 nhanVien = (NhanVien)item.Tag;
 
-                bangCongHCs = bangCongDAO.GetBangCongHCsByIDNVAndDate(nhanVien.ID, 
-                    cboThang.SelectedIndex+1, 
+                bangCongHCs = bangCongDAO.GetBangCongHCsByIDNVAndDate(nhanVien.ID,
+                    cboThang.SelectedIndex + 1,
                     Convert.ToInt32(cboNam.Text));
 
                 LoadDataNgayNghi(bangCongHCs);
@@ -270,7 +266,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             else
             {
                 MessageBox.Show("Lỗi tính lương!", "Thông báo");
-            }    
+            }
 
         }
     }

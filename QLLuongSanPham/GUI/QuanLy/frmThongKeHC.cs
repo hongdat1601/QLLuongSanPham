@@ -32,16 +32,31 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void frmThongKeHC_Load(object sender, EventArgs e)
         {
+            CreateCombobox();
             CreateTitleLuong(lstvLuong);
             LoadDataLuong(bangLuongDAO.GetBangLuongs());
         }
 
+        private void CreateCombobox()
+        {
+            int range = 50;
+            int year = DateTime.Now.Year;
+
+            while(range > 0)
+            {
+                cboNam.Items.Add(year--);
+                range--;
+            }
+        }
 
         private void LoadDataLuong(IEnumerable<BangLuong> data)
         {
+            if (data == null) return;
+
             data = data.Where(x => nhanVienDAO.GetById(x.IDNhanVien).IDChucVu.Value != 7);
 
             lstvLuong.Items.Clear();
+            chartThongKe.Series["BangLuong"].Points.Clear();
             foreach (var bl in data)
             {
                 ListViewItem item = new ListViewItem();
@@ -51,7 +66,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(phongBanDAO.GetById(nhanVienDAO.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDAO.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
                 item.SubItems.Add(bl.NgayLap.Value.Date.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(bl.TienLuong.ToString() + " VND")1;
+                item.SubItems.Add(bl.TienLuong.ToString() + " VND");
 
                 item.Tag = bl;
 
@@ -63,6 +78,66 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                 chartThongKe.Series["BangLuong"].Points.Add(point);
             }
+
+            // Infomation
+            Infomation(data);
+        }
+
+        private void Infomation(IEnumerable<BangLuong> data)
+        {
+            if (data == null) return;
+
+            decimal tong = 0;
+            decimal tb = 0;
+            decimal max = 0;
+            decimal min = 0;
+            decimal std = 0;
+
+            int n = 0;
+
+            foreach (var i in data)
+            {
+                tong += i.TienLuong;
+
+                if (n == 0)
+                {
+                    max = i.TienLuong;
+                    min = i.TienLuong;
+                }
+                else
+                {
+                    if (max < i.TienLuong)
+                        max = i.TienLuong;
+
+                    if (min > i.TienLuong)
+                        min = i.TienLuong;
+                }
+
+                n++;
+            }
+            if (tong == 0)
+            {
+                tb = 0;
+            }
+            else
+            {
+                tb = tong / n;
+            }
+          
+            foreach (var i in data)
+            {
+                std += (i.TienLuong / 1000 - tb / 1000) * (i.TienLuong / 1000 - tb / 1000);
+            }
+
+            double tmp = Math.Round(Math.Sqrt(Convert.ToDouble(std / (n - 1))) * 1000, 3);
+
+            lblTong.Text = tong.ToString();
+            lblTrungBinh.Text = Math.Round(tb, 3).ToString();
+            lblMin.Text = min.ToString();
+            lblMax.Text = max.ToString();
+            lblChenhLech.Text = tmp.ToString();
+
+            
         }
 
         private void CreateTitleLuong(ListView lvw)
@@ -80,9 +155,35 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.FullRowSelect = true;
         }
 
-        private void chartThongKe_Click(object sender, EventArgs e)
+        private void LoadDataWithDate()
         {
+            int month, year;
 
+            if (cboThang.Text.Equals("Tất cả")) month = -1;
+            else
+            {
+                month = Convert.ToInt32(cboThang.Text.Split(' ')[1]);
+            }
+
+            if (cboNam.Text.Equals("Tất cả")) year = -1;
+            else
+            {
+                year = Convert.ToInt32(cboNam.Text);
+            }
+
+
+            IEnumerable<BangLuong> data = bangLuongDAO.GetBangLuongsByDate(month, year);
+            LoadDataLuong(data);
+        }
+
+        private void cboThang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDataWithDate();
+        }
+
+        private void cboNam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDataWithDate();
         }
     }
 }

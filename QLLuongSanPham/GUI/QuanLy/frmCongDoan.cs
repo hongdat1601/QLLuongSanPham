@@ -1,14 +1,9 @@
-﻿using QLLuongSanPham.DAO;
-using QLLuongSanPham.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
@@ -140,7 +135,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             }
 
             if (btnSua.Text == "Lưu")
-            { 
+            {
                 if (KiemTraThongTin())
                 {
                     congDoan.TenCongDoan = txtCongDoanCapNhat.Text.Trim();
@@ -158,7 +153,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                     LoadListCongDoan(congDoanDAO.GetCongDoansByIdSanPham(sanPham.ID));
                 }
-                
+
             }
             else
             {
@@ -183,7 +178,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             if (btnThem.Text == "Lưu")
             {
-                             
+
                 if (KiemTraThongTin())
                 {
                     CongDoan cd = new CongDoan
@@ -206,7 +201,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
                     LoadListCongDoan(congDoanDAO.GetCongDoansByIdSanPham(sanPham.ID));
                     lstvCongDoan.SelectedIndices.Add(lstvCongDoan.Items.Count - 1);
-                }      
+                }
             }
             else
             {
@@ -244,7 +239,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnTimKimSP_Click(object sender, EventArgs e)
         {
-                LoadListSanPham(sanPhamDAO.GetSPByChar(txtTenSearch.Text));
+            LoadListSanPham(sanPhamDAO.GetSPByChar(txtTenSearch.Text));
         }
 
         #endregion

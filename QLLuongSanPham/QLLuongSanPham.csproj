@@ -298,12 +298,6 @@
     <EmbeddedResource Include="GUI\QuanLy\frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\frmThongKeHC.resx">
-      <DependentUpon>frmThongKeHC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLy\frmThongKeSP.resx">
-      <DependentUpon>frmThongKeSP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLy\frmTimKiemNV.resx">
       <DependentUpon>frmTimKiemNV.cs</DependentUpon>
     </EmbeddedResource>

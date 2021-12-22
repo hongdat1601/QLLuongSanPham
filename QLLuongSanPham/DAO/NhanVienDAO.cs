@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using QLLuongSanPham.Entities;
 
@@ -32,7 +30,7 @@ namespace QLLuongSanPham.DAO
         public IEnumerable<NhanVien> GetNhanViensByNameAndIDPhongBan(string name, int idPhongBan)
         {
             var data = context.NhanVien.Where(x => x.HoTen.Contains(name));
-            
+
             if (idPhongBan != -1)
             {
                 data = data.Where(x => x.IDPhongBan == idPhongBan);
@@ -50,7 +48,7 @@ namespace QLLuongSanPham.DAO
 
         public bool AddEmployee(NhanVien nv)
         {
-            using(var db = context.Database.BeginTransaction())
+            using (var db = context.Database.BeginTransaction())
             {
                 try
                 {
@@ -104,9 +102,9 @@ namespace QLLuongSanPham.DAO
             }
         }
 
-        public IEnumerable<NhanVien> Find(string ten, 
-            string sdt, 
-            string ngaySinh, 
+        public IEnumerable<NhanVien> Find(string ten,
+            string sdt,
+            string ngaySinh,
             bool? gioiTinh,
             string cmnd,
             string diaChi,

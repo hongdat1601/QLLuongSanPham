@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using QLLuongSanPham.Entities;
 
@@ -41,7 +39,7 @@ namespace QLLuongSanPham.DAO
             if (pb == null)
                 return -1;
             else return pb.ID;
-                
+
         }
 
         public string GetNameByID(int id)
@@ -136,7 +134,7 @@ namespace QLLuongSanPham.DAO
                     throw new Exception("Lỗi cập nhật số lượng nv");
                 }
             }
-           
+
         }
 
     }

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLLuongSanPham.Entities; 
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.DAO
 {
@@ -34,7 +30,7 @@ namespace QLLuongSanPham.DAO
         public IEnumerable<BangCongHC> GetBangCongHCsByIDNVAndDate(int id, int month, int year)
         {
             return context.BangCongHC
-                .Where(x => x.IDNhanVien == id 
+                .Where(x => x.IDNhanVien == id
                 && x.NgayCham.Value.Month == month
                 && x.NgayCham.Value.Year == year);
         }

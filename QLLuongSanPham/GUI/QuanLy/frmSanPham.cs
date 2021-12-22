@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLLuongSanPham.Entities;
 using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
@@ -25,7 +20,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void CreateCtilte(ListView lvw)
         {
             lvw.Columns.Add("Tên sản phẩm", 120);
-            lvw.Columns.Add("Đơn giá",80);
+            lvw.Columns.Add("Đơn giá", 80);
             lvw.Columns.Add("Đơn vị tính", 120);
 
             lvw.View = View.Details;
@@ -101,8 +96,8 @@ namespace QLLuongSanPham.GUI.QuanLy
             OpenFileDialog opf = new OpenFileDialog();
             opf.Title = "Chọn ảnh của bạn";
             opf.Filter = "Image File (*.jpg; *.jpeg; *.png;) | *.jpg; *.jpeg; *.png;";
-            
-            if(opf.ShowDialog() == DialogResult.OK)
+
+            if (opf.ShowDialog() == DialogResult.OK)
             {
                 Bitmap image = new Bitmap(opf.FileName);
                 ptcAvata.Image = image;
@@ -180,7 +175,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void lvwDSSP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lvwDSSP.SelectedItems.Count > 0)
+            if (lvwDSSP.SelectedItems.Count > 0)
             {
                 SanPham sp = (SanPham)lvwDSSP.SelectedItems[0].Tag;
                 txtDG.Text = sp.DonGia.ToString();

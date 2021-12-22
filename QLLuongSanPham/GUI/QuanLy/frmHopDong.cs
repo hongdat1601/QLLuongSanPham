@@ -1,14 +1,9 @@
-﻿using QLLuongSanPham.DAO;
-using QLLuongSanPham.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
@@ -74,8 +69,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(hd.NgayBatDau.Value.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(hd.NgayKetThuc.Value.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(hd.DieuKhoan);
-                
-                if(hd.TrangThai.Value)
+
+                if (hd.TrangThai.Value)
                 {
                     item.SubItems.Add("Còn thời hạn");
                 }
@@ -213,7 +208,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 chiTietHopDong = (ChiTietHopDong)lstvCTHopDong.SelectedItems[0].Tag;
                 txtTenSanPham.Text = sanPhamDAO.GetById(chiTietHopDong.IDSanPham).TenSP;
-                nudSoLuong.Text = chiTietHopDong.SoLuong.ToString();                
+                nudSoLuong.Text = chiTietHopDong.SoLuong.ToString();
             }
             else if (lstvCTHopDong.SelectedItems.Count > 0 && btnLapHopDong.Text == "Lưu")
             {
@@ -271,7 +266,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     lstvHopDong.SelectedIndices.Add(lstvHopDong.Items.Count - 1);
                     lstvSanPham.Items.Clear();
                     sanPham = null;
-                }    
+                }
             }
             else
             {
@@ -311,9 +306,9 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if(btnThem.Text == "Lưu")
+            if (btnThem.Text == "Lưu")
             {
-                if(sanPham == null)
+                if (sanPham == null)
                 {
                     MessageBox.Show("Chưa chọn sản phẩm!", "Thông báo");
 

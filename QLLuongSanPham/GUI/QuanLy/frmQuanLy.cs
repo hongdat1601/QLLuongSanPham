@@ -1,14 +1,8 @@
-﻿using QLLuongSanPham.DAO;
-using QLLuongSanPham.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
@@ -56,7 +50,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void FocusBtn(Button btn)
         {
-            if(activeBtn != null)
+            if (activeBtn != null)
             {
                 activeBtn.BackColor = (Color)Constant.Colors["primary"];
             }
@@ -66,7 +60,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void ToggleMenu(Panel pnl)
         {
-            if(activePnl == null)
+            if (activePnl == null)
             {
                 activePnl = pnl;
                 activePnl.Visible = true;
@@ -88,7 +82,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         {
             if (activeSubBtn == null || !activeSubBtn.Equals(btn))
             {
-                if(activeSubBtn != null)
+                if (activeSubBtn != null)
                     activeSubBtn.BackColor = (Color)Constant.Colors["btnSub"];
 
                 activeSubBtn = btn;
@@ -103,7 +97,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private void frmQuanLy_Load(object sender, EventArgs e)
         {
             SettingDefault();
-            lblWelcome.Text ="Chào mừng quản lý " + nvDAO.GetById(_nv.ID).HoTen;
+            lblWelcome.Text = "Chào mừng quản lý " + nvDAO.GetById(_nv.ID).HoTen;
             txtTen.Text = nvDAO.GetById(_nv.ID).HoTen;
         }
 
@@ -119,7 +113,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         }
 
         private void btnClose_Click(object sender, EventArgs e)
-        
+
         {
             DialogResult msg = MessageBox.Show("Thoát khỏi chương trình.", "Thông báo", MessageBoxButtons.YesNo);
 

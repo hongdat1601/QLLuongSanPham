@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLLuongSanPham.Entities;
 using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 namespace QLLuongSanPham.GUI.QuanLy
 {
     public partial class frmNhanVien : Form
@@ -17,7 +12,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         private PhongBanDAO pbDAO;
         private ChucVuDAO cvDAO;
         private TrinhDoHocVanDAO hvDAO;
-       
+
         public frmNhanVien()
         {
             InitializeComponent();

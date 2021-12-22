@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLLuongSanPham.Entities;
 using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
@@ -30,7 +25,7 @@ namespace QLLuongSanPham.GUI.QuanLy
         public frmChamCongHC()
         {
             InitializeComponent();
-            
+
         }
 
         #region Method
@@ -47,7 +42,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             // Load danh sach loai phep
             var loaiPhepList = loaiPhepDAO.GetLoaiPheps();
-            foreach ( var i in loaiPhepList)
+            foreach (var i in loaiPhepList)
             {
                 cboPhep.Items.Add(i.TenPhep);
             }
@@ -83,7 +78,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             if (data == null) return;
 
             lstvNhanVien.Items.Clear();
-            foreach(var nv in data)
+            foreach (var nv in data)
             {
                 ListViewItem item = new ListViewItem();
 
@@ -206,7 +201,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 MessageBox.Show("Bị trùng ngày nghỉ!", "Lỗi");
             }
-               
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -232,17 +227,17 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             if (bangCongDAO.CheckExist(nhanVienCurrent.ID, dtmDate.Value) == null)
             {
-                if(bangCongDAO.Add(bc))
+                if (bangCongDAO.Add(bc))
                 {
                     LoadDataNgayNghi(nhanVienCurrent.ID);
                     MessageBox.Show("Thêm thành công!", "Thông báo");
-                }    
+                }
             }
             else
             {
                 MessageBox.Show($"Công ngày {dtmDate.Value.ToString("dd/MM/yyyy")} đã tồn tại!", "Lỗi");
             }
-            
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -258,7 +253,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 bangCongDAO.Remove(bangCong);
                 bangCong = null;
                 LoadDataNgayNghi(nhanVienCurrent.ID);
-            }     
+            }
         }
 
         #endregion

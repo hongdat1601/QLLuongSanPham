@@ -1,7 +1,7 @@
-﻿using QLLuongSanPham.DAO;
-using QLLuongSanPham.Entities;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.NhanVienGUI
 {
