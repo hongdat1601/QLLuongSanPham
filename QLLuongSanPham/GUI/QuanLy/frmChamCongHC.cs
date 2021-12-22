@@ -170,6 +170,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 loaiPhep = loaiPhepDAO.GetByID(bangCong.IDLoaiPhep.Value);
                 cboPhep.Text = loaiPhep.TenPhep;
                 nudPhuCap.Value = loaiPhep.PhuCap.Value;
+                dtmDate.Value = bangCong.NgayCham.Value;
             }
         }
 

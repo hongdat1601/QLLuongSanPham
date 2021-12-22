@@ -77,6 +77,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
             nudNgayNghi.Value = data.Count();
             lstvNgayNghi.Items.Clear();
+            nudTongPhuCap.Value = 0;
             foreach (var bc in data)
             {
                 ListViewItem item = new ListViewItem();
@@ -89,6 +90,8 @@ namespace QLLuongSanPham.GUI.QuanLy
                 lstvNgayNghi.Items.Add(item);
                 nudTongPhuCap.Value += loaiPhepDAO.GetByID(bc.IDLoaiPhep.Value).PhuCap.Value;
             }
+
+            nudTongPhuCap.Value += chucVuDAO.GetChucByID(nhanVien.IDChucVu.Value).PhuCap.Value;
         }
 
         private void LoadDataLuong(IEnumerable<BangLuong> data)
