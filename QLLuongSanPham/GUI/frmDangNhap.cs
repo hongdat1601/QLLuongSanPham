@@ -1,16 +1,9 @@
-﻿using QLLuongSanPham.GUI.QuanLy;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
-using QLLuongSanPham.Entities;
 using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 using QLLuongSanPham.GUI.NhanVienGUI;
+using QLLuongSanPham.GUI.QuanLy;
 
 namespace QLLuongSanPham.GUI
 {
@@ -48,7 +41,7 @@ namespace QLLuongSanPham.GUI
                 return;
             }
 
-            string name = taiKhoan.Username.Substring(0,2);
+            string name = taiKhoan.Username.Substring(0, 2);
             NhanVien nv = nvDAO.GetById(taiKhoan.IDNhanVien.Value);
 
             if (name == "QL")
@@ -64,7 +57,7 @@ namespace QLLuongSanPham.GUI
             else
             {
                 frmNVChinh frm = new frmNVChinh(nv);
-                
+
                 if (frm.ShowDialog() == DialogResult.Yes)
                     this.Close();
                 else

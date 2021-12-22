@@ -1,9 +1,7 @@
-﻿using QLLuongSanPham.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.DAO
 {
@@ -30,7 +28,12 @@ namespace QLLuongSanPham.DAO
             return context.BangLuong
                 .Where(x => x.IDNhanVien == idNV);
         }
-
+        public BangLuong GetByIDNV(int idNV)
+        {
+            return context.BangLuong
+                .Where(x => x.IDNhanVien == idNV)
+                .FirstOrDefault();
+        }
         public bool Add(BangLuong bl)
         {
             using (var db = context.Database.BeginTransaction())
@@ -50,11 +53,39 @@ namespace QLLuongSanPham.DAO
 
             }
         }
+        public IEnumerable<BangLuong> GetBangLuongsByDate(int month, int year)
+        {
+            var data = GetBangLuongs();
 
+            if (month != -1)
+            {
+                data = data.Where(x => x.NgayLap.Value.Month == month);
+            }
+
+            if (year != -1)
+            {
+                data = data.Where(x => x.NgayLap.Value.Year == year);
+            }
+
+            return data;
+        }
+        public IEnumerable<BangLuong> GetBangLuongsDate(int month, int year)
+        {
+            var data = GetBangLuongs();
+            if (month != -1)
+            {
+                data = data.Where(x => x.NgayLap.Value.Month == month);
+            }
+            if (year != -1)
+            {
+                data = data.Where(x => x.NgayLap.Value.Year == year);
+            }
+            return data;
+        }
         public BangLuong CheckExist(int idNhanVien, int month, int year)
         {
-            var bl  = GetBangLuongsByIDNV(idNhanVien)
-                .Where(x => x.NgayLap.Value.Month == month 
+            var bl = GetBangLuongsByIDNV(idNhanVien)
+                .Where(x => x.NgayLap.Value.Month == month
                 && x.NgayLap.Value.Year == year)
                 .FirstOrDefault();
 

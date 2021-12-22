@@ -1,9 +1,9 @@
-﻿using FontAwesome.Sharp;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.NhanVienGUI
@@ -30,7 +30,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private void frmMainEmployee_Load(object sender, EventArgs e)
         {
             OpenFormChild(new frmTongQuan(nhanVien));
-            
+
         }
 
         //Structs
@@ -214,7 +214,7 @@ namespace QLLuongSanPham.GUI.NhanVienGUI
         private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult hoi = MessageBox.Show("Bạn có muốn đăng xuất ?", "Thông báo", MessageBoxButtons.YesNo);
-            if(hoi == DialogResult.Yes)
+            if (hoi == DialogResult.Yes)
             {
                 this.DialogResult = DialogResult.No;
                 this.Close();

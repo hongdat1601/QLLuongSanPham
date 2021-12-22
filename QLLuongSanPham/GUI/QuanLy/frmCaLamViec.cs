@@ -1,14 +1,9 @@
-﻿using QLLuongSanPham.DAO;
-using QLLuongSanPham.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
@@ -32,7 +27,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.GridLines = true;
             lvw.FullRowSelect = true;
         }
-        
+
         private void LoadListPB(IEnumerable<CaLam> caLams)
         {
             lvwDSCA.Items.Clear();
@@ -67,7 +62,7 @@ namespace QLLuongSanPham.GUI.QuanLy
 
         private void lvwDSCA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lvwDSCA.SelectedItems.Count > 0)
+            if (lvwDSCA.SelectedItems.Count > 0)
             {
                 CaLam ca = (CaLam)lvwDSCA.SelectedItems[0].Tag;
                 txtCalam.Text = ca.TenCa;
@@ -156,7 +151,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
             }
-            
+
         }
     }
 }

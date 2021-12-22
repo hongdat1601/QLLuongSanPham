@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.DAO
@@ -46,7 +44,7 @@ namespace QLLuongSanPham.DAO
                     db.Rollback();
                     throw new Exception("Lỗi thêm bảng công cho công nhân");
                 }
-                
+
             }
         }
 

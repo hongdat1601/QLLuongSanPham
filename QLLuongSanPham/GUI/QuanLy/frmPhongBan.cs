@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using QLLuongSanPham.DAO;
@@ -47,7 +42,7 @@ namespace QLLuongSanPham.GUI.QuanLy
             {
                 foreach (PhongBan pb in phongBanDAO.GetPhongBans())
                 {
-                    if(nv.IDPhongBan == pb.ID)
+                    if (nv.IDPhongBan == pb.ID)
                     {
                         pb.SoLuongNhanVien++;
                     }
@@ -216,7 +211,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     btnXoa.Enabled = true;
                     LoadListPhongBan(phongBanDAO.GetPhongBans());
                     lstvPhongBan.SelectedIndices.Add(lstvPhongBan.Items.Count - 1);
-                }    
+                }
             }
             else
             {

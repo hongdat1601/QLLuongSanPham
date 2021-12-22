@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLLuongSanPham.Entities;
 using QLLuongSanPham.DAO;
+using QLLuongSanPham.Entities;
 
 namespace QLLuongSanPham.GUI.QuanLy
 {
@@ -157,7 +152,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                     {
                         foreach (BangCongSP bc in bcDAO.GetByIDCd(cdDAO.GetByName(cboTenCD.Text).ID))
                         {
-                            if(bc.ID_NhanVien == nv.ID)
+                            if (bc.ID_NhanVien == nv.ID)
                             {
                                 lvwDSPC.Items.Add(CreateItems(nv));
                             }
