@@ -129,7 +129,15 @@ namespace QLLuongSanPham.GUI.QuanLy
                 std += (i.TienLuong / 1000 - tb / 1000) * (i.TienLuong / 1000 - tb / 1000);
             }
 
-            double tmp = Math.Round(Math.Sqrt(Convert.ToDouble(std / (n - 1))) * 1000, 3);
+            double tmp;
+            if (n <= 1)
+            {
+                tmp = 0;
+            }
+            else
+            {
+                tmp = Math.Round(Math.Sqrt(Convert.ToDouble(std / (n - 1))) * 1000, 3);
+            }
 
             lblTong.Text = tong.ToString();
             lblTrungBinh.Text = Math.Round(tb, 3).ToString();
