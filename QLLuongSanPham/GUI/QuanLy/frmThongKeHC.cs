@@ -51,7 +51,7 @@ namespace QLLuongSanPham.GUI.QuanLy
                 item.SubItems.Add(phongBanDAO.GetById(nhanVienDAO.GetById(bl.IDNhanVien).IDPhongBan.Value).TenPhongBan);
                 item.SubItems.Add(chucVuDAO.GetChucByID(nhanVienDAO.GetById(bl.IDNhanVien).IDChucVu.Value).TenChucVu);
                 item.SubItems.Add(bl.NgayLap.Value.Date.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(bl.TienLuong.ToString() + " VND");
+                item.SubItems.Add(bl.TienLuong.ToString() + " VND")1;
 
                 item.Tag = bl;
 
@@ -80,5 +80,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             lvw.FullRowSelect = true;
         }
 
+        private void chartThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

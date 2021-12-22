@@ -64,8 +64,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.picNen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picNen.Image = global::QLLuongSanPham.Properties.Resources.back3;
             this.picNen.Location = new System.Drawing.Point(0, 0);
+            this.picNen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picNen.Name = "picNen";
-            this.picNen.Size = new System.Drawing.Size(1327, 974);
+            this.picNen.Size = new System.Drawing.Size(995, 791);
             this.picNen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picNen.TabIndex = 0;
             this.picNen.TabStop = false;
@@ -78,15 +79,17 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.chartThongKe.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartThongKe.Legends.Add(legend1);
-            this.chartThongKe.Location = new System.Drawing.Point(153, 45);
+            this.chartThongKe.Location = new System.Drawing.Point(115, 37);
+            this.chartThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chartThongKe.Name = "chartThongKe";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "BangLuong";
             this.chartThongKe.Series.Add(series1);
-            this.chartThongKe.Size = new System.Drawing.Size(1018, 491);
+            this.chartThongKe.Size = new System.Drawing.Size(764, 399);
             this.chartThongKe.TabIndex = 34;
             this.chartThongKe.Text = "chart";
+            this.chartThongKe.Click += new System.EventHandler(this.chartThongKe_Click);
             // 
             // pnlLuong
             // 
@@ -94,18 +97,20 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.pnlLuong.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlLuong.Controls.Add(this.lstvLuong);
             this.pnlLuong.Controls.Add(this.lblDSLuong);
-            this.pnlLuong.Location = new System.Drawing.Point(22, 603);
+            this.pnlLuong.Location = new System.Drawing.Point(16, 490);
+            this.pnlLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlLuong.Name = "pnlLuong";
-            this.pnlLuong.Size = new System.Drawing.Size(1283, 327);
+            this.pnlLuong.Size = new System.Drawing.Size(963, 266);
             this.pnlLuong.TabIndex = 33;
             // 
             // lstvLuong
             // 
             this.lstvLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstvLuong.HideSelection = false;
-            this.lstvLuong.Location = new System.Drawing.Point(20, 51);
+            this.lstvLuong.Location = new System.Drawing.Point(15, 41);
+            this.lstvLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstvLuong.Name = "lstvLuong";
-            this.lstvLuong.Size = new System.Drawing.Size(1245, 269);
+            this.lstvLuong.Size = new System.Drawing.Size(935, 219);
             this.lstvLuong.TabIndex = 1;
             this.lstvLuong.UseCompatibleStateImageBehavior = false;
             // 
@@ -115,8 +120,9 @@ namespace QLLuongSanPham.GUI.QuanLy
             this.lblDSLuong.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblDSLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSLuong.Location = new System.Drawing.Point(0, 0);
+            this.lblDSLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDSLuong.Name = "lblDSLuong";
-            this.lblDSLuong.Size = new System.Drawing.Size(1279, 37);
+            this.lblDSLuong.Size = new System.Drawing.Size(959, 30);
             this.lblDSLuong.TabIndex = 0;
             this.lblDSLuong.Text = "Danh sách bảng lương";
             this.lblDSLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,14 +161,15 @@ namespace QLLuongSanPham.GUI.QuanLy
             // 
             // frmThongKeHC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1327, 974);
+            this.ClientSize = new System.Drawing.Size(995, 791);
             this.Controls.Add(this.chartThongKe);
             this.Controls.Add(this.pnlLuong);
             this.Controls.Add(this.picNen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmThongKeHC";
             this.Text = "frmThongKeHC";
             this.Load += new System.EventHandler(this.frmThongKeHC_Load);
